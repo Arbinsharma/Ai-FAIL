@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Failed Portal - Live Updates</title>
+    <style>
+        :root {
+            --bg-color: #0b0e14;
+            --card-bg: #131722;
+            --text-color: #e6edf3;
+            --text-muted: #8b949e;
+            --accent-color: #3b82f6;
+            --accent-hover: #60a5fa;
+            --border-color: #21262d;
+        }
+
+        [data-theme="light"] {
+            --bg-color: #f4f6f8;
+            --card-bg: #ffffff;
+            --text-color: #1f2937;
+            --text-muted: #6b7280;
+            --accent-color: #2563eb;
+            --accent-hover: #1d4ed8;
+            --border-color: #e5e7eb;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.3s, color 0.3s, transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--card-bg);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+        .navbar {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 1.5rem;
+        }
+
+        .logo {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--accent-color);
+            letter-spacing: -0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 1.2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-color);
+        }
+
+        .theme-btn {
+            background: none;
+            border: 1px solid var(--border-color);
+            color: var(--text-color);
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.85rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .section {
+            margin-bottom: 3rem;
+            animation: fadeIn 0.8s ease-in-out;
+        }
+
+        h2.section-title {
+            font-size: 1.6rem;
+            margin-bottom: 1.2rem;
+            border-bottom: 3px solid var(--accent-color);
+            display: inline-block;
+            padding-bottom: 0.2rem;
+        }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .news-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+        }
+
+        .card-img-container {
+            width: 100%;
+            height: 190px;
+            background-color: #111;
+            overflow: hidden;
+        }
+
+        .news-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .news-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .news-content {
+            padding: 1.2rem;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .source-badge {
+            font-size: 0.7rem;
+            background-color: var(--accent-color);
+            color: #fff;
+            padding: 0.2rem 0.6rem;
+            border-radius: 12px;
+            align-self: flex-start;
+            margin-bottom: 0.6rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .news-card h3 {
+            font-size: 1.05rem;
+            margin-bottom: 0.6rem;
+            line-height: 1.4;
+        }
+
+        .news-card p {
+            color: var(--text-muted);
+            font-size: 0.88rem;
+            flex-grow: 1;
+            margin-bottom: 1rem;
+        }
+
+        .read-btn {
+            text-decoration: none;
+            color: var(--accent-color);
+            font-weight: 600;
+            font-size: 0.88rem;
+        }
+
+        .read-btn:hover {
+            color: var(--accent-hover);
+        }
+
+        .about-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 2rem;
+            border-radius: 12px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+            gap: 1rem;
+            margin-top: 1.2rem;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 130px;
+            object-fit: cover;
+            border-radius: 10px;
+            border: 1px solid var(--border-color);
+        }
+
+        .gallery img:hover {
+            transform: scale(1.03);
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem 1rem;
+            border-top: 1px solid var(--border-color);
+            background-color: var(--card-bg);
+            margin-top: 3rem;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Mobile Optimization */
+        @media (max-width: 600px) {
+            .navbar {
+                flex-direction: column;
+                gap: 0.8rem;
+                align-items: flex-start;
+            }
+            .nav-links {
+                width: 100%;
+                justify-content: space-between;
+                font-size: 0.85rem;
+            }
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">AI Failed Portal</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#news">AI News</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><button class="theme-btn" onclick="toggleTheme()">🌓 Theme</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section id="home" class="section">
+            <h2 class="section-title">Latest AI Failures & Updates</h2>
+            <p>Welcome to AI Failed Portal — automated tracking of real-time artificial intelligence mishaps, edge-case bugs, and breakthrough news from top global sources.</p>
+        </section>
+
+        <section id="news" class="section">
+            <h2 class="section-title">AI News Feed</h2>
+            <div class="news-grid">
+                
+        <div class="news-card">
+            <div class="card-img-container">
+                <img src="https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300" alt="News Image" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80';">
+            </div>
+            <div class="news-content">
+                <span class="source-badge">cio.com</span>
+                <h3>AI failures are inevitable. So is the CIO getting blamed. - cio.com</h3>
+                <p>AI failures are inevitable. So is the CIO getting blamed.&nbsp;&nbsp;cio.com</p>
+                <a href="https://news.google.com/rss/articles/CBMinAFBVV95cUxNSUNDYTd5dUpoNkkzUkJkNmppVF96Z0Jwc0RIM3VPRzRjN0YtVlFnbE1leVJ0cDZfSUZIRndhU1VzNEpYN2FGMlV0SGpsUjRxSEdmaHBqTzhhVG9fWDREN0ZrVTczNFJVUG03endwNXpsb1FnQmZzLXY1YkhmSlVGbkxMeG5lX2NraVZRUWlSMVQ5QXhEd09peU1GSjg?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
+            </div>
+        </div>
+        
+        <div class="news-card">
+            <div class="card-img-container">
+                <img src="https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300" alt="News Image" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80';">
+            </div>
+            <div class="news-content">
+                <span class="source-badge">WSJ</span>
+                <h3>Opinion | Humans Are to Blame for AI Failures - WSJ</h3>
+                <p>Opinion | Humans Are to Blame for AI Failures&nbsp;&nbsp;WSJ</p>
+                <a href="https://news.google.com/rss/articles/CBMifEFVX3lxTE1taV9jR1ptVnZDOHcyUklzOFVSLTYzR0paYnF0ZlhiRlpEWlY3UlNxNXY5QllkTnFMQ1lndU1ubVU2MlU5ejUtYUJ1WmMtNGZESFRBX3lXWHZKTTZNNHV0M3h5c3NnSHBkUlZ3Sk9tQ1k2YXY0aEo2NGs2WS0?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
+            </div>
+        </div>
+        
+        <div class="news-card">
+            <div class="card-img-container">
+                <img src="https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300" alt="News Image" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80';">
+            </div>
+            <div class="news-content">
+                <span class="source-badge">Reuters</span>
+                <h3>Mississippi asks appeals court to reassign judge over 'error-plagued' AI-assisted ruling - Reuters</h3>
+                <p>Mississippi asks appeals court to reassign judge over 'error-plagued' AI-assisted ruling&nbsp;&nbsp;Reuters</p>
+                <a href="https://news.google.com/rss/articles/CBMiyAFBVV95cUxNd2dKR3hMUER1SDlsSnFaTUpyM19FZjF0N0hWaDFXRTNublVRS0RKUGs1NmZhZUg1R2ZVVUJIUEJQbmcxckc5Y1o5TDRHalQtNkJ1NV9FNmZGd0E5aE5OVHVpMEhxejFLcnY0YXNjUkEwOXBTVG9iZWtxS1plU2ZTUkxwVWJpSmNzeFJkaFJPTkl6TXdqbWgwcDh5X1R5ank3Z3ZxbTh2aWVuR2tZQS13Zkh0V1dkOVpTS0FQMzFzVFpTY3JIV3FIdw?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
+            </div>
+        </div>
+        
+        <div class="news-card">
+            <div class="card-img-container">
+                <img src="https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300" alt="News Image" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80';">
+            </div>
+            <div class="news-content">
+                <span class="source-badge">news.virginia.edu</span>
+                <h3>Q&A: Who’s responsible when AI makes mistakes? - news.virginia.edu</h3>
+                <p>Q&amp;A: Who’s responsible when AI makes mistakes?&nbsp;&nbsp;news.virginia.edu</p>
+                <a href="https://news.google.com/rss/articles/CBMiggFBVV95cUxPeW51MlhDVDVrQ192NWlJTk91UXZqRU44TzM0Z0hiNEpqMC1EZEktd3g1YTVFVnhrTURCYVdUN0VFWlRhMDBzU1FlM3JENnNrV2ZxdjR4Qnl1RlpTRkJUUUVUUUF6bzFiTk1rVl96UDVQcktMNThRM3pLVERaNDlYeUd3?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
+            </div>
+        </div>
+        
+        <div class="news-card">
+            <div class="card-img-container">
+                <img src="https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300" alt="News Image" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80';">
+            </div>
+            <div class="news-content">
+                <span class="source-badge">UT San Antonio Today</span>
+                <h3>Can robots “fail forward”? Teaching AI to learn from its mistakes - UT San Antonio Today - UT San Antonio Today</h3>
+                <p>Can robots “fail forward”? Teaching AI to learn from its mistakes - UT San Antonio Today&nbsp;&nbsp;UT San Antonio Today</p>
+                <a href="https://news.google.com/rss/articles/CBMimAFBVV95cUxNNGFhamlpcjRVQk9KaElCRThTRnVDTnRwTGllNmtIU21PanhDRnZOMmlpd19nRG80Ni1ZUkRXbFl4Ykk0MDJuM0ozYXlsbDRfR2pnVEZyRTBsOWU0azVCM081VVRYRjBUTW5Sd29rQmg0UnpRVVBzRGFHZ05ncjJNcUpQdXpzQTFpQjNUbDMyX3dOUV8xc3ZhZQ?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
+            </div>
+        </div>
+        
+        <div class="news-card">
+            <div class="card-img-container">
+                <img src="https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300" alt="News Image" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80';">
+            </div>
+            <div class="news-content">
+                <span class="source-badge">BioSpace</span>
+                <h3>Opinion: Assessing shared failures with AI is key to cell and gene therapy’s evolution - BioSpace</h3>
+                <p>Opinion: Assessing shared failures with AI is key to cell and gene therapy’s evolution&nbsp;&nbsp;BioSpace</p>
+                <a href="https://news.google.com/rss/articles/CBMixAFBVV95cUxQVE5aVThGMWFnSlNTWnI4UzBmSWRjNlowZDBBdmU2bGp0cVN5eVV3dVpKRHh6TnVYeUd2WTdjUm9vb0FKdkYtR21fSjZTX3FoUVQ2UTJCRWRnMHY0TXgtd3ZaNEdSZDZtNHlyeVJGMk9hOHotZmRKbkx6ZDdTMjR4Tnh5QzFEbzA0blZNQUEtMGhWMXdUMmlodkpRYnY3Y09CcHlLR01xdUZpeHBhZ1JXUTRLZ0dOcTgwQnVGbHhscHliTHFm?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
+            </div>
+        </div>
+        
+        <div class="news-card">
+            <div class="card-img-container">
+                <img src="https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300" alt="News Image" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80';">
+            </div>
+            <div class="news-content">
+                <span class="source-badge">MIT Sloan</span>
+                <h3>What leaders still get wrong about AI - MIT Sloan</h3>
+                <p>What leaders still get wrong about AI&nbsp;&nbsp;MIT Sloan</p>
+                <a href="https://news.google.com/rss/articles/CBMiiwFBVV95cUxPQXRyQ29wTHkwcW5aeERYRnpadm9KRncwczhBX242QUllTVRRYmczcE5RaVgzdUJkUV9qNG1GYWU1cnVHZDJ5MWpxdXVnMnNEbFhKc2ZrS2RLQ2MtNG1TLTNvVW1JS0xVTExpYWppN3RBNWFjaTZHOVE1QmdDRFNqMEswMjJRcVpWYURj?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
+            </div>
+        </div>
+        
+        <div class="news-card">
+            <div class="card-img-container">
+                <img src="https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300" alt="News Image" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80';">
+            </div>
+            <div class="news-content">
+                <span class="source-badge">BBC Science Focus Magazine</span>
+                <h3>7 ways we're trusting AI too much – and already paying for it - BBC Science Focus Magazine</h3>
+                <p>7 ways we're trusting AI too much – and already paying for it&nbsp;&nbsp;BBC Science Focus Magazine</p>
+                <a href="https://news.google.com/rss/articles/CBMiakFVX3lxTE83bE9FUWVpSkxuMHdGc1E4SlFqdlM2TmQ0N2JTMWhpMXJfNnEzNktaQnBNYjlST0kwa2xiRFFwR25RcGI1alY2YnNUU04tajJ1a0hDSGFEakl6TFpuZWg5YzhQVFdORkhVbXc?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
+            </div>
+        </div>
+        
+        <div class="news-card">
+            <div class="card-img-container">
+                <img src="https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300" alt="News Image" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80';">
+            </div>
+            <div class="news-content">
+                <span class="source-badge">Los Angeles Times</span>
+                <h3>Contributor: AI, like a hovering parent, protects students from the failures they need - Los Angeles Times</h3>
+                <p>Contributor: AI, like a hovering parent, protects students from the failures they need&nbsp;&nbsp;Los Angeles Times</p>
+                <a href="https://news.google.com/rss/articles/CBMilgFBVV95cUxPNE9qMWxtSUlBMXh6TWNOM0ZFUkZTMmhhMmMxb2F1aGlzck9DR20xWEFJbFNMdi10cHpLOTk1Ymt1ZW1qOUZ4TGprSHFlaVdmeVJTaHpoZkZ3VTVyT3g3NG9QNXRjVzIwYUZBTHJrTVJDRWlxVmpUWlNHSmxqaWFsMUxzdnBwSE9CTnN6cjJrc2x2Q2JUOUE?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
+            </div>
+        </div>
+        
+        <div class="news-card">
+            <div class="card-img-container">
+                <img src="https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300" alt="News Image" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80';">
+            </div>
+            <div class="news-content">
+                <span class="source-badge">CFO Dive</span>
+                <h3>Poor leadership, process failures are sinking AI projects: IBM exec - CFO Dive</h3>
+                <p>Poor leadership, process failures are sinking AI projects: IBM exec&nbsp;&nbsp;CFO Dive</p>
+                <a href="https://news.google.com/rss/articles/CBMinwFBVV95cUxOOThSSTB0SmxzUlhYdU5sX1RyNWtpUFpNRVVoQU5KYmZ5M242S21WbzA0V3ZKZnprcUEwcHBySDlPbzNEX3FNcVNoalBDTmMwRExGN0RMUTVoQTM1a0dDWTNDRGRHZ24teXAyUGxia3Jtb0E5TWhwYWlOWm90UWVKRUxEV0NTUmRHNFZuVVFtQ1l1Vm9IMzRlZ1g4dU1wRUE?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
+            </div>
+        </div>
+        
+        <div class="news-card">
+            <div class="card-img-container">
+                <img src="https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300" alt="News Image" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80';">
+            </div>
+            <div class="news-content">
+                <span class="source-badge">thenationalnews.com</span>
+                <h3>Meta's Muse AI disaster exposes Big Tech's costly pattern of getting things wrong - thenationalnews.com</h3>
+                <p>Meta's Muse AI disaster exposes Big Tech's costly pattern of getting things wrong&nbsp;&nbsp;thenationalnews.com</p>
+                <a href="https://news.google.com/rss/articles/CBMi1gFBVV95cUxPRVZLb0J2aUZDNGdvMzhKWUcwNEJuaFgwWEc5QWd0WHB2RWFHSE43YWozQUQ5anFHb1dwaTEyamRfZ0lLSE1JR0RqVVEtNFZ3NWV0YU5TZUlueW9xWG83NTAzN094UmNLdTZLelRLOC16T18tU0ZsZjdHMXpJTFFWSXZDQXZzWFNXa3hRUGw1NWYtY01pRTZWM1RtU3N2UUVROV9HMzhid003eTVPV1o5aXBIa2JRZndUaG9WNDE4WGE2MUZUaVBQc3BQc3dYUWVyNmppTnJn?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
+            </div>
+        </div>
+        
+        <div class="news-card">
+            <div class="card-img-container">
+                <img src="https://lh3.googleusercontent.com/J6_coFbogxhRI9iM864NL_liGXvsQp2AupsKei7z0cNNfDvGUmWUy20nuUhkREQyrpY4bEeIBuc=s0-w300" alt="News Image" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80';">
+            </div>
+            <div class="news-content">
+                <span class="source-badge">Forbes India</span>
+                <h3>Why insurance needs new models to cover AI failures - Forbes India</h3>
+                <p>Why insurance needs new models to cover AI failures&nbsp;&nbsp;Forbes India</p>
+                <a href="https://news.google.com/rss/articles/CBMiyAFBVV95cUxNaXBwM3J2RGtzZHlXZVdmU0ZJbDVGTG5OQk1uT29JNmtGbWhvbE5CRTZwT2hGemczTC12YWxFU2NqZ1dsZ0tjaEY1R3RSY2puV3djeGtBNmUzamJCLVRBT1doOEI2eTVIMEpfaktfSENIRERINTRpNXdBU0ZINUR0bXFsbGVMYkY3LVpnVFlVdU9yTHNXejdUMTJzbUJJb1lqMkVRRjc5bjQtSWlZdndYdUU5cTFCUzY2UE9FclZwTjVFV3liNWJfedIBzgFBVV95cUxOdjgxVWR4QThPVzI4dlZ4TUlkNU84XzBDNElDcXFHc1h3b0JPVWpmWVVlb3IxX1Vyc0lLUWhoR1FtRndXZEE4VllkUEtFVEtGdlo0TEVIdVpMRmRwcmFxckJqSUhKYW1GQlE5ZlVuSms4X0VmUHl2SDlJYVJ4YzZHYkYxdE1IUUFBZWFGUVl5N1ZkMG1OaE91SUkzU3ZRY202UUN5a3pxTURtd3VFeTIyQU1fMDJOVTFxbExYTExPeFh5MVpSTk9HcTdpNFV5Zw?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
+            </div>
+        </div>
+        
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <h2 class="section-title">About the Developer</h2>
+            <div class="about-card">
+                <h3>Prashant Bhusal / Arbin Sharma</h3>
+                <p style="margin-top: 0.6rem;">Hello! I am Prashant Bhusal (Arbin Sharma), a Grade 9 student studying at <strong>Rosy Buds Bal Batika</strong> in Nepal. I am passionate about web development, programming, and automated web systems.</p>
+                <p style="margin-top: 0.6rem;"><strong>AI Failed Portal</strong> automatically fetches and displays real-time updates regarding AI mishaps, technological advancements, and technical news coverage.</p>
+                
+                <h4 style="margin-top: 1.5rem;">Gallery</h4>
+                <div class="gallery">
+                    <img src="image1.jpg" alt="Gallery Image" onerror="this.onerror=null; this.src='https://via.placeholder.com/200?text=Profile+1';">
+                    <img src="image2.jpg" alt="Gallery Image" onerror="this.onerror=null; this.src='https://via.placeholder.com/200?text=Profile+2';">
+                    <img src="image3.jpg" alt="Gallery Image" onerror="this.onerror=null; this.src='https://via.placeholder.com/200?text=Profile+3';">
+                    <img src="image4.jpg" alt="Gallery Image" onerror="this.onerror=null; this.src='https://via.placeholder.com/200?text=Profile+4';">
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <h2 class="section-title">Contact Me</h2>
+            <div class="about-card">
+                <p>Have questions or feedback? Feel free to write to me!</p>
+                <p style="margin-top: 0.5rem;"><strong>Email:</strong> <a href="mailto:prashantvushal@gmail.com" style="color: var(--accent-color);">prashantvushal@gmail.com</a></p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 AI Failed Portal. Developed by Prashant Bhusal (Arbin Sharma), Grade 9 Student at Rosy Buds Bal Batika.</p>
+    </footer>
+
+    <script>
+        function toggleTheme() {
+            const body = document.body;
+            if (body.getAttribute('data-theme') === 'light') {
+                body.removeAttribute('data-theme');
+            } else {
+                body.setAttribute('data-theme', 'light');
+            }
+        }
+    </script>
+</body>
+</html>
