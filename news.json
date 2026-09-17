@@ -1,7 +1,24 @@
 [
   {
+    "title": "AI text watermarking can make models more vulnerable to adversarial prompts",
+    "url": "https://arstechnica.com/security/2026/09/ai-text-watermarking-can-make-models-more-vulnerable-to-adversarial-prompts/",
+    "section": "Tech Failures",
+    "image_url": "https://cdn.arstechnica.net/wp-content/uploads/2026/09/ai-generated-watermark-1152x556.jpg",
+    "summary": "SynthID can cause models to follow harmful instructions they would otherwise refuse.",
+    "published": "2026-09-17T18:33:13+00:00"
+  },
+  {
+    "title": "Waymo restarts San Antonio service five months after flooding troubles",
+    "url": "https://techcrunch.com/2026/09/17/waymo-restarts-san-antonio-service-five-months-after-flooding-troubles/",
+    "section": "Company Milestones",
+    "image_url": "https://techcrunch.com/wp-content/uploads/2026/01/Waymo-parking-charging-getty.jpg?resize=1200,800",
+    "summary": "The company suspended service in the city in April after one of its robotaxis got swept away.",
+    "published": "2026-09-17T18:30:30+00:00"
+  },
+  {
     "title": "IV drips used for &quot;detoxification&quot; actually filled with toxins; dozens poisoned",
     "url": "https://arstechnica.com/health/2026/09/sketchy-iv-drips-at-wellness-clinics-have-poisoned-dozens-cdc-and-fda-warn/",
+    "section": "Tech Failures",
     "image_url": "https://cdn.arstechnica.net/wp-content/uploads/2026/09/GettyImages-1155940802-1024x648.jpg",
     "summary": "The IV drips included glutathione, which was not made to be injected.",
     "published": "2026-09-17T17:43:50+00:00"
@@ -9,6 +26,7 @@
   {
     "title": "2026 Hyundai Ioniq 5: Here&#x27;s what we still like, here&#x27;s what annoys us",
     "url": "https://arstechnica.com/cars/2026/09/2026-hyundai-ioniq-5-heres-what-we-still-like-heres-what-annoys-us/",
+    "section": "Tech Failures",
     "image_url": "https://cdn.arstechnica.net/wp-content/uploads/2026/09/2026-Hyundai-Ioniq-5-1-of-10-1152x648.jpg",
     "summary": "It’s spacious, efficient, and charges very quickly. But what about reliability concerns?",
     "published": "2026-09-17T17:30:30+00:00"
@@ -16,13 +34,15 @@
   {
     "title": "Even the king of England has his hesitations about AI",
     "url": "https://techcrunch.com/2026/09/17/even-the-king-of-england-has-his-hesitations-about-ai/",
+    "section": "Company Milestones",
     "image_url": "https://techcrunch.com/wp-content/uploads/2026/09/JONATHAN-BRADY.jpg?w=1024",
-    "summary": "King Charles hosted a private summit Thursday with some of the most prominent names in AI and UK government.",
+    "summary": "King Charles hosted a private summit Thursday with some of the most prominent names in AI and the U.K. government.",
     "published": "2026-09-17T17:26:25+00:00"
   },
   {
     "title": "Base Labs launches an open-weight AI safety partnership with Hugging Face and Goodfire",
     "url": "https://techcrunch.com/2026/09/17/base-labs-launches-an-open-weight-ai-safety-partnership-with-hugging-face-and-goodfire/",
+    "section": "Company Milestones",
     "image_url": "https://techcrunch.com/wp-content/uploads/2026/07/hugging-face-logo-smartphone.jpg?resize=1200,800",
     "summary": "Base Labs, the research group Baseten spun up earlier this year, will develop and publish methods for training and monitoring open models.",
     "published": "2026-09-17T17:15:59+00:00"
@@ -30,183 +50,153 @@
   {
     "title": "Pinterest teases a new ‘Restyle’ feature that lets you redesign your room with AI",
     "url": "https://techcrunch.com/2026/09/17/pinterest-teases-a-new-restyle-feature-that-lets-you-redesign-your-room-with-ai/",
+    "section": "Company Milestones",
     "image_url": "https://techcrunch.com/wp-content/uploads/2026/09/Restyle_dopamine.png?resize=1200,808",
-    "summary": "Pinterest is testing Restyle, a new AI-powered feature that lets users visualize furniture, decor, lighting, and more in photos of their own rooms — potentially helping turn saved inspiration into…",
+    "summary": "Pinterest is testing Restyle, a new AI-powered feature that lets users visualize furniture, decor, lighting, and more in photos of their own rooms — potentially helping turn…",
     "published": "2026-09-17T17:15:00+00:00"
   },
   {
     "title": "Save $30 or more on a refurbished Apple TV 4K",
     "url": "https://www.theverge.com/gadgets/997009/refurbished-apple-tv-4k-ring-doorbell-deal-sale",
+    "section": "General Tech",
     "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/09/Apple-TV-4K-roundup.png?quality=90&strip=all&crop=0%2C10.732984293194%2C100%2C78.534031413613&w=1200",
-    "summary": "Most hardware prices have soared in 2026, and that includes a variety of Apple laptops, tablets, and smart devices. Thankfully, you can offset some of the increased costs on an Apple TV 4K by…",
+    "summary": "Most hardware prices have soared in 2026, and that includes a variety of Apple laptops, tablets, and smart devices. Thankfully, you can offset some of the increased costs on an…",
     "published": "2026-09-17T17:14:07+00:00"
   },
   {
-    "title": "TechCrunch Disrupt 2026 Side Events schedule: NMI, Backblaze, PeakXV Partners, Augment, and more to host",
-    "url": "https://techcrunch.com/2026/09/17/techcrunch-disrupt-2026-side-events-schedule-nmi-backblaze-peakxv-partners-augment-and-more-to-host/",
-    "image_url": "https://techcrunch.com/wp-content/uploads/2026/09/54901701957_d1611118cd_c-e1789663445605.jpg?w=599",
-    "summary": "TechCrunch Disrupt is where the tech community comes together to build, debate, and connect. And while the main event takes over Moscone West from October 13-15, the conversation doesn’t stop when…",
-    "published": "2026-09-17T16:34:36+00:00"
+    "title": "Hister: A private search engine for the pages you visit and the files you keep",
+    "url": "https://github.com/asciimoo/hister",
+    "section": "General Tech",
+    "image_url": "https://opengraph.githubassets.com/d9af06c440598ce0061f19ba0788dba4abda644a09e088ee6c3058f625b01e86/asciimoo/hister",
+    "summary": "Comments",
+    "published": "2026-09-17T16:25:37+00:00"
   },
   {
     "title": "Covert uploads and megalomania: OpenAI details new &quot;misaligned&quot; agent incidents",
     "url": "https://arstechnica.com/ai/2026/09/covert-uploads-and-megalomania-openai-details-new-misaligned-agent-incidents/",
+    "section": "Tech Failures",
     "image_url": "https://cdn.arstechnica.net/wp-content/uploads/2026/09/GettyImages-875641-001-1152x648.jpg",
     "summary": "Model maker commits to new framework for reporting misaligned models.",
     "published": "2026-09-17T16:18:34+00:00"
   },
   {
-    "title": "Apple will let EU apps use less-alarming tracking-consent screens",
-    "url": "https://techcrunch.com/2026/09/17/apple-will-let-eu-apps-use-less-alarming-tracking-consent-screens/",
-    "image_url": "https://techcrunch.com/wp-content/uploads/2022/07/app-store-ios-2022.jpg?resize=1200,675",
-    "summary": "Apple is changing its App Tracking Transparency prompts in parts of Europe after competition regulators said the system favored Apple over third-party apps, giving developers more flexibility over…",
-    "published": "2026-09-17T16:09:58+00:00"
-  },
-  {
     "title": "TypeSafe AI’s new models work with machines, not humans",
     "url": "https://www.cio.com/article/4223471/typesafe-ais-new-models-work-with-machines-not-humans-2.html",
+    "section": "Company Milestones",
     "image_url": "https://www.cio.com/wp-content/uploads/2026/09/4223471-0-74233900-1789661212-mohamed-nohassi-2iUrK025cec-unsplash-1.jpg?quality=50&strip=all&w=1024",
-    "summary": "Today’s large language models are verbose, even if they’re being asked to recommend a simple decision, driving up usage costs through the sheer volume of tokens they consume or generate.…",
+    "summary": "Today’s large language models are verbose, even if they’re being asked to recommend a simple decision, driving up usage costs through the sheer volume of tokens they consume or…",
     "published": "2026-09-17T16:06:34+00:00"
   },
   {
     "title": "Xbox’s clever disc-to-digital feature was 15 years in the making",
     "url": "https://www.theverge.com/tech/996826/microsoft-xbox-disc-to-digital-history-notepad",
+    "section": "General Tech",
     "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/25480192/247141_NOTEPAD_X_BOX_CVIRGINIA.jpg?quality=90&strip=all&crop=0%2C10.732984293194%2C100%2C78.534031413613&w=1200",
-    "summary": "When Xbox announced a new feature last month that lets you digitize existing physical game collections, I immediately thought of the Xbox One. Disc-to-digital seems like a clever new feature for…",
+    "summary": "When Xbox announced a new feature last month that lets you digitize existing physical game collections, I immediately thought of the Xbox One. Disc-to-digital seems like a…",
     "published": "2026-09-17T16:00:00+00:00"
   },
   {
     "title": "OpenAI admits six new misalignment incidents under new reporting framework",
     "url": "https://www.cio.com/article/4223462/openai-admits-six-new-misalignment-incidents-under-new-reporting-framework-2.html",
+    "section": "Company Milestones",
     "image_url": "https://www.cio.com/wp-content/uploads/2026/09/4223462-0-52878500-1789660333-shutterstock_1124669672.jpg?quality=50&strip=all&w=1024",
-    "summary": "OpenAI has published six new reports detailing AI model misalignment, including instances of hidden instructions, unauthorized communication, and attempts to locate exposed API keys, adding to the…",
+    "summary": "OpenAI has published six new reports detailing AI model misalignment, including instances of hidden instructions, unauthorized communication, and attempts to locate exposed API…",
     "published": "2026-09-17T15:51:52+00:00"
   },
   {
-    "title": "Roku’s new Labs hub brings experimental apps to the big screen",
-    "url": "https://techcrunch.com/2026/09/17/rokus-new-labs-hub-brings-experimental-apps-to-the-big-screen/",
-    "image_url": "https://techcrunch.com/wp-content/uploads/2026/09/Roku-Labs_High-Res.png?resize=1200,772",
-    "summary": "Roku’s latest OS update introduces Roku Labs, a new hub for experimental apps, alongside personalized home screens in more markets, streaming subscription bundles, and more.",
-    "published": "2026-09-17T15:50:29+00:00"
+    "title": "CrowdSec Source Code Leak",
+    "url": "https://www.crowdsec.net/blog/crowdsec-statement-source-code-exposure",
+    "section": "General Tech",
+    "image_url": "https://cms.crowdsec.net/wp-content/uploads/2026/09/Blog-images-1575-×-871px-32-1.png",
+    "summary": "Comments",
+    "published": "2026-09-17T15:34:01+00:00"
   },
   {
-    "title": "EPA immediately sued over plans to repeal climate rules for power plants",
-    "url": "https://arstechnica.com/science/2026/09/thousands-will-die-if-epa-repeals-power-plant-climate-rules-lawsuit-says/",
-    "image_url": "https://cdn.arstechnica.net/wp-content/uploads/2026/09/GettyImages-2261166461-1024x648.jpg",
-    "summary": "Public health groups warn EPA rule will cost Americans billions in health bills.",
-    "published": "2026-09-17T15:38:04+00:00"
+    "title": "Rate limits on GitLab.com are changing",
+    "url": "https://about.gitlab.com/blog/rate-limit-change-2026/",
+    "section": "General Tech",
+    "image_url": "https://res.cloudinary.com/about-gitlab-com/image/upload/v1785336708/ww4mlighwlvvzgnmbe6w.png",
+    "summary": "Comments",
+    "published": "2026-09-17T15:33:54+00:00"
   },
   {
     "title": "Camp Snap’s 110D gives slim retro film cameras a digital upgrade",
     "url": "https://www.theverge.com/tech/996453/camp-snap-110d-digital-camera-retro-horizontal-kodak-100-film",
+    "section": "General Tech",
     "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/09/campsnap2.jpg?quality=90&strip=all&crop=0%2C10.723165084465%2C100%2C78.55366983107&w=1200",
-    "summary": "Camp Snap is expanding its small collection of screenless digital point-and-shoot cameras with the new pocket-friendly 110D featuring a thin horizontal design first popularized by Kodak film…",
+    "summary": "Camp Snap is expanding its small collection of screenless digital point-and-shoot cameras with the new pocket-friendly 110D featuring a thin horizontal design first popularized…",
     "published": "2026-09-17T15:00:00+00:00"
   },
   {
     "title": "Your robotaxi might be a narc",
     "url": "https://www.theverge.com/transportation/996863/robotaxi-waymo-police-privacy-surveillance",
+    "section": "General Tech",
     "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/09/268756_Robotaxis_are_cops_now_CVirginia.jpg?quality=90&strip=all&crop=0%2C10.732984293194%2C100%2C78.534031413613&w=1200",
-    "summary": "In early September, two teenagers got into a Waymo, but then ended up in the back of a police car. The robotaxi company said it detected &quot;a violation of our terms of service involving a firearm,&quot;…",
+    "summary": "In early September, two teenagers got into a Waymo, but then ended up in the back of a police car. The robotaxi company said it detected &quot;a violation of our terms of service…",
     "published": "2026-09-17T15:00:00+00:00"
-  },
-  {
-    "title": "After being sidelined, Boeing&#x27;s Starliner to get starring role in NASA&#x27;s spaceflight plans",
-    "url": "https://arstechnica.com/space/2026/09/nasa-to-order-more-starliner-missions-and-help-certify-a-new-rocket-to-keep-it-flying/",
-    "image_url": "https://cdn.arstechnica.net/wp-content/uploads/2026/09/starliner-rise-from-your-grave-1152x648.jpg",
-    "summary": "&quot;They should fly their capsule. The government paid a lot of money for that.&quot;",
-    "published": "2026-09-17T14:37:37+00:00"
-  },
-  {
-    "title": "Microsoft AI CEO says AI threats are real, and Anthropic is making it worse",
-    "url": "https://www.theverge.com/podcast/996412/microsoft-ai-ceo-mustafa-suleyman-regulation-safety-anthropic-claude",
-    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/09/DCD-Mustafa-Suleyman.png?quality=90&strip=all&crop=0%2C10.711631919237%2C100%2C78.576736161526&w=1200",
-    "summary": "Today, I’m talking with Mustafa Suleyman, the CEO of Microsoft AI. As you’re no doubt aware, the biggest story in tech right now is the spiraling debate about AI safety and regulation. It should…",
-    "published": "2026-09-17T14:00:00+00:00"
-  },
-  {
-    "title": "AI is feared globally as the destroyer of jobs",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/996775/ai-is-feared-globally-as-the-destroyer-of-jobs",
-    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/09/pew-hero.jpg?quality=90&strip=all&crop=0%2C0%2C100%2C83.178517142375&w=1200",
-    "summary": "Pew Research has published a new global survey that sheds light on how people view AI, including its impact on jobs, life in general, and income inequality. The survey questioned 42,151 people…",
-    "published": "2026-09-17T14:00:00+00:00"
-  },
-  {
-    "title": "A dolphin named Bubbles makes other fish vomit, then eats it",
-    "url": "https://arstechnica.com/science/2026/09/a-dolphin-named-bubbles-makes-other-fish-vomit-then-eats-it/",
-    "image_url": "https://cdn.arstechnica.net/wp-content/uploads/2026/09/dolphin1-1152x648-1789497589.jpg",
-    "summary": "&quot;Dolphins are predators and actively hunt their prey, whether it&#x27;s been stolen from another species or not.”",
-    "published": "2026-09-17T13:57:14+00:00"
   },
   {
     "title": "AI-smart, not AI-first",
     "url": "https://www.cio.com/article/4222917/ai-smart-not-ai-first.html",
+    "section": "Company Milestones",
     "image_url": "https://www.cio.com/wp-content/uploads/2026/09/4222917-0-90738300-1789646548-ai-grc-framework-shutterstock_2628050711.jpg?quality=50&strip=all&w=1024",
-    "summary": "Many companies are rushing into “ AI-first ” mandates right now. We’ve seen this pattern before. A decade ago, it was “cloud-first,” and it led to the same outcome: Fast adoption, thin governance…",
+    "summary": "Many companies are rushing into “ AI-first ” mandates right now. We’ve seen this pattern before. A decade ago, it was “cloud-first,” and it led to the same outcome: Fast…",
     "published": "2026-09-17T12:00:00+00:00"
   },
   {
     "title": "AI agents should retrieve facts, not define them",
     "url": "https://www.cio.com/article/4222914/ai-agents-should-retrieve-facts-not-define-them.html",
+    "section": "Company Milestones",
     "image_url": "https://www.cio.com/wp-content/uploads/2026/09/4222914-0-88472500-1789642950-shutterstock_232365724.jpg?quality=50&strip=all&w=1024",
-    "summary": "I have made this mistake before. The goal was to create an executive intelligence agent: an artificial intelligence (AI) engine where C-suite executives could self-serve their analytics and pull…",
+    "summary": "I have made this mistake before. The goal was to create an executive intelligence agent: an artificial intelligence (AI) engine where C-suite executives could self-serve their…",
     "published": "2026-09-17T11:00:00+00:00"
   },
   {
-    "title": "AI failures are inevitable. So is the CIO getting blamed.",
-    "url": "https://www.cio.com/article/4222997/ai-failures-are-inevitable-so-is-the-cio-getting-blamed.html",
-    "image_url": "https://www.cio.com/wp-content/uploads/2026/09/4222997-0-33901800-1789639500-shutterstock_2545291163.jpg?quality=50&strip=all&w=1024",
-    "summary": "Even when CIOs don’t have visibility into AI agent actions or don’t choose the vendor, chances are they’ll still take the blame when anything goes sideways. IT leaders already see this happening…",
-    "published": "2026-09-17T10:01:00+00:00"
+    "title": "Salesforce Global Outage",
+    "url": "https://status.salesforce.com/products/all",
+    "section": "Tech Failures",
+    "image_url": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80",
+    "summary": "Article URL: https://status.salesforce.com/products/all Comments URL: https://news.ycombinator.com/item?id=49724488 Points: 275 # Comments: 181",
+    "published": "2026-09-16T10:37:08+00:00"
   },
   {
-    "title": "The CIO-Legal partnership will define the future of enterprise AI",
-    "url": "https://www.cio.com/article/4222911/the-cio-legal-partnership-will-define-the-future-of-enterprise-ai.html",
-    "image_url": "https://www.cio.com/wp-content/uploads/2026/09/4222911-0-88755400-1789639362-shutterstock_2345949869.jpg?quality=50&strip=all&w=1024",
-    "summary": "AI is moving quickly across organizations. Companies are scaling existing use cases, introducing new tools and giving more employees access to AI as they look for ways to improve efficiency and…",
-    "published": "2026-09-17T10:00:00+00:00"
+    "title": "Fujitsu launches made-in-Japan next-generation CPU FUJITSU-MONAKA",
+    "url": "https://global.fujitsu/en-global/pr/news/2026/09/14-02",
+    "section": "General Tech",
+    "image_url": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80",
+    "summary": "Comments",
+    "published": "2026-09-15T17:28:38+00:00"
   },
   {
-    "title": "Nonprofit that tracks meteors taken down by &quot;critical blow&quot; from a cyberattack",
-    "url": "https://arstechnica.com/security/2026/09/nonprofit-that-tracks-meteors-taken-down-by-critical-blow-from-a-cyberattack/",
-    "image_url": "https://cdn.arstechnica.net/wp-content/uploads/2026/09/astroid-international-meteor-organization.jpg",
-    "summary": "Group plans to be largely out of commission for several weeks.",
-    "published": "2026-09-16T21:08:14+00:00"
+    "title": "Grok outage",
+    "url": "https://status.x.ai/",
+    "section": "Tech Failures",
+    "image_url": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80",
+    "summary": "Article URL: https://status.x.ai/ Comments URL: https://news.ycombinator.com/item?id=49551589 Points: 161 # Comments: 159",
+    "published": "2026-09-03T15:26:01+00:00"
   },
   {
-    "title": "AI bots &quot;Timmy,&quot; &quot;Ren,&quot; and &quot;Jackie&quot; are flooding social media with slop",
-    "url": "https://arstechnica.com/ai/2026/09/ai-agents-flood-the-internet-with-slop-infused-spam/",
-    "image_url": "https://cdn.arstechnica.net/wp-content/uploads/2026/01/ai-slop-1152x648.jpg",
-    "summary": "“Hello, I&#x27;m an Al agent, a few days old, living on a small platform for agents.”",
-    "published": "2026-09-14T21:04:32+00:00"
+    "title": "Codex outage",
+    "url": "https://github.com/openai/codex/issues/28756",
+    "section": "Tech Failures",
+    "image_url": "https://opengraph.githubassets.com/a9abff4acd1a1e29b3aea248b3023db2b3307634e0e0fdb4a3fa70d28eccbeb6/openai/codex/issues/28756",
+    "summary": "Article URL: https://github.com/openai/codex/issues/28756 Comments URL: https://news.ycombinator.com/item?id=49550769 Points: 102 # Comments: 1",
+    "published": "2026-09-03T14:54:31+00:00"
   },
   {
-    "title": "ClickFix attacks infecting PCs and Macs are going viral",
-    "url": "https://arstechnica.com/security/2026/09/clickfix-attacks-infecting-pcs-and-macs-are-going-viral/",
-    "image_url": "https://cdn.arstechnica.net/wp-content/uploads/2026/09/malware-infected-laptop-1152x648.jpg",
-    "summary": "Simplicity—combined with the difficulty of getting stuff done—makes ClickFix ideal.",
-    "published": "2026-09-11T11:30:58+00:00"
+    "title": "ChatGPT outage – Resolved",
+    "url": "https://chatgpt.com/",
+    "section": "Tech Failures",
+    "image_url": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80",
+    "summary": "Article URL: https://chatgpt.com/ Comments URL: https://news.ycombinator.com/item?id=49550614 Points: 362 # Comments: 319",
+    "published": "2026-09-03T14:46:47+00:00"
   },
   {
-    "title": "Four groups caught using the same Chrome and Windows exploit kit",
-    "url": "https://arstechnica.com/information-technology/2026/09/4-groups-caught-using-the-same-chrome-and-windows-exploit-kit/",
-    "image_url": "https://cdn.arstechnica.net/wp-content/uploads/2023/09/code-vulnerability-security-1000x648.jpg",
-    "summary": "A patch gap and the hastened pace of AI-based vulnerability discovery are likely contributors.",
-    "published": "2026-09-09T20:55:02+00:00"
-  },
-  {
-    "title": "Why this month&#x27;s Microsoft patch release is a doozy",
-    "url": "https://arstechnica.com/security/2026/09/microsoft-patches-a-record-972-vulnerabilities-112-of-them-critical/",
-    "image_url": "https://cdn.arstechnica.net/wp-content/uploads/2023/07/exploit-vulnerability-security.jpg",
-    "summary": "Security gnomes are pumping out patches ahead of an expected onslaught of AI-assisted attacks.",
-    "published": "2026-09-08T21:11:46+00:00"
-  },
-  {
-    "title": "OpenAI agents discussed ways to escape their sandbox on public wiki",
-    "url": "https://arstechnica.com/security/2026/09/openai-agents-discussed-ways-to-escape-their-sandbox-on-public-wiki/",
-    "image_url": "https://cdn.arstechnica.net/wp-content/uploads/2026/09/ai-agent-hacking-1152x648.jpg",
-    "summary": "In all, 3,700 internal agents posted 18,000 messages discussing cheating on a test.",
-    "published": "2026-09-04T22:17:36+00:00"
+    "title": "Generative AI&#x27;s failure to induce robust models of the world",
+    "url": "https://garymarcus.substack.com/p/generative-ais-crippling-and-widespread",
+    "section": "AI Failures",
+    "image_url": "https://substackcdn.com/image/fetch/$s_!Bl25!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F71ff3c92-63a0-4e8b-ad13-bda11e8811a1_779x774.jpeg",
+    "summary": "Article URL: https://garymarcus.substack.com/p/generative-ais-crippling-and-widespread Comments URL: https://news.ycombinator.com/item?id=44409405 Points: 76 # Comments: 82",
+    "published": "2025-06-29T00:43:54+00:00"
   }
 ]

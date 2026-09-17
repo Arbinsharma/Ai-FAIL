@@ -13,15 +13,24 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(me
 
 OUTPUT_FILE = "news.json"
 
-# Real publisher feeds — these reliably have og:image tags
-FEEDS = [
-    "https://www.theverge.com/rss/index.xml",
-    "https://arstechnica.com/feed/",
-    "https://techcrunch.com/feed/",
-    "https://www.cio.com/feed/",
-    "https://feeds.arstechnica.com/arstechnica/technology-lab",
-    "https://hnrss.org/newest?q=AI&points=50",
-]
+FEED_SOURCES = {
+    "AI Failures": [
+        "https://hnrss.org/newest?q=AI+failure&points=20",
+        "https://hnrss.org/newest?q=hallucination+AI&points=20",
+    ],
+    "Tech Failures": [
+        "https://arstechnica.com/feed/",
+        "https://hnrss.org/newest?q=outage&points=20",
+    ],
+    "Company Milestones": [
+        "https://techcrunch.com/feed/",
+        "https://www.cio.com/feed/",
+    ],
+    "General Tech": [
+        "https://www.theverge.com/rss/index.xml",
+        "https://news.ycombinator.com/rss",
+    ]
+}
 
 FALLBACK_IMG = (
     "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe"
@@ -29,157 +38,90 @@ FALLBACK_IMG = (
 )
 
 HEADERS = {
-    "User-Agent": (
-        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-        "AppleWebKit/537.36 (KHTML, like Gecko) "
-        "Chrome/120.0.0.0 Safari/537.36"
-    ),
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
     "Accept-Language": "en-US,en;q=0.9",
 }
 
-
 def clean_html(raw):
-    """Strip HTML tags and unescape entities from an RSS snippet."""
     text = re.sub(r"<[^>]+>", " ", raw or "")
-    text = html_lib.unescape(text)
-    return re.sub(r"\s+", " ", text).strip()
+    return re.sub(r"\s+", " ", html_lib.unescape(text)).strip()
 
-
-def truncate(s, n=200):
+def truncate(s, n=180):
     s = s.strip()
-    if len(s) <= n:
-        return s
-    return s[: n - 3].rsplit(" ", 1)[0] + "…"
-
+    return s if len(s) <= n else s[:n-3].rsplit(" ", 1)[0] + "…"
 
 def to_iso(entry):
     if entry.get("published_parsed"):
-        return datetime.datetime(
-            *entry.published_parsed[:6], tzinfo=datetime.timezone.utc
-        ).isoformat()
+        return datetime.datetime(*entry.published_parsed[:6], tzinfo=datetime.timezone.utc).isoformat()
     return datetime.datetime.now(datetime.timezone.utc).isoformat()
 
-
 def extract_og_image(article_url):
-    """
-    Robustly fetch the cover image, checking OpenGraph, Twitter cards, 
-    and direct article CDNs for publishers like Ars Technica and The Verge.
-    """
     try:
-        with requests.get(
-            article_url, headers=HEADERS, timeout=6, stream=True
-        ) as r:
+        with requests.get(article_url, headers=HEADERS, timeout=5, stream=True) as r:
             if r.status_code != 200:
                 return None
             buf = b""
             for chunk in r.iter_content(8192):
                 buf += chunk
-                if b"</head>" in buf or len(buf) > 150_000:
+                if b"</head>" in buf or len(buf) > 100_000:
                     break
-
         soup = BeautifulSoup(buf, "html.parser")
-
-        # 1. Open Graph image tags
-        for prop in ("og:image", "og:image:secure_url"):
+        for prop in ("og:image", "og:image:secure_url", "twitter:image"):
             tag = soup.find("meta", property=prop) or soup.find("meta", attrs={"name": prop})
             if tag and tag.get("content"):
                 return tag["content"]
-
-        # 2. Twitter card image tags
-        for name in ("twitter:image", "twitter:image:src"):
-            tag = soup.find("meta", property=name) or soup.find("meta", attrs={"name": name})
-            if tag and tag.get("content"):
-                return tag["content"]
-
-        # 3. Direct CDN / article body image check (for Ars Technica, etc.)
-        article_body = soup.find("article") or soup.find("div", class_="post-content") or soup
-        img_tag = article_body.find("img")
-        if img_tag:
-            src = img_tag.get("src") or img_tag.get("data-src")
-            if src and src.startswith("http") and not any(x in src.lower() for x in ("avatar", "logo", "icon", "spacer")):
-                return src
-
-        # 4. Fallback search for any valid image link in the page
-        for img in soup.find_all("img"):
-            src = img.get("src", "")
-            if src.startswith("http") and any(ext in src.lower() for ext in (".jpg", ".jpeg", ".png", ".webp")):
-                if not any(x in src.lower() for x in ("avatar", "logo", "icon", "pixel", "advertisement")):
-                    return src
-
-    except Exception as e:
-        logging.debug(f"Image scrape failed for {article_url}: {e}")
-
+        img = soup.find("img")
+        if img and img.get("src", "").startswith("http"):
+            return img["src"]
+    except Exception:
+        pass
     return None
 
-
-def is_scrapable(url):
-    """Skip HN discussion pages and other non-article URLs."""
-    if not url:
-        return False
-    if "news.ycombinator.com/item?id=" in url:
-        return False
-    if url.endswith((".pdf", ".zip")):
-        return False
-    return True
-
-
 def fetch_news():
-    logging.info("Starting news fetch...")
+    logging.info("Starting categorized news fetch...")
     articles = []
     seen = set()
 
-    for feed_url in FEEDS:
-        try:
-            feed = feedparser.parse(feed_url)
-            for entry in feed.entries[:6]:
-                link = (entry.get("link") or "").strip()
-                if not is_scrapable(link) or link in seen:
-                    continue
-                seen.add(link)
+    for section_name, feeds in FEED_SOURCES.items():
+        for feed_url in feeds:
+            try:
+                feed = feedparser.parse(feed_url)
+                for entry in feed.entries[:4]:
+                    link = (entry.get("link") or "").strip()
+                    if not link or link in seen or "news.ycombinator.com/item" in link:
+                        continue
+                    seen.add(link)
 
-                title = clean_html(entry.get("title", "Untitled"))
-                summary = clean_html(
-                    entry.get("summary") or entry.get("description") or ""
-                )
+                    title = clean_html(entry.get("title", "Untitled"))
+                    summary = clean_html(entry.get("summary") or entry.get("description") or "")
 
-                articles.append(
-                    {
+                    articles.append({
                         "title": html_lib.escape(title),
                         "url": link,
+                        "section": section_name,
                         "image_url": None,
                         "summary": html_lib.escape(truncate(summary)),
                         "published": to_iso(entry),
-                    }
-                )
-        except Exception as e:
-            logging.error(f"Feed error {feed_url}: {e}")
+                    })
+            except Exception as e:
+                logging.error(f"Feed error {feed_url}: {e}")
 
     if not articles:
-        logging.warning("No articles fetched — leaving news.json untouched.")
         return
 
-    logging.info(f"Scraping images for {len(articles)} articles in parallel...")
+    logging.info(f"Scraping images for {len(articles)} articles...")
     with ThreadPoolExecutor(max_workers=8) as pool:
         images = list(pool.map(extract_og_image, [a["url"] for a in articles]))
 
-    hits = 0
     for article, img in zip(articles, images):
-        if img:
-            article["image_url"] = img
-            hits += 1
-        else:
-            article["image_url"] = FALLBACK_IMG
-
-    logging.info(f"Real images found: {hits}/{len(articles)}")
-    logging.info(f"Fallback used: {len(articles) - hits}")
+        article["image_url"] = img if img else FALLBACK_IMG
 
     articles.sort(key=lambda a: a["published"], reverse=True)
 
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         json.dump(articles, f, indent=2, ensure_ascii=False)
 
-    logging.info(f"Saved {len(articles)} articles to {OUTPUT_FILE}")
-
+    logging.info(f"Successfully saved {len(articles)} articles with sections!")
 
 if __name__ == "__main__":
     fetch_news()

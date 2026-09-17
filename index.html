@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI & Tech News Portal</title>
+    <title>AI Fail & Tech News Portal</title>
     <style>
         :root {
-            --bg-color: #f8f9fa;
+            --bg-color: #f4f6f9;
             --card-bg: #ffffff;
             --text-color: #212529;
             --text-muted: #6c757d;
-            --accent-color: #0d6efd;
+            --accent-color: #dc3545; /* Red badge vibe for AI Fail */
             --border-color: #dee2e6;
+            --badge-bg: #ffe3e6;
         }
 
         [data-theme="dark"] {
@@ -19,23 +20,24 @@
             --card-bg: #1e1e1e;
             --text-color: #f8f9fa;
             --text-muted: #adb5bd;
-            --accent-color: #3b82f6;
+            --accent-color: #ef4444;
             --border-color: #2d3748;
+            --badge-bg: #451a03;
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             background-color: var(--bg-color);
             color: var(--text-color);
             margin: 0;
             padding: 0;
-            transition: background 0.3s ease, color 0.3s ease;
+            transition: background 0.3s, color 0.3s;
         }
 
         header {
             background-color: var(--card-bg);
             border-bottom: 1px solid var(--border-color);
-            padding: 1.5rem 2rem;
+            padding: 1rem 2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -44,10 +46,23 @@
             z-index: 1000;
         }
 
-        header h1 {
-            margin: 0;
-            font-size: 1.5rem;
-            color: var(--accent-color);
+        /* Cool AI Fail Watermark Badge Logo */
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .ai-fail-badge {
+            background: linear-gradient(135deg, #ff416c, #ff4b2b);
+            color: white;
+            font-weight: 900;
+            font-size: 1rem;
+            padding: 8px 14px;
+            border-radius: 12px;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 15px rgba(255, 65, 108, 0.4);
+            text-transform: uppercase;
         }
 
         .theme-toggle {
@@ -55,9 +70,35 @@
             border: 1px solid var(--border-color);
             color: var(--text-color);
             padding: 0.5rem 1rem;
-            border-radius: 6px;
+            border-radius: 8px;
             cursor: pointer;
             font-weight: 600;
+        }
+
+        /* Navigation Menu / Category Tabs */
+        .nav-menu {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            padding: 1.5rem 1rem 0 1rem;
+            flex-wrap: wrap;
+        }
+
+        .nav-btn {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            color: var(--text-color);
+            padding: 8px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+
+        .nav-btn.active, .nav-btn:hover {
+            background-color: var(--accent-color);
+            color: white;
+            border-color: var(--accent-color);
         }
 
         .container {
@@ -66,44 +107,86 @@
             padding: 0 1rem;
         }
 
+        /* About Me / Creator Section */
+        .about-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 2.5rem;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+        }
+
+        .about-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--accent-color);
+        }
+
+        .about-info h3 {
+            margin: 0 0 5px 0;
+            font-size: 1.2rem;
+        }
+
+        .about-info p {
+            margin: 0;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.4;
+        }
+
+        /* News Grid & Cards */
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
         }
 
         .card {
             background-color: var(--card-bg);
             border: 1px solid var(--border-color);
-            border-radius: 10px;
+            border-radius: 12px;
             overflow: hidden;
             display: flex;
             flex-direction: column;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            transition: transform 0.2s, box-shadow 0.2s;
         }
 
         .card:hover {
             transform: translateY(-4px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
         }
 
         .card img {
             width: 100%;
-            height: 190px;
+            height: 180px;
             object-fit: cover;
-            background-color: #ddd;
         }
 
-        .card-content {
+        .card-body {
             padding: 1.25rem;
             display: flex;
             flex-direction: column;
             flex-grow: 1;
         }
 
+        .section-tag {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--accent-color);
+            margin-bottom: 0.5rem;
+            letter-spacing: 0.5px;
+        }
+
         .card h3 {
-            margin: 0 0 0.75rem 0;
-            font-size: 1.15rem;
+            margin: 0 0 0.5rem 0;
+            font-size: 1.1rem;
             line-height: 1.4;
         }
 
@@ -118,22 +201,22 @@
 
         .card p {
             color: var(--text-muted);
-            font-size: 0.95rem;
-            line-height: 1.5;
-            margin: 0 0 1.25rem 0;
+            font-size: 0.9rem;
+            line-height: 1.4;
+            margin: 0 0 1rem 0;
             flex-grow: 1;
         }
 
         .card-footer {
             display: flex;
             justify-content: space-between;
-            align-items: center;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             color: var(--text-muted);
             border-top: 1px solid var(--border-color);
             padding-top: 0.75rem;
         }
 
+        /* Footer styling with bold copyright */
         footer {
             text-align: center;
             padding: 3rem 1rem;
@@ -143,16 +226,16 @@
             font-size: 0.9rem;
         }
 
-        footer span {
+        .copyright {
             font-weight: bold;
             color: var(--text-color);
+            margin-top: 1rem;
         }
 
         .loading {
             text-align: center;
             grid-column: 1 / -1;
-            padding: 4rem;
-            font-size: 1.2rem;
+            padding: 3rem;
             color: var(--text-muted);
         }
     </style>
@@ -160,23 +243,47 @@
 <body>
 
     <header>
-        <h1>⚡ Tech & AI Pulse</h1>
+        <div class="logo-container">
+            <div class="ai-fail-badge">⚡ AI FAIL</div>
+            <span style="font-weight: 700; font-size: 1.1rem;">Tech Pulse</span>
+        </div>
         <button class="theme-toggle" onclick="toggleTheme()">🌓 Theme</button>
     </header>
 
+    <!-- Navigation Menu Filter Tabs -->
+    <div class="nav-menu" id="nav-menu">
+        <button class="nav-btn active" onclick="filterArticles('All', this)">All News</button>
+        <button class="nav-btn" onclick="filterArticles('AI Failures', this)">AI Failures</button>
+        <button class="nav-btn" onclick="filterArticles('Tech Failures', this)">Tech Failures</button>
+        <button class="nav-btn" onclick="filterArticles('Company Milestones', this)">Milestones</button>
+        <button class="nav-btn" onclick="filterArticles('General Tech', this)">General Tech</button>
+    </div>
+
     <div class="container">
+        <!-- About Me / Creator Section -->
+        <div class="about-card">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80" alt="Creator Photo" class="about-avatar">
+            <div class="about-info">
+                <h3>About the Creators</h3>
+                <p>Built with passion by <strong>Prashant Bhusal & Arbin Sharma</strong> — Grade 9 students at Rosy Buds Bal Batika School, Nepal.</p>
+                <p>Reach out: <a href="mailto:prashantvushal@gmail.com" style="color: var(--accent-color);">prashantvushal@gmail.com</a></p>
+            </div>
+        </div>
+
+        <!-- News Grid -->
         <div id="news-grid" class="grid">
-            <div class="loading">Loading latest breaking articles...</div>
+            <div class="loading">Loading breaking news and failures...</div>
         </div>
     </div>
 
     <footer>
-        <p>Developed with passion by <span>Prashant Bhusal & Arbin Sharma</span> (Grade 9, Rosy Buds Bal Batika, Nepal)</p>
-        <p>Contact: <a href="mailto:prashantvushal@gmail.com" style="color: var(--accent-color);">prashantvushal@gmail.com</a></p>
+        <p>Brought to you by the AI Fail & Tech News Network.</p>
+        <p class="copyright">© 2026 Prashant Bhusal & Arbin Sharma. All rights reserved. Unauthorized reproduction prohibited.</p>
     </footer>
 
     <script>
-        // Theme Switcher Logic
+        let allArticles = [];
+
         function toggleTheme() {
             const current = document.documentElement.getAttribute('data-theme');
             const target = current === 'dark' ? 'light' : 'dark';
@@ -184,49 +291,57 @@
             localStorage.setItem('theme', target);
         }
 
-        // Load saved theme preference
-        const savedTheme = localStorage.getItem('theme') || 'light';
-        document.documentElement.setAttribute('data-theme', savedTheme);
+        document.documentElement.setAttribute('data-theme', localStorage.getItem('theme') || 'light');
 
-        // Fetch and Render News from news.json
         async function loadNews() {
             const grid = document.getElementById('news-grid');
             try {
-                const response = await fetch('news.json?' + new Date().getTime()); // bypass cache
-                if (!response.ok) throw new Error('Failed to load news data.');
-                
-                const articles = await response.json();
-                
-                if (articles.length === 0) {
-                    grid.innerHTML = '<div class="loading">No articles available right now. Check back soon!</div>';
-                    return;
-                }
+                const res = await fetch('news.json?' + new Date().getTime());
+                if (!res.ok) throw new Error('Could not load news');
+                allArticles = await res.json();
+                displayArticles(allArticles);
+            } catch (e) {
+                grid.innerHTML = '<div class="loading">Failed to load news. Run python3 fetch_news.py first!</div>';
+            }
+        }
 
-                grid.innerHTML = '';
-                articles.forEach(article => {
-                    const dateStr = new Date(article.published).toLocaleDateString(undefined, {
-                        month: 'short', day: 'numeric', year: 'numeric'
-                    });
+        function displayArticles(articles) {
+            const grid = document.getElementById('news-grid');
+            if (articles.length === 0) {
+                grid.innerHTML = '<div class="loading">No articles found in this category.</div>';
+                return;
+            }
 
-                    const card = document.createElement('div');
-                    card.className = 'card';
-                    card.innerHTML = `
-                        <img src="${article.image_url}" alt="Article Cover Image" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80'">
-                        <div class="card-content">
-                            <h3><a href="${article.url}" target="_blank" rel="noopener noreferrer">${article.title}</a></h3>
-                            <p>${article.summary}</p>
-                            <div class="card-footer">
-                                <span>Published</span>
-                                <span>${dateStr}</span>
-                            </div>
+            grid.innerHTML = '';
+            articles.forEach(art => {
+                const dateStr = new Date(art.published).toLocaleDateString(undefined, {month:'short', day:'numeric'});
+                const card = document.createElement('div');
+                card.className = 'card';
+                card.innerHTML = `
+                    <img src="${art.image_url}" alt="Cover" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80'">
+                    <div class="card-body">
+                        <span class="section-tag">${art.section}</span>
+                        <h3><a href="${art.url}" target="_blank" rel="noopener">${art.title}</a></h3>
+                        <p>${art.summary}</p>
+                        <div class="card-footer">
+                            <span>News Update</span>
+                            <span>${dateStr}</span>
                         </div>
-                    `;
-                    grid.appendChild(card);
-                });
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
 
-            } catch (error) {
-                console.error(error);
-                grid.innerHTML = '<div class="loading">Unable to load news feed. Please run python3 fetch_news.py to generate news.json.</div>';
+        function filterArticles(category, btn) {
+            document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            if (category === 'All') {
+                displayArticles(allArticles);
+            } else {
+                const filtered = allArticles.filter(a => a.section === category);
+                displayArticles(filtered);
             }
         }
 
