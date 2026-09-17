@@ -1,5 +1,95 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Watchdog & Safety Updates</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0f172a;
+            color: #f8fafc;
+            margin: 0;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        header {
+            text-align: center;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #334155;
+        }
+        h1 {
+            color: #38bdf8;
+            font-size: 2.5rem;
+        }
+        .badge {
+            background-color: #ef4444;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        .card {
+            background-color: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 8px;
+            padding: 24px;
+            margin-top: 30px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            background: #0f172a;
+            margin: 12px 0;
+            padding: 16px;
+            border-radius: 6px;
+            border-left: 4px solid #ef4444;
+        }
+        a {
+            color: #38bdf8;
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            color: #94a3b8;
+            font-size: 0.875rem;
+        }
+    </style>
 </head>
-<body
-<h1 style="text-align: center; font-size:4em;"\> AI FAILS </h1>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Threat & Vulnerability Tracker</h1>
+            <p>Automatically capturing AI failures, jailbreaks, and safety risks.</p>
+        </header>
+        
+        <div class="card">
+            <h2><span class="badge">Latest Incidents</span> Automated Feed</h2>
+            <ul>
+                <li><a href='https://news.google.com/rss/articles/CBMingFBVV95cUxQdU5nVVRuUkpVc05JdE5XSnl6Rk0zLVEzV0F6TWhhTXoycTB5MW4yZ3NqT0toU0F5eFVhd2czOTc4dElISzdHSmVfaW9uQnFudXFEenVwRi1fNEpoZGJ6ZHphUXZKaWNnSHo0cHZhVVhObHNlUXFub1k3Z1RndmN1NXN1SWkxUGF5ejNLTmZUSGcweHUwaXk2LS1SRW1jZw?oc=5' target='_blank'>Leading AI models are more vulnerable to malicious prompts than vendors claim - Cybersecurity Dive</a></li>
+<li><a href='https://news.google.com/rss/articles/CBMifkFVX3lxTE9Qc0plOG9hZUV1aFk1WmRIOW5VajI1M1lrQzBuRkVqRkZnYkNKRmN1Rlo3dl93SVFQN3J1ZWxja25PZjNkSDZ6Zmx1a3dNUEw3UTR4emFmN2VVYklwM0w2RkFwZ3BTbkgyUFg5YTdZUGtrUU13aEtHQkdsWGg1dw?oc=5' target='_blank'>AI Jailbreak Prompts Are Evolving Into Real Cyber Threats - Bitsight</a></li>
+<li><a href='https://news.google.com/rss/articles/CBMilgFBVV95cUxNRHRTZDJ0T3JwbFhmczBjYW1xMWtJZFJUN3M4V3N3d3NJUGlYTUlDbVRjeUhiamEza29mejFwcnVEZzZtVzI5c3JvYnZ6MkNCajhUTHV3dzNKcnVna3FMdEVmMVQwLXFZY1FoSkVDaUYwWjF3X004S3pqeWdSX1ZJTkhTMFZtYmhMZ3V5R0RiRVEzaXp4SkE?oc=5' target='_blank'>Hidden Prompts in Manuscripts Exploit AI-Assisted Peer Review - Communications of the ACM</a></li>
+<li><a href='https://news.google.com/rss/articles/CBMieEFVX3lxTE51d0YxWGdWWXdvSHFjUmVJaV9uaGZYUnhoVHV5QkswNkc5cl9OMTZpVFJXTlJ0ZzNCeTFrYTBQeFlWeEpic3N2UHVmWmRsYV9HQ3VmQmZabTZFRFhoS1YyZGg0S0Y0Si11blhmZWxRaGdwb19HcmlFadIBfkFVX3lxTE1sVWl3bDdjeVJqaElzM2oyMW1pMWNQODgtWU1wQ1ZHTnU2aGVBei0xeldzem5YUlNBZFF4U29CN3RfRGNZTFNDTl9FT3Q0T04wWUpYMC1Ob3luWHE5V3k0anMyS1VTc1paQjNrLVBNNEpsLVotWHZ0RXdlS3o3QQ?oc=5' target='_blank'>Anthropic Disputes Fable 5 AI Jailbreak - SecurityWeek</a></li>
+<li><a href='https://news.google.com/rss/articles/CBMigwFBVV95cUxOQ1kwR1dpeHZ1TDZjNTQ4VFczOGlzNkI4a1pCMnRwakRRVkx5VmVjR1YzRy1vVW1kUnNKdlp0YnhFSUt1bTBWZnNFbENJTjBXNFZPbzU0RGZjN1E5cTNkVEdhN3ZJQlJiV3ZNZUdEdVo5SHRDZk1DTE5lNEt1Tk9DVFdRdw?oc=5' target='_blank'>ChatGPhish Vulnerability Turns ChatGPT Web Summaries Into a Phishing Surface - The Hacker News</a></li>
+            </ul>
+        </div>
+
+        <footer>
+            <p>Last updated on: 2026-09-17 16:21:23 UTC</p>
+        </footer>
+    </div>
+</body>
+</html>
