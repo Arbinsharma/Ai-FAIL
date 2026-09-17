@@ -3,11 +3,14 @@ import re
 import urllib.parse
 import feedparser
 
-# RSS Feeds for AI News
+# RSS Feeds for AI News & Failures/Updates
 RSS_FEEDS = [
+    "https://news.google.com/rss/search?q=artificial+intelligence+fails+or+mistakes&hl=en-US&gl=US&ceid=US:en",
     "https://news.google.com/rss/search?q=artificial+intelligence&hl=en-US&gl=US&ceid=US:en",
     "https://techcrunch.com/category/artificial-intelligence/feed/",
 ]
+
+MAX_ARTICLES = 12  # Limits articles so the page loads fast without endless scrolling
 
 def clean_html(raw_html):
     """Remove HTML tags from text."""
@@ -24,17 +27,21 @@ def extract_image(entry):
         for link in entry.links:
             if link.get('type', '').startswith('image/'):
                 return link.get('href', '')
-    # Fallback default image
-    return "https://via.placeholder.com/600x350?text=AI+News"
+    # Default SVG placeholder fallback
+    return "https://via.placeholder.com/600x350/1e1e1e/4da6ff?text=AI+Failed+Portal"
 
 def fetch_all_news():
-    """Fetch news items from RSS feeds."""
+    """Fetch news items from RSS feeds up to MAX_ARTICLES."""
     articles = []
     seen_titles = set()
 
     for url in RSS_FEEDS:
+        if len(articles) >= MAX_ARTICLES:
+            break
         feed = feedparser.parse(url)
         for entry in feed.entries:
+            if len(articles) >= MAX_ARTICLES:
+                break
             title = entry.get('title', 'No Title')
             if title in seen_titles:
                 continue
@@ -48,7 +55,7 @@ def fetch_all_news():
             articles.append({
                 'title': title,
                 'link': link,
-                'summary': summary[:200] + '...' if len(summary) > 200 else summary,
+                'summary': summary[:160] + '...' if len(summary) > 160 else summary,
                 'image': image_url,
                 'source': source
             })
@@ -57,12 +64,13 @@ def fetch_all_news():
 def generate_html(articles):
     """Generate the full HTML page."""
     
-    # Generate news grid cards
     news_cards_html = ""
     for article in articles:
         news_cards_html += f"""
         <div class="news-card">
-            <img src="{article['image']}" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
+            <div class="card-img-container">
+                <img src="{article['image']}" alt="News Image" onerror="this.onerror=null; this.src='https://via.placeholder.com/600x350/1e1e1e/4da6ff?text=AI+Failed+Portal';">
+            </div>
             <div class="news-content">
                 <span class="source-badge">{article['source']}</span>
                 <h3>{article['title']}</h3>
@@ -72,30 +80,29 @@ def generate_html(articles):
         </div>
         """
 
-    # Full HTML structure
     html_content = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Pulse - Latest AI News</title>
+    <title>AI Failed Portal - Latest AI Failures & News</title>
     <style>
         :root {{
-            --bg-color: #f4f6f9;
-            --card-bg: #ffffff;
-            --text-color: #1a1a1a;
-            --text-muted: #666666;
-            --accent-color: #0066cc;
-            --border-color: #e0e0e0;
+            --bg-color: #0d1117;
+            --card-bg: #161b22;
+            --text-color: #c9d1d9;
+            --text-muted: #8b949e;
+            --accent-color: #58a6ff;
+            --border-color: #30363d;
         }}
 
-        [data-theme="dark"] {{
-            --bg-color: #121212;
-            --card-bg: #1e1e1e;
-            --text-color: #e0e0e0;
-            --text-muted: #aaa;
-            --accent-color: #4da6ff;
-            --border-color: #333333;
+        [data-theme="light"] {{
+            --bg-color: #f6f8fa;
+            --card-bg: #ffffff;
+            --text-color: #24292f;
+            --text-muted: #57606a;
+            --accent-color: #0969da;
+            --border-color: #d0d7de;
         }}
 
         * {{
@@ -106,7 +113,7 @@ def generate_html(articles):
         }}
 
         body {{
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             background-color: var(--bg-color);
             color: var(--text-color);
             line-height: 1.6;
@@ -172,32 +179,38 @@ def generate_html(articles):
         }}
 
         h2.section-title {{
-            font-size: 2rem;
+            font-size: 1.8rem;
             margin-bottom: 1.5rem;
             border-bottom: 2px solid var(--accent-color);
             display: inline-block;
             padding-bottom: 0.3rem;
         }}
 
-        /* News Grid */
         .news-grid {{
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 1.8rem;
         }}
 
         .news-card {{
             background-color: var(--card-bg);
             border: 1px solid var(--border-color);
-            border-radius: 8px;
+            border-radius: 10px;
             overflow: hidden;
             display: flex;
             flex-direction: column;
         }}
 
-        .news-card img {{
+        .card-img-container {{
             width: 100%;
             height: 200px;
+            background-color: #000;
+            overflow: hidden;
+        }}
+
+        .news-card img {{
+            width: 100%;
+            height: 100%;
             object-fit: cover;
         }}
 
@@ -209,7 +222,7 @@ def generate_html(articles):
         }}
 
         .source-badge {{
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             background-color: var(--accent-color);
             color: #fff;
             padding: 0.2rem 0.5rem;
@@ -219,13 +232,13 @@ def generate_html(articles):
         }}
 
         .news-card h3 {{
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             margin-bottom: 0.5rem;
         }}
 
         .news-card p {{
             color: var(--text-muted);
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             flex-grow: 1;
             margin-bottom: 1rem;
         }}
@@ -234,28 +247,28 @@ def generate_html(articles):
             text-decoration: none;
             color: var(--accent-color);
             font-weight: bold;
+            font-size: 0.9rem;
         }}
 
-        /* About & Gallery */
         .about-card {{
             background-color: var(--card-bg);
             border: 1px solid var(--border-color);
             padding: 2rem;
-            border-radius: 8px;
+            border-radius: 10px;
         }}
 
         .gallery {{
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
             gap: 1rem;
             margin-top: 1.5rem;
         }}
 
         .gallery img {{
             width: 100%;
-            height: 180px;
+            height: 160px;
             object-fit: cover;
-            border-radius: 6px;
+            border-radius: 8px;
             border: 1px solid var(--border-color);
         }}
 
@@ -272,7 +285,7 @@ def generate_html(articles):
 
     <header>
         <nav class="navbar">
-            <div class="logo">AI Pulse Portal</div>
+            <div class="logo">AI Failed Portal</div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#news">AI News</a></li>
@@ -284,13 +297,11 @@ def generate_html(articles):
     </header>
 
     <div class="container">
-        <!-- Home Section -->
         <section id="home" class="section">
-            <h2 class="section-title">Latest AI Updates</h2>
-            <p>Welcome to AI Pulse, your automated news portal for real-time artificial intelligence updates.</p>
+            <h2 class="section-title">Latest AI Failures & Updates</h2>
+            <p>Welcome to AI Failed Portal — real-time automated tracking of artificial intelligence mishaps, errors, and breaking news from global sources.</p>
         </section>
 
-        <!-- News Section -->
         <section id="news" class="section">
             <h2 class="section-title">AI News Feed</h2>
             <div class="news-grid">
@@ -298,46 +309,45 @@ def generate_html(articles):
             </div>
         </section>
 
-        <!-- About Section -->
         <section id="about" class="section">
             <h2 class="section-title">About the Developer</h2>
             <div class="about-card">
                 <h3>Prashant Bhusal / Arbin Sharma</h3>
-                <p>Hi! I am Prashant Bhusal (Arbin Sharma), a 9th-grade student at Rose Buds Balvatika in Nepal. I built this automated AI news portal to track real-time artificial intelligence developments from top global sources.</p>
+                <p style="margin-top: 0.5rem;">Hello! I am Prashant Bhusal (also known as Arbin Sharma), a 9th-grade student studying at Rose Buds Balvatika School in Nepal. I am a tech enthusiast focused on web development, automation, and cybersecurity.</p>
+                <p style="margin-top: 0.5rem;">I created <strong>AI Failed Portal</strong> to automatically fetch and curate real-time intelligence on artificial intelligence failures, glitches, and major breakthroughs across the tech industry.</p>
                 
                 <h4 style="margin-top: 1.5rem;">Gallery</h4>
                 <div class="gallery">
-                    <img src="image1.jpg" alt="Prashant Bhusal 1" onerror="this.src='https://via.placeholder.com/200?text=Photo+1';">
-                    <img src="image2.jpg" alt="Prashant Bhusal 2" onerror="this.src='https://via.placeholder.com/200?text=Photo+2';">
-                    <img src="image3.jpg" alt="Prashant Bhusal 3" onerror="this.src='https://via.placeholder.com/200?text=Photo+3';">
-                    <img src="image4.jpg" alt="Prashant Bhusal 4" onerror="this.src='https://via.placeholder.com/200?text=Photo+4';">
-                    <img src="image5.jpg" alt="Prashant Bhusal 5" onerror="this.src='https://via.placeholder.com/200?text=Photo+5';">
+                    <img src="image1.jpg" alt="Photo 1" onerror="this.onerror=null; this.src='https://via.placeholder.com/200?text=Photo+1';">
+                    <img src="image2.jpg" alt="Photo 2" onerror="this.onerror=null; this.src='https://via.placeholder.com/200?text=Photo+2';">
+                    <img src="image3.jpg" alt="Photo 3" onerror="this.onerror=null; this.src='https://via.placeholder.com/200?text=Photo+3';">
+                    <img src="image4.jpg" alt="Photo 4" onerror="this.onerror=null; this.src='https://via.placeholder.com/200?text=Photo+4';">
+                    <img src="image5.jpg" alt="Photo 5" onerror="this.onerror=null; this.src='https://via.placeholder.com/200?text=Photo+5';">
                 </div>
             </div>
         </section>
 
-        <!-- Contact Section -->
         <section id="contact" class="section">
             <h2 class="section-title">Contact Me</h2>
             <div class="about-card">
                 <p>Have suggestions or feedback? Reach out directly via email!</p>
-                <p style="margin-top: 0.5rem;"><strong>Email:</strong> <a href="mailto:your_email@example.com" style="color: var(--accent-color);">your_email@example.com</a></p>
+                <p style="margin-top: 0.5rem;"><strong>Email:</strong> <a href="mailto:prashantvushal@gmail.com" style="color: var(--accent-color);">prashantvushal@gmail.com</a></p>
             </div>
         </section>
     </div>
 
     <footer>
-        <p>&copy; 2026 AI Pulse Portal. Developed by Prashant Bhusal (Arbin Sharma).</p>
+        <p>&copy; 2026 AI Failed Portal. Developed by Prashant Bhusal (Arbin Sharma), 9th Grade Student at Rose Buds Balvatika.</p>
     </footer>
 
     <script>
         function toggleTheme() {{
             const body = document.body;
             const currentTheme = body.getAttribute('data-theme');
-            if (currentTheme === 'dark') {{
+            if (currentTheme === 'light') {{
                 body.removeAttribute('data-theme');
             }} else {{
-                body.setAttribute('data-theme', 'dark');
+                body.setAttribute('data-theme', 'light');
             }}
         }}
     </script>

@@ -3,24 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Pulse - Latest AI News</title>
+    <title>AI Failed Portal - Latest AI Failures & News</title>
     <style>
         :root {
-            --bg-color: #f4f6f9;
-            --card-bg: #ffffff;
-            --text-color: #1a1a1a;
-            --text-muted: #666666;
-            --accent-color: #0066cc;
-            --border-color: #e0e0e0;
+            --bg-color: #0d1117;
+            --card-bg: #161b22;
+            --text-color: #c9d1d9;
+            --text-muted: #8b949e;
+            --accent-color: #58a6ff;
+            --border-color: #30363d;
         }
 
-        [data-theme="dark"] {
-            --bg-color: #121212;
-            --card-bg: #1e1e1e;
-            --text-color: #e0e0e0;
-            --text-muted: #aaa;
-            --accent-color: #4da6ff;
-            --border-color: #333333;
+        [data-theme="light"] {
+            --bg-color: #f6f8fa;
+            --card-bg: #ffffff;
+            --text-color: #24292f;
+            --text-muted: #57606a;
+            --accent-color: #0969da;
+            --border-color: #d0d7de;
         }
 
         * {
@@ -31,7 +31,7 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             background-color: var(--bg-color);
             color: var(--text-color);
             line-height: 1.6;
@@ -97,32 +97,38 @@
         }
 
         h2.section-title {
-            font-size: 2rem;
+            font-size: 1.8rem;
             margin-bottom: 1.5rem;
             border-bottom: 2px solid var(--accent-color);
             display: inline-block;
             padding-bottom: 0.3rem;
         }
 
-        /* News Grid */
         .news-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 1.8rem;
         }
 
         .news-card {
             background-color: var(--card-bg);
             border: 1px solid var(--border-color);
-            border-radius: 8px;
+            border-radius: 10px;
             overflow: hidden;
             display: flex;
             flex-direction: column;
         }
 
-        .news-card img {
+        .card-img-container {
             width: 100%;
             height: 200px;
+            background-color: #000;
+            overflow: hidden;
+        }
+
+        .news-card img {
+            width: 100%;
+            height: 100%;
             object-fit: cover;
         }
 
@@ -134,7 +140,7 @@
         }
 
         .source-badge {
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             background-color: var(--accent-color);
             color: #fff;
             padding: 0.2rem 0.5rem;
@@ -144,13 +150,13 @@
         }
 
         .news-card h3 {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             margin-bottom: 0.5rem;
         }
 
         .news-card p {
             color: var(--text-muted);
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             flex-grow: 1;
             margin-bottom: 1rem;
         }
@@ -159,28 +165,28 @@
             text-decoration: none;
             color: var(--accent-color);
             font-weight: bold;
+            font-size: 0.9rem;
         }
 
-        /* About & Gallery */
         .about-card {
             background-color: var(--card-bg);
             border: 1px solid var(--border-color);
             padding: 2rem;
-            border-radius: 8px;
+            border-radius: 10px;
         }
 
         .gallery {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
             gap: 1rem;
             margin-top: 1.5rem;
         }
 
         .gallery img {
             width: 100%;
-            height: 180px;
+            height: 160px;
             object-fit: cover;
-            border-radius: 6px;
+            border-radius: 8px;
             border: 1px solid var(--border-color);
         }
 
@@ -197,7 +203,7 @@
 
     <header>
         <nav class="navbar">
-            <div class="logo">AI Pulse Portal</div>
+            <div class="logo">AI Failed Portal</div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#news">AI News</a></li>
@@ -209,1300 +215,201 @@
     </header>
 
     <div class="container">
-        <!-- Home Section -->
         <section id="home" class="section">
-            <h2 class="section-title">Latest AI Updates</h2>
-            <p>Welcome to AI Pulse, your automated news portal for real-time artificial intelligence updates.</p>
+            <h2 class="section-title">Latest AI Failures & Updates</h2>
+            <p>Welcome to AI Failed Portal — real-time automated tracking of artificial intelligence mishaps, errors, and breaking news from global sources.</p>
         </section>
 
-        <!-- News Section -->
         <section id="news" class="section">
             <h2 class="section-title">AI News Feed</h2>
             <div class="news-grid">
                 
         <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
+            <div class="card-img-container">
+                <img src="https://via.placeholder.com/600x350/1e1e1e/4da6ff?text=AI+Failed+Portal" alt="News Image" onerror="this.onerror=null; this.src='https://via.placeholder.com/600x350/1e1e1e/4da6ff?text=AI+Failed+Portal';">
+            </div>
             <div class="news-content">
-                <span class="source-badge">The Economist</span>
-                <h3>Artificial intelligence now beats some of the best human forecasters - The Economist</h3>
-                <p>Artificial intelligence now beats some of the best human forecasters&nbsp;&nbsp;The Economist</p>
-                <a href="https://news.google.com/rss/articles/CBMixwFBVV95cUxNOVE2WlNjSlVyUjdJZzRYT1ZTSlI1cWFHdHJYcHhMNnREaXYzRzhINE8xWHZIZmh2TTFaOGllS0lTVU5sNDctUzhuOXpNQi1BbjBwalduUkE3SllUbEp3ZTFveEVZajZwOGRSVXhDaS02bnVCMkM3OWdBZTd5STl4a2dBbjNidGhpSlQ1OXlCanZRaXpoay02TU45cXk5b2c5dndkQnRCVHdCbUxvV1ljTkNtMmY4aDFnUEFHNm5iMGdhWjB4SHNR?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
+                <span class="source-badge">cio.com</span>
+                <h3>AI failures are inevitable. So is the CIO getting blamed. - cio.com</h3>
+                <p>AI failures are inevitable. So is the CIO getting blamed.&nbsp;&nbsp;cio.com</p>
+                <a href="https://news.google.com/rss/articles/CBMinAFBVV95cUxNSUNDYTd5dUpoNkkzUkJkNmppVF96Z0Jwc0RIM3VPRzRjN0YtVlFnbE1leVJ0cDZfSUZIRndhU1VzNEpYN2FGMlV0SGpsUjRxSEdmaHBqTzhhVG9fWDREN0ZrVTczNFJVUG03endwNXpsb1FnQmZzLXY1YkhmSlVGbkxMeG5lX2NraVZRUWlSMVQ5QXhEd09peU1GSjg?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
             </div>
         </div>
         
         <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
+            <div class="card-img-container">
+                <img src="https://via.placeholder.com/600x350/1e1e1e/4da6ff?text=AI+Failed+Portal" alt="News Image" onerror="this.onerror=null; this.src='https://via.placeholder.com/600x350/1e1e1e/4da6ff?text=AI+Failed+Portal';">
+            </div>
             <div class="news-content">
-                <span class="source-badge">Tom's Hardware</span>
-                <h3>'Defeated' GPT-6 Astra model spent several hours just farming potatoes after being blown up by a Creeper in Minecraft — OpenAI offering gets further than any other AI system in 141-hour test - Tom's Hardware</h3>
-                <p>'Defeated' GPT-6 Astra model spent several hours just farming potatoes after being blown up by a Creeper in Minecraft — OpenAI offering gets further than any other AI system in 141-hour test&nbsp;&nbs...</p>
-                <a href="https://news.google.com/rss/articles/CBMi7gJBVV95cUxOdEVEN0dXS2lPdzZhR0l5UTZnWl9uSVE4VlVrVWZ2WW9uUmpLekRvbWlsYjVRT1VNWUVIb0FNc245X245RDdzNlh6cVBIdXZsU3V2Wi1Udkd6cFZZZDB0UnpmTGVEWkl2X0ppMDNfVjlnT3FHQ2FZMHVFamZ0UGUzZmQ5bjhnUXdGS0xheTh4OFhFVHVpUVFyclBERzJrWjB1SlNNX291bW1HSFJlRnZDbjZNQkNfR1M5NWdieGkzTHZzTkUtT1p3Mk8xeUxSdHlTUWtVbGZFR1JmOUpzR01ZUlU4cUJROHU5TVBRUFNXSk9nNUw3WkY0NFRBMXB5LVhfYjBjNTg0LV9nVXdGbG5zZ1ZSV092Y3hyYkg2YnBsdmxkeWpRMlY5Q29oLTFMTVZmWGU0YVowVXJHVHJnRFoyUVRtemNzV1FtQTlicFVYSGFpM19FbzR5S09kUDlOMVRBTi1FOXFST2c4azlMQXc?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
+                <span class="source-badge">WSJ</span>
+                <h3>Opinion | Humans Are to Blame for AI Failures - WSJ</h3>
+                <p>Opinion | Humans Are to Blame for AI Failures&nbsp;&nbsp;WSJ</p>
+                <a href="https://news.google.com/rss/articles/CBMifEFVX3lxTE1taV9jR1ptVnZDOHcyUklzOFVSLTYzR0paYnF0ZlhiRlpEWlY3UlNxNXY5QllkTnFMQ1lndU1ubVU2MlU5ejUtYUJ1WmMtNGZESFRBX3lXWHZKTTZNNHV0M3h5c3NnSHBkUlZ3Sk9tQ1k2YXY0aEo2NGs2WS0?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
             </div>
         </div>
         
         <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">Politico</span>
-                <h3>Problem Solvers Caucus launches AI working group - Politico</h3>
-                <p>Problem Solvers Caucus launches AI working group&nbsp;&nbsp;Politico</p>
-                <a href="https://news.google.com/rss/articles/CBMiowFBVV95cUxPYmZNTVJXTFlKTU9fM3FyRHZJdF9tTjZ6ZF9CNFVUT0FQZUZvcTJUcVgzQnBhd05SYkUyUDVreEdYNF9pNFBKMHVIbEFYR3pQOFlsREVZeDhTZ0xCMmQ2OHI4ZkRKMzBSZ3V6TWVDY1dfeFd2UmloSEdLWnBzX1IwblZucXRFcjlYY0tCQ3BxVksxSHAtbGU3bms4NDhFc2Vmb2w0?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
+            <div class="card-img-container">
+                <img src="https://via.placeholder.com/600x350/1e1e1e/4da6ff?text=AI+Failed+Portal" alt="News Image" onerror="this.onerror=null; this.src='https://via.placeholder.com/600x350/1e1e1e/4da6ff?text=AI+Failed+Portal';">
             </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">NBC News</span>
-                <h3>The king and AI: U.K. monarch Charles meets with artificial intelligence leaders - NBC News</h3>
-                <p>The king and AI: U.K. monarch Charles meets with artificial intelligence leaders&nbsp;&nbsp;NBC News</p>
-                <a href="https://news.google.com/rss/articles/CBMivAFBVV95cUxNb2lXWFFzOEw1SVdiZElQTTRRWWhWTlpEMlNKS2sxNXpTSzRLeERaaFZtdEtlQTNFaG5Mb2FQVnRCb3dJU0ZGMXpLbmJvNlZPNE9KMlNDcjFzWWRsUWlQVC1wVGt0b2tuc2N2eUZ3MEl2bUxteTdmTzdlTFNlQUlKTWVtc2Fyc2hJQjlTdnpnVFZYeFhVMmRaNEJfX241YklvX2M2Q0ZrOXJyRm5BMDk3TzhRNXhIM3BULVcybA?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
-            </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">Yahoo</span>
-                <h3>King Charles meets with artificial intelligence leaders over safety risks - Yahoo</h3>
-                <p>King Charles meets with artificial intelligence leaders over safety risks&nbsp;&nbsp;Yahoo</p>
-                <a href="https://news.google.com/rss/articles/CBMilgFBVV95cUxORmNpbjJabWx1UUxoeENBWTRTQlV3N2YzZnhGLXJPSjhTYWtwZTlubXZLSXdydXFOdnhRdm5VYTFTUUl4RXA5NmVmSDY2cTRVc1ZJSzNpYkpfODl2N3h6OW80WHc3NGZyZ2E1cnA5S1ZsNlhCbnVmdGlJQ1lkSkZ2cWxOV1VwVmhXZlNabXhpVlVhRTJucmc?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
-            </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
             <div class="news-content">
                 <span class="source-badge">Reuters</span>
-                <h3>King Charles warns AI leaders of 'existential dangers' - Reuters</h3>
-                <p>King Charles warns AI leaders of 'existential dangers'&nbsp;&nbsp;Reuters</p>
-                <a href="https://news.google.com/rss/articles/CBMiqwFBVV95cUxPdFdPV3JrbjNYMUd3RXlUY3NwOU5RMTVheVM2eHRUQ2VFWnBVU2w2SnFqR05iaHBiZzE5MHlyc1ZhX1NSeWxHMmNLMEx4YkxBQjVZY1A4MllpU19lM0c5RHhnV3JTRkQzWGlDME1Cam9WdlVzTTVNclhxZm90akpuUHFkeW9INXdGbmdiUTBTNHBnZEVSNmxtRDNLUWNPQTh4N05qVmh4c01JUWM?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
+                <h3>Mississippi asks appeals court to reassign judge over 'error-plagued' AI-assisted ruling - Reuters</h3>
+                <p>Mississippi asks appeals court to reassign judge over 'error-plagued' AI-assisted ruling&nbsp;&nbsp;Reuters</p>
+                <a href="https://news.google.com/rss/articles/CBMiyAFBVV95cUxNd2dKR3hMUER1SDlsSnFaTUpyM19FZjF0N0hWaDFXRTNublVRS0RKUGs1NmZhZUg1R2ZVVUJIUEJQbmcxckc5Y1o5TDRHalQtNkJ1NV9FNmZGd0E5aE5OVHVpMEhxejFLcnY0YXNjUkEwOXBTVG9iZWtxS1plU2ZTUkxwVWJpSmNzeFJkaFJPTkl6TXdqbWgwcDh5X1R5ank3Z3ZxbTh2aWVuR2tZQS13Zkh0V1dkOVpTS0FQMzFzVFpTY3JIV3FIdw?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
             </div>
         </div>
         
         <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">The New York Times</span>
-                <h3>Bots Behaving Badly? New York Wants to Hear From A.I. Whistle-Blowers. - The New York Times</h3>
-                <p>Bots Behaving Badly? New York Wants to Hear From A.I. Whistle-Blowers.&nbsp;&nbsp;The New York Times</p>
-                <a href="https://news.google.com/rss/articles/CBMinAFBVV95cUxOQnZhM1RZaW94TDlBV0NYdzJPQzZZNDNjTjRmTDVuYUpKNkpxUWJCUkplUjY5b0hvcHZfOXhkMEphcjlsMTlzNWxKZ2plWFVJVXcwSnhNQ2VNVXU2VTNESXNMR0M5VnJWNDduYVV3aFFLTVRscTRNQUF2aTRtTHlCTm8tdE9EenFyZi13ZUVCZkNGRDgzMldaajlmYnc?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
-            </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">Reuters</span>
-                <h3>Chinese AI not powerful enough to see rogue-AI risks, says Huawei - Reuters</h3>
-                <p>Chinese AI not powerful enough to see rogue-AI risks, says Huawei&nbsp;&nbsp;Reuters</p>
-                <a href="https://news.google.com/rss/articles/CBMiuAFBVV95cUxNaUE3YTRDUXE4UEcxSGc4VDdtb241MHBPMkhtWHk5a1Qzcm9vOTZuMmlpcUJqX2ZFTF9QU25FSnh2TW5IUWozX1FMSHZ1ck8xUUxEQzlkeUp2aU13VGZidkgxcEgtZlRteEM1OHZMV0V2bHl6b2J6dFJ4bHRfWkMzbjFhMHJvU2NveTNjU1ZaeU5oREtYcE83aC1pQXllekdjUWpzcnZmaDBqQUF0N282Zm10a3VxdVBS?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
-            </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">CBS News</span>
-                <h3>OpenAI reveals 6 more incidents of "unexpected or concerning" AI behavior - CBS News</h3>
-                <p>OpenAI reveals 6 more incidents of "unexpected or concerning" AI behavior&nbsp;&nbsp;CBS News</p>
-                <a href="https://news.google.com/rss/articles/CBMilAFBVV95cUxNV0Vmay1XV2VDdE1NWG56OVdqUm9ZNFkyT1N4aUdFeWVWakxRUzhWS3Ixb0R6WnZMdzV3VjlEejlIUlZNT29BZjJsWU9rUG1sSm5UcjFVaXd0eDFtc2JydGxoUUkya1VmZkcwUVFkRDlBd2FiUGF3VkVsOUY2VW0wUXJyVTZFNmN4ZXEzakxqbzItY0p0?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
-            </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">FOX 13 Seattle</span>
-                <h3>UW professor says AI takeover unlikely, but concerns remain - FOX 13 Seattle</h3>
-                <p>UW professor says AI takeover unlikely, but concerns remain&nbsp;&nbsp;FOX 13 Seattle</p>
-                <a href="https://news.google.com/rss/articles/CBMihwFBVV95cUxNMktLUHh1U1puUTdjLXVDNXVUcGYwX21sUXIxNDl2UDE4VlhMa3o3dWhBZktUM1JORDNXbWg1UkRTaFlXNWZwakdnU2dYZDQ2VTNoQUJwWFpNbTN3NTBvSmVoMVZsWHNVQlNUblZPZTVQelBHUk9UWThyenBVbXE3d0cwa1dMSVHSAYwBQVVfeXFMT2xIWXpjSWwyZS1UUHdWS21HcmJWb2V1c2wxLWZGMmNpZ01QVV9CNENJY2JnN3BJbXowcFUyZXc3VGI0OFIzLVIxTzZLd1lIdllrT0NYNmJMbWJja3ZPMEx6VEVDMGJHdjVQOWE1OGtITGNrUURiX2RyY1ZCYy1FeUI3MklaSUdIeUkyLVY?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
-            </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">telegraphindia.com</span>
-                <h3>Honchos, ex-staff sound humanity alarm as Frankenstein AI acquires lethal mind of its own - telegraphindia.com</h3>
-                <p>Honchos, ex-staff sound humanity alarm as Frankenstein AI acquires lethal mind of its own&nbsp;&nbsp;telegraphindia.com</p>
-                <a href="https://news.google.com/rss/articles/CBMi2gFBVV95cUxPWTlBeGhEQW1IMUlHeklLbGVLa2x6ODJrWUtmMDRLS0lfMFhNTE8ySkJpVzVlem0tYmtwVnpzVEs2Q1phYnY5ejZyV1Z6bS1QTnVldmNra3VRVkFGVmVvdEJqWTZ5ZDRFUWxUc1E3b09pTGc0aWFTMlByYXVyWGtpb0tSU01PMUxvcWl2djNkOUdnakpyMUxiakdRQUZCdWlFM2tnaEtISnFBbDF4V1BjckFHYlNZUGN0WVU5UGU5ZmRReUluZHZrRmZLb0E2dGJfbFo2dFJLWHpyZ9IB3wFBVV95cUxNc1BMUFZkR2NpNlEyWFp1NVQ2T0dRa25tdWczSUNrYlR4a2RMNm1DZVdPTWtMN3MwNVNWS3VjaWhYdnlfak5mWW5RT3VneFJ3UHctOHFUZktmdlB0QV9GbktFWkpjMTYyb3ZhelpncGVpeHd0WE9NZFY0dUhjWnBXbDlVSXFBOXdUXzd6eGhjdnRtT0V1Ym9JajBSM3lWLXloajNaMHZ1TzNyemxxQjhZR1NEZmxWNGdyTXA0WG8wNnFSMlNLcWhxYmUwZVFZRGRkQ2tiTF82VGQyYmhha0gw?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
-            </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">NDTV</span>
-                <h3>Artificial Intelligence Sentient, Self-Aware: AI Risk Expert Nick Bostrom - NDTV</h3>
-                <p>Artificial Intelligence Sentient, Self-Aware: AI Risk Expert Nick Bostrom&nbsp;&nbsp;NDTV</p>
-                <a href="https://news.google.com/rss/articles/CBMisgFBVV95cUxQN3VYMjVFOUlBTl9BbUxpeGJSQUFqTDgwRnJ1S05iSnl3ZENzTW80SmZRYTdRWEdGZHNIRUx5MDZCTjZvSk9qR3pBcnB6aGF6a3FfdDh4bTR4WjFGT3BEMWFINjd1RzNTb05iOGR6bjF4ZDV1UzhSdUgxZkNvYzBtbTZpc0YyTWtEeEVaLTgxcjVrYlJERFpxX3Bya3VhTzQzaUNHaWJ5VDZTNUJTSzJ4b0pn0gG6AUFVX3lxTE9qTVZEZ0xpTlJNSy1MdmpYbFM4Uk4zNTRIX2pLVDAycHBmaG1WbjV5eG9Rc3pLR2Itcll5NjAzaDdScTMwNE9YZnhfZWFoQkhQUkk3WjVUOEtrWmh4SXRqRG5CYk9TYUg0M1VTZWY4a1M0ZEJUMGRTYTZPTS1mWjJhM0FBTDZZZlo3aHBCSk9uQ2xmdkJ2T3VOVExjdTloMEdwN0dKeUN6MUx3RkRWVFZsbUxOSElfRXRoZw?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
-            </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">Phys.org</span>
-                <h3>Nebraskans wary of risks surrounding artificial intelligence - Phys.org</h3>
-                <p>Nebraskans wary of risks surrounding artificial intelligence&nbsp;&nbsp;Phys.org</p>
-                <a href="https://news.google.com/rss/articles/CBMif0FVX3lxTE9hTnBHa2Y3V0NGSTZZMmx0Tm1sMXpjT2hxR1NqRGF3bk5MTWZGNmdWSWt2OUs4d2lTeVJvNWt3TXFCSTJVcm5jMm0wTWNEeHVQaTY5SEc5TG5NLTlqU0tRS25DYkJwRVltQkdwQXhVOUV1R1pmNzU0SElXbmxXeFE?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
-            </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">BBC</span>
-                <h3>Demand for data centre equipment drives NI manufacturing, figures show - BBC</h3>
-                <p>Demand for data centre equipment drives NI manufacturing, figures show&nbsp;&nbsp;BBC</p>
-                <a href="https://news.google.com/rss/articles/CBMiW0FVX3lxTFBzTksxOTdFeHA5clF0LTBzZy1WRHNaazRRZWRzQ195VjB4eXg2ZkhKa3pNWWxnMDcydjdQV3JOVjN1ZjhIZmEyX19zbnlRV2JIa0VsN09OM21CVE0?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
-            </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">Gates Notes</span>
-                <h3>The turbulent AI era is here. The choices we make now are critical. - Gates Notes</h3>
-                <p>The turbulent AI era is here. The choices we make now are critical.&nbsp;&nbsp;Gates Notes</p>
-                <a href="https://news.google.com/rss/articles/CBMif0FVX3lxTE5vNHRZblJwZHNZZEZfZ285LUdncWl0YUk0UHVfTDM1b05YSU9rVHRhYUpkQ1VwV1RJaXZ4SzZwV2dBd2ZYeEZtbUpGNkpDdng5WjRTa28yOVdIM3drTERSVVVoeWI0WnpWT3dQbGVQcVhvdEZIZE1oaTB4cHdRb0E?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
-            </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">Rice University</span>
-                <h3>Rice to launch Master of Artificial Intelligence program in fall 2027 - Rice University</h3>
-                <p>Rice to launch Master of Artificial Intelligence program in fall 2027&nbsp;&nbsp;Rice University</p>
-                <a href="https://news.google.com/rss/articles/CBMilwFBVV95cUxOTXQtQUg4TzFRWUlFSWNjR2o3RVpUMnQzZWxjYWV6Y2ZZZV91OFlRT3RBZkNLdHlhcGNObFBhUUFOcExYVVR6M2x0RWxsVU1GNUVMUC10X3ZpdVZHZW5SQW1FVXBSV2hVdG5zMFhTOW9STVQ2RGkteWx0WEk5Ym5URTVtVTJ1YjhSSkZTUHNQVzA1ZXY0RFJR?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
-            </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">news.unl.edu</span>
-                <h3>Nebraskans wary of risks surrounding artificial intelligence - news.unl.edu</h3>
-                <p>Nebraskans wary of risks surrounding artificial intelligence&nbsp;&nbsp;news.unl.edu</p>
-                <a href="https://news.google.com/rss/articles/CBMikwFBVV95cUxNelBHOEVFaTVMd2JJNzJuZ0dyWk5tb2RrbnRSdzdFd2VxTTNWQ2FoRm0wMmlrVF9aamZwN1g2SFFZOUhMb3B1WWRPVEVidVR0bU04eWpINUwyOURZUnZ6UDdvWFVGbXF4MHktanpKclRrTUkxMkcyaUVNa0Z6ckdsQkNTT1gzNDd4QU1nUUs0dWZ0OVk?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
-            </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">Vatican News</span>
-                <h3>Burundi: Formators meet for a seminar on Artificial Intelligence - Vatican News</h3>
-                <p>Burundi: Formators meet for a seminar on Artificial Intelligence&nbsp;&nbsp;Vatican News</p>
-                <a href="https://news.google.com/rss/articles/CBMiugFBVV95cUxPSlZxSlhzWTNOMDJqdzJtQmxqd2QyWW52dzh5SmFaZnRpaW5odlBpdXF2QWNFdmNiLUN6R25raWVqODFYUWJmNlF5eEZGUDNhaVVkdkJkUzFGeXBfdzRFOW03QU5uMlJXUnlpdHZoekxJYzdCSWw0Y0hSUVpGX0w2LVFmWkNCekJpaVR2b3FSendrZU9waDBkczRrck04RW54XzZCRWhuazZ2bXRFV1ZKb0hnNVltVk9tclE?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
-            </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">Scott County Times</span>
-                <h3>Love/hate relationship with Artificial Intelligence - Scott County Times</h3>
-                <p>Love/hate relationship with Artificial Intelligence&nbsp;&nbsp;Scott County Times</p>
-                <a href="https://news.google.com/rss/articles/CBMie0FVX3lxTE5LcjB4bzVTdk80Y1loY1NSLTFUNzEwOTY0b3g1OUI4MGJMQ3YzcVBYZHFqWUFvLU11WW1DN09XNEZqakxTckZINWhla0UzSnlQY1lRVFM1MzliZ0dUNWtOVnEwMnNaMTU3bFhzLW5IYXFYTWNfMzNVVzJMWQ?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
-            </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">1A | Speak Freely</span>
-                <h3>1A’s Niala Boodhoo on spirituality and artificial intelligence - 1A | Speak Freely</h3>
-                <p>1A’s Niala Boodhoo on spirituality and artificial intelligence&nbsp;&nbsp;1A | Speak Freely</p>
-                <a href="https://news.google.com/rss/articles/CBMikwFBVV95cUxPOVREUi1WeXRFR1RVSFhXVFhwTlpGWkYxVFAxZklLLXBUT0RpYnRoa0xFRFlvUVplYU1Sdkw2LTRjMTJmcko5UVlTaDhkckRqYlgyMmhnQU40S1Y5Wk5tdEJ0VG1TODdETVd5dl9WUGpnQVF2T0h1U1ZPSEdwR0hoRV9UNEJQdHFFQzhTRVNNRUx6LW8?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
-            </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">Indiana Daily Student</span>
-                <h3>OPINION: Love, drama and artificial intelligence - Indiana Daily Student</h3>
-                <p>OPINION: Love, drama and artificial intelligence&nbsp;&nbsp;Indiana Daily Student</p>
-                <a href="https://news.google.com/rss/articles/CBMigAFBVV95cUxNVF9SRDYxNmVMR2dDVlEzMFcyNWNlOFhUU0d2QVVUdWxwS1ZKYzZBOUVQcVFIRUQ4N2UzM3kzUVVJZnc3ZjR4dnZxMWFsa3k4Qk9xY2tidDUycGtuaTN6YzlVRU5oS2kwWnFHNTE0N1JRS0ZFd05LX0tsZ2dMY2RHVg?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
-            </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">Yale Daily News</span>
-                <h3>For new and emerging restaurants, artificial intelligence can be a boon - Yale Daily News</h3>
-                <p>For new and emerging restaurants, artificial intelligence can be a boon&nbsp;&nbsp;Yale Daily News</p>
-                <a href="https://news.google.com/rss/articles/CBMiqAFBVV95cUxNa1ZROVdCcGhlMkYzUktFU0xMV0NraFJyTU1keVBBaVgtNFZYS2RhdXdwdDJBempoY1JlNjhTbWxabHF1X1ZOTGtyQjNZTjNuS2I1TzBDa3BiSzZmb0NkZVk2VzNuRHFEelFOQWd0S09xS2dhekUyUXZDNmVWcFM1NWxycEo3Vkh2RUZjT2l0WVBjeElYOVgtNXZyUGRJUVM1ZlkxME1nOFI?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
-            </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">NBC News</span>
-                <h3>King Charles meets with artificial intelligence leaders over safety risks - NBC News</h3>
-                <p>King Charles meets with artificial intelligence leaders over safety risks&nbsp;&nbsp;NBC News</p>
-                <a href="https://news.google.com/rss/articles/CBMitwFBVV95cUxOTTFLS1VfdTJydzhHdExhS1pyRXVrX1hHTlUxUlJLa2tnYnd5aThBSTNRbE1IdTRacVM4Z1dad3Rya1RaRWxCRXpHMkIycHE3VUZsaW1sZ2xjZ1JUM0tHLU5aTW1RVmtTRVNDeGVnVW5IcEE5QlBhbWpnbHkzdTRUZUhtSFZwQmh2QUdDUHFFM3FfYVR5UlRBT1VwcGZneUpJUFJQa3k1R0tfNjYtV1N5eGZ4TFdNZ1k?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
-            </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">WGCU</span>
-                <h3>State board approves artificial intelligence guidelines for K-12 Schools, colleges - WGCU</h3>
-                <p>State board approves artificial intelligence guidelines for K-12 Schools, colleges&nbsp;&nbsp;WGCU</p>
-                <a href="https://news.google.com/rss/articles/CBMiwAFBVV95cUxQMHZwajNpZFFOMFVwUENURlZuQnVVOXRra0VOQW5ZN2N2UGNrZm5aQU04RnN0dWtDLWU1Y0VuSEdObnZYaHoxTDhIZkFhc1lqZGR6bnExYnVfeWo4V1U2NngxRWd3T2xfZzZWRVFmTmNqa28wZVdCS0tpRlB2UWJSSF85ZHZ5XzhpLXdtSzNqRDRwQTJualp0aW1LajJnRWoxZHZzTHhxbWxDSUhYZVE1NmRDS0p0VV83dVEwdUZKb3o?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
-            </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">Clemson News</span>
-                <h3>“Who owns my creative work in the age of AI?” Symposium explores the ethics and legality of artificial intelligence - Clemson News</h3>
-                <p>“Who owns my creative work in the age of AI?” Symposium explores the ethics and legality of artificial intelligence&nbsp;&nbsp;Clemson News</p>
-                <a href="https://news.google.com/rss/articles/CBMi1AFBVV95cUxNb3RjbjZHQVlrcDJMTGF4VnBjeVlQTERqTndlNV9SM21BbzlvVEZid2dDSmV0N2tMZlpRQnJHWTQ1TmtJT2pwOVBXWjd5RENlM3FhTm1xb3dCQkFXekhqc3VkWURaT1NFdXpkcFU1TlpQY1NpU3p4ZU55MDRHM1RsZnNmZmNibVJ1RE5jZVYycFpPUEZPYTZwNnA5SDZLcWFMVkVsalpFS2tGRFhTRjI4c1NFS3lmRmRaQ2RsUUFYbmVZM2s4OEpUcWFEMU1iRHh2cl85Yg?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
-            </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">The State</span>
-                <h3>As calls to slow AI grow, what can SC do about evolving technology? - The State</h3>
-                <p>As calls to slow AI grow, what can SC do about evolving technology?&nbsp;&nbsp;The State</p>
-                <a href="https://news.google.com/rss/articles/CBMie0FVX3lxTE9VSXpuNDRCREpKd0MzbTRSMk5scm0wNGw4RFAteFJqSTVORmpXaXprX1pjUWttMGxYR2Z2TXBVRDQ2SWw1X0ZlZWlYQjUxVTg1b2pZNExvcjdHRzduQW5PZlZYYWpHV0JoQlhWWnczQWRxbjltQ1ktY2N1b9IBe0FVX3lxTE5fZzI1aHpEclFVYzF3a1NIRXVpS2tRMXZlT28xWVZCTWZ2c2VuVldfbEVlYUJFTS1EbXR4SlM3d3BGdmxSMmpKMXE2ZHQ5T0NrV2pUVG95VGxDRThlaUxNeTc1ZW8yMm5vYzQ1clZNeVVFUzNSNkZZbE1mMA?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
-            </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">The Daily Reporter - Greenfield Indiana</span>
-                <h3>The king and AI: UK monarch Charles meets with artificial intelligence leaders - The Daily Reporter - Greenfield Indiana</h3>
-                <p>The king and AI: UK monarch Charles meets with artificial intelligence leaders&nbsp;&nbsp;The Daily Reporter - Greenfield Indiana</p>
-                <a href="https://news.google.com/rss/articles/CBMiwgFBVV95cUxNaEdPbWtXcThLQVZwaTVyaE1xMFE3TUMzS0FFZ3BmNUYtdkdiUkxjc2p2R0RPNk9TNWJzbGZCZ1EtUjR6d1ZRRWcwOVhMTDRaOFdaVzMway0wVVQxdzZ2TFVIQ2dTdWRadTFkTFBqcUNaOUtUSGJmSmQydXFqbkhqRFpHOHhJT1RhVzNVSmlOT0VjZDU1ajhjUDVmN0hsbC12NC1XdFUycHNRMlZiTGFuWWw0eVZxX2t2X1c2M1ctUC13Zw?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
-            </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">United States Coast Guard (.mil)</span>
-                <h3>Coast Guard debuts new collaboration and research hub on artificial intelligence - United States Coast Guard (.mil)</h3>
-                <p>Coast Guard debuts new collaboration and research hub on artificial intelligence&nbsp;&nbsp;United States Coast Guard (.mil)</p>
-                <a href="https://news.google.com/rss/articles/CBMixwFBVV95cUxPVWk0bGVJdm9YYWxjbzlnV3dqQjdTSlc4VUFlVldob20zSzMyVi1MUUNzUll6Q2t6MjN2M2Z4Wk9nVkpvUkVaYzlkaUFqdkxyRjA0WEtydzk3ckF2aTFOLXZEekJtVFlLS3BWcnpFZDF0amowajNFNXA5THhnczZqN3hVVzdITG95cXZBVFJZVGJMcUN2Vk1zbV9PNEV6djhLWlpGeUZHY1ZjdjZIYVN2WEZZWGV5N211ZDZMZzdtN1QxUFBSdWtj?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
-            </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">Live 5 News</span>
-                <h3>South Carolina Senate Committee begins studying artificial intelligence - Live 5 News</h3>
-                <p>South Carolina Senate Committee begins studying artificial intelligence&nbsp;&nbsp;Live 5 News</p>
-                <a href="https://news.google.com/rss/articles/CBMirgFBVV95cUxQRDh3dlBpRW9rSE9kUU5NUjhnSU53SXkwX3A0UEY3ZzhLVWt6UmFteXhyMWpsYm9OY2k3Nnp4Mk95bC1SakVMOHZHbWJZNmVpLWZQR3NMbEFCR0NnTmdIR2NXWVJHVEtzU2hjR21ibUJYUVo4cjMtNmw5QVJ6RFpHZmlwak9QZXIwMGJuN254NVpyQkQ5dlBuZUlQVURSZHVXS0lIdm9JLXFaY1JzMXfSAcIBQVVfeXFMUExELU53M19lVkoxWkh3NnBGVjVJQkpWN2xhUk5wejdvVE5oRWFGc25XS3RHRWxIM2pNb3JGUmh5TzFxdmxYT1VlWXlYLTVmLVp5c1c1dUZ5eTV5MGd5M1duM2R6SDl0a1pPR0owWWdEalRaeGpFMEM2X0c0dXdZU0QxUXhLMnZJOFpkY2x4c0VXTkprUHB5WUhibTRuUHdhcmR4MkpUak5saWQ4UEZWT1V2d2hEd3YzMmczRzVEbllpWEE?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
-            </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">Coeur d'Alene Press</span>
-                <h3>MY TURN: Looking Inside Artificial Intelligence (AI) - Coeur d'Alene Press</h3>
-                <p>MY TURN: Looking Inside Artificial Intelligence (AI)&nbsp;&nbsp;Coeur d'Alene Press</p>
-                <a href="https://news.google.com/rss/articles/CBMikgFBVV95cUxNSmtwYzRHN3FHLTgxdElDX2VtQ2lkVWR1YlRtZXRqa2JrZkdpbXFBUE5Xbjd6X01oZGg2YlpIN01KZGxwMC14YXhQendDN1FzTkhSTi1QSURYMF9qOXpDbnF1WGdxUVdaMjRFMUJ5T2Frd2dLXzRUcDVCaXlCYldTdW80NVdmUXJqcTIzSndhekp0UQ?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
-            </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">San Antonio Express-News</span>
-                <h3>Artificial intelligence use is spreading, but there are still limits - San Antonio Express-News</h3>
-                <p>Artificial intelligence use is spreading, but there are still limits&nbsp;&nbsp;San Antonio Express-News</p>
-                <a href="https://news.google.com/rss/articles/CBMitAFBVV95cUxPTTB6UUhlWjVoZ2xBcUdrYUpibzR0STZWTnhXVFQ1MWFESDJLalhFS0x4UjFhT3hWeVhmVjY3ZWtEckpRSjRvUnFMRGxnUHhFWjcwNXNWdzNOaUJEcmRza3BJX2Zkd1Q2QVB2d3dweUlEY01mZHliWEZ0cXdZUS0wS08teWJJTWxHMEdheEJJenBQcThmSzVFckRiN3ctMFkyWEVoN0Q0RGg5M1JUdk9IS3JnOEE?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
-            </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">National Review</span>
-                <h3>China Wants America to Fear AI. Congress Shouldn’t Encourage That - National Review</h3>
-                <p>China Wants America to Fear AI. Congress Shouldn’t Encourage That&nbsp;&nbsp;National Review</p>
-                <a href="https://news.google.com/rss/articles/CBMipgFBVV95cUxQNEJhNjQ3aWZLcUh4Y2I2dGR0OExsVnBjZ3ctUnBsUV80LVdyN2RxMlRLYW9qMlE1eXZqTHhXRGJZdWUyZ3QyeGNRVEIzYl9ZMnpqaDNoNDdVdzMzOHhhWWxQYlVQai1IUGRCUlVobGx3QUFwM0R6ME9KckEya3hCbUJ1Q2x0bnFVLTdHVmI1LTlDV3lzamxkVGJmajFNM3doS3B5ZGF30gGrAUFVX3lxTFBSQ2wzMWM0ZnJXTTNjQks1OHJlcVMtcGppNUNITU1yWUl2SjJRWFZfSVBvT0VHVktUVEZ6Y3huMmxjMUhYblRtWFVSd2ljR21xVTRRbThfNGNvRFIwcE1Id1RNU3RsUTBrUk82aWp3LVJPM2tRLXdibFBfcEdfaHlyTWduMXVQbkh6WlA5Ui03eldMd3BxdFhjSC1yLTYxZllaM2k5ZjA0eGlfTQ?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
-            </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">Durango Herald</span>
-                <h3>The king and AI: UK monarch Charles meets artificial intelligence leaders as safety concerns swirl - Durango Herald</h3>
-                <p>The king and AI: UK monarch Charles meets artificial intelligence leaders as safety concerns swirl&nbsp;&nbsp;Durango Herald</p>
-                <a href="https://news.google.com/rss/articles/CBMizwFBVV95cUxPcElIN19POURIdk1iMW9KTUstdnJMbVJ0YUZHbUNINmkyVHJQemRDaGZmU3MxcjhpQXk3SnR4SzRWYThYSzdqY2Qyd3Z2ZW1qd1U3aVFxT2dDMUlEMXdCeU9rckhtckZxbXUxQ00wUmh1UlI4YWlyWjRmRVlLX2xicmVnYlo3R2NQQ0pUNWxVdUtFN1RVNGxyUTU1Qk1XMEdSTndqRW45LVhUTnBuXy1ObWdlTlVnRHNEeWdid2NQLS1wa2RBUlBJdjlGMjZXVlE?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
-            </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">Nature</span>
-                <h3>Building health-literate artificial intelligence - Nature</h3>
-                <p>Building health-literate artificial intelligence&nbsp;&nbsp;Nature</p>
-                <a href="https://news.google.com/rss/articles/CBMiX0FVX3lxTE00b21CUlNaajh3MXN5ZlBnZVVnRWZaVlptcW5NM2VUbGoyX1U0LW5CX0dqWHpkWkIxcVVIa1lkZmFlcGFDVzZld3VjVkFzMjktTHk1bGZPaktjZWx3WUNZ?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
-            </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">Bozeman Daily Chronicle</span>
-                <h3>The king and AI: UK monarch Charles meets with artificial intelligence leaders - Bozeman Daily Chronicle</h3>
-                <p>The king and AI: UK monarch Charles meets with artificial intelligence leaders&nbsp;&nbsp;Bozeman Daily Chronicle</p>
-                <a href="https://news.google.com/rss/articles/CBMiiwJBVV95cUxPalhXTDRJZDBJU21NWG9vcW15SEpza3I4aWE5TzhGdzhFeHNuNmc3MlQyUkpZWWNQeDBGc0ZaUktINHhBRTJaMmNySFRwaDlTSE9qRzVQczBaeFpyOG1EN252TFhfVGtWMlAyUktCQTlVcVlETWp0bFc4STBuNHJNZkJRWW5GVWhFd084SUExZDFqQ1Z6ZWZWNG9oMnV0UTdHV254Z05GdXliSVYxbHJFR1V6RW5SQi1ZWkU2Z3BfejlsUmlYOGJ1NDkwQ0hzWnIzSS1EZm9UYUhVUGZqaVY4MXd6TWNKVGhzdkVKWjZuTnpGUlFUZU1xeDNnelFtMS1kZTBTUlVQUjBBMnM?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
-            </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">WNYC</span>
-                <h3>Artificial intelligence apocalypse alarms NYC Council - WNYC</h3>
-                <p>Artificial intelligence apocalypse alarms NYC Council&nbsp;&nbsp;WNYC</p>
-                <a href="https://news.google.com/rss/articles/CBMijgFBVV95cUxNeFQ4YTZHQWRBQ2RULV8xamNQQVRwWUd5N2RtLWg4OUluazh5eHd6ckdmdU9FZlctSmpYeFRhTHhDZjFGVzlNS2JILWJJaDNnSGVVb1RzWUpQeFNSUkl2VzlsZXh3VXYyMnZZczB5R2lLQWRXWW5zZE9KMDRzNXl0cWk3MWlqSHgyeFc5eXF3?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
-            </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">infoq.com</span>
-                <h3>Building an Internal Developer Platform with Artificial Intelligence - infoq.com</h3>
-                <p>Building an Internal Developer Platform with Artificial Intelligence&nbsp;&nbsp;infoq.com</p>
-                <a href="https://news.google.com/rss/articles/CBMid0FVX3lxTE9NY01LcWZKdUVIVUgwSlppaXhXekVGaVNaWE5tS09qRW1KOEpSMzVxc2ZaT0ZIRXU4cUIxelAzVzdac0pOdzU2cnA1WE1Uc2hRbGNKT2VQLV9yY3hONlVYTXNfYktzSmdFQWs1Tmtxck90czJMa0pz?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
-            </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">BBC</span>
-                <h3>What is AI, how do apps like ChatGPT work and why are there concerns? - BBC</h3>
-                <p>What is AI, how do apps like ChatGPT work and why are there concerns?&nbsp;&nbsp;BBC</p>
-                <a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTFBiVlVDbllHd2t2NVB2YjJQYkQwOEF6ZzhqRVhyNmNQRGlzSTkzbkVrYUtLV20wMzFrWDktM0VFQXUzZEtseC0ybTRYX0xjUjI0QkZNX0M2Z3oyZw?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
-            </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">The Seattle Times</span>
-                <h3>The king and AI: UK monarch Charles meets artificial intelligence leaders as safety concerns swirl - The Seattle Times</h3>
-                <p>The king and AI: UK monarch Charles meets artificial intelligence leaders as safety concerns swirl&nbsp;&nbsp;The Seattle Times</p>
-                <a href="https://news.google.com/rss/articles/CBMitwFBVV95cUxPWUVBUXJ6Yk5mV0FQR3h6YWx6TlhqZWM2YjgzdklrN0hNcEtmQmhqcHRaOHBsaDA0RnNDQnR2N1Q1WGRYelBOQ0MwdWFPY3Q0ektXZi00SEdWN083MlNrajFyMjk4Tmc3eWxjUjVCdzFEMzdBY3p5bFdUOTVLS1hFd2hHdllTeXNYRG9PNnJ6T2puTzQ0WVdFQTF2bkdjZVZ1V0pnUnhkeW5oU2JJdGY2a056NlBnSVk?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
-            </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">Al Jazeera</span>
-                <h3>What are the five pros and cons of artificial intelligence? - Al Jazeera</h3>
-                <p>What are the five pros and cons of artificial intelligence?&nbsp;&nbsp;Al Jazeera</p>
-                <a href="https://news.google.com/rss/articles/CBMioAFBVV95cUxPUkJUcjZydEhPb3Itel9PUVFhWFpZcm5GRE1UYUhQQWxRYjdLbmp0RTg4T050Q0N3UGtral9HSFEzc2NXcWFnd3FwOUhPS0tpc0k4cXFZOHJuWHJ1TUYzN1ItMUNxMGRDbDNiMlZYV205eERMTk9uUjg3NzJleUdYOG0zSEIzU2RHTDZCRjROMU9qZW14MXh1SnU1MlFrWkkt0gGmAUFVX3lxTE1PXy1fNFdzYUxKLUVpWWN0RjhGaEp4ZnJXOFVEOGZ6RkxYb0NKUDR5SkliWmZTSXpYR3U1RFdVc0ZPM0FuVll2cF9lbnRpcTN5ZWVWbm1mTVdobklyaVlqUGdRSlFaMEg5SVNTa1AyR25HN0pOUHptdnVmY01JQmRDZUxUbTV1OXl1Z2JjRDI5UXBRR1N5MzJqZWRHd1gxN1ZZZ1U2cHc?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
-            </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">Ottumwa Courier</span>
-                <h3>The king and AI: UK monarch Charles meets artificial intelligence leaders as safety concerns swirl - Ottumwa Courier</h3>
-                <p>The king and AI: UK monarch Charles meets artificial intelligence leaders as safety concerns swirl&nbsp;&nbsp;Ottumwa Courier</p>
-                <a href="https://news.google.com/rss/articles/CBMiowJBVV95cUxOQlNrX25JZExWZS1DLU1BZWxUMTVKT2VCZDV4TE85NldKLXp4a3A4aHp6cFdvV2Z2d053cW5tWUczNmotMDdOeW9ZMlRMdEY3ME1STTRJd2tXZ2VmT3AyQk5jYlFNdUxoTUNZMXp0UUdnXzBEUkp3VkRwRFZWVkkxWkJER21qeF9ON3BUc3lJWFJZV2VXQ1pKWmNyTkpwdHBmTXpIaXRMTFgwQ05CTDc2Z3g0a2lzZWlaVlBzdVc5VF9ZUXV2Z1FLcFo2MFJ3U2NoaUVLWE1TX25BZXktUUYxaXUyaURLQm8tZ2gyVVhjeDNiMlhxSERwVTRTZW9MRlRSbXRzVzhNMVhlU19peXFZMnZfaWZHa1EzVlpoZGhqU0JQcW8?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
-            </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">WHIO TV</span>
-                <h3>Troubling new concerns about Artificial intelligence and terrorists usage - WHIO TV</h3>
-                <p>Troubling new concerns about Artificial intelligence and terrorists usage&nbsp;&nbsp;WHIO TV</p>
-                <a href="https://news.google.com/rss/articles/CBMizgFBVV95cUxNU2luZzhVaFNoSlJPZm5LRVNfUE4tZEczMTN0YVVSdW5TamVqMlpCVE5vYS16R2M5MHkxbVRCc041bkptbWtMeWFOYVItck8yRzRZa0lFcFRCTnFIYlVVNnFCVGllT3FjN2ZOcWhYTmVyR1g2YjdwaGJ4UlpyZEhZeXBnazlJQVNBOFpybVpDeldnWkJIaW0zU1NDR0hzZDI1Ync4anQwU1FMaHRWNUlVYlljOHlKY0syZkNLa3lqTGtMUjN5ZDhtc3VjdmI2QQ?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
-            </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">Nashville Catholic</span>
-                <h3>USCCB Establishes Task Force on Artificial Intelligence - Nashville Catholic</h3>
-                <p>USCCB Establishes Task Force on Artificial Intelligence&nbsp;&nbsp;Nashville Catholic</p>
-                <a href="https://news.google.com/rss/articles/CBMiogFBVV95cUxQTkx3R28tdEhZNDFMUVlKTE9KdHBlRms0eXFrQ1hnS1o0aGl5MDhvLTVlLVpETC1FYmlaUzRIUDZkVk94Y2hEeFdnZlpJLW56QzlMWGVIZmdHdmV3eVZ1RTJ1TzRvdnhLbXM0ZThiU1l6ZlVmVXRaclZ6aTFpQ3lFQUhzVmhLeDRCTWRqWE10ZVJFT1BxTHpTQ1c4Q2h3MkNOMmc?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
-            </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">WTOC</span>
-                <h3>VIDEO: South Carolina Senate Committee begins studying artificial intelligence - WTOC</h3>
-                <p>VIDEO: South Carolina Senate Committee begins studying artificial intelligence&nbsp;&nbsp;WTOC</p>
-                <a href="https://news.google.com/rss/articles/CBMiugFBVV95cUxOMjdzNUlaazEyUmVNVUdrOFNpNmEySlRWQUlUOWlucmtzajdjQ2pkNlZGdkNzQVNaUkFKMXh5MzU4eEdkeERQaE1EamFMUUxkcWk0QkM5aXZkUWNyTGEtYXF6VXFYbHd3WnJkbTByS2YxZ0ZyMVFpUGdROHNoWnpSdkVkVEZoS2lpcmRwT1pVdVpkdnd0X2xyQm9HWkJQN1RlUUdkNG4zVGNIbWxWdG5UcXJ5NVd1dHY0SXc?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
-            </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">The Miami Student</span>
-                <h3>University Senate debates Center for Artificial Intelligence at Miami - The Miami Student</h3>
-                <p>University Senate debates Center for Artificial Intelligence at Miami&nbsp;&nbsp;The Miami Student</p>
-                <a href="https://news.google.com/rss/articles/CBMi4AFBVV95cUxNaTJmY25nelJ5cEZ3UVZVakFBc01TOERvdlNuZ1ZUSXVSX2gwZnVVNFg2a1p0elFVT3FxTmpBN2I1N1hWMV93U2ljS1FVYnl3NHNNcjhtU2g1LU5YcFBRbDdDelFOc2JFQkphTnNKT2lWNmMzYW1UaVJsamFUTlRBajRlSWd6U1I2b3VjUkdlWXlkOV9aY0Z1b3VKYTBBM0g1T0tUQU1hc2Y3NTB4dDlhUUJkX2dtWEV5OGNyUzZQMUNDRndrWE4yZF90MmJNZ3UyQkR2bm1HcUZMQ05IeFZZSw?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
-            </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">yonkerstimes.com</span>
-                <h3>New Art Exhibition Explores the Influence of Artificial Intelligence on the Human Condition - yonkerstimes.com</h3>
-                <p>New Art Exhibition Explores the Influence of Artificial Intelligence on the Human Condition&nbsp;&nbsp;yonkerstimes.com</p>
-                <a href="https://news.google.com/rss/articles/CBMiuAFBVV95cUxQVFBkdGFqR2QzOG8yTE5hQWRtTG84T21yVlVzZVRxcWxpb0JEUGFXVFc0dDJGWVJzX2N4RkVSMzNva0NHd1lmWTI0NkVJeTdpVHVQYUxRTkN3bzJ6amRuVUQybG5BdzJZcUM0X0hQcWdudnVTQ19BVHBtMnpkYnQ3eEtreFF6RWV0S0NMMnlfMzh4cldaeDg4SGw3Uk0xVm9obGd3MjJFbjFnX1cyVGdGV2hCZ0ZBaFdK?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
-            </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">SitePoint</span>
-                <h3>The Future of Everything: How Artificial Intelligence is Revolutionizing Education, Traffic Management, Healthcare, and Modern Coding - SitePoint</h3>
-                <p>The Future of Everything: How Artificial Intelligence is Revolutionizing Education, Traffic Management, Healthcare, and Modern Coding&nbsp;&nbsp;SitePoint</p>
-                <a href="https://news.google.com/rss/articles/CBMi7AFBVV95cUxQRFd6VUktbXoxcE44TUZGRFBERE5tSUl4ZElBb2xDalY3SDFFUGE1QXVuQXNzdnNDVWJUeUU5RVFNeEFCb2dSN3FvaENvN3pnT2JmY0UzYXU1Y28yb2s1RFNPYXM3bmdFaDlnbl8tZTd5MEIxV29uX0tvMXowcVl0LWNIWTJmc1phVWVEYkZNTkV0RXhwUXFwN3Ywa0lEMEYtRGpMRWVtZkdJT3JYVkVEQlVRQTB1aW0yWkFZX2NYQUhNTjNEc05NclRtNUp5ejNsQTQwRk1CYlFWRGVlWk1hZHZ5N09EMWE3ZzdrUQ?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
-            </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">Reuters</span>
-                <h3>'I'm not a doomer': US Senator Mark Warner makes the case for acting fast on AI guardrails - Reuters</h3>
-                <p>'I'm not a doomer': US Senator Mark Warner makes the case for acting fast on AI guardrails&nbsp;&nbsp;Reuters</p>
-                <a href="https://news.google.com/rss/articles/CBMixAFBVV95cUxNN1lEN29UQk1ESlNaOTRHVzFSVktUWExVNzdlYUt0TW1YcnZXbG42QjhreHdnd1NWVTZOdmtNclk5VlJibzc2ODkzSUI3cFJyNWdsSll4aTZDT1BzUExrZ0dkdG5zRmJBdXpJNTlPOTc1NmlGMzVDcVR6dE9uUTN6dUN6RW1qYkQ5ZjV2Q2xEdVQxMVoyWHRCOTNFTDMwWm9HUXRpa3BLT2RscW9iMkZjZFMweEdaRUtKUHpmSUZxMC1UME5F?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
-            </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">MarketBeat</span>
-                <h3>Artificial Intelligence Stocks Worth Watching - September 17th - MarketBeat</h3>
-                <p>Artificial Intelligence Stocks Worth Watching - September 17th&nbsp;&nbsp;MarketBeat</p>
-                <a href="https://news.google.com/rss/articles/CBMiuwFBVV95cUxQQ19RQWpxekZVd3RpY1l1NzdJQVdrdl8zYThUc2ViV2RtaEs4cENWU0NaT3hVUnlSSENBR20xOFh2M3E5NGcyUjRLRHBUWjhGYnpYRXdhWHhNdHNBd25fU284UDcyZmctaFFrSmdLRUtEYVdjS0tIeVg1WVRLOWo3U1RFd2xjbV8tN0s0YUxhNXQ1eWVtUnp2RWZWelVsLWc2TVk4a19KRnppWmpzMm9NNEF4T3c4MFBRMWhZ?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
-            </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">The Motley Fool</span>
-                <h3>22.4% of Billionaire Bill Ackman’s Pershing Square Capital Management Is Invested in These 2 Artificial Intelligence (AI) Stocks - The Motley Fool</h3>
-                <p>22.4% of Billionaire Bill Ackman’s Pershing Square Capital Management Is Invested in These 2 Artificial Intelligence (AI) Stocks&nbsp;&nbsp;The Motley Fool</p>
-                <a href="https://news.google.com/rss/articles/CBMi7gFBVV95cUxOYW91cGkzN0JYTFNMUDkyOFlPbHl6TWtfa0pxekxYU1ZKR1o2OG5SM0Y1LXpUR0xaUkRvWUFwTW4zb0tpT3JJeEhBeW0wM1FhQnZMaFdicFRIdmhoa1ZOT044S1NjWWR4VDFNRG9jUi1oYjk1dHFiLXNsZXVtbVpkVTNDZGVaWXRCb2JoSnEtOTZJYk1qR2FXTmxuSkFtNTcxUUpwWVpkRFNLSXVVSVA4VldqMTdhSGpJbERwbm1WVUZfc24wVVNITXNZMGJQa21QVENrZWU2eDVlYlVtUVlrS2NrNzM2M0hoaklUTjdR?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
-            </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">Click2Houston</span>
-                <h3>The king and AI: UK monarch Charles meets artificial intelligence leaders as safety concerns swirl - Click2Houston</h3>
-                <p>The king and AI: UK monarch Charles meets artificial intelligence leaders as safety concerns swirl&nbsp;&nbsp;Click2Houston</p>
-                <a href="https://news.google.com/rss/articles/CBMixwFBVV95cUxOUjJ2TXBvck1hdWtCR25MUXJrRGRFLWZ6S29VZ2ZtNzd3TU05Q09JandVc0h3QW4yNGdjZld2SUtYYkdOVW5aZ0tRaHlOSHRZTmhUMUlxbWVMYkVKWF9VdWZiNHR2UkVpaElQaExUcWg0akk5YWQ5TU14X0VLcldsZGRiVjRGU0gxRXdMV3o1S3J0YkU3NV9ZUTlMemVfeS1VUnNtcVlCUWxhWThwTy1Bb1J3QTd5TGcwSVVQbXk0d2xlcEhBal9V?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
-            </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">The Lufkin Daily News</span>
-                <h3>Senator Mark Warner Sits for Interview with Reuters on Artificial Intelligence in Washington - The Lufkin Daily News</h3>
-                <p>Senator Mark Warner Sits for Interview with Reuters on Artificial Intelligence in Washington&nbsp;&nbsp;The Lufkin Daily News</p>
-                <a href="https://news.google.com/rss/articles/CBMimgJBVV95cUxQandtT1BJQUpCWVV6NkFWRHhHWDhuN2JKbmFFcVE5ZXNrZGltUHdkZ3oyRWptSHU2MnZHblRiNUlmLVk3RFVROExtblJPdVl4SWR5T1dSclNrNHh3ajFqaVFDcEZwalJmLVlzNFJ5YlZKOVlKOFpibXF3OHpoMUFicFdNNTVFWHI4TC1KTkk2dzRWVWktQmtBNzF2dGtKRzBLOXlZTGhSTVdnUEhpbkkxajBNMVN3cl9vYWg3cVpMYWVKVDlSWDBwU0lOcmhkR1hNV2c3VTA3RmZ4blN6cHZSLWZOUWlFUm5RTDRKS2dMQzFLTTlBdlBPU3ktck0wajJ2emkyZzM5Sng1SDFEM04tNTF4d2d6emdXRHc?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
-            </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">Atalayar</span>
-                <h3>Benefits and applications of artificial intelligence in the fields of healthcare, the economy and the workplace - Atalayar</h3>
-                <p>Benefits and applications of artificial intelligence in the fields of healthcare, the economy and the workplace&nbsp;&nbsp;Atalayar</p>
-                <a href="https://news.google.com/rss/articles/CBMiqAJBVV95cUxOejBFbnFjMVVaMWk0UFRTZXJXYkYzQmxNTkJOR3g3bGxLdElHZ1BfTDUyQ2FQN3JxNFdKU0poX21YNmtYTERBdlA1YmlKcGdrb3RCMTlwWGNaUUJCTUlSM3E5cG5YcFFVbmwwWTZ2Um9MUE05VDhUanlaMEZabUdnZkxzMUY1VS1OREZ1bU1KdHkzdDdEcGl5Skp6T3IzMmU3dl96cEY0TkdrcGNIUHBEdjFWQy1IMjVqblpMRFNjVFBnNjVRR2F5cGVheS1kME9mT2V6QTNtdzRCWWhZclBuWi1Lazk3RDZuMXN0N200ZU1EOEExalRlOGR5MkZTZXdNVUM1WVlocUpsWjVoNnFtZVItOFFBU3RLMHpNSXRYV24yUlUwTjN3d9IBrgJBVV95cUxPYzNnY2ZtQXJON3E3OGNnTTUzQW44c3pwZi1mU2JFQV84aW5xeklwX04yRWdfZ0YtLWFzdERNMGROUGFiakh3RGczTkxuektzanNNZFFkbjN5RU9uNFF2dUNDUlg0SW1Mcm93WEM0MTdFTC1zVEZqUC1fMjZPcnNUV196YlF5aE1ENkJKT2VMZ19VbzlCQ1hmSzJXcXo2TjFNYlp5b0NUQVdwc3BOVkFGTmEwTDFxUk1iTkRwZFRycUFaZUJlbW53SWd5N1B6RUZzN25WWmVFTmpELTdYemVNWmdkNGxnYzFmWmNJVVpsNzc3cV9QWEtiS1AwWW01dG5LT0d0SXRvU0E1WE5UMFlEcVlPUWNEUm16dEVlZVNkcDlzb3NGTC1ZYmtRY1A1UQ?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
-            </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">Van Nuys News Press</span>
-                <h3>Problem Solvers Caucus Announces New Working Group on Artificial Intelligence and Evolving Technologies - Van Nuys News Press</h3>
-                <p>Problem Solvers Caucus Announces New Working Group on Artificial Intelligence and Evolving Technologies&nbsp;&nbsp;Van Nuys News Press</p>
-                <a href="https://news.google.com/rss/articles/CBMi0wFBVV95cUxONXhocTVXekhqMWE5OTJnV2oyQzRMeWhFTG9KeXRBU0F3cFlzMDM4TGhkVlJHbF9WVjRVWG9pNnJQc25BSXVKVFA5cE04b2kxVTdEOFJFYkdzcUZGQ3h1X2FXa1J1cFRBeFZXQ3Vmam1icWVFcC1DSjNnZDRqOEh5aTBpLXpjdV9IU2x4YWJrUk82QWFxeC04N1RKZ3hvdGtSajZRSXdxTHZrWGlCTEtvUDJsWGFic3FWY1lHcXg4ZVV2WUxvZEhlMm9pdlNXRVNaMWpv?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
-            </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">Computer Weekly</span>
-                <h3>Saffron Building Society drinks its ‘first drop’ of artificial intelligence - Computer Weekly</h3>
-                <p>Saffron Building Society drinks its ‘first drop’ of artificial intelligence&nbsp;&nbsp;Computer Weekly</p>
-                <a href="https://news.google.com/rss/articles/CBMiuwFBVV95cUxNWEdmV0ZPeVd6aDdRWlRYTkNqWG5pNXpFQVAtN2RIbGluamZnQ2RGSUVmX20wbTNnd2wtS3FVaWU4VER5T3hScktOVWtGdks0TjNEbDlBMkN3a2tpMXBRck1xVDFNV1kwR0NXSkptelRqdy11TG9fWlJ3SF9CNlZwVzBSNkhwTFJwVnFNY0w5ek1lN0NtcUxZWkdQYmZzVzV0NXdYREtudmxwcmxDMDVyNmx3V0Z2RklYaUhR?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
-            </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">morning-times.com</span>
-                <h3>The king and AI: UK monarch Charles meets with artificial intelligence leaders - morning-times.com</h3>
-                <p>The king and AI: UK monarch Charles meets with artificial intelligence leaders&nbsp;&nbsp;morning-times.com</p>
-                <a href="https://news.google.com/rss/articles/CBMi_gFBVV95cUxPaGVqMmNLRFJjNWM1QlpOQ09NaDl0bzJ0OWtCaGFSVTlEbnAwNzkyZlVFUWplcWRZdEJMdHFycjZXS3JFV01BYjRyWlYzbUUwQWgtS3pZeGEwd09FQXFBeEV6a1prdi14bDQ5UjdSSmpLWTNLb1cwYWhLVWw0LVRhNDkwOGN6ZXJCSEtNaE9Najgza0FnNHgwSnNmcTNLZGtGQmhwV0JjcmgxQ0gzdFkyeU1KdUYxSUpvM2RwdTVITmpISzZRS0R0cnVrLS1qRXZXTGJfQlRqOThrakpReVJEMWs5eWMxZU95VEtsc2M2SVUtbFplVVFxQnVhZFB3dw?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
-            </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">Caledonian Record</span>
-                <h3>The king and AI: UK monarch Charles meets artificial intelligence leaders as safety concerns swirl - Caledonian Record</h3>
-                <p>The king and AI: UK monarch Charles meets artificial intelligence leaders as safety concerns swirl&nbsp;&nbsp;Caledonian Record</p>
-                <a href="https://news.google.com/rss/articles/CBMimwJBVV95cUxQN21Yd2ZwbkNWSEVTVHFKNnZVa04yU3k5LVVnZU1CdmlWSkh0SWQyWW9Qdkp0SlpIUGNHenhoUGhiVmMwSlA2d2hCN3JsV0pWdUdoLWtfNXM4LUdQREt1U1FTaF9aN3h6UUNaZUxQWS11SFloX3IwbXhfeUx6VDhjLVlxRHhFMEVDUjh6ZVhsamhrRUZsRjhnQ2VXUzA4ZGZ0WjlwTkpfNU9KdEE2NW1ZazBQUDVMMi05Q29oMDZCak1uLXM2RHZSU3hGZDVtTVNUS2NBT0ZnQUd3QkJma0pMYm5JbVZnRFhzcmJ4WXJmajZvd00zdl9RMEFqVUQ5Z2ZfQXJneUhlMDVTNjlDWEExYWR5eXJBQ1hOWWM0?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
-            </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">tradingview.com</span>
-                <h3>OpenAI Details Problematic Behaviour Of Artificial Intelligence - tradingview.com</h3>
-                <p>OpenAI Details Problematic Behaviour Of Artificial Intelligence&nbsp;&nbsp;tradingview.com</p>
-                <a href="https://news.google.com/rss/articles/CBMiwAFBVV95cUxNYklJUTVObGxYU01ZSzVaNUhWbmpvQmhoRks3VzBmVzd1azF2SV9ZX1VYVnlnSVpzNHljQ0IxTGtpSWJCa3dPei1sTUdLVTREcExqdlAxX3VzQzdfT2t0U3pMb3h0VnRGSlp1X2dpMHFoOXJqUG9UQWl5N01fNDBSSzk5MlNXT3YzZlVCRE9iRkF1ZW01QmJKczE2bldrcUVxSkxiSmVmTzJ4WWw4U2E3RVk5X1pCVjFiSnlYazJzbTI?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
-            </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">Premier Christianity Magazine</span>
-                <h3>Should Christians fear the existential threat of AI? - Premier Christianity Magazine</h3>
-                <p>Should Christians fear the existential threat of AI?&nbsp;&nbsp;Premier Christianity Magazine</p>
-                <a href="https://news.google.com/rss/articles/CBMirgFBVV95cUxQeWpoVkxKeEVvQldSR1Q4Skg4aktDbWhBMmRwMFo2NktvN2RfSWNUWEphUFg1MzhCODYwZnNoeDcyUVhHeXdQQm5aRDJmQUhuSnpEOWczVmZMbkRWZjRYYURKek1ocDBvT2RScUdHRFBnbE9BYlk1elF4dnJaLWdzNVpQeFRERXN2MjhfOEU5X21Tc3pDVWd4WVdtblB1WmxIZ0VjNE92Y3lDVXV5cHc?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
-            </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">The Tribune-Democrat</span>
-                <h3>U.K. monarch Charles meets artificial intelligence leaders as safety concerns swirl - The Tribune-Democrat</h3>
-                <p>U.K. monarch Charles meets artificial intelligence leaders as safety concerns swirl&nbsp;&nbsp;The Tribune-Democrat</p>
-                <a href="https://news.google.com/rss/articles/CBMigwJBVV95cUxQUUtGLXIyWVhoRGVJNE56UWNXZ2pLR0hRVk5xZUlTRFFreXJWWGlPeFBLXzBBY3BfY3FQaHZ1b2Z2dU1BaTRVbGxwRXJtTnlqVVZtcGRCSnNLMHdYLWoyVy1nMmZQeldPa3d6Mm41UDdZOUZUS0NBekhhT3BMYmRJVm93NzRRMzlDSXJYWFZfeGs2MkVHUnR4UGczQ2NyY0VRTGJ4Vi1ITjNibm1pSXhabmNGaXdLdk5DWkVpZkZTQjFSYk1Vb0NzekptQ2JmTVl6Nk5Yb253T0s4cTQybWlhcE1ET3ZyUi1JWE9xQWJhaVFzQlMzSmRnWVV2WE5iUF9UbFlB?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
-            </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">Politico</span>
-                <h3>How China is driving the emerging partisan divide on AI safety - Politico</h3>
-                <p>How China is driving the emerging partisan divide on AI safety&nbsp;&nbsp;Politico</p>
-                <a href="https://news.google.com/rss/articles/CBMigAFBVV95cUxPLThxcnc3TnBHbHdma0R5dThYTGt5djh2SHJTQ2s3aWltWW1LOUVRSUZNYUh2Rkw3WjVneEZaQ19VbzR5Q19CUE4yTC1qcEJDV2VTWEVzTURKV1c4dDdrRFItMnlJVHlLbHd6STBpM01QOGFkSjVickJZWm9DNW1haQ?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
-            </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">EIN News</span>
-                <h3>Artificial Intelligence (AI) In Data Integration Market: Demand Trends, Growth And Competitive Insights - EIN News</h3>
-                <p>Artificial Intelligence (AI) In Data Integration Market: Demand Trends, Growth And Competitive Insights&nbsp;&nbsp;EIN News</p>
-                <a href="https://news.google.com/rss/articles/CBMi2AFBVV95cUxNN3NJY2pIWkJDSWs4amRfd3RVZ1M0YW1KdTg5ZUZjNzNQaUVBUDdlUVFXUVpuVXM0ZkdfQllmLUNjWHJrRHlFdEw5NlZqa0VMWWZkam5sLWNJSndPS2tkQ0FUb0Y0bTFISEtqUDQ4OTc0TWphUEZaZTBPa0F3ZllMNkI3Y0xPdl9WRi1QTFlldVRFeDF0azFiQi1iQU5adzBQaHlHY3FKLV9BNXB0YnlkdVVJMkZmMzd4OXMyTEVnZTd5QXY4QnNCRzc5eDFFS0VwdWZZYzFpRUk?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
-            </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">WIS News 10</span>
-                <h3>South Carolina Senate Committee begins studying artificial intelligence - WIS News 10</h3>
-                <p>South Carolina Senate Committee begins studying artificial intelligence&nbsp;&nbsp;WIS News 10</p>
-                <a href="https://news.google.com/rss/articles/CBMisAFBVV95cUxPVGQySmdmMktGdm1wNDVBVWtjU2tCd25zZm0ydzE3VnNTTGZqTlN3b1dhNTY3Wk5kY0s5REFoUU1PWS1jU3BsaHViVmJOb3VmX1MyYXZMT1UzLUk3elVyeXhiTmJ5alhOVzBHOFJTdFpIRE1DYlVjdzlBdC1qcUFsNF9rVENrRGZiZUQyOFc4d2VFbHpXVUt1cTl1Vm1zX0gtNWNTSzYxREZoaU56ZTBpQQ?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
-            </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">UNESCO</span>
-                <h3>Learning with new technologies and artificial intelligence - UNESCO</h3>
-                <p>Learning with new technologies and artificial intelligence&nbsp;&nbsp;UNESCO</p>
-                <a href="https://news.google.com/rss/articles/CBMikgFBVV95cUxQaVFVWVRyQXBuaGF3WlpDNm9BZzkzb2FEUk9JSVZDQWY4MHBkOFB6Y1hhN1c3bXhDbDkzcExSNnBqS0FQQ24ySE10eHdvckJGVzdUMzQtRDBqcUkwb3Vfa3dMTXlJeUVwcEI4VzJST3dQVkpfLWg4cXVBeXlnb05kbmpYOEI0RjliYlVac2pIcXhBZw?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
-            </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">EIN News</span>
-                <h3>Artificial Intelligence (AI) Edge Infrastructure Market Set For Rapid Expansion With 30.8% CAGR Through 2030 - EIN News</h3>
-                <p>Artificial Intelligence (AI) Edge Infrastructure Market Set For Rapid Expansion With 30.8% CAGR Through 2030&nbsp;&nbsp;EIN News</p>
-                <a href="https://news.google.com/rss/articles/CBMi4AFBVV95cUxPZU1hQjdTUGVyU1NuWUdMYzBtTnQxTExmZlpJdmMwenVRaEdOY1M5NFQ0TVFZSk5sQkJfWTNlV21oczZMZHBRN2VVM3F5a2tRRS1xelZ6OUVDaGVVVngzRjNmMWZTMUN1WGxYTmdmZzN6cjRRa3FfdW9yaEIxVHQxUzVJNkQzcDY3QzhxMmxtbzBHSjZLZS1TYmI2dnVJV3V3dEoyVVJVaE5vM2tYX0RfTG9uMlgtcm9iN2V4NHplQlctVUhGcmxGZnc3R2tLTWhsSFowLWROV3NycGJTREY2eg?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
-            </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">Traverse City Record-Eagle</span>
-                <h3>The king and AI: UK monarch Charles meets with artificial intelligence leaders - Traverse City Record-Eagle</h3>
-                <p>The king and AI: UK monarch Charles meets with artificial intelligence leaders&nbsp;&nbsp;Traverse City Record-Eagle</p>
-                <a href="https://news.google.com/rss/articles/CBMi_AFBVV95cUxNdkpJODN6R3dhTWQyN0F6LThvbDdobU14YTVHbnFHdEZYWXJlSjNwSUtsTlV6UXdLQjJ4TmgxQXJpcG5ZVmlMRlMySGVHdFpGcHJJMW9NaUl4NUZwU2dJWWxydnFfbU9vaDNxN2xPZE9faVVoR1VyV1h4VkFTQVB3UTlZNDdsb19zX0RTSGp5MkZLR28wczZZb2FJd0o5RHhSVEZXcVpfMUdCNWxiWWM3TTlxaWFNdlgxWWR3dU1iZ3otUW5BdHc4ZWpkX2Rja0NYeWsyeXQ2X0tCRVJDQ255cTVYTkxmOS1NdmctNW16RW5jT05BN3pSc2xNcGc?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
-            </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">thecrimson.com</span>
-                <h3>Anthropic and Microsoft Researchers Weigh Limits of Artificial Intelligence at Berkman Klein Panel - thecrimson.com</h3>
-                <p>Anthropic and Microsoft Researchers Weigh Limits of Artificial Intelligence at Berkman Klein Panel&nbsp;&nbsp;thecrimson.com</p>
-                <a href="https://news.google.com/rss/articles/CBMidEFVX3lxTE9XajFPdXNBUTlaQnQxUnhRbkt5MVNLZ3hBUGFqWXRTRWM4NUZqeXZZZ25ucmdMdEc0RWhENkVPcnA0RGJXZzlWUUoyVVMzMVNzMzlHQUk5S0V1cUhIa0dYcF9DTVl5dk9CaHJ2T0diRjctOVUy?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
-            </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">EIN News</span>
-                <h3>Artificial Intelligence (AI) Robot Dog Market Report Examines Market Dynamics, Segment Insights And Company Strategies - EIN News</h3>
-                <p>Artificial Intelligence (AI) Robot Dog Market Report Examines Market Dynamics, Segment Insights And Company Strategies&nbsp;&nbsp;EIN News</p>
-                <a href="https://news.google.com/rss/articles/CBMi7gFBVV95cUxQMmJENlh1d2Q5QXVoRlA5ODZyQjdzejBJcGpiLVlOXzZqMHpyZ084eV85d3RpVG9VbTc0Sl9xd0RPdm50SFJ0V0FucV9YbXdBaFBheEUyN3AzS2gtYlBZcEo3azI5MThaRjdaRnZrTG5QWnRyWkVrQnpuV0d3QmpxNkRpLTJmN3JHZU9BXzNKTkk2M0xGYlZrODhDdWZ5UGQteHBFbXpxbjZpRzI0cnlLWlh6N0FGYVNKM2x0eEVhUE1ZWDgtaURzd3ZJVEV1UDhBQ3BzQ3lIVzVReER4dnRwdDlkQzh4eVBIMnZQYWdn?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
-            </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">EIN News</span>
-                <h3>Artificial Intelligence (AI) Personal Finance Platform Market Growth Rate Expected To Reach 27.3% CAGR By 2030 - EIN News</h3>
-                <p>Artificial Intelligence (AI) Personal Finance Platform Market Growth Rate Expected To Reach 27.3% CAGR By 2030&nbsp;&nbsp;EIN News</p>
-                <a href="https://news.google.com/rss/articles/CBMi4wFBVV95cUxORTI5Qjd0cExPbk95T1FLeTZxdldmYmlDSEJRVkJfdng3bXBUVVYtMHRFaGk3NkdtSzJHUGlzTWwyd0gwbUR6dUN4UEpCSEM0WExRMlNpNEhLOHFnd3E2YkQxQ0ZSNUdnZlJORXZUaVFlMVFHTG9RQTRiWDNybThBOW0wRjZwRFRUQjhXVzlMYm56RTdSR0RWMzdKaEVWb01hbVVMVnROSGJJS3hWd1RzZnZhM1M2ektQU1VwU0lGWVNrSk5tOWdTNWEyeDFNUWJmdVZacTh6REhocUxrVGo3U1NrQQ?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
-            </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">WSPA 7News</span>
-                <h3>The king and AI: UK monarch Charles meets artificial intelligence leaders as safety concerns swirl - WSPA 7News</h3>
-                <p>The king and AI: UK monarch Charles meets artificial intelligence leaders as safety concerns swirl&nbsp;&nbsp;WSPA 7News</p>
-                <a href="https://news.google.com/rss/articles/CBMixgFBVV95cUxOOGxpMVBBbExaMHM2VDFtSGhRS2ZUV3ZQOWtfMXlsM1FDZUd6WkdoaHhON0wySFNZRy1sNXE1blR0TEYxbmtYRnhBUnhxODVBUVNZRzZWT1JmQ3Jsdms2SldCYlQ2WnRJYmVGYnozV3pTYzhhblNjcHlabVR3aFhIaFNpbVdzY3RPX2RyWExtMUJ6MXJNT09sYWM2SnlWQW5lSlBPdFhTY1JIWUtOLTNBUWNKWGV1cHBIM2l3MlVwTmlwUXE1aGfSAcsBQVVfeXFMUGVxTTJZLWZqdk0za0JGVnVyNzlFdjRLWXNTamFBUHQzM0ZRbWdHbVpnTUZpSWpOUGx6WTlNVWRRZ3d5QUJWQUlBNDZXOC1PdEVCclQ4SVVkRFZaa1JOODNMQlY2Ymc4clk1TnBIVHBLNDBWSFFxRzRHSjJEYmxaODEyRjlKWXByZWhGbHpCaUh0dHRiVTNSY01JTUlkeHJTSjcyaUQtbW8zRU1KaFh4QkFEWnB5RUlzUVZZOGlsZDhaNTdtS1UwZUhjYjg?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
-            </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">EIN News</span>
-                <h3>High-Bandwidth Memory For Artificial Intelligence Market Demonstrates Strong Growth Potential With 25.2% CAGR Forecast - EIN News</h3>
-                <p>High-Bandwidth Memory For Artificial Intelligence Market Demonstrates Strong Growth Potential With 25.2% CAGR Forecast&nbsp;&nbsp;EIN News</p>
-                <a href="https://news.google.com/rss/articles/CBMi8AFBVV95cUxPVDlvZDJEanVBUEQ4R1oydm5yTlphUUd0VEUyQUpOQmRfank4U1VzRUs1QzQtVWREaW51MGRVbGs2NHBLMGRRMlpYV2VUbl84eWRsdlJkYmhONUhJUFBadG5GUnE4OE03M1FTcjkwRldxbXRmX1VTZ2M3aWx4Nl8xZ2dRa3NpZG1pVkZZb3ZyYi1UV2dleHNMLXBJczFwdnlDVmZ0WWJySjZ0TkR2emFsV252UTV5QTdpc0pEZENiUTloN3VMckZXaGo5ckQ1bjJPb2NqWlVILWFjMGFJMzZwN1pHQTMxWks3QV9NUkNFejQ?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
-            </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">Yahoo News Canada</span>
-                <h3>ANALYSIS: When Sanders and Bannon Sound the Same Alarm About Artificial Intelligence - Yahoo News Canada</h3>
-                <p>ANALYSIS: When Sanders and Bannon Sound the Same Alarm About Artificial Intelligence&nbsp;&nbsp;Yahoo News Canada</p>
-                <a href="https://news.google.com/rss/articles/CBMigAFBVV95cUxPOEZKeDVyUVVac1JVS2FYZllpUXVWRlo0OTdVVmp4bGZkQjFkRm11TFl0ZmZEYjlxbEJIWlpTX3hQLUtqcko4VUMzZFVGQnJOeE16eGFvSG5CVml3YnRrdW5oUW82YlAyRkR5bmxucVNwRjYxUHktR3lmai1NY0xSdg?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
-            </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">EIN News</span>
-                <h3>Artificial Intelligence (AI) Maternity Alert Monitor Market Report: Size, Share, Trends, Growth And Forecast - EIN News</h3>
-                <p>Artificial Intelligence (AI) Maternity Alert Monitor Market Report: Size, Share, Trends, Growth And Forecast&nbsp;&nbsp;EIN News</p>
-                <a href="https://news.google.com/rss/articles/CBMi3AFBVV95cUxNLWZ0UTdVcDYzU3dmZ3p5NXlqemxuU2tOb0ppeE1hNUtBbnY0TlZKSVlnY0lnRFh2amFmekVldzV0MDdXOXY2R0ZiRFpIZVdqSXlLMmMtNE40Q1h3allkczBBVkh5alVWWW5MV2hqdC16SG1mX3NvM0l2NHdyemxNYUw3eThrYjdpX2JGWGZyMWtkYnhtSExaYlhLd1YyZ0stYS1vN0NXT0NzWElyblhRaVZ4V21BX0VIc0RPZUNmZkgxWF85N2tlbUFybVZBTl9LYm5WemFCNUdNUlN1?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
-            </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">EIN News</span>
-                <h3>Artificial Intelligence-Native Insurance Platform Market Outlook 2030: Market Size, CAGR, Trends And Forecast Analysis - EIN News</h3>
-                <p>Artificial Intelligence-Native Insurance Platform Market Outlook 2030: Market Size, CAGR, Trends And Forecast Analysis&nbsp;&nbsp;EIN News</p>
-                <a href="https://news.google.com/rss/articles/CBMi7gFBVV95cUxPYmlZVWZaRU5DaXJGdlhpTDkwWW1DaUc0dUMxMEg1N0ZNTzUzbEZBNVRIN3B1cWljSmRldHR4WFZJQ3lCSTZVN2tzdkFtUzZaLXhoZjFaOEp4LXl6cUxjbWc2RTEzdUtkdWJBbzFDZWpOZjNEdjZPeTlXbnU0eEJ4WDJWTU14b0N1eXhZRjUxQnNSeG16c29tWTROY3JGWEJpNDR1aFZMM18wVmRLbHVyLWlUTmNaaXJoQWt4RmE4b200alA5NWtJckI0eDl3ZTNIS3UxQTBfWWIyUmhKMkdjMkgwUzZNbWFoYUJuUHNB?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
-            </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">guardonline.com</span>
-                <h3>The king and AI: UK monarch Charles meets artificial intelligence leaders as safety concerns swirl - guardonline.com</h3>
-                <p>The king and AI: UK monarch Charles meets artificial intelligence leaders as safety concerns swirl&nbsp;&nbsp;guardonline.com</p>
-                <a href="https://news.google.com/rss/articles/CBMilAJBVV95cUxNWUVhZC02YVNuaWhPU3ZJb3Rxd2w4V1RITE9XSElDQXBHZUc4bDMyek11X1dfQkw3cEJ3V1NKNUdRcVZTV25sTENfTkJlaDVEOVdSWVh0Z0pEbWhkQW5ORjBSelRlLXZaQWtiTzl1Yzl0OXZJTTdRZndKbEVNUkYzWl9HYU0wazJkb0hBQm1TUk0tRlZ6dnlqSTZyMzJ4Q1I4bnV3R1ByM2N6emxNTUYwYVpRQ1B0ZDZFN0xvdk5WaU90NHNhaGY4aUd4NVFRTjlUcnF3MzNEZkt5X2o3QmhnUzE0ck5TOGI2MFpuTTF6WmlqVm1CRU50TEZmVTlPOGJ3UlpnN05EbVhyOVdmZFVFV1V2ZW4?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
-            </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">Reuters</span>
-                <h3>China's Huawei says AI chip demand outstrips supply as it steps up Nvidia challenge - Reuters</h3>
-                <p>China's Huawei says AI chip demand outstrips supply as it steps up Nvidia challenge&nbsp;&nbsp;Reuters</p>
-                <a href="https://news.google.com/rss/articles/CBMingFBVV95cUxQUUF2NV9DeFExYkFNQS1hQnZfTjFBY05sRjRmN3hMQkxoTmo0aEYtMnNyU3BnRUZPUzVtZGt6ZjE1ZWVsRldkWG1RMVUyaWpFWTg1Q3paeENVblNJUi1ITktZemVWRy1tbGc3OHd5QkFLT0Zya1UyOE13LW1XbTN4d002Zi1ReXJHRlZDNTZlUmh5cmFEcmhlNk9ET2JWZw?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
-            </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">EIN News</span>
-                <h3>Spend Analytics Artificial Intelligence Market To Reach $5.41 Billion By 2030 Driven By Expanding Industry Demand - EIN News</h3>
-                <p>Spend Analytics Artificial Intelligence Market To Reach $5.41 Billion By 2030 Driven By Expanding Industry Demand&nbsp;&nbsp;EIN News</p>
-                <a href="https://news.google.com/rss/articles/CBMi6gFBVV95cUxORHNCNzE3UVgzeEs2MlNBdXl1ejhIb3Q4YnZZRmc4WE42bkRxbWpPOXFhbWNuUENwZURFeGxSQnRRUUFVdVlWYk45cHZOZkFKOEd1LVF5X3FKQ3g2TklwYTdSdVpiek5JcDY5SW9QMVNTVlRha09kMW9vanFyNWlGLWd0dnZrZy1JaVB0dnRtTkpRVnNvZTNXRm05dHZmUFcyQVV2Zk5XdlQ0SFZXdGd6UldTYlk0VWxGUU1HU1ZVZFlqaklaRVAwOVcyUVYzODhiakVDM0pTbkVJYjh6NFZqMG00WXo1cmhJbnc?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
-            </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">Radiology Business</span>
-                <h3>AI company scores world’s 1st approval for breast triage tool that skips radiologist review - Radiology Business</h3>
-                <p>AI company scores world’s 1st approval for breast triage tool that skips radiologist review&nbsp;&nbsp;Radiology Business</p>
-                <a href="https://news.google.com/rss/articles/CBMi2gFBVV95cUxPNWQ4dC14OFlYXzJsTl9xZWNqRXJYWkVHWUo4aktJZEZDaU80MHhaSmFYS1M3YW5KSEdMalVFclViUXhpSDFjQXFjY0tmUVFvMlZEanR2bHJMOE95TktUVW5ESUp2LWlUMFVhZXYzYll4WXVNcG95aThfWlByaWc0Znl4ZGNaN3lDeS1hRkNDWjZGaUprdWVkdWNRd1VnY3Q5bVBtSlZ0V05qM0xQTmc2NUJHbW9qME9venZpOFZUNXJicUxJN2J1TjdGemVKSGFyTUVKUDZPTjhRUQ?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
-            </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">Межа. Новини України.</span>
-                <h3>Experts Debate Whether Artificial Intelligence Could Threaten Humanity Within a Decade | Ukraine news - #Mezha - Межа. Новини України.</h3>
-                <p>Experts Debate Whether Artificial Intelligence Could Threaten Humanity Within a Decade | Ukraine news - #Mezha&nbsp;&nbsp;Межа. Новини України.</p>
-                <a href="https://news.google.com/rss/articles/CBMia0FVX3lxTE9RemdPZlhsMTV4VzVkeXY2ZVd6OFByS29iQ0oxcFZqOERodzdnbER5UVdOejhPUUNqQ2RPTFBka3huRjFWN2RweFQ0cFI4czQ3MlBEMDNRZUdoZXkzMWE1aTZCX3U2MTJqSnhB?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
-            </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">The New York Times</span>
-                <h3>OpenAI Discloses Six New Incidents of ‘Concerning’ A.I. Behavior - The New York Times</h3>
-                <p>OpenAI Discloses Six New Incidents of ‘Concerning’ A.I. Behavior&nbsp;&nbsp;The New York Times</p>
-                <a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxPanVqWlBmM21Obkh1TWdaekdGZS1CaEphcUllWFJnc1Rvdm9Ka3NHbWEtZFFWMU9vUW85ZnJpOW1fVG41djJPeEpjOFNoT0huMWtEVndLUVh2REN3VmNfRG5neXN0eW5YRktYX2w1MGR5QlFyQUlxWjFVREE4SWNkN05oMmIwbENJ?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
-            </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">C-SPAN</span>
-                <h3>Lawmakers and Tech Leaders Discuss Artificial Intelligence, Part 1 - C-SPAN</h3>
-                <p>Lawmakers and Tech Leaders Discuss Artificial Intelligence, Part 1&nbsp;&nbsp;C-SPAN</p>
-                <a href="https://news.google.com/rss/articles/CBMiwgFBVV95cUxNTFdkTUNUZUtjdXdEY19RS1M5TkMtTWNid3NBRFNRNmVFMWp4aFhidnBwRVFMU3BkVE1ERWNMbGNtdDQxRU43eW9qRkdxME5PTmRycFpwWmQ5RmxkRWZPd09tajlxWlQzRHJRTFBCd3EyWkVfUy05Q2ptNnRDeEgxSlEteFRocFJVaVlYbzFzVzJnb3N0NEhaM04yYUxSZVlCNjNYMVJtZkxNc05KQ2M5azNFaWlyRGU4Q1NzSVZjZDdPdw?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
-            </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">The Morning Call</span>
-                <h3>Bill White: A different perspective on artificial intelligence - The Morning Call</h3>
-                <p>Bill White: A different perspective on artificial intelligence&nbsp;&nbsp;The Morning Call</p>
-                <a href="https://news.google.com/rss/articles/CBMimwFBVV95cUxPLWU4RzBuZE9Dc1NWRGs3NFh3OFVlVy1ZVFFmYkJXdTVheFZyQmd5el9ST3VKaGdjUkRxbHltV2l1ZXR2c05RNEI0djZQSDc5TlduWG5JSUk5VGljaDlVYmNlZk82NnlvOEVIM1dCRmphNEJ2WE8weXhvcWdvWkFCSUhaWkpHWGcwcmo2UEFWN1BFQjhZVTAwVkhiMA?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
-            </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">Politico</span>
-                <h3>Poll: Americans say there’s a serious risk of AI destroying humanity - Politico</h3>
-                <p>Poll: Americans say there’s a serious risk of AI destroying humanity&nbsp;&nbsp;Politico</p>
-                <a href="https://news.google.com/rss/articles/CBMinAFBVV95cUxNNUc0MTYzZ2FSRUQ0c0doT3lBUl9yV3FzVG5VVFhFSFNLaFdOMjdsdmM5d1hYWEVkWkE1MU1ZRFpWSEU0Q2VkZmR5NnZwVVBCMFQwd1k2dGhXT1V0R1Z2NmxLRm5pRHcwdEpPdk1yUW5ObTZNcnJYNzZ4aGJFWGJkTktBSUticDhpemtnUjR4cGhjemtmN0J4ajZnclU?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
-            </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">BLABBERMOUTH.NET</span>
-                <h3>STONE TEMPLE PILOTS' ERIC KRETZ On Artificial Intelligence: 'I Hate It As An Aid For Songwriting. That's Just Disgusting. - BLABBERMOUTH.NET</h3>
-                <p>STONE TEMPLE PILOTS' ERIC KRETZ On Artificial Intelligence: 'I Hate It As An Aid For Songwriting. That's Just Disgusting.&nbsp;&nbsp;BLABBERMOUTH.NET</p>
-                <a href="https://news.google.com/rss/articles/CBMi3gFBVV95cUxQTGJsTW84TW1MUzhaLXZtanFGanNNc0RBMEYyWlBLRmZ3QUxVWTBFZHN2QWtielBzaHNUeXNHYXB2WE9pb2ZlMHJqdGthZV94LTlZUkV2aGw1RHhYcTBfaW5kWklUTzBqc045RkpXMXFfRUFmcGxUZC1QaDJ4MmppdF9sYnVuX2YwNGw4ZGNoN3FFbVdXaFcwU3VYMFdXaUtuZGlMd3dqbFJ5MW1rVU9EczRpRlB3RHNNVlVySFpDWGpEZEJGaXhGVFpCa0hkcERYRFhDM1hmYThiZHI4SFE?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
-            </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">marketscreener.com</span>
-                <h3>The king and AI: UK monarch Charles meets artificial intelligence leaders as safety concerns swirl - marketscreener.com</h3>
-                <p>The king and AI: UK monarch Charles meets artificial intelligence leaders as safety concerns swirl&nbsp;&nbsp;marketscreener.com</p>
-                <a href="https://news.google.com/rss/articles/CBMi5AFBVV95cUxNSmJQNTR4bjdUWU1ROVZJZ2VacVp5bHdqU0drR3Q5M2RUQm5raG16U1psekk4WUVldzBTSFFOLVpIejNwOVR4ekZiV19oM21aVmE0WVYzb3Nxb19DNkdMcmtBVFo2bTNubTJkRldlVWZ0WkI4TlVhcTlxQ3VQQlBHcWVYeDkwbTNUUElVWk1FeUEzb3hNNVZHSERKT1gxVmZya1JpM3JscklULXpxN0h3N3YtWWNleDBnQjdFWkVJeE5XTlo2V2hmQ3JkQkRTOW9vNlctRVNsWDRtaE9RTWUweEZaUkE?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
-            </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">The Guardian</span>
-                <h3>OpenAI reveals cases of ‘concerning’ AI behaviour as it announces new disclosure system - The Guardian</h3>
-                <p>OpenAI reveals cases of ‘concerning’ AI behaviour as it announces new disclosure system&nbsp;&nbsp;The Guardian</p>
-                <a href="https://news.google.com/rss/articles/CBMiwAFBVV95cUxOU2xHb1VzUHk1ZUZJTWhQOXdsM0RKOXduMDI2a29fN3RmTFhTX3VIVGdyZmhaQWZsWTJzbG9hZUkwVGhrMGNiMTh6VjEwNWp4SlJSR1hsMTYxUXFOSDdDZDlJUWxza1NQZi1XbzRRd1RuYUloRHV4OHhYVDRnS1BkaGJWYTk5T0JjRzBDeGpqMFhRWjZLOEtPeUY0blRTSEtabTNoTDJJRUtqSzE5M3FCZHZaTElWVVhOaGZOT09GNHM?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
-            </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">Yahoo News Singapore</span>
-                <h3>Amazon enters AI safety fray, calls for "rigorous testing," safeguards - Yahoo News Singapore</h3>
-                <p>Amazon enters AI safety fray, calls for "rigorous testing," safeguards&nbsp;&nbsp;Yahoo News Singapore</p>
-                <a href="https://news.google.com/rss/articles/CBMieEFVX3lxTE5FOTdULUdUUWFqRWFuakxnaHhxam15aklFaVZaelJVTzhJN1RyX2pCQ3F4ellXSVk5c1J0SmE0dzZ6ajBKZjkyOHplWnVzNlB2ZWxES0FOT21MclN4SW1CbkIwVWNtWGVWcl96VFI4OThxOGVFNEx4LQ?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
-            </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">thecrimson.com</span>
-                <h3>Artificial Education - thecrimson.com</h3>
-                <p>Artificial Education&nbsp;&nbsp;thecrimson.com</p>
-                <a href="https://news.google.com/rss/articles/CBMimgFBVV95cUxNYmVuYjVGT0Q2SHFHOGZydU9QTFZRcXJqRkZPSXZPVlNBMTlqNlpTRUYxSF83TEE0Y2x0elNTNmEyaDY5SDU2b3RDMzNfbU9hU3VCeVlvdHVlNTF2OXJsSWFxNUU1V09fNC02SkZCM1hJVzc2czBKZTU1Qi1MX2UxZkJkU0tPc3RmYlE1dEFDR2Ftek9vUVZpNWNB?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
-            </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">Department of Energy (.gov)</span>
-                <h3>Artificial Intelligence for Nuclear Deterrence Strategy 2023 - Department of Energy (.gov)</h3>
-                <p>Artificial Intelligence for Nuclear Deterrence Strategy 2023&nbsp;&nbsp;Department of Energy (.gov)</p>
-                <a href="https://news.google.com/rss/articles/CBMikgFBVV95cUxOWjF4LVVxSzc2MWJEa212X3ZmZnBvbDJFcmFoTzQ1SnlZY0dGWmhQMllXbW5WYUUxLWx3MlhRTXZsSjBSbHFEbFlmZGtuaDF0YThoelh3UHl4d2JQQjBxWWthVEZUYnR5WEJ0dGFjdXZlVGd1T2tlQnVGUmdaeUpOcjlwR1k1dFBSM1pBODJmN2hUZw?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
-            </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">en.vijesti.me</span>
-                <h3>Charles warns of 'existential dangers' of artificial intelligence - en.vijesti.me</h3>
-                <p>Charles warns of 'existential dangers' of artificial intelligence&nbsp;&nbsp;en.vijesti.me</p>
-                <a href="https://news.google.com/rss/articles/CBMisgFBVV95cUxQNHJUM2hjcjE2Wjc3a0FRcHNjV01kWFM1S3E2dlZXVWZJY3ZodWs3Wm5sNjdSRHNrMkZRMkZ2Tm9aOGhVWnN4ejRBeHU3RW9zM1RrWEZXS3RIV1ZTd25vZXFleUpxWnFRTmQyWGVCZG9Lc2MyeWRRWm1Ebi10NHVSakV6dHdtZnVuNEhrb28yX2xlU000YjIwZThva3dkaFFsUVFTdXRRUlF3VTJTY3g5Tk5R0gGjAUFVX3lxTE9nZlluam11emJWcXYzMjVLaGJaQVB3Rnc0cjZjMFhYNWNQQmV3Q2ZrMXZacEx4c3hqbUFVTzJCZW5YREg1aG4yTFU3ckxucEh6RXBXdXhZTnRVRjRZbE4tUEhYOFRVdW5JbzFQT2lQZ1ZmcTdtVld5UWhpZkx5Z2dCSW04UWhDY05KUkhwZFdlVWZzSE45WlZXU0tnM0ZSRU4zX2s?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
-            </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">Politico</span>
-                <h3>‘The US can’t lose’: Pentagon plows ahead on AI despite warnings - Politico</h3>
-                <p>‘The US can’t lose’: Pentagon plows ahead on AI despite warnings&nbsp;&nbsp;Politico</p>
-                <a href="https://news.google.com/rss/articles/CBMijwFBVV95cUxQRmRGSXJNS1BNSndxZk51THRqX0VxbUgxV2lhT2xoVHprMUhZTUhnRmJRcWdycHBMd0ZSblMxeVcyM2M2R3ZGYVFFSU12RXFORWwxajZ3Y2JrcWh3RUdWSlNyR0VYb1VJOHNQY0tSbGVza3hmRi1wVFNQVVpGNHE5MFJINF9WYkl2S0VpSzVJMA?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
-            </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">The Guardian</span>
-                <h3>I’m a father of three who studies the impact of artificial intelligence: this is what parents need to know about AI - The Guardian</h3>
-                <p>I’m a father of three who studies the impact of artificial intelligence: this is what parents need to know about AI&nbsp;&nbsp;The Guardian</p>
-                <a href="https://news.google.com/rss/articles/CBMiywFBVV95cUxNZUp6TVFuemZ5UmY1aXQ3a1dSRzhKTk5FbDRvUktyYkNPQnpEZFhJWjh3Ym1EamdrVVNWdkh4MEhyN0w0aVpWRi13THcyQkh2Q05xLUVZUDlaekt6aUF6LVlId2liVXVTZC1fa09aM3E4RWtYclBkeG5kUVFVOEQtaFI4X3laOFJNemlGUlI1RG0yY3NJc0RncU1sYVpvR2VNdV9nNlpoZ0FDUTc2ajhPX3pQeDBTN2FqT0M3Ylo5cGUwSzJnOE1lMVlNVQ?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
-            </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">Hindustan Times</span>
-                <h3>Artificial intelligence now beats some of the best human forecasters | World News - Hindustan Times</h3>
-                <p>Artificial intelligence now beats some of the best human forecasters | World News&nbsp;&nbsp;Hindustan Times</p>
-                <a href="https://news.google.com/rss/articles/CBMiywFBVV95cUxQT0pNVVRTeVVBUEIxRGdPNjFreVNjeHN3c2t6dlZwWllMeVRUMFhjVkw3N3VDYzZ5WFp3THJ6NWp5MlJPMzZTYVNEVl9ZenFod2V3T3JTVVYySktLSTYxRXFEUGlhV0JOU09HQkxUcmlUbDk0UmdheEdOMnJOekFMUjNiT0twcVRwVEJxb3VHdF9yQ3R4TG5Ucm9YWDNXSk5HSWFLNzc2dkhFaXVKMWhnZU4xc25aWWJsd21aRmRYdlRJQjhmRDFYTGczb9IB0AFBVV95cUxNSG5qeEdnMFBGWG9vV3d5NDVSWFhoNURYN0lZVVd5OWtLbGR0Tkk0NEVJQ1VDbEdqaWYxY3lfNmFSN3B1NVk0c29zQkl0ekkyX3d4RlVoQXZxWGo5UDFWWGNIcThlQ1NpdUtSVklVYzMtUTRoclFOQmh0b0lfRDRYWWVLMlNXMU5OeWlDdHJQcHc5dmJpVXY3YTFiZThqTFJsRFRQeGEzcFF5NF91VTY0Ylk1SmVOZkhGUjV5ZFo2UzFnVjNDWV9BMDRLWHl5eWVH?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
-            </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">Yahoo Finance</span>
-                <h3>3 Artificial Intelligence (AI) Stocks That Turned $10,000 Into More Than $100,000 in 5 Years (Hint: They've All Outperformed Nvidia) - Yahoo Finance</h3>
-                <p>3 Artificial Intelligence (AI) Stocks That Turned $10,000 Into More Than $100,000 in 5 Years (Hint: They've All Outperformed Nvidia)&nbsp;&nbsp;Yahoo Finance</p>
-                <a href="https://news.google.com/rss/articles/CBMiogFBVV95cUxOUzk0RHRlTG41VVpUcjdSYW16N3FZZUNWMFhhNTdtaENBc1B0Vk1LUlZZemd3cmt0N2JEYzFrRVo3dUxSb3RfVndCOUJmdHMxaDRPTjRGVG5ZSzZBRC1tdUJoNldRWTY4VVQweUVET2lmWTFNSXdMNTJQTDdSSnlrZ1IwSlVxaEp3VlpnZ25rRVJHbmhZMzdtTnlhc1VPU2FNWXc?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
-            </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">Bruegel</span>
-                <h3>China’s artificial intelligence goals and strategic choices for Europe - Bruegel</h3>
-                <p>China’s artificial intelligence goals and strategic choices for Europe&nbsp;&nbsp;Bruegel</p>
-                <a href="https://news.google.com/rss/articles/CBMinwFBVV95cUxPTWdDUUl1VDcyX1l6LUhJdksyTXlpODJZVUJUdDFYMGxsVTFJaVZ6QUZDT19lczNKRmlnbm8ycFd5eHNYZmltUlRFWG9LU3VwUlJxQkczcUhXeVBLWUQ3UmFUd2Zpd3hhQWxMaVQtN3RMcEUzOW5zUDNGaXQ5Y2phdFc5bkJGa242NnpmcThRWU9MaWF6YmZrLXZKSUVGY1k?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
-            </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">ft.com</span>
-                <h3>China’s AI labs must accelerate development, says Huawei chair - ft.com</h3>
-                <p>China’s AI labs must accelerate development, says Huawei chair&nbsp;&nbsp;ft.com</p>
-                <a href="https://news.google.com/rss/articles/CBMihAFBVV95cUxOSmFQWW4xZ2R2RGxnUUJVdXBHdy15dEVZaWlmaXVoOWxWUk5VNDBBMHBtU2hwZVNsek55cHRoZUFzN3FFdG9uOTZCWm8yQjZ3UkF1WjFQUDkwaHJYeTd4dzB4TVBKeXNwR0hmQm5UWXRJSVlwNXBpYUk5alFOQXdycWdEdzc?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
-            </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">KDnuggets</span>
-                <h3>5 Free Microsoft GitHub Courses to Learn Data Science and Artificial Intelligence - KDnuggets</h3>
-                <p>5 Free Microsoft GitHub Courses to Learn Data Science and Artificial Intelligence&nbsp;&nbsp;KDnuggets</p>
-                <a href="https://news.google.com/rss/articles/CBMiqwFBVV95cUxQU2kxM2FjaGhDYUhRVlJtMThCWlFvWWJVazR6Rk90OUxMcG9uTFVYWC1MSThka05qLWtQc2JYbW42Z19HeXY4Ujc0TmVyQzQtaFl6eWwwejVMUFFfVXoyNVZqazRQMHk5YVZkSmtZeklONDFrMDhkaVFfaXpvcEUyUERGOWFCZ0RtdHk2MFpmY0k1V25uZ1A5ZHZZcEk5cDAyY0wyMldJT0JLME0?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
-            </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">Reuters</span>
-                <h3>China's Huawei forecasts billions of agents will dominate AI traffic by 2035 - Reuters</h3>
-                <p>China's Huawei forecasts billions of agents will dominate AI traffic by 2035&nbsp;&nbsp;Reuters</p>
-                <a href="https://news.google.com/rss/articles/CBMiwwFBVV95cUxNUmNZcnR3ajkwaEx6LWxLSElZU3o0R3ZsZ0F2QWxNYVlCMWR1R2hmTl9ycm55dEVrSzdreGZ5MTdPNHF1WGJtaFpVczJBei1qLWI4R2NSWjdGWldQNnZXTWQtT1dnVTQtbzFuZnpvMllxRTM1UlJxRnlDOG4tdFJVTEJJUFROSXQwM2s4V0pWZ1NiUmNMZkZpVWtZeVJWZzFVNlJwV1hiRTlfa1A4OFNnOXY5ZU1BQ0JwdWduOFJ1RmhnQXc?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
-            </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">The Verge</span>
-                <h3>Inside the suddenly explosive world of AI safety - The Verge</h3>
-                <p>Inside the suddenly explosive world of AI safety&nbsp;&nbsp;The Verge</p>
-                <a href="https://news.google.com/rss/articles/CBMiqwFBVV95cUxOblhva2pqODRpMVdNNmtSYzMwUEJPcjNMVndZRUp0UUxtZzRNdlpyOTk1YXpkNmpwaXhkd196OGNRY3JXazZUNnpMZkdnb3J2eTJjTlQtZGxYcy1tREE2SmxlN3lOVFRyaktlNHhCdVIyMUszLW5GYnhONFl5LU1SVnROMUpPcW1DdHlFNGNxVUVJS2VjVHBMWnVCX0MzZEtpUGs2dmRoQ1pfQlU?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
-            </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">Al Jazeera</span>
-                <h3>Poll shows Americans are increasingly alarmed by AI’s ecological footprint - Al Jazeera</h3>
-                <p>Poll shows Americans are increasingly alarmed by AI’s ecological footprint&nbsp;&nbsp;Al Jazeera</p>
-                <a href="https://news.google.com/rss/articles/CBMitAFBVV95cUxPQ1lZcUtoOUhuTEgzVk9jZGFXbjNZZ1NtQ2l4WlFSQ2lGdVFVdURYcUtYTjhBQlBFN3otUS1salFkT1RkREFNMjFyR3dzcEgyYWZfWnBkN1NlVUxESm5BNXdGV2p6OVBoZDdqaVgxb3pIalZtTlhKbnJLeV9pczhRWktyQnR6R0YwYzRjWTVMQWthR1JKbm5FeTVKYVdRekFuOGRaSUx5OE13NERnejlwaTcwWnLSAboBQVVfeXFMTU5xWVA4ZU5wU3ZYcHg2ZGhmZS12ZmNtWmE1dHNadkFwRjNQd2VpZ3U3Z1JCUWNTZnpBM2FnOURmMkMwN1hVdV9OclJ0c2NKbW1uN0VvSzF1ekx6akh1REEzUWZHWnRCcWRCVUdrM2xXRUQyWGxudHVwbHI2djRiaWNsN2NlZkNFUV9GcGRpekpCS01tYnJGcUNJMXdxWG1rcFZPd29yOGFSVnVaeTNXU18xbllHZXUzSURn?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
-            </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">The Motley Fool</span>
-                <h3>Nvidia vs. Micron: Which Is the Better Artificial Intelligence (AI) Semiconductor Stock to Own for the Next 5 Years? - The Motley Fool</h3>
-                <p>Nvidia vs. Micron: Which Is the Better Artificial Intelligence (AI) Semiconductor Stock to Own for the Next 5 Years?&nbsp;&nbsp;The Motley Fool</p>
-                <a href="https://news.google.com/rss/articles/CBMimAFBVV95cUxQWFVlbDZwdVJlUDhMVnk1LTBmRE1lZ0tJenRlZnBGZEphQkJNR21NbWdkSk5GaU1WbDV0NExYZGNCR09Bend5NXBpMmtRRS05andlUWNGMk5XeVczY3lnUTNiRDdhVF9kdzVVWmRIS2xyTjlSVnBhNi1EVUROV1ZtbFVhNjAySFR1dmNhRHBTN1VVejBBNkVfeA?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
+            <div class="card-img-container">
+                <img src="https://via.placeholder.com/600x350/1e1e1e/4da6ff?text=AI+Failed+Portal" alt="News Image" onerror="this.onerror=null; this.src='https://via.placeholder.com/600x350/1e1e1e/4da6ff?text=AI+Failed+Portal';">
             </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">Fox News</span>
-                <h3>Joe Rogan hopes artificial intelligence will take over government, military decisions - Fox News</h3>
-                <p>Joe Rogan hopes artificial intelligence will take over government, military decisions&nbsp;&nbsp;Fox News</p>
-                <a href="https://news.google.com/rss/articles/CBMirgFBVV95cUxNc3k0STU0M1FuS2h4VVhJdGNFRXFrTXctSFJrTzBWTFZRTVBJY3JYNnl0OXhrRTk2NDFtY0tra203cWp2ZUFfSDdCejI2S1kxM3RKSkhmT21MUmE5bXUtNF9nREtfS3d5TXZaNjU3dnRHZVBKclZETEd1UE9fNF9nWUphb2U2RTNXM0JGV1ptVU8tWTk5RndxUGk2TVRUMzBoS3hCajZzR0FaRXNrSXfSAbMBQVVfeXFMT2I0VG1hYjlTUm5lQXVveVpoZUdpTUNTeXJUNGxGV295S3lhejhhN1VweFQySDlNZ2dydGl6VVd1VW5Eb3hpa2RWODNhTW5VMExic1YzbG9OUWxHRjY4YWxSdlVUM0NNdENkUFdQbkhuQzVBd1FwTXRmYXlsZ2NkWmtKYU9ZR1RUeVJDQ1gxQjVuQzNFVDZtYXRBWElCbDJwRzR4VVV6OWRJMmZsT2NScmdudzQ?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
-            </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">CP24</span>
-                <h3>Why are we talking about an existential threat from AI? And other questions about where Canada stands - CP24</h3>
-                <p>Why are we talking about an existential threat from AI? And other questions about where Canada stands&nbsp;&nbsp;CP24</p>
-                <a href="https://news.google.com/rss/articles/CBMiwgFBVV95cUxNOF9TU0RrTTBzX1RIdTk4N191cmhWdTI5U21JTzRiSFdwN0ZOaWFXXzJFek95ZGgxY2NES3MxVWdpQlJtazJqV3VHUmhXRjRxdzh2YkQ1U1prQXBVV1hlcmsxMW84dEdzbGhYSTVaVnRmVDRWTzdVVmlsenAxaVlXMVdlTGpJQ0dHYTg4UVZrZGNxYVI3YlNCNWlVQzB6SEIxU1JidDBjUFdGRHd2Vnl6dVZMc05fSEppZVVOUC0zdnNwQQ?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
-            </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">The Motley Fool</span>
-                <h3>Micron vs. Sandisk: Which AI Memory Stock Benefits More From Nvidia's $279 Billion Warning? - The Motley Fool</h3>
-                <p>Micron vs. Sandisk: Which AI Memory Stock Benefits More From Nvidia's $279 Billion Warning?&nbsp;&nbsp;The Motley Fool</p>
-                <a href="https://news.google.com/rss/articles/CBMilgFBVV95cUxNZzJ6aFBNOEc2TnlSWEtFRWxvNHgyTWcyeFctZlROVjI3eDRFRkRHOC1McVpQakRSbF9STXNLdnhsdEd4bmtwY1ZoeGlwX2dQUUh3clI1aGpTT0Z1eE5Ob21LY043dEpyVmotNXhlQzE5ZkU0Z1FJdVJLcE0yYmRaVU5ORHBzNENhclJ4WmlJTDJMYVl3M0E?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
-            </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">AI News Source</span>
-                <h3>Huawei plans Q1 2027 launch of new AI chip as it takes on Nvidia</h3>
-                <p>Huawei is accelerating the launch of its next-generation Ascend 960DT AI chip as it pushes to compete with Nvidia and close China’s AI computing gap with the U.S.</p>
-                <a href="https://techcrunch.com/2026/09/17/huawei-plans-q1-2027-launch-of-new-ai-chip-as-it-takes-on-nvidia/" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
-            </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">AI News Source</span>
-                <h3>2 days left to exhibit at TechCrunch Disrupt 2026</h3>
-                <p>Last day to book your exhibit table at Disrupt is September 18. Two days left. Get your startup in front of 10,000+ founders, investors, operators, and tech leaders on October 13–15.</p>
-                <a href="https://techcrunch.com/2026/09/17/2-days-left-to-exhibit-at-techcrunch-disrupt-2026/" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
-            </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">AI News Source</span>
-                <h3>Rival AI agents, Instinct and Meta’s Muse, both add the ability to make calls</h3>
-                <p>People can use these assistants to make restaurant reservations and cancel subscriptions.</p>
-                <a href="https://techcrunch.com/2026/09/17/rival-ai-agents-instinct-and-metas-muse-both-add-the-ability-to-make-calls/" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
-            </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
             <div class="news-content">
-                <span class="source-badge">AI News Source</span>
-                <h3>Google, Nvidia, and Anthropic want Emerald AI to find space on the grid for more data centers</h3>
-                <p>A new coalition that includes Google, Nvidia, Anthropic, and Emerald AI wants to find 100 GW of grid capacity for new data centers.</p>
-                <a href="https://techcrunch.com/2026/09/17/google-nvidia-and-anthropic-want-emerald-ai-to-find-space-on-the-grid-for-more-data-centers/" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
+                <span class="source-badge">news.virginia.edu</span>
+                <h3>Q&A: Who’s responsible when AI makes mistakes? - news.virginia.edu</h3>
+                <p>Q&amp;A: Who’s responsible when AI makes mistakes?&nbsp;&nbsp;news.virginia.edu</p>
+                <a href="https://news.google.com/rss/articles/CBMiggFBVV95cUxPeW51MlhDVDVrQ192NWlJTk91UXZqRU44TzM0Z0hiNEpqMC1EZEktd3g1YTVFVnhrTURCYVdUN0VFWlRhMDBzU1FlM3JENnNrV2ZxdjR4Qnl1RlpTRkJUUUVUUUF6bzFiTk1rVl96UDVQcktMNThRM3pLVERaNDlYeUd3?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
             </div>
         </div>
         
         <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">AI News Source</span>
-                <h3>Iceland-based Treble raises $18 million for its voice simulation platform</h3>
-                <p>Treble's voice simulation platform is used by voice AI model developers and AI wearable and robotics companies,</p>
-                <a href="https://techcrunch.com/2026/09/16/iceland-based-treble-raises-18-million-for-its-voice-simulation-platform/" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
+            <div class="card-img-container">
+                <img src="https://via.placeholder.com/600x350/1e1e1e/4da6ff?text=AI+Failed+Portal" alt="News Image" onerror="this.onerror=null; this.src='https://via.placeholder.com/600x350/1e1e1e/4da6ff?text=AI+Failed+Portal';">
             </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
             <div class="news-content">
-                <span class="source-badge">AI News Source</span>
-                <h3>Your startup’s next teammate might be an AI agent: Gusto, Insight Partners, and Leland explain what that changes at TechCrunch Disrupt 2026</h3>
-                <p>This session will explore how early-stage companies are building teams where humans and AI agents work alongside each other — and how founders can do that without sacrificing speed, accountability, or...</p>
-                <a href="https://techcrunch.com/2026/09/16/your-startups-next-teammate-might-be-an-ai-agent-gusto-insight-partners-and-leland-explain-what-that-changes-at-techcrunch-disrupt-2026/" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
+                <span class="source-badge">UT San Antonio Today</span>
+                <h3>Can robots “fail forward”? Teaching AI to learn from its mistakes - UT San Antonio Today - UT San Antonio Today</h3>
+                <p>Can robots “fail forward”? Teaching AI to learn from its mistakes - UT San Antonio Today&nbsp;&nbsp;UT San Antonio Today</p>
+                <a href="https://news.google.com/rss/articles/CBMimAFBVV95cUxNNGFhamlpcjRVQk9KaElCRThTRnVDTnRwTGllNmtIU21PanhDRnZOMmlpd19nRG80Ni1ZUkRXbFl4Ykk0MDJuM0ozYXlsbDRfR2pnVEZyRTBsOWU0azVCM081VVRYRjBUTW5Sd29rQmg0UnpRVVBzRGFHZ05ncjJNcUpQdXpzQTFpQjNUbDMyX3dOUV8xc3ZhZQ?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
             </div>
         </div>
         
         <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">AI News Source</span>
-                <h3>Snap tries to make the case again for its $2,200 smart glasses</h3>
-                <p>Since Specs' debut earlier this year, Snap has clearly been looking for an opportunity to explain why the smart glasses deserve to exist.</p>
-                <a href="https://techcrunch.com/2026/09/16/snap-tries-to-make-the-case-again-for-its-2200-smart-glasses/" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
+            <div class="card-img-container">
+                <img src="https://via.placeholder.com/600x350/1e1e1e/4da6ff?text=AI+Failed+Portal" alt="News Image" onerror="this.onerror=null; this.src='https://via.placeholder.com/600x350/1e1e1e/4da6ff?text=AI+Failed+Portal';">
             </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
             <div class="news-content">
-                <span class="source-badge">AI News Source</span>
-                <h3>Al Gore says the real AI risk isn’t data centers</h3>
-                <p>In an interview with TechCrunch, Al Gore suggested he isn't losing sleep over AI data center emissions — he's more worried about the AI industry's own warnings about where the technology is headed.</p>
-                <a href="https://techcrunch.com/2026/09/16/al-gore-has-a-surprisingly-calm-take-on-the-ai-data-center-backlash/" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
+                <span class="source-badge">BioSpace</span>
+                <h3>Opinion: Assessing shared failures with AI is key to cell and gene therapy’s evolution - BioSpace</h3>
+                <p>Opinion: Assessing shared failures with AI is key to cell and gene therapy’s evolution&nbsp;&nbsp;BioSpace</p>
+                <a href="https://news.google.com/rss/articles/CBMixAFBVV95cUxQVE5aVThGMWFnSlNTWnI4UzBmSWRjNlowZDBBdmU2bGp0cVN5eVV3dVpKRHh6TnVYeUd2WTdjUm9vb0FKdkYtR21fSjZTX3FoUVQ2UTJCRWRnMHY0TXgtd3ZaNEdSZDZtNHlyeVJGMk9hOHotZmRKbkx6ZDdTMjR4Tnh5QzFEbzA0blZNQUEtMGhWMXdUMmlodkpRYnY3Y09CcHlLR01xdUZpeHBhZ1JXUTRLZ0dOcTgwQnVGbHhscHliTHFm?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
             </div>
         </div>
         
         <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">AI News Source</span>
-                <h3>Anthropic and OpenAI want to embed safety evaluators. Will they really be independent?</h3>
-                <p>Anthropic and OpenAI want to embed independent safety evaluators inside their AI labs. Researchers welcome the unprecedented access, but warn meaningful oversight requires transparency, independence, ...</p>
-                <a href="https://techcrunch.com/2026/09/16/anthropic-and-openai-want-to-embed-safety-evaluators-will-they-really-be-independent/" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
+            <div class="card-img-container">
+                <img src="https://via.placeholder.com/600x350/1e1e1e/4da6ff?text=AI+Failed+Portal" alt="News Image" onerror="this.onerror=null; this.src='https://via.placeholder.com/600x350/1e1e1e/4da6ff?text=AI+Failed+Portal';">
             </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
             <div class="news-content">
-                <span class="source-badge">AI News Source</span>
-                <h3>After accusations of selling ‘perv glasses,’ Meta prepares to sell a pair without a camera</h3>
-                <p>Can Meta dodge the "pervert glasses" accusations with a new camera-free product?</p>
-                <a href="https://techcrunch.com/2026/09/16/after-accusations-of-selling-perv-glasses-meta-prepares-to-sell-a-pair-without-a-camera/" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
+                <span class="source-badge">MIT Sloan</span>
+                <h3>What leaders still get wrong about AI - MIT Sloan</h3>
+                <p>What leaders still get wrong about AI&nbsp;&nbsp;MIT Sloan</p>
+                <a href="https://news.google.com/rss/articles/CBMiiwFBVV95cUxPQXRyQ29wTHkwcW5aeERYRnpadm9KRncwczhBX242QUllTVRRYmczcE5RaVgzdUJkUV9qNG1GYWU1cnVHZDJ5MWpxdXVnMnNEbFhKc2ZrS2RLQ2MtNG1TLTNvVW1JS0xVTExpYWppN3RBNWFjaTZHOVE1QmdDRFNqMEswMjJRcVpWYURj?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
             </div>
         </div>
         
         <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">AI News Source</span>
-                <h3>AI labs want in-house auditors — but maybe they should shut the front door first</h3>
-                <p>There may be a simpler and more effective fix for rogue agents, hiding in plain sight.</p>
-                <a href="https://techcrunch.com/2026/09/16/ai-labs-want-in-house-auditors-but-maybe-they-should-shut-the-front-door-first/" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
+            <div class="card-img-container">
+                <img src="https://via.placeholder.com/600x350/1e1e1e/4da6ff?text=AI+Failed+Portal" alt="News Image" onerror="this.onerror=null; this.src='https://via.placeholder.com/600x350/1e1e1e/4da6ff?text=AI+Failed+Portal';">
             </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
             <div class="news-content">
-                <span class="source-badge">AI News Source</span>
-                <h3>Your AI agents can now control your Google Home devices</h3>
-                <p>Google is launching early access to a new MCP server for Google Home, allowing AI agents like Claude, ChatGPT, and others to control connected devices, review camera summaries, and access smart home a...</p>
-                <a href="https://techcrunch.com/2026/09/16/your-ai-agents-can-now-control-your-google-home-devices/" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
+                <span class="source-badge">BBC Science Focus Magazine</span>
+                <h3>7 ways we're trusting AI too much – and already paying for it - BBC Science Focus Magazine</h3>
+                <p>7 ways we're trusting AI too much – and already paying for it&nbsp;&nbsp;BBC Science Focus Magazine</p>
+                <a href="https://news.google.com/rss/articles/CBMiakFVX3lxTE83bE9FUWVpSkxuMHdGc1E4SlFqdlM2TmQ0N2JTMWhpMXJfNnEzNktaQnBNYjlST0kwa2xiRFFwR25RcGI1alY2YnNUU04tajJ1a0hDSGFEakl6TFpuZWg5YzhQVFdORkhVbXc?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
             </div>
         </div>
         
         <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">AI News Source</span>
-                <h3>Anthropic merges Claude chat and Cowork in one interface</h3>
-                <p>Anthropic is initially releasing these features to Pro and Max plan subscribers.</p>
-                <a href="https://techcrunch.com/2026/09/16/anthropic-merges-claude-chat-and-cowork-in-one-interface/" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
+            <div class="card-img-container">
+                <img src="https://via.placeholder.com/600x350/1e1e1e/4da6ff?text=AI+Failed+Portal" alt="News Image" onerror="this.onerror=null; this.src='https://via.placeholder.com/600x350/1e1e1e/4da6ff?text=AI+Failed+Portal';">
             </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
             <div class="news-content">
-                <span class="source-badge">AI News Source</span>
-                <h3>Robots are waiting for a ChatGPT moment: Nvidia’s Les Karpas explains why at TechCrunch Disrupt 2026</h3>
-                <p>The robotics industry is still waiting for their breakthrough into day-to-day life. Nvidia's Les Karpas has an answer as to why at TechCrunch Disrupt 2026. Register before September 25 to save up to $...</p>
-                <a href="https://techcrunch.com/2026/09/16/robots-are-waiting-for-a-chatgpt-moment-nvidias-les-karpas-explains-why-at-techcrunch-disrupt-2026/" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
+                <span class="source-badge">Los Angeles Times</span>
+                <h3>Contributor: AI, like a hovering parent, protects students from the failures they need - Los Angeles Times</h3>
+                <p>Contributor: AI, like a hovering parent, protects students from the failures they need&nbsp;&nbsp;Los Angeles Times</p>
+                <a href="https://news.google.com/rss/articles/CBMilgFBVV95cUxPNE9qMWxtSUlBMXh6TWNOM0ZFUkZTMmhhMmMxb2F1aGlzck9DR20xWEFJbFNMdi10cHpLOTk1Ymt1ZW1qOUZ4TGprSHFlaVdmeVJTaHpoZkZ3VTVyT3g3NG9QNXRjVzIwYUZBTHJrTVJDRWlxVmpUWlNHSmxqaWFsMUxzdnBwSE9CTnN6cjJrc2x2Q2JUOUE?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
             </div>
         </div>
         
         <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">AI News Source</span>
-                <h3>Threads’ new features let podcasters promote shows and reach listeners</h3>
-                <p>Threads is rolling out new tools for podcasters, including profile cards, episode links, transcripts, guest tags, posting reminders, and audience insights, as Meta looks to make the X rival a bigger h...</p>
-                <a href="https://techcrunch.com/2026/09/16/threads-new-features-let-podcasters-promote-shows-and-reach-listeners/" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
+            <div class="card-img-container">
+                <img src="https://via.placeholder.com/600x350/1e1e1e/4da6ff?text=AI+Failed+Portal" alt="News Image" onerror="this.onerror=null; this.src='https://via.placeholder.com/600x350/1e1e1e/4da6ff?text=AI+Failed+Portal';">
             </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
             <div class="news-content">
-                <span class="source-badge">AI News Source</span>
-                <h3>Next wave of VCs judging Startup Battlefield 200 contenders at TechCrunch Disrupt 2026 revealed</h3>
-                <p>Meet the next five top-tier investors judging the Startup Battlefield 200 contenders live at TechCrunch Disrupt 2026. Register before September 25 to save up to $200 and don't miss a moment of the ult...</p>
-                <a href="https://techcrunch.com/2026/09/16/next-wave-of-vcs-judging-startup-battlefield-200-contenders-at-techcrunch-disrupt-2026-revealed/" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
+                <span class="source-badge">CFO Dive</span>
+                <h3>Poor leadership, process failures are sinking AI projects: IBM exec - CFO Dive</h3>
+                <p>Poor leadership, process failures are sinking AI projects: IBM exec&nbsp;&nbsp;CFO Dive</p>
+                <a href="https://news.google.com/rss/articles/CBMinwFBVV95cUxOOThSSTB0SmxzUlhYdU5sX1RyNWtpUFpNRVVoQU5KYmZ5M242S21WbzA0V3ZKZnprcUEwcHBySDlPbzNEX3FNcVNoalBDTmMwRExGN0RMUTVoQTM1a0dDWTNDRGRHZ24teXAyUGxia3Jtb0E5TWhwYWlOWm90UWVKRUxEV0NTUmRHNFZuVVFtQ1l1Vm9IMzRlZ1g4dU1wRUE?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
             </div>
         </div>
         
         <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">AI News Source</span>
-                <h3>3 days left to exhibit: Get your brand in front of VCs and high-value leads at TechCrunch Disrupt 2026</h3>
-                <p>Last day to book your exhibit table at Disrupt is September 18. Three days left. Get your startup in front of 10,000+ founders, investors, operators, and tech leaders on October 13–15.</p>
-                <a href="https://techcrunch.com/2026/09/16/3-days-left-to-exhibit-at-techcrunch-disrupt-2026/" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
+            <div class="card-img-container">
+                <img src="https://via.placeholder.com/600x350/1e1e1e/4da6ff?text=AI+Failed+Portal" alt="News Image" onerror="this.onerror=null; this.src='https://via.placeholder.com/600x350/1e1e1e/4da6ff?text=AI+Failed+Portal';">
             </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
             <div class="news-content">
-                <span class="source-badge">AI News Source</span>
-                <h3>SK Hynix reportedly in talks with Intel to build memory chips in US</h3>
-                <p>SK Hynix told TechCrunch the company hasn't finalized any plans or arrangements yet.</p>
-                <a href="https://techcrunch.com/2026/09/16/sk-hynix-reportedly-in-talks-with-intel-to-build-memory-chips-in-us/" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
+                <span class="source-badge">thenationalnews.com</span>
+                <h3>Meta's Muse AI disaster exposes Big Tech's costly pattern of getting things wrong - thenationalnews.com</h3>
+                <p>Meta's Muse AI disaster exposes Big Tech's costly pattern of getting things wrong&nbsp;&nbsp;thenationalnews.com</p>
+                <a href="https://news.google.com/rss/articles/CBMi1gFBVV95cUxPRVZLb0J2aUZDNGdvMzhKWUcwNEJuaFgwWEc5QWd0WHB2RWFHSE43YWozQUQ5anFHb1dwaTEyamRfZ0lLSE1JR0RqVVEtNFZ3NWV0YU5TZUlueW9xWG83NTAzN094UmNLdTZLelRLOC16T18tU0ZsZjdHMXpJTFFWSXZDQXZzWFNXa3hRUGw1NWYtY01pRTZWM1RtU3N2UUVROV9HMzhid003eTVPV1o5aXBIa2JRZndUaG9WNDE4WGE2MUZUaVBQc3BQc3dYUWVyNmppTnJn?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
             </div>
         </div>
         
         <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
-            <div class="news-content">
-                <span class="source-badge">AI News Source</span>
-                <h3>Former Infosys chief’s AI startup nabs another $53M</h3>
-                <p>The Palo Alto startup says it has landed multiple seven-figure enterprise contracts within months of launch.</p>
-                <a href="https://techcrunch.com/2026/09/16/former-infosys-chiefs-ai-startup-adds-50m-to-seed-weeks-after-initial-raise/" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
+            <div class="card-img-container">
+                <img src="https://via.placeholder.com/600x350/1e1e1e/4da6ff?text=AI+Failed+Portal" alt="News Image" onerror="this.onerror=null; this.src='https://via.placeholder.com/600x350/1e1e1e/4da6ff?text=AI+Failed+Portal';">
             </div>
-        </div>
-        
-        <div class="news-card">
-            <img src="https://via.placeholder.com/600x350?text=AI+News" alt="News Image" onerror="this.src='https://via.placeholder.com/600x350?text=AI+News';">
             <div class="news-content">
-                <span class="source-badge">AI News Source</span>
-                <h3>Amazon launches Alexa+ in India with Hindi support</h3>
-                <p>Amazon is letting all customers use Alexa+ assistant in early access period.</p>
-                <a href="https://techcrunch.com/2026/09/16/amazon-launches-alexa-in-india-with-hindi-support/" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
+                <span class="source-badge">Forbes India</span>
+                <h3>Why insurance needs new models to cover AI failures - Forbes India</h3>
+                <p>Why insurance needs new models to cover AI failures&nbsp;&nbsp;Forbes India</p>
+                <a href="https://news.google.com/rss/articles/CBMiyAFBVV95cUxNaXBwM3J2RGtzZHlXZVdmU0ZJbDVGTG5OQk1uT29JNmtGbWhvbE5CRTZwT2hGemczTC12YWxFU2NqZ1dsZ0tjaEY1R3RSY2puV3djeGtBNmUzamJCLVRBT1doOEI2eTVIMEpfaktfSENIRERINTRpNXdBU0ZINUR0bXFsbGVMYkY3LVpnVFlVdU9yTHNXejdUMTJzbUJJb1lqMkVRRjc5bjQtSWlZdndYdUU5cTFCUzY2UE9FclZwTjVFV3liNWJfedIBzgFBVV95cUxOdjgxVWR4QThPVzI4dlZ4TUlkNU84XzBDNElDcXFHc1h3b0JPVWpmWVVlb3IxX1Vyc0lLUWhoR1FtRndXZEE4VllkUEtFVEtGdlo0TEVIdVpMRmRwcmFxckJqSUhKYW1GQlE5ZlVuSms4X0VmUHl2SDlJYVJ4YzZHYkYxdE1IUUFBZWFGUVl5N1ZkMG1OaE91SUkzU3ZRY202UUN5a3pxTURtd3VFeTIyQU1fMDJOVTFxbExYTExPeFh5MVpSTk9HcTdpNFV5Zw?oc=5" target="_blank" class="read-btn">Read Reference Article &rarr;</a>
             </div>
         </div>
         
             </div>
         </section>
 
-        <!-- About Section -->
         <section id="about" class="section">
             <h2 class="section-title">About the Developer</h2>
             <div class="about-card">
                 <h3>Prashant Bhusal / Arbin Sharma</h3>
-                <p>Hi! I am Prashant Bhusal (Arbin Sharma), a 9th-grade student at Rose Buds Balvatika in Nepal. I built this automated AI news portal to track real-time artificial intelligence developments from top global sources.</p>
+                <p style="margin-top: 0.5rem;">Hello! I am Prashant Bhusal (also known as Arbin Sharma), a 9th-grade student studying at Rose Buds Balvatika School in Nepal. I am a tech enthusiast focused on web development, automation, and cybersecurity.</p>
+                <p style="margin-top: 0.5rem;">I created <strong>AI Failed Portal</strong> to automatically fetch and curate real-time intelligence on artificial intelligence failures, glitches, and major breakthroughs across the tech industry.</p>
                 
                 <h4 style="margin-top: 1.5rem;">Gallery</h4>
                 <div class="gallery">
-                    <img src="image1.jpg" alt="Prashant Bhusal 1" onerror="this.src='https://via.placeholder.com/200?text=Photo+1';">
-                    <img src="image2.jpg" alt="Prashant Bhusal 2" onerror="this.src='https://via.placeholder.com/200?text=Photo+2';">
-                    <img src="image3.jpg" alt="Prashant Bhusal 3" onerror="this.src='https://via.placeholder.com/200?text=Photo+3';">
-                    <img src="image4.jpg" alt="Prashant Bhusal 4" onerror="this.src='https://via.placeholder.com/200?text=Photo+4';">
-                    <img src="image5.jpg" alt="Prashant Bhusal 5" onerror="this.src='https://via.placeholder.com/200?text=Photo+5';">
+                    <img src="image1.jpg" alt="Photo 1" onerror="this.onerror=null; this.src='https://via.placeholder.com/200?text=Photo+1';">
+                    <img src="image2.jpg" alt="Photo 2" onerror="this.onerror=null; this.src='https://via.placeholder.com/200?text=Photo+2';">
+                    <img src="image3.jpg" alt="Photo 3" onerror="this.onerror=null; this.src='https://via.placeholder.com/200?text=Photo+3';">
+                    <img src="image4.jpg" alt="Photo 4" onerror="this.onerror=null; this.src='https://via.placeholder.com/200?text=Photo+4';">
+                    <img src="image5.jpg" alt="Photo 5" onerror="this.onerror=null; this.src='https://via.placeholder.com/200?text=Photo+5';">
                 </div>
             </div>
         </section>
 
-        <!-- Contact Section -->
         <section id="contact" class="section">
             <h2 class="section-title">Contact Me</h2>
             <div class="about-card">
                 <p>Have suggestions or feedback? Reach out directly via email!</p>
-                <p style="margin-top: 0.5rem;"><strong>Email:</strong> <a href="mailto:your_email@example.com" style="color: var(--accent-color);">your_email@example.com</a></p>
+                <p style="margin-top: 0.5rem;"><strong>Email:</strong> <a href="mailto:prashantvushal@gmail.com" style="color: var(--accent-color);">prashantvushal@gmail.com</a></p>
             </div>
         </section>
     </div>
 
     <footer>
-        <p>&copy; 2026 AI Pulse Portal. Developed by Prashant Bhusal (Arbin Sharma).</p>
+        <p>&copy; 2026 AI Failed Portal. Developed by Prashant Bhusal (Arbin Sharma), 9th Grade Student at Rose Buds Balvatika.</p>
     </footer>
 
     <script>
         function toggleTheme() {
             const body = document.body;
             const currentTheme = body.getAttribute('data-theme');
-            if (currentTheme === 'dark') {
+            if (currentTheme === 'light') {
                 body.removeAttribute('data-theme');
             } else {
-                body.setAttribute('data-theme', 'dark');
+                body.setAttribute('data-theme', 'light');
             }
         }
     </script>
