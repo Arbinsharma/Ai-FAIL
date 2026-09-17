@@ -20,7 +20,7 @@ FEEDS = [
     "https://techcrunch.com/feed/",
     "https://www.cio.com/feed/",
     "https://feeds.arstechnica.com/arstechnica/technology-lab",
-    "https://hnrss.org/newest?q=AI&points=50",   # only high-point AI stories
+    "https://hnrss.org/newest?q=AI&points=50",
 ]
 
 FALLBACK_IMG = (
@@ -62,43 +62,49 @@ def to_iso(entry):
 
 def extract_og_image(article_url):
     """
-    Fetch only the <head> of the article and pull the primary cover image.
-    Returns the real image URL, or None if the page has no OG/twitter image.
+    Robustly fetch the cover image, checking OpenGraph, Twitter cards, 
+    and direct article CDNs for publishers like Ars Technica and The Verge.
     """
     try:
         with requests.get(
-            article_url, headers=HEADERS, timeout=4, stream=True
+            article_url, headers=HEADERS, timeout=6, stream=True
         ) as r:
             if r.status_code != 200:
                 return None
-            # Read just enough of the page to capture <head>
             buf = b""
             for chunk in r.iter_content(8192):
                 buf += chunk
-                if b"</head>" in buf or len(buf) > 80_000:
+                if b"</head>" in buf or len(buf) > 150_000:
                     break
 
         soup = BeautifulSoup(buf, "html.parser")
 
-        # 1. Open Graph image (most common)
-        for attr in ("property", "name"):
-            tag = soup.find("meta", attrs={attr: "og:image"})
+        # 1. Open Graph image tags
+        for prop in ("og:image", "og:image:secure_url"):
+            tag = soup.find("meta", property=prop) or soup.find("meta", attrs={"name": prop})
             if tag and tag.get("content"):
                 return tag["content"]
 
-        # 2. Twitter card image
-        for attr in ("property", "name"):
-            tag = soup.find("meta", attrs={attr: "twitter:image"})
+        # 2. Twitter card image tags
+        for name in ("twitter:image", "twitter:image:src"):
+            tag = soup.find("meta", property=name) or soup.find("meta", attrs={"name": name})
             if tag and tag.get("content"):
                 return tag["content"]
 
-        # 3. Fallback: first large-looking <img> in the page
+        # 3. Direct CDN / article body image check (for Ars Technica, etc.)
+        article_body = soup.find("article") or soup.find("div", class_="post-content") or soup
+        img_tag = article_body.find("img")
+        if img_tag:
+            src = img_tag.get("src") or img_tag.get("data-src")
+            if src and src.startswith("http") and not any(x in src.lower() for x in ("avatar", "logo", "icon", "spacer")):
+                return src
+
+        # 4. Fallback search for any valid image link in the page
         for img in soup.find_all("img"):
             src = img.get("src", "")
-            if src.startswith("http") and any(
-                ext in src.lower() for ext in (".jpg", ".jpeg", ".png", ".webp")
-            ):
-                return src
+            if src.startswith("http") and any(ext in src.lower() for ext in (".jpg", ".jpeg", ".png", ".webp")):
+                if not any(x in src.lower() for x in ("avatar", "logo", "icon", "pixel", "advertisement")):
+                    return src
 
     except Exception as e:
         logging.debug(f"Image scrape failed for {article_url}: {e}")
@@ -122,7 +128,6 @@ def fetch_news():
     articles = []
     seen = set()
 
-    # --- Pass 1: Collect entries from all feeds ---
     for feed_url in FEEDS:
         try:
             feed = feedparser.parse(feed_url)
@@ -141,7 +146,7 @@ def fetch_news():
                     {
                         "title": html_lib.escape(title),
                         "url": link,
-                        "image_url": None,  # filled in pass 2
+                        "image_url": None,
                         "summary": html_lib.escape(truncate(summary)),
                         "published": to_iso(entry),
                     }
@@ -153,7 +158,6 @@ def fetch_news():
         logging.warning("No articles fetched — leaving news.json untouched.")
         return
 
-    # --- Pass 2: Scrape images in parallel ---
     logging.info(f"Scraping images for {len(articles)} articles in parallel...")
     with ThreadPoolExecutor(max_workers=8) as pool:
         images = list(pool.map(extract_og_image, [a["url"] for a in articles]))
@@ -169,7 +173,6 @@ def fetch_news():
     logging.info(f"Real images found: {hits}/{len(articles)}")
     logging.info(f"Fallback used: {len(articles) - hits}")
 
-    # --- Pass 3: Sort newest first, write JSON ---
     articles.sort(key=lambda a: a["published"], reverse=True)
 
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
