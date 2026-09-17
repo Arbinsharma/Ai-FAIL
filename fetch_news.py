@@ -1,47 +1,87 @@
 import os
 import re
-import urllib.parse
+import urllib.request
 import feedparser
+from bs4 import BeautifulSoup
 
-# RSS Feeds for AI News & Failures/Updates
 RSS_FEEDS = [
     "https://news.google.com/rss/search?q=artificial+intelligence+fails+or+mistakes&hl=en-US&gl=US&ceid=US:en",
     "https://news.google.com/rss/search?q=artificial+intelligence&hl=en-US&gl=US&ceid=US:en",
     "https://techcrunch.com/category/artificial-intelligence/feed/",
 ]
 
-MAX_ARTICLES = 12  # Limits articles so the page loads fast without endless scrolling
+MAX_ARTICLES = 12
 
 def clean_html(raw_html):
     """Remove HTML tags from text."""
     cleanr = re.compile('<.*?>')
     return re.sub(cleanr, '', raw_html)
 
-def extract_image(entry):
-    """Extract an image URL from an RSS entry if available."""
-    if 'media_content' in entry and len(entry.media_content) > 0:
-        return entry.media_content[0].get('url', '')
-    if 'media_thumbnail' in entry and len(entry.media_thumbnail) > 0:
-        return entry.media_thumbnail[0].get('url', '')
-    if 'links' in entry:
-        for link in entry.links:
-            if link.get('type', '').startswith('image/'):
-                return link.get('href', '')
-    # Default SVG placeholder fallback
-    return "https://via.placeholder.com/600x350/1e1e1e/4da6ff?text=AI+Failed+Portal"
+def get_real_url(google_url):
+    """Follow Google News redirect to get the actual news site URL."""
+    try:
+        req = urllib.request.Request(
+            google_url, 
+            headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'}
+        )
+        with urllib.request.urlopen(req, timeout=5) as response:
+            return response.geturl()
+    except Exception:
+        return google_url
+
+def extract_meta_image(article_url):
+    """Scrape the Open Graph meta image from the final source web page."""
+    try:
+        # Resolve real destination if coming from Google News
+        if "news.google.com" in article_url:
+            article_url = get_real_url(article_url)
+
+        req = urllib.request.Request(
+            article_url, 
+            headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'}
+        )
+        with urllib.request.urlopen(req, timeout=5) as response:
+            html = response.read()
+            soup = BeautifulSoup(html, 'html.parser')
+            
+            # 1. Open Graph Meta Image
+            og_img = soup.find("meta", property="og:image") or soup.find("meta", attrs={"name": "og:image"})
+            if og_img and og_img.get("content"):
+                img_src = og_img["content"]
+                if img_src.startswith("http"):
+                    return img_src
+
+            # 2. Twitter Meta Image
+            tw_img = soup.find("meta", property="twitter:image") or soup.find("meta", attrs={"name": "twitter:image"})
+            if tw_img and tw_img.get("content"):
+                img_src = tw_img["content"]
+                if img_src.startswith("http"):
+                    return img_src
+
+            # 3. Direct Article Image Tag
+            for img in soup.find_all('img'):
+                src = img.get('src', '')
+                if src.startswith('http') and not src.endswith('.svg') and 'logo' not in src.lower():
+                    return src
+    except Exception as e:
+        pass
+    
+    # Clean fallback if image cannot be extracted
+    return "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80"
 
 def fetch_all_news():
-    """Fetch news items from RSS feeds up to MAX_ARTICLES."""
+    """Fetch news items and extract true featured images."""
     articles = []
     seen_titles = set()
 
-    for url in RSS_FEEDS:
+    for feed_url in RSS_FEEDS:
         if len(articles) >= MAX_ARTICLES:
             break
-        feed = feedparser.parse(url)
+        feed = feedparser.parse(feed_url)
         for entry in feed.entries:
             if len(articles) >= MAX_ARTICLES:
                 break
+            
             title = entry.get('title', 'No Title')
             if title in seen_titles:
                 continue
@@ -49,27 +89,29 @@ def fetch_all_news():
 
             link = entry.get('link', '#')
             summary = clean_html(entry.get('summary', entry.get('description', 'No description available.')))
-            image_url = extract_image(entry)
-            source = entry.get('source', {}).get('title', 'AI News Source')
+            
+            print(f"Extracting image for: {title[:40]}...")
+            image_url = extract_meta_image(link)
+            source = entry.get('source', {}).get('title', 'AI News')
 
             articles.append({
                 'title': title,
                 'link': link,
-                'summary': summary[:160] + '...' if len(summary) > 160 else summary,
+                'summary': summary[:150] + '...' if len(summary) > 150 else summary,
                 'image': image_url,
                 'source': source
             })
     return articles
 
 def generate_html(articles):
-    """Generate the full HTML page."""
+    """Generate modern, responsive HTML with smooth CSS transitions."""
     
     news_cards_html = ""
     for article in articles:
         news_cards_html += f"""
         <div class="news-card">
             <div class="card-img-container">
-                <img src="{article['image']}" alt="News Image" onerror="this.onerror=null; this.src='https://via.placeholder.com/600x350/1e1e1e/4da6ff?text=AI+Failed+Portal';">
+                <img src="{article['image']}" alt="News Image" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80';">
             </div>
             <div class="news-content">
                 <span class="source-badge">{article['source']}</span>
@@ -85,35 +127,37 @@ def generate_html(articles):
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Failed Portal - Latest AI Failures & News</title>
+    <title>AI Failed Portal - Live Updates</title>
     <style>
         :root {{
-            --bg-color: #0d1117;
-            --card-bg: #161b22;
-            --text-color: #c9d1d9;
+            --bg-color: #0b0e14;
+            --card-bg: #131722;
+            --text-color: #e6edf3;
             --text-muted: #8b949e;
-            --accent-color: #58a6ff;
-            --border-color: #30363d;
+            --accent-color: #3b82f6;
+            --accent-hover: #60a5fa;
+            --border-color: #21262d;
         }}
 
         [data-theme="light"] {{
-            --bg-color: #f6f8fa;
+            --bg-color: #f4f6f8;
             --card-bg: #ffffff;
-            --text-color: #24292f;
-            --text-muted: #57606a;
-            --accent-color: #0969da;
-            --border-color: #d0d7de;
+            --text-color: #1f2937;
+            --text-muted: #6b7280;
+            --accent-color: #2563eb;
+            --accent-hover: #1d4ed8;
+            --border-color: #e5e7eb;
         }}
 
         * {{
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            transition: background-color 0.3s, color 0.3s;
+            transition: background-color 0.3s, color 0.3s, transform 0.3s ease, box-shadow 0.3s ease;
         }}
 
         body {{
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             background-color: var(--bg-color);
             color: var(--text-color);
             line-height: 1.6;
@@ -125,6 +169,7 @@ def generate_html(articles):
             position: sticky;
             top: 0;
             z-index: 1000;
+            backdrop-filter: blur(10px);
         }}
 
         .navbar {{
@@ -133,19 +178,20 @@ def generate_html(articles):
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1rem 2rem;
+            padding: 1rem 1.5rem;
         }}
 
         .logo {{
-            font-size: 1.5rem;
-            font-weight: bold;
+            font-size: 1.4rem;
+            font-weight: 800;
             color: var(--accent-color);
+            letter-spacing: -0.5px;
         }}
 
         .nav-links {{
             display: flex;
             list-style: none;
-            gap: 1.5rem;
+            gap: 1.2rem;
             align-items: center;
         }}
 
@@ -153,6 +199,7 @@ def generate_html(articles):
             text-decoration: none;
             color: var(--text-color);
             font-weight: 500;
+            font-size: 0.95rem;
         }}
 
         .nav-links a:hover {{
@@ -166,45 +213,53 @@ def generate_html(articles):
             padding: 0.4rem 0.8rem;
             border-radius: 20px;
             cursor: pointer;
+            font-size: 0.85rem;
         }}
 
         .container {{
             max-width: 1200px;
             margin: 2rem auto;
-            padding: 0 1.5rem;
+            padding: 0 1rem;
         }}
 
         .section {{
             margin-bottom: 3rem;
+            animation: fadeIn 0.8s ease-in-out;
         }}
 
         h2.section-title {{
-            font-size: 1.8rem;
-            margin-bottom: 1.5rem;
-            border-bottom: 2px solid var(--accent-color);
+            font-size: 1.6rem;
+            margin-bottom: 1.2rem;
+            border-bottom: 3px solid var(--accent-color);
             display: inline-block;
-            padding-bottom: 0.3rem;
+            padding-bottom: 0.2rem;
         }}
 
         .news-grid {{
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            gap: 1.8rem;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
         }}
 
         .news-card {{
             background-color: var(--card-bg);
             border: 1px solid var(--border-color);
-            border-radius: 10px;
+            border-radius: 12px;
             overflow: hidden;
             display: flex;
             flex-direction: column;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }}
+
+        .news-card:hover {{
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.25);
         }}
 
         .card-img-container {{
             width: 100%;
-            height: 200px;
-            background-color: #000;
+            height: 190px;
+            background-color: #111;
             overflow: hidden;
         }}
 
@@ -212,6 +267,11 @@ def generate_html(articles):
             width: 100%;
             height: 100%;
             object-fit: cover;
+            transition: transform 0.5s ease;
+        }}
+
+        .news-card:hover img {{
+            transform: scale(1.05);
         }}
 
         .news-content {{
@@ -222,23 +282,26 @@ def generate_html(articles):
         }}
 
         .source-badge {{
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             background-color: var(--accent-color);
             color: #fff;
-            padding: 0.2rem 0.5rem;
-            border-radius: 4px;
+            padding: 0.2rem 0.6rem;
+            border-radius: 12px;
             align-self: flex-start;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.6rem;
+            font-weight: 600;
+            text-transform: uppercase;
         }}
 
         .news-card h3 {{
-            font-size: 1.1rem;
-            margin-bottom: 0.5rem;
+            font-size: 1.05rem;
+            margin-bottom: 0.6rem;
+            line-height: 1.4;
         }}
 
         .news-card p {{
             color: var(--text-muted);
-            font-size: 0.9rem;
+            font-size: 0.88rem;
             flex-grow: 1;
             margin-bottom: 1rem;
         }}
@@ -246,38 +309,69 @@ def generate_html(articles):
         .read-btn {{
             text-decoration: none;
             color: var(--accent-color);
-            font-weight: bold;
-            font-size: 0.9rem;
+            font-weight: 600;
+            font-size: 0.88rem;
+        }}
+
+        .read-btn:hover {{
+            color: var(--accent-hover);
         }}
 
         .about-card {{
             background-color: var(--card-bg);
             border: 1px solid var(--border-color);
             padding: 2rem;
-            border-radius: 10px;
+            border-radius: 12px;
         }}
 
         .gallery {{
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
             gap: 1rem;
-            margin-top: 1.5rem;
+            margin-top: 1.2rem;
         }}
 
         .gallery img {{
             width: 100%;
-            height: 160px;
+            height: 130px;
             object-fit: cover;
-            border-radius: 8px;
+            border-radius: 10px;
             border: 1px solid var(--border-color);
+        }}
+
+        .gallery img:hover {{
+            transform: scale(1.03);
         }}
 
         footer {{
             text-align: center;
-            padding: 2rem;
+            padding: 2rem 1rem;
             border-top: 1px solid var(--border-color);
             background-color: var(--card-bg);
             margin-top: 3rem;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }}
+
+        @keyframes fadeIn {{
+            from {{ opacity: 0; transform: translateY(10px); }}
+            to {{ opacity: 1; transform: translateY(0); }}
+        }}
+
+        @media (max-width: 600px) {{
+            .navbar {{
+                flex-direction: column;
+                gap: 0.8rem;
+                align-items: flex-start;
+            }}
+            .nav-links {{
+                width: 100%;
+                justify-content: space-between;
+                font-size: 0.85rem;
+            }}
+            .news-grid {{
+                grid-template-columns: 1fr;
+            }}
         }}
     </style>
 </head>
@@ -299,7 +393,7 @@ def generate_html(articles):
     <div class="container">
         <section id="home" class="section">
             <h2 class="section-title">Latest AI Failures & Updates</h2>
-            <p>Welcome to AI Failed Portal — real-time automated tracking of artificial intelligence mishaps, errors, and breaking news from global sources.</p>
+            <p>Welcome to AI Failed Portal — automated tracking of real-time artificial intelligence mishaps, edge-case bugs, and breakthrough news from top global sources.</p>
         </section>
 
         <section id="news" class="section">
@@ -313,16 +407,15 @@ def generate_html(articles):
             <h2 class="section-title">About the Developer</h2>
             <div class="about-card">
                 <h3>Prashant Bhusal / Arbin Sharma</h3>
-                <p style="margin-top: 0.5rem;">Hello! I am Prashant Bhusal (also known as Arbin Sharma), a 9th-grade student studying at Rose Buds Balvatika School in Nepal. I am a tech enthusiast focused on web development, automation, and cybersecurity.</p>
-                <p style="margin-top: 0.5rem;">I created <strong>AI Failed Portal</strong> to automatically fetch and curate real-time intelligence on artificial intelligence failures, glitches, and major breakthroughs across the tech industry.</p>
+                <p style="margin-top: 0.6rem;">Hello! I am Prashant Bhusal (Arbin Sharma), a Grade 9 student studying at <strong>Rosy Buds Bal Batika</strong> in Nepal. I am passionate about web development, programming, and automated web systems.</p>
+                <p style="margin-top: 0.6rem;"><strong>AI Failed Portal</strong> automatically fetches and displays real-time updates regarding AI mishaps, technological advancements, and technical news coverage.</p>
                 
                 <h4 style="margin-top: 1.5rem;">Gallery</h4>
                 <div class="gallery">
-                    <img src="image1.jpg" alt="Photo 1" onerror="this.onerror=null; this.src='https://via.placeholder.com/200?text=Photo+1';">
-                    <img src="image2.jpg" alt="Photo 2" onerror="this.onerror=null; this.src='https://via.placeholder.com/200?text=Photo+2';">
-                    <img src="image3.jpg" alt="Photo 3" onerror="this.onerror=null; this.src='https://via.placeholder.com/200?text=Photo+3';">
-                    <img src="image4.jpg" alt="Photo 4" onerror="this.onerror=null; this.src='https://via.placeholder.com/200?text=Photo+4';">
-                    <img src="image5.jpg" alt="Photo 5" onerror="this.onerror=null; this.src='https://via.placeholder.com/200?text=Photo+5';">
+                    <img src="image1.jpg" alt="Gallery Image" onerror="this.onerror=null; this.src='https://via.placeholder.com/200?text=Profile+1';">
+                    <img src="image2.jpg" alt="Gallery Image" onerror="this.onerror=null; this.src='https://via.placeholder.com/200?text=Profile+2';">
+                    <img src="image3.jpg" alt="Gallery Image" onerror="this.onerror=null; this.src='https://via.placeholder.com/200?text=Profile+3';">
+                    <img src="image4.jpg" alt="Gallery Image" onerror="this.onerror=null; this.src='https://via.placeholder.com/200?text=Profile+4';">
                 </div>
             </div>
         </section>
@@ -330,21 +423,20 @@ def generate_html(articles):
         <section id="contact" class="section">
             <h2 class="section-title">Contact Me</h2>
             <div class="about-card">
-                <p>Have suggestions or feedback? Reach out directly via email!</p>
+                <p>Have questions or feedback? Feel free to write to me!</p>
                 <p style="margin-top: 0.5rem;"><strong>Email:</strong> <a href="mailto:prashantvushal@gmail.com" style="color: var(--accent-color);">prashantvushal@gmail.com</a></p>
             </div>
         </section>
     </div>
 
     <footer>
-        <p>&copy; 2026 AI Failed Portal. Developed by Prashant Bhusal (Arbin Sharma), 9th Grade Student at Rose Buds Balvatika.</p>
+        <p>&copy; 2026 AI Failed Portal. Developed by Prashant Bhusal (Arbin Sharma), Grade 9 Student at Rosy Buds Bal Batika.</p>
     </footer>
 
     <script>
         function toggleTheme() {{
             const body = document.body;
-            const currentTheme = body.getAttribute('data-theme');
-            if (currentTheme === 'light') {{
+            if (body.getAttribute('data-theme') === 'light') {{
                 body.removeAttribute('data-theme');
             }} else {{
                 body.setAttribute('data-theme', 'light');
@@ -359,8 +451,8 @@ def generate_html(articles):
         f.write(html_content)
 
 if __name__ == "__main__":
-    print("Fetching news...")
+    print("Fetching news and extracting images...")
     news_items = fetch_all_news()
-    print(f"Fetched {len(news_items)} news items.")
+    print(f"Successfully processed {len(news_items)} news items.")
     generate_html(news_items)
     print("Successfully generated index.html!")
