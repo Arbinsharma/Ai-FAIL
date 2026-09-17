@@ -10,9 +10,8 @@
             --card-bg: #ffffff;
             --text-color: #212529;
             --text-muted: #6c757d;
-            --accent-color: #dc3545; /* Red badge vibe for AI Fail */
+            --accent-color: #dc3545;
             --border-color: #dee2e6;
-            --badge-bg: #ffe3e6;
         }
 
         [data-theme="dark"] {
@@ -22,7 +21,6 @@
             --text-muted: #adb5bd;
             --accent-color: #ef4444;
             --border-color: #2d3748;
-            --badge-bg: #451a03;
         }
 
         body {
@@ -46,11 +44,13 @@
             z-index: 1000;
         }
 
-        /* Cool AI Fail Watermark Badge Logo */
+        /* Clickable Logo returning home */
         .logo-container {
             display: flex;
             align-items: center;
             gap: 12px;
+            cursor: pointer;
+            text-decoration: none;
         }
 
         .ai-fail-badge {
@@ -65,21 +65,32 @@
             text-transform: uppercase;
         }
 
-        .theme-toggle {
+        .header-controls {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .control-btn {
             background: none;
             border: 1px solid var(--border-color);
             color: var(--text-color);
-            padding: 0.5rem 1rem;
+            padding: 0.5rem 0.9rem;
             border-radius: 8px;
             cursor: pointer;
             font-weight: 600;
+            font-size: 0.85rem;
         }
 
-        /* Navigation Menu / Category Tabs */
+        .control-btn:hover {
+            border-color: var(--accent-color);
+        }
+
+        /* Navigation Menu (Home, About Me, News, Contact, Sections) */
         .nav-menu {
             display: flex;
             justify-content: center;
-            gap: 10px;
+            gap: 8px;
             padding: 1.5rem 1rem 0 1rem;
             flex-wrap: wrap;
         }
@@ -107,7 +118,7 @@
             padding: 0 1rem;
         }
 
-        /* About Me / Creator Section */
+        /* About Me Section */
         .about-card {
             background-color: var(--card-bg);
             border: 1px solid var(--border-color);
@@ -121,8 +132,8 @@
         }
 
         .about-avatar {
-            width: 80px;
-            height: 80px;
+            width: 85px;
+            height: 85px;
             border-radius: 50%;
             object-fit: cover;
             border: 3px solid var(--accent-color);
@@ -130,14 +141,61 @@
 
         .about-info h3 {
             margin: 0 0 5px 0;
-            font-size: 1.2rem;
+            font-size: 1.25rem;
         }
 
         .about-info p {
-            margin: 0;
+            margin: 0 0 8px 0;
             color: var(--text-muted);
             font-size: 0.95rem;
             line-height: 1.4;
+        }
+
+        .social-links a {
+            display: inline-block;
+            background-color: #1877f2;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-top: 5px;
+        }
+
+        /* Gallery Showcase (Image 1 to Image 5) */
+        .gallery-section {
+            margin-bottom: 2.5rem;
+        }
+
+        .gallery-section h3 {
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1rem;
+        }
+
+        .gallery-item {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            overflow: hidden;
+            height: 140px;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .gallery-item img:hover {
+            transform: scale(1.05);
         }
 
         /* News Grid & Cards */
@@ -243,46 +301,69 @@
 <body>
 
     <header>
-        <div class="logo-container">
+        <!-- Clickable Logo takes user back home -->
+        <a class="logo-container" onclick="resetHome(event)" href="#">
             <div class="ai-fail-badge">⚡ AI FAIL</div>
-            <span style="font-weight: 700; font-size: 1.1rem;">Tech Pulse</span>
+            <span style="font-weight: 700; font-size: 1.1rem; color: var(--text-color);">Tech Pulse</span>
+        </a>
+        <div class="header-controls">
+            <button class="control-btn" onclick="toggleLanguage()" id="lang-btn">🌐 NP / EN</button>
+            <button class="control-btn" onclick="toggleTheme()">🌓 Theme</button>
         </div>
-        <button class="theme-toggle" onclick="toggleTheme()">🌓 Theme</button>
     </header>
 
-    <!-- Navigation Menu Filter Tabs -->
+    <!-- Navigation Menu (Home, About Me, News, Contact, Categories) -->
     <div class="nav-menu" id="nav-menu">
-        <button class="nav-btn active" onclick="filterArticles('All', this)">All News</button>
-        <button class="nav-btn" onclick="filterArticles('AI Failures', this)">AI Failures</button>
-        <button class="nav-btn" onclick="filterArticles('Tech Failures', this)">Tech Failures</button>
-        <button class="nav-btn" onclick="filterArticles('Company Milestones', this)">Milestones</button>
-        <button class="nav-btn" onclick="filterArticles('General Tech', this)">General Tech</button>
+        <button class="nav-btn active" onclick="filterArticles('All', this)">🏠 Home / All</button>
+        <button class="nav-btn" onclick="scrollToSection('about-section')">👤 About Me</button>
+        <button class="nav-btn" onclick="scrollToSection('gallery-section')">🖼️ Gallery</button>
+        <button class="nav-btn" onclick="filterArticles('AI Failures', this)">🔥 AI Failures</button>
+        <button class="nav-btn" onclick="filterArticles('Tech Failures', this)">⚠️ Tech Failures</button>
+        <button class="nav-btn" onclick="filterArticles('Company Milestones', this)">🚀 Milestones</button>
+        <button class="nav-btn" onclick="scrollToSection('contact-footer')">📞 Contact</button>
     </div>
 
     <div class="container">
         <!-- About Me / Creator Section -->
-        <div class="about-card">
-            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80" alt="Creator Photo" class="about-avatar">
+        <div class="about-card" id="about-section">
+            <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=300&q=80" alt="Prashant Bhusal" class="about-avatar">
             <div class="about-info">
-                <h3>About the Creators</h3>
-                <p>Built with passion by <strong>Prashant Bhusal & Arbin Sharma</strong> — Grade 9 students at Rosy Buds Bal Batika School, Nepal.</p>
-                <p>Reach out: <a href="mailto:prashantvushal@gmail.com" style="color: var(--accent-color);">prashantvushal@gmail.com</a></p>
+                <h3 id="about-title">About Me</h3>
+                <p id="about-desc">Hello! I am <strong>Prashant Bhusal</strong> (along with my partner Arbin Sharma), a Grade 9 student at Rosy Buds Bal Batika School, Nepal. Passionate coder and tech enthusiast!</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/share/1FNoCNSMZp/" target="_blank" rel="noopener">📘 Connect on Facebook</a>
+                </div>
             </div>
         </div>
 
+        <!-- Personal Image Showcase (Image 1 to Image 5) -->
+        <div class="gallery-section" id="gallery-section">
+            <h3>My Gallery (Image 1 - Image 5)</h3>
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="image1.jpg" alt="Gallery Image 1" onerror="this.src='https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=400&q=80'"></div>
+                <div class="gallery-item"><img src="image2.jpg" alt="Gallery Image 2" onerror="this.src='https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=400&q=80'"></div>
+                <div class="gallery-item"><img src="image3.jpg" alt="Gallery Image 3" onerror="this.src='https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=400&q=80'"></div>
+                <div class="gallery-item"><img src="image4.jpg" alt="Gallery Image 4" onerror="this.src='https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=400&q=80'"></div>
+                <div class="gallery-item"><img src="image5.jpg" alt="Gallery Image 5" onerror="this.src='https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?auto=format&fit=crop&w=400&q=80'"></div>
+            </div>
+        </div>
+
+        <h2 id="news-heading" style="margin-bottom: 1.5rem; font-size: 1.4rem;">Live News & Articles</h2>
+
         <!-- News Grid -->
         <div id="news-grid" class="grid">
-            <div class="loading">Loading breaking news and failures...</div>
+            <div class="loading">Loading breaking news...</div>
         </div>
     </div>
 
-    <footer>
-        <p>Brought to you by the AI Fail & Tech News Network.</p>
-        <p class="copyright">© 2026 Prashant Bhusal & Arbin Sharma. All rights reserved. Unauthorized reproduction prohibited.</p>
+    <footer id="contact-footer">
+        <p>Contact Email: <a href="mailto:prashantvushal@gmail.com" style="color: var(--accent-color);">prashantvushal@gmail.com</a> | School: Rosy Buds Bal Batika, Nepal</p>
+        <p class="copyright">© 2026 Prashant Bhusal & Arbin Sharma. All rights reserved. Unauthorized duplication or reproduction of this website and its content is strictly prohibited.</p>
     </footer>
 
     <script>
         let allArticles = [];
+        let currentLang = 'en';
 
         function toggleTheme() {
             const current = document.documentElement.getAttribute('data-theme');
@@ -292,6 +373,31 @@
         }
 
         document.documentElement.setAttribute('data-theme', localStorage.getItem('theme') || 'light');
+
+        function toggleLanguage() {
+            currentLang = currentLang === 'en' ? 'np' : 'en';
+            if (currentLang === 'np') {
+                document.getElementById('about-title').innerText = 'मेro बारेमा (About Me)';
+                document.getElementById('about-desc').innerText = 'नमस्ते! म प्रशान्त भुसाल (र अर्बिन शर्मा), नेपालको रोसी बड्स बाल बाटिका स्कुलको कक्षा ९ को विद्यार्थी हुँ।';
+                document.getElementById('news-heading').innerText = 'ताजा समाचारहरू (Live News)';
+                document.getElementById('lang-btn').innerText = '🇳🇵 नेपाली';
+            } else {
+                document.getElementById('about-title').innerText = 'About Me';
+                document.getElementById('about-desc').innerText = 'Hello! I am Prashant Bhusal (along with my partner Arbin Sharma), a Grade 9 student at Rosy Buds Bal Batika School, Nepal. Passionate coder and tech enthusiast!';
+                document.getElementById('news-heading').innerText = 'Live News & Articles';
+                document.getElementById('lang-btn').innerText = '🌐 NP / EN';
+            }
+        }
+
+        function resetHome(e) {
+            e.preventDefault();
+            filterArticles('All', document.querySelector('.nav-btn'));
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function scrollToSection(id) {
+            document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+        }
 
         async function loadNews() {
             const grid = document.getElementById('news-grid');
@@ -335,7 +441,7 @@
 
         function filterArticles(category, btn) {
             document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
+            if(btn) btn.classList.add('active');
 
             if (category === 'All') {
                 displayArticles(allArticles);
