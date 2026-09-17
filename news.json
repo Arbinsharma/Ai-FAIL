@@ -140,13 +140,6 @@
     "published": "2026-09-17T13:57:14+00:00"
   },
   {
-    "title": "Show HN: Share your AI Setup, Learn from others",
-    "url": "https://mysetup.ai/",
-    "image_url": "https://mysetup.ai/social-preview.png",
-    "summary": "I kept seeing engineers share what they were building with AI; however, I was always more curious about how they worked. Which agents did they use? What skills and tools had stuck or been thrown…",
-    "published": "2026-09-17T13:01:44+00:00"
-  },
-  {
     "title": "AI-smart, not AI-first",
     "url": "https://www.cio.com/article/4222917/ai-smart-not-ai-first.html",
     "image_url": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80",
@@ -175,46 +168,11 @@
     "published": "2026-09-17T10:00:00+00:00"
   },
   {
-    "title": "AI safety is mostly a sex cult",
-    "url": "https://skywriter.blue/@segyges.bsky.social/3mvom4b4dn22q",
-    "image_url": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80",
-    "summary": "Article URL: https://skywriter.blue/@segyges.bsky.social/3mvom4b4dn22q Comments URL: https://news.ycombinator.com/item?id=49737985 Points: 180 # Comments: 139",
-    "published": "2026-09-17T08:36:37+00:00"
-  },
-  {
-    "title": "OpenSpec – A lightweight and configurable AI spec framework",
-    "url": "https://openspec.dev/",
-    "image_url": "https://openspec.dev/og-card.jpg",
-    "summary": "Article URL: https://openspec.dev/ Comments URL: https://news.ycombinator.com/item?id=49734264 Points: 183 # Comments: 90",
-    "published": "2026-09-16T23:06:39+00:00"
-  },
-  {
     "title": "Nonprofit that tracks meteors taken down by &quot;critical blow&quot; from a cyberattack",
     "url": "https://arstechnica.com/security/2026/09/nonprofit-that-tracks-meteors-taken-down-by-critical-blow-from-a-cyberattack/",
     "image_url": "https://cdn.arstechnica.net/wp-content/uploads/2026/09/astroid-international-meteor-organization.jpg",
     "summary": "Group plans to be largely out of commission for several weeks.",
     "published": "2026-09-16T21:08:14+00:00"
-  },
-  {
-    "title": "A coffee shop owner used AI to make a menu poster. Then came the angry DMs",
-    "url": "https://www.businessinsider.com/coffee-shop-owner-ai-menu-backlash-2026-9",
-    "image_url": "https://i.insider.com/6aa45cf09b8974787b1cb435?width=1191&format=jpeg",
-    "summary": "Article URL: https://www.businessinsider.com/coffee-shop-owner-ai-menu-backlash-2026-9 Comments URL: https://news.ycombinator.com/item?id=49731395 Points: 79 # Comments: 303",
-    "published": "2026-09-16T18:59:42+00:00"
-  },
-  {
-    "title": "Show HN: How Stale Is Your AI? Release age and training cutoff for 20 models",
-    "url": "https://stale.jock.pl/",
-    "image_url": "https://stale.jock.pl/og.png",
-    "summary": "Article URL: https://stale.jock.pl/ Comments URL: https://news.ycombinator.com/item?id=49726343 Points: 78 # Comments: 44",
-    "published": "2026-09-16T13:01:52+00:00"
-  },
-  {
-    "title": "Mistral X Mozilla: Private, Multilingual AI Browsing",
-    "url": "https://mistral.ai/news/mistral-x-mozilla/",
-    "image_url": "https://mistral.ai/cms-media/api/media/file/Linkedin-Partnership-Firefox%20copie.jpg",
-    "summary": "Article URL: https://mistral.ai/news/mistral-x-mozilla/ Comments URL: https://news.ycombinator.com/item?id=49723408 Points: 577 # Comments: 199",
-    "published": "2026-09-16T08:08:57+00:00"
   },
   {
     "title": "AI bots &quot;Timmy,&quot; &quot;Ren,&quot; and &quot;Jackie&quot; are flooding social media with slop",
