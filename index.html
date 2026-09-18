@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
 
-<!-- SEO Meta Tags for Top Google Ranking -->
+<!-- SEO Meta Tags -->
 <title>AIFail — AI Failures, Outages & Nepal Tech Intelligence</title>
 <meta name="description" content="Real-time tracker for critical AI failures, LLM hallucinations, outages, prompt injections, and technology news from Nepal and worldwide.">
 <meta name="keywords" content="AI fails, AI failures, ChatGPT wrong, AI hallucination, prompt injection, Nepal tech news, RONB, TechPana, AIFail, Arbin Sharma">
@@ -12,23 +12,28 @@
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 <link rel="canonical" href="https://aifail.pages.dev/">
 
+<!-- Permanent Favicon -->
+<link rel="icon" type="image/jpeg" href="image2.jpg">
+<link rel="shortcut icon" type="image/jpeg" href="image2.jpg">
+<link rel="apple-touch-icon" href="image2.jpg">
+
 <!-- Open Graph & Social Cards -->
 <meta property="og:title" content="AIFail — AI Failures & Technology Intelligence">
 <meta property="og:description" content="Tracking rogue AI incidents, outages, model exploits, and Nepal technology news in real time.">
 <meta property="og:url" content="https://aifail.pages.dev/">
 <meta property="og:site_name" content="AIFail">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://aifail.pages.dev/image1.jpg">
+<meta property="og:image" content="https://aifail.pages.dev/image2.jpg">
 <meta name="twitter:card" content="summary_large_image">
 
-<!-- Schema.org News Organization Structured Data -->
+<!-- Schema.org Structured Data -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "NewsMediaOrganization",
   "name": "AIFail",
   "url": "https://aifail.pages.dev/",
-  "logo": "https://aifail.pages.dev/image1.jpg",
+  "logo": "https://aifail.pages.dev/image2.jpg",
   "description": "Independent intelligence platform documenting artificial intelligence failures and Nepal tech updates.",
   "founder": [
     {
@@ -45,15 +50,8 @@
 
 <meta name="theme-color" content="#07080c">
 
-<!-- Favicon Randomizer -->
 <script>
 (function() {
-    var rand = Math.floor(Math.random() * 5) + 1;
-    var link = document.createElement("link");
-    link.rel = "icon";
-    link.type = "image/jpeg";
-    link.href = "image" + rand + ".jpg";
-    document.head.appendChild(link);
     try {
         var s = localStorage.getItem("aifail-theme");
         if (s === "light" || (!s && window.matchMedia("(prefers-color-scheme: light)").matches)) {
@@ -63,7 +61,6 @@
 })();
 </script>
 
-<!-- Google AdSense Script -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3086366212061442" crossorigin="anonymous"></script>
 
 <style>
@@ -107,7 +104,6 @@ body {
 a { color: inherit; text-decoration: none; }
 button, input { font: inherit; }
 
-/* Subtle Persistent Watermark */
 .top-watermark {
     position: fixed;
     top: 6px;
@@ -120,7 +116,6 @@ button, input { font: inherit; }
     z-index: 3000;
 }
 
-/* Zero CLS Ad Container (hidden until filled by Google) */
 .ad-shell {
     width: min(1360px, 94%);
     margin: 10px auto;
@@ -132,7 +127,6 @@ button, input { font: inherit; }
     display: block;
 }
 
-/* Taskbar Floating Header */
 .taskbar-wrapper {
     position: fixed;
     top: 14px;
@@ -152,7 +146,7 @@ button, input { font: inherit; }
 
 .taskbar {
     pointer-events: auto;
-    width: min(1080px, 94%);
+    width: min(1120px, 95%);
     height: var(--nav-height);
     background: rgba(14, 17, 26, 0.78);
     backdrop-filter: blur(24px);
@@ -173,7 +167,7 @@ html.light .taskbar {
 .logo-brand {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
     font-weight: 950;
     font-size: 18px;
     letter-spacing: -0.5px;
@@ -183,10 +177,17 @@ html.light .taskbar {
     width: 32px;
     height: 32px;
     border-radius: 50%;
-    display: grid;
-    place-items: center;
-    background: linear-gradient(135deg, var(--accent), var(--accent2));
-    font-size: 14px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1.5px solid var(--accent);
+    background: var(--bg-card);
+}
+.logo-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .nav-links {
@@ -232,7 +233,6 @@ html.light .taskbar {
 }
 .btn-icon:hover { transform: scale(1.08); border-color: var(--accent); }
 
-/* Dynamic Sub-Niche Horizontal Pill Strip */
 .sub-bar-container {
     width: min(1080px, 94%);
     margin: 86px auto 14px;
@@ -263,13 +263,11 @@ html.light .taskbar {
     color: #fff;
 }
 
-/* Main Container */
 main {
     width: min(1360px, 94%);
     margin: 0 auto 50px;
 }
 
-/* In-Site Universal Search Toolbar */
 .toolbar-wrap {
     margin: 20px 0 25px;
     display: flex;
@@ -312,7 +310,6 @@ main {
     font-weight: 700;
 }
 
-/* Dynamic Featured Banner */
 .featured-card {
     border: 1px solid var(--border);
     border-radius: var(--radius);
@@ -391,7 +388,6 @@ main {
 }
 .btn-primary:hover { transform: translateY(-2px); }
 
-/* News Grid */
 .news-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -465,7 +461,6 @@ main {
     color: var(--muted);
 }
 
-/* About / Developer Profile */
 .profile-section {
     margin-top: 80px;
     padding: 55px 20px;
@@ -515,7 +510,6 @@ main {
 }
 .btn-pill:hover { transform: translateY(-2px); border-color: var(--accent); }
 
-/* Gallery */
 .gallery-wrap {
     margin-top: 35px;
     display: grid;
@@ -536,7 +530,6 @@ main {
 }
 .gallery-thumb:hover img { transform: scale(1.08); }
 
-/* Toast */
 .toast-notice {
     position: fixed;
     bottom: 22px;
@@ -555,7 +548,6 @@ main {
 }
 .toast-notice.active { transform: translate(-50%, 0); opacity: 1; }
 
-/* Responsive Rules */
 @media (max-width: 950px) {
     .featured-layout { grid-template-columns: 1fr; }
     .featured-thumb { min-height: 240px; }
@@ -596,7 +588,9 @@ main {
 <div class="taskbar-wrapper" id="taskbarWrap">
     <nav class="taskbar" aria-label="Main taskbar">
         <div class="logo-brand" id="logoClick">
-            <div class="logo-icon">⚡</div>
+            <div class="logo-icon">
+                <img src="image2.jpg" alt="AIFail Logo">
+            </div>
             <span>AIFAIL</span>
         </div>
 
@@ -605,6 +599,7 @@ main {
             <button class="nav-pill" data-section="General Tech">General</button>
             <button class="nav-pill" data-section="AI Failures">AI Failures</button>
             <button class="nav-pill" data-section="Nepali News">Nepali</button>
+            <a href="#about" class="nav-pill" id="aboutNavBtn">About Me</a>
         </div>
 
         <div class="action-buttons">
@@ -617,7 +612,7 @@ main {
 <!-- Dynamic Sub-Niche Strip -->
 <div class="sub-bar-container" id="subBar"></div>
 
-<!-- Top Ad Slot (0 height until Google approval renders an ad) -->
+<!-- Top Ad Slot -->
 <div class="ad-shell">
     <ins class="adsbygoogle"
          style="display:block"
@@ -673,13 +668,13 @@ main {
     <!-- Developer & Creator Section -->
     <section class="profile-section" id="about">
         <div class="profile-wrap">
-            <img class="avatar-img" id="creatorAvatar" src="image1.jpg" alt="Arbin Sharma & Prashant Bhusal">
+            <img class="avatar-img" id="creatorAvatar" src="image2.jpg" alt="Arbin Sharma & Prashant Bhusal">
             <h2>Arbin Sharma &amp; Prashant Bhusal</h2>
             <div class="profile-meta">
-                Lead Developers &amp; Incident Researchers · Age 15 · Nepal
+                Lead Developers &amp; Incident Researchers · Nepal
             </div>
             <p class="profile-bio">
-                Created by 15-year-old student developers from Rosy Buds Bal Batika Secondary Boarding School.
+                Created by student developers from Rosy Buds Bal Batika Secondary Boarding School.
                 AIFail is an automated, real-time intelligence hub tracking artificial intelligence malfunctions,
                 model jailbreaks, hallucinations, outages, and regional Nepali tech coverage from RONB and TechPana.
             </p>
@@ -744,7 +739,7 @@ const subNicheMap = {
     "General Tech": ["all", "Tech", "Milestones", "Discussion"]
 };
 
-// Taskbar Scroll Animation (Hide down, Reveal up)
+// Taskbar Scroll Animation
 window.addEventListener("scroll", () => {
     const currentY = window.scrollY;
     if (currentY > 120 && currentY > lastScrollY) {
@@ -772,12 +767,12 @@ function renderSubBar() {
             activeSub = sub;
             renderSubBar();
             renderArticles();
+            document.getElementById("home").scrollIntoView({ behavior: "smooth" });
         });
         subBar.appendChild(btn);
     });
 }
 
-// Fisher-Yates shuffle to guarantee refreshed positioning
 function shuffleArray(arr) {
     const a = [...arr];
     for (let i = a.length - 1; i > 0; i--) {
@@ -852,8 +847,8 @@ function renderArticles() {
     });
 }
 
-// Navigation Tabs - Switch sections without scrolling down
-document.querySelectorAll(".nav-pill").forEach(btn => {
+// Navigation Tabs
+document.querySelectorAll(".nav-pill[data-section]").forEach(btn => {
     btn.addEventListener("click", () => {
         document.querySelectorAll(".nav-pill").forEach(b => b.classList.remove("active"));
         btn.classList.add("active");
@@ -864,13 +859,17 @@ document.querySelectorAll(".nav-pill").forEach(btn => {
     });
 });
 
+document.getElementById("aboutNavBtn").addEventListener("click", (e) => {
+    e.preventDefault();
+    document.getElementById("about").scrollIntoView({ behavior: "smooth" });
+});
+
 document.getElementById("logoClick").addEventListener("click", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
 localSearch.addEventListener("input", renderArticles);
 
-// In-Place Dynamic Translation
 async function translateStr(text, target) {
     if (!text || target === "en") return text;
     try {
@@ -902,13 +901,11 @@ document.getElementById("themeToggle").addEventListener("click", () => {
     showToast(isLight ? "Light Mode" : "Dark Mode");
 });
 
-// Load Feed Data with Shuffling
 async function load() {
     try {
         const res = await fetch("news.json?t=" + Date.now());
         const raw = await res.json();
 
-        // Separate and shuffle on every load
         const shuffled = shuffleArray(raw);
         updateFeatured(shuffled[0]);
         allArticles = shuffled.slice(1);
