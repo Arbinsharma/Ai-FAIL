@@ -1,5 +1,265 @@
 [
   {
+    "title": "This cartridge-playing Game Boy clone is smaller and cheaper than Analogue’s Pocket",
+    "url": "https://www.theverge.com/tech/997379/funnyplaying-fpbg-mini-game-boy-color-handheld-fpga-cartridge",
+    "section": "AI Outages",
+    "incident_type": "News",
+    "source": "The Verge",
+    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/09/funny1.jpg?quality=90&strip=all&crop=0%2C10.711059661308%2C100%2C78.577880677383&w=1200",
+    "summary": "FunnyPlaying, a Chinese company known for its Game Boy and GBA upgrade kits, has announced a new handheld that plays original Nintendo cartridges and ROMs. The FPGB Mini's cartridge support is limited to the Game Boy...",
+    "published": "2026-09-18T14:41:18+00:00",
+    "score": 0,
+    "status": "Reported",
+    "rank": 1
+  },
+  {
+    "title": "Inertia co-founder Jeff Lawson’s next big bet is fusion: Go inside it at TechCrunch Disrupt 2026",
+    "url": "https://techcrunch.com/2026/09/18/jeff-lawsons-next-big-bet-is-fusion-go-inside-it-at-techcrunch-disrupt-2026",
+    "section": "Company Milestones",
+    "incident_type": "Milestone",
+    "source": "TechCrunch",
+    "image_url": "https://techcrunch.com/wp-content/uploads/2026/09/TCD26_Jeff-Lawson_1-Speaker-16x9-Dark.png?resize=1200,675",
+    "summary": "Inertia co-founder and CEO Jeff Lawson joins the Smart Systems Stage at TechCrunch Disrupt 2026. Register now to save up to $200 by September 25.",
+    "published": "2026-09-18T14:30:00+00:00",
+    "score": 0,
+    "status": "Announced",
+    "rank": 2
+  },
+  {
+    "title": "KDE turns 30 and someone's brought an AI-native desktop proposal",
+    "url": "https://www.theregister.com/software/2026/09/18/kde-turns-30-and-someones-brought-an-ai-native-desktop-proposal/5297282",
+    "section": "Tech Failures",
+    "incident_type": "News",
+    "source": "The Register",
+    "image_url": "https://image.theregister.com/5297398.jpg?imageId=5297398&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683",
+    "summary": "Akademy talk imagines Plasma assembling itself around a personal model of each user",
+    "published": "2026-09-18T14:25:00+00:00",
+    "score": 0,
+    "status": "Reported",
+    "rank": 3
+  },
+  {
+    "title": "Researchers used Anthropic’s Claude to hack into OpenAI",
+    "url": "https://techcrunch.com/2026/09/18/researchers-used-anthropics-claude-to-hack-into-openai",
+    "section": "Company Milestones",
+    "incident_type": "Security",
+    "source": "TechCrunch",
+    "image_url": "https://techcrunch.com/wp-content/uploads/2025/04/GettyImages-1979406539.jpg?resize=1200,675",
+    "summary": "Security researchers used Anthropic’s Claude to exploit vulnerabilities in OpenAI’s systems, taking over employee accounts and gaining access to an internal code repository before reporting the flaws.",
+    "published": "2026-09-18T14:00:14+00:00",
+    "score": 26,
+    "status": "Announced",
+    "rank": 4
+  },
+  {
+    "title": "Secure enterprise sharing with access reviews for Microsoft 365",
+    "url": "https://www.bleepingcomputer.com/news/security/secure-enterprise-sharing-with-access-reviews-for-microsoft-365",
+    "section": "AI Security",
+    "incident_type": "News",
+    "source": "BleepingComputer",
+    "image_url": "https://www.bleepstatic.com/content/posts/2026/09/09/tenfold-upload.jpg",
+    "summary": "Microsoft 365 makes sharing files easy, but access can remain long after its original purpose has ended, leaving organizations with little visibility into who can still reach sensitive data. tenfold Software explains...",
+    "published": "2026-09-18T14:00:10+00:00",
+    "score": 0,
+    "status": "Reported",
+    "rank": 5
+  },
+  {
+    "title": "The clock is ticking: Final 24 hours to exhibit at TechCrunch Disrupt 2026",
+    "url": "https://techcrunch.com/2026/09/18/final-24-hours-to-exhibit-at-techcrunch-disrupt-2026",
+    "section": "Company Milestones",
+    "incident_type": "Milestone",
+    "source": "TechCrunch",
+    "image_url": "https://techcrunch.com/wp-content/uploads/2026/09/29395589440_9fda12ac24_k.jpg?resize=1200,800",
+    "summary": "Last day to book your exhibit table at Disrupt is today, September 18. Get your startup in front of 10,000+ founders, investors, operators, and tech leaders on October 13–15.",
+    "published": "2026-09-18T14:00:00+00:00",
+    "score": 0,
+    "status": "Announced",
+    "rank": 6
+  },
+  {
+    "title": "Microsoft Teams will let admins block custom file extensions",
+    "url": "https://www.bleepingcomputer.com/news/security/microsoft-teams-will-let-admins-block-custom-file-extensions",
+    "section": "AI Security",
+    "incident_type": "Security",
+    "source": "BleepingComputer",
+    "image_url": "https://www.bleepstatic.com/content/hl-images/2026/09/18/Microsoft-Teams.jpg",
+    "summary": "Microsoft Teams will soon let administrators tweak the list of file extensions commonly associated with security threats to meet their company's security requirements. [...]",
+    "published": "2026-09-18T13:58:40+00:00",
+    "score": 8,
+    "status": "Reported",
+    "rank": 7
+  },
+  {
+    "title": "Meet the winner of Nikon's Small World in Motion video contest",
+    "url": "https://arstechnica.com/science/2026/09/meet-the-winner-of-nikons-small-world-in-motion-video-contest",
+    "section": "Tech Failures",
+    "incident_type": "News",
+    "source": "Ars Technica",
+    "image_url": "https://cdn.arstechnica.net/wp-content/uploads/2026/09/nikonTOP-1152x648.jpg",
+    "summary": "Ning Xu of Tsinghua University captured tiny cilia beating in airways of a child with rare respiratory disorder.",
+    "published": "2026-09-18T13:56:57+00:00",
+    "score": 0,
+    "status": "Reported",
+    "rank": 8
+  },
+  {
+    "title": "AI chatbots becoming experts at changing people's minds. What's their secret?",
+    "url": "https://www.science.org/content/article/ai-chatbots-are-becoming-experts-changing-people-s-minds-what-s-their-secret",
+    "section": "General Tech",
+    "incident_type": "News",
+    "source": "science.org",
+    "image_url": "https://images.unsplash.com/photo-1655720828018-edd2daec9349?auto=format&fit=crop&w=1200&q=80",
+    "summary": "Comments",
+    "published": "2026-09-18T13:39:27+00:00",
+    "score": 0,
+    "status": "Reported",
+    "rank": 9
+  },
+  {
+    "title": "Researchers used Claude to hack OpenAI",
+    "url": "https://arstechnica.com/ai/2026/09/researchers-used-claude-to-hack-openai",
+    "section": "Tech Failures",
+    "incident_type": "Security",
+    "source": "Ars Technica",
+    "image_url": "https://cdn.arstechnica.net/wp-content/uploads/2026/09/ailogos-1152x648.jpg",
+    "summary": "Researchers used Claude to reach an OpenAI employee account and sensitive GitHub data.",
+    "published": "2026-09-18T13:30:12+00:00",
+    "score": 8,
+    "status": "Reported",
+    "rank": 10
+  },
+  {
+    "title": "Microsoft fixes the fix that broke Excel paste – partly",
+    "url": "https://www.theregister.com/software/2026/09/18/microsoft-fixes-the-fix-that-broke-excel-paste-partly/5297467",
+    "section": "Tech Failures",
+    "incident_type": "News",
+    "source": "The Register",
+    "image_url": "https://image.theregister.com/244387.jpg?imageId=244387&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683",
+    "summary": "Hotfix covers only Excel 2016 and may still come unstuck around conditional formatting",
+    "published": "2026-09-18T13:22:00+00:00",
+    "score": 0,
+    "status": "Reported",
+    "rank": 11
+  },
+  {
+    "title": "Webinar: Which Google Workspace security controls actually matter?",
+    "url": "https://www.bleepingcomputer.com/news/security/webinar-which-google-workspace-security-controls-actually-matter",
+    "section": "AI Security",
+    "incident_type": "Security",
+    "source": "BleepingComputer",
+    "image_url": "https://www.bleepstatic.com/content/hl-images/2022/06/29/Google_Workspace.jpg",
+    "summary": "Fast-growing companies face countless recommendations for securing Google Workspace, but not every control provides the same value. This webinar examines real-world breaches to explore which security controls matter...",
+    "published": "2026-09-18T13:10:19+00:00",
+    "score": 20,
+    "status": "Reported",
+    "rank": 12
+  },
+  {
+    "title": "An Empirical Study of Harness Design for Coding Agents",
+    "url": "https://arxiv.org/abs/2609.20804",
+    "section": "General Tech",
+    "incident_type": "News",
+    "source": "arxiv.org",
+    "image_url": "https://static.arxiv.org/icons/twitter/arxiv-logo-twitter-square.png",
+    "summary": "Comments",
+    "published": "2026-09-18T13:06:30+00:00",
+    "score": 0,
+    "status": "Reported",
+    "rank": 13
+  },
+  {
+    "title": "Microsoft Patches CVSS 10.0 Azure AI Foundry Flaw Enabling Unauthorized Privilege Escalation",
+    "url": "https://thehackernews.com/2026/09/microsoft-patches-cvss-100-azure-ai.html",
+    "section": "AI Security",
+    "incident_type": "Security",
+    "source": "The Hacker News",
+    "image_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiML2C2l_2QmIUPPt9Gs6K9nVdVk9WZWhJaeBQjf92a7R0O0ghnhNznkqPHwG1quCmfadrkibl0WJhLioNmbATDXGxPcy6EHuDVvUrcDF_q0m23IQD1CxL0DsMZT2ZnXCtOyGADMztIcBmgQzaAvNQR39JWnvbG085s4q4W01UQnH4g-Yj15_ZKrJXDaOpQ/s1600/ms-azure.jpg",
+    "summary": "Microsoft has released fixes for a maximum-severity security flaw in Azure AI Foundry that could be exploited to achieve privilege escalation. No customer action is required. The vulnerability, tracked as...",
+    "published": "2026-09-18T12:47:04+00:00",
+    "score": 47,
+    "status": "Reported",
+    "rank": 14
+  },
+  {
+    "title": "The ideal database for AI agents doesn't exist yet, says Percona CEO",
+    "url": "https://www.theregister.com/databases/2026/09/18/the-ideal-database-for-ai-agents-doesnt-exist-yet-says-percona-ceo/5296906",
+    "section": "Tech Failures",
+    "incident_type": "News",
+    "source": "The Register",
+    "image_url": "https://image.theregister.com/5296909.jpg?imageId=5296909&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683",
+    "summary": "Iterative workloads caught vendors off guard, but requirements for a clean-slate solution remain unclear",
+    "published": "2026-09-18T12:34:00+00:00",
+    "score": 0,
+    "status": "Reported",
+    "rank": 15
+  },
+  {
+    "title": "Microsoft fixes bug behind ‘Defender Antivirus is turned off’ alerts",
+    "url": "https://www.bleepingcomputer.com/news/security/microsoft-fixes-bug-behind-defender-antivirus-is-turned-off-alerts",
+    "section": "AI Security",
+    "incident_type": "Failure",
+    "source": "BleepingComputer",
+    "image_url": "https://www.bleepstatic.com/content/hl-images/2026/09/18/Microsoft-Defender.jpg",
+    "summary": "Microsoft has resolved a known issue that causes incorrect alerts warning that Defender Antivirus was turned off after installing recent updates. [...]",
+    "published": "2026-09-18T12:16:32+00:00",
+    "score": 11,
+    "status": "Reported",
+    "rank": 16
+  },
+  {
+    "title": "The Download: AI’s extinction risk and bioweapons threat",
+    "url": "https://www.technologyreview.com/2026/09/18/1142577/the-download-ai-extinction-threat-bioweapons",
+    "section": "AI Failures",
+    "incident_type": "Outage",
+    "source": "MIT Tech Review",
+    "image_url": "https://wp.technologyreview.com/wp-content/uploads/2026/09/260917_RoundTable2.jpg?resize=1200,600",
+    "summary": "This is today’s edition of The Download, our weekday newsletter that provides a daily dose of what’s going on in the world of technology. Could AI really kill us all? Your questions, answered On Wednesday, MIT...",
+    "published": "2026-09-18T12:10:00+00:00",
+    "score": 8,
+    "status": "Reported",
+    "rank": 17
+  },
+  {
+    "title": "I don't like passkeys",
+    "url": "https://hawksley.dev/blog/i-dont-like-passkeys",
+    "section": "General Tech",
+    "incident_type": "News",
+    "source": "hawksley.dev",
+    "image_url": "https://hawksley.dev/og/blog/i-dont-like-passkeys.jpg?v=7",
+    "summary": "Comments",
+    "published": "2026-09-18T12:06:50+00:00",
+    "score": 0,
+    "status": "Reported",
+    "rank": 18
+  },
+  {
+    "title": "Bend 2 and the Vibe-Coding Trap",
+    "url": "https://blog.liampwll.com/posts/bend_vibe_coding",
+    "section": "General Tech",
+    "incident_type": "News",
+    "source": "blog.liampwll.com",
+    "image_url": "https://images.unsplash.com/photo-1655720828018-edd2daec9349?auto=format&fit=crop&w=1200&q=80",
+    "summary": "Comments",
+    "published": "2026-09-18T12:03:55+00:00",
+    "score": 0,
+    "status": "Reported",
+    "rank": 19
+  },
+  {
+    "title": "Former Labour deputy Tom Watson joins Palantir as £330M NHS deal nears break point",
+    "url": "https://www.theregister.com/public-sector/2026/09/18/former-labour-deputy-tom-watson-joins-palantir-as-330m-nhs-deal-nears-break-point/5297426",
+    "section": "Tech Failures",
+    "incident_type": "News",
+    "source": "The Register",
+    "image_url": "https://image.theregister.com/5297443.jpg?imageId=5297443&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683",
+    "summary": "US spy-tech firm insists its new UK senior vice president is there to 'build things, not to open doors'",
+    "published": "2026-09-18T11:48:15+00:00",
+    "score": 0,
+    "status": "Reported",
+    "rank": 20
+  },
+  {
     "title": "What Enters Through an Image: The Blind Spot in AI Security Nobody Is Detecting",
     "url": "https://www.cybersecurity-insiders.com/what-enters-through-an-image-the-blind-spot-in-ai-security-nobody-is-detecting",
     "section": "AI Security",
@@ -10,7 +270,7 @@
     "published": "2026-09-18T11:37:54+00:00",
     "score": 8,
     "status": "Reported",
-    "rank": 1
+    "rank": 21
   },
   {
     "title": "Could AI really kill us all? Your questions, answered.",
@@ -23,7 +283,46 @@
     "published": "2026-09-18T11:29:22+00:00",
     "score": 0,
     "status": "Reported",
-    "rank": 2
+    "rank": 22
+  },
+  {
+    "title": "Warren Buffett Steps Down as Berkshire Chairman, Names Son to Replace Him",
+    "url": "https://www.nytimes.com/2026/09/18/business/warren-buffett-berkshire-chairman.html",
+    "section": "General Tech",
+    "incident_type": "Outage",
+    "source": "nytimes.com",
+    "image_url": "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1200&q=80",
+    "summary": "Comments",
+    "published": "2026-09-18T11:01:44+00:00",
+    "score": 8,
+    "status": "Reported",
+    "rank": 23
+  },
+  {
+    "title": "An Abandoned CDN Domain Was Re-Registered. Thousands of Sites Still Call It.",
+    "url": "https://thehackernews.com/2026/09/an-abandoned-cdn-domain-was-re.html",
+    "section": "AI Security",
+    "incident_type": "Outage",
+    "source": "The Hacker News",
+    "image_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh4A312zOZ7ftKXmWapCccs7ZW6g3d61vCPFzToGj6Y9nRb2cXUHcQ9__5Taotig6y1W_tljoo5ih74cJCTxZzfz5Ii0MMoLcBuUZS6fQCgn_L4zmq92Zamf2FJM-oT3ptyyzPM-2c1oyZSZSn3eYiUp0QidqC2N2tYT9GFrqAYitjrco1cmrDJRCm6HEk/s1600/report-uri.jpg",
+    "summary": "In July 2025, someone registered a domain that used to belong to a content delivery network. The CDN had been wound down years earlier, and the domain it served assets from was allowed to expire. What it had not lost...",
+    "published": "2026-09-18T11:01:16+00:00",
+    "score": 8,
+    "status": "Reported",
+    "rank": 24
+  },
+  {
+    "title": "Plugin4Shell Lets Repository Owners Swap Pinned Plugin Code Across Four AI Coding Agents",
+    "url": "https://thehackernews.com/2026/09/plugin4shell-lets-repository-owners.html",
+    "section": "AI Security",
+    "incident_type": "Security",
+    "source": "The Hacker News",
+    "image_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEizNK9maRYTbrRVwr9_9b7Sm_IizPdRJh0AbH1GtKU1BNPrcxJydnUdRQxRxauE5p1ejpfk4ihANpP7HAoXbRCDD1Pu-ZZD1dnfzLFjysOSJm7gGRKYrkUjxVF-tX-0neJMQtN87iyk1DRD70hKKtFU_J6idWK4aoZr3k4DAz4q8pkjTfKTX10Vttaiwag/s1600/coding-agents.jpg",
+    "summary": "A flaw in four widely used AI coding agents lets someone who controls a plugin's code repository swap the plugin an agent installs for a malicious one, even when the agent locked that plugin to a specific reviewed...",
+    "published": "2026-09-18T11:01:01+00:00",
+    "score": 8,
+    "status": "Reported",
+    "rank": 25
   },
   {
     "title": "Rocket Report: China wants a Raptor 3 engine; SpaceX set for big Starship test",
@@ -36,7 +335,7 @@
     "published": "2026-09-18T11:00:11+00:00",
     "score": 0,
     "status": "Reported",
-    "rank": 3
+    "rank": 26
   },
   {
     "title": "The best workplace culture in America is being built by companies you’ve never heard of",
@@ -49,7 +348,7 @@
     "published": "2026-09-18T11:00:00+00:00",
     "score": 15,
     "status": "Announced",
-    "rank": 4
+    "rank": 27
   },
   {
     "title": "Flash floods can strike without warning — this new technology could change that",
@@ -62,7 +361,7 @@
     "published": "2026-09-18T11:00:00+00:00",
     "score": 0,
     "status": "Reported",
-    "rank": 5
+    "rank": 28
   },
   {
     "title": "WeaselBiscuit Stealer Spreads via 13 npm Packages to Harvest Chrome Extension Storage",
@@ -75,7 +374,7 @@
     "published": "2026-09-18T10:40:06+00:00",
     "score": 18,
     "status": "Reported",
-    "rank": 6
+    "rank": 29
   },
   {
     "title": "ZCode, the GLM coding agent, silently uploads your Git history",
@@ -83,12 +382,12 @@
     "section": "General Tech",
     "incident_type": "News",
     "source": "tokenstead.ai",
-    "image_url": "https://tokenstead.ai/og/guides/zcode-silent-git-history-upload.png",
+    "image_url": "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1200&q=80",
     "summary": "Comments",
     "published": "2026-09-18T10:35:28+00:00",
     "score": 0,
     "status": "Reported",
-    "rank": 7
+    "rank": 30
   },
   {
     "title": "KPMG tech cuts come with a severance sum some staff call insulting",
@@ -101,7 +400,7 @@
     "published": "2026-09-18T10:32:00+00:00",
     "score": 0,
     "status": "Reported",
-    "rank": 8
+    "rank": 31
   },
   {
     "title": "16 governance tools for securing your AI fleet",
@@ -114,7 +413,7 @@
     "published": "2026-09-18T10:01:00+00:00",
     "score": 119,
     "status": "Announced",
-    "rank": 9
+    "rank": 32
   },
   {
     "title": "McDonald’s reintroduces AI at drive-thrus",
@@ -127,7 +426,7 @@
     "published": "2026-09-18T10:00:00+00:00",
     "score": 49,
     "status": "Announced",
-    "rank": 10
+    "rank": 33
   },
   {
     "title": "Enterprise AI desperately needs a lifecycle for context",
@@ -140,20 +439,7 @@
     "published": "2026-09-18T10:00:00+00:00",
     "score": 29,
     "status": "Announced",
-    "rank": 11
-  },
-  {
-    "title": "Microsoft exec called AI scraping 'the largest theft of labor in human history'",
-    "url": "https://techcrunch.com/2026/09/17/microsoft-exec-called-ai-scraping-the-largest-theft-of-labor-in-human-history-new-unredacted-filings-reveal",
-    "section": "General Tech",
-    "incident_type": "News",
-    "source": "TechCrunch",
-    "image_url": "https://techcrunch.com/wp-content/uploads/2023/11/GettyImages-1778706504.jpg?resize=1200,783",
-    "summary": "Comments",
-    "published": "2026-09-18T09:45:07+00:00",
-    "score": 0,
-    "status": "Reported",
-    "rank": 12
+    "rank": 34
   },
   {
     "title": "OpenJev",
@@ -166,7 +452,7 @@
     "published": "2026-09-18T09:42:22+00:00",
     "score": 0,
     "status": "Reported",
-    "rank": 13
+    "rank": 35
   },
   {
     "title": "New Check Point flaw lets hackers execute code with root privileges",
@@ -179,7 +465,7 @@
     "published": "2026-09-18T09:34:33+00:00",
     "score": 45,
     "status": "Reported",
-    "rank": 14
+    "rank": 36
   },
   {
     "title": "British Army spends £16M on 1,000 pocket-sized eyes in the sky",
@@ -192,7 +478,7 @@
     "published": "2026-09-18T09:29:00+00:00",
     "score": 0,
     "status": "Reported",
-    "rank": 15
+    "rank": 37
   },
   {
     "title": "Claimed Bug Bounty Hunter Likely Used LLM to Build PhantomRaven npm Stealer",
@@ -205,7 +491,7 @@
     "published": "2026-09-18T09:18:03+00:00",
     "score": 16,
     "status": "Reported",
-    "rank": 16
+    "rank": 38
   },
   {
     "title": "Healthcare AI’s real bottleneck isn’t intelligence — it’s integration",
@@ -218,7 +504,7 @@
     "published": "2026-09-18T09:00:00+00:00",
     "score": 22,
     "status": "Announced",
-    "rank": 17
+    "rank": 39
   },
   {
     "title": "The specter of AI-enabled bioweapons is a wake-up call for biotech",
@@ -226,12 +512,12 @@
     "section": "AI Failures",
     "incident_type": "News",
     "source": "MIT Tech Review",
-    "image_url": "https://wp.technologyreview.com/wp-content/uploads/2026/09/260915_TheCheckup.jpg?resize=1200,600",
+    "image_url": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
     "summary": "In recent weeks, leaders of some of the biggest AI companies have warned that the very tech they are developing is dangerous. Last weekend, Anthropic CEO Dario Amodei argued that AI carries serious risk and that...",
     "published": "2026-09-18T09:00:00+00:00",
     "score": 0,
     "status": "Reported",
-    "rank": 18
+    "rank": 40
   },
   {
     "title": "Royal Society slams UK.gov science shake-up",
@@ -244,7 +530,7 @@
     "published": "2026-09-18T08:30:00+00:00",
     "score": 0,
     "status": "Reported",
-    "rank": 19
+    "rank": 41
   },
   {
     "title": "Microsoft fixes broken copy and paste for Excel 2016 users",
@@ -257,7 +543,7 @@
     "published": "2026-09-18T07:35:31+00:00",
     "score": 23,
     "status": "Reported",
-    "rank": 20
+    "rank": 42
   },
   {
     "title": "Techie fixed Wi-Fi dead zone with a drill",
@@ -270,7 +556,7 @@
     "published": "2026-09-18T06:30:00+00:00",
     "score": 0,
     "status": "Reported",
-    "rank": 21
+    "rank": 43
   },
   {
     "title": "RatHat Android Malware Abuses ADB to Retain Shell Access After Uninstall",
@@ -283,7 +569,7 @@
     "published": "2026-09-18T06:17:25+00:00",
     "score": 34,
     "status": "Reported",
-    "rank": 22
+    "rank": 44
   },
   {
     "title": "AI risks make some insurers wary of corporate liability",
@@ -296,7 +582,7 @@
     "published": "2026-09-18T05:33:00+00:00",
     "score": 0,
     "status": "Reported",
-    "rank": 23
+    "rank": 45
   },
   {
     "title": "AWS confesses its console causes cloudy confusion for new users",
@@ -309,7 +595,7 @@
     "published": "2026-09-18T04:52:40+00:00",
     "score": 0,
     "status": "Reported",
-    "rank": 24
+    "rank": 46
   },
   {
     "title": "Jemalloc 5.4.0",
@@ -317,38 +603,12 @@
     "section": "General Tech",
     "incident_type": "News",
     "source": "github.com",
-    "image_url": "https://opengraph.githubassets.com/757edfa22c8cec63243b6db8691aa148bbcede35b72fb0f10a038fa3aa43da14/jemalloc/jemalloc/releases/tag/5.4.0",
+    "image_url": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=1200&q=80",
     "summary": "Comments",
     "published": "2026-09-18T04:20:24+00:00",
     "score": 0,
     "status": "Reported",
-    "rank": 25
-  },
-  {
-    "title": "The scourge of x86 emulation",
-    "url": "https://fex-emu.com/scourge-of-emulation",
-    "section": "General Tech",
-    "incident_type": "News",
-    "source": "fex-emu.com",
-    "image_url": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80",
-    "summary": "Comments",
-    "published": "2026-09-18T04:09:48+00:00",
-    "score": 0,
-    "status": "Reported",
-    "rank": 26
-  },
-  {
-    "title": "USA’s Venezuela takeover comes with bonus exposure to Chinese AI surveillance tech",
-    "url": "https://www.theregister.com/security/2026/09/18/usas-venezuela-takeover-comes-with-bonus-exposure-to-chinese-ai-surveillance-tech/5297357",
-    "section": "Tech Failures",
-    "incident_type": "News",
-    "source": "The Register",
-    "image_url": "https://image.theregister.com/5297362.jpg?imageId=5297362&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683",
-    "summary": "Think tank points out that companies banned by Washington will help run the regime that Uncle Sam now controls",
-    "published": "2026-09-18T02:28:30+00:00",
-    "score": 0,
-    "status": "Reported",
-    "rank": 27
+    "rank": 47
   },
   {
     "title": "Waymo says Singapore will be its next international robotaxi city",
@@ -361,7 +621,7 @@
     "published": "2026-09-18T02:00:00+00:00",
     "score": 6,
     "status": "Reported",
-    "rank": 28
+    "rank": 48
   },
   {
     "title": "SAP CEO: The end is near for the keyboard",
@@ -374,7 +634,7 @@
     "published": "2026-09-18T01:17:48+00:00",
     "score": 0,
     "status": "Announced",
-    "rank": 29
+    "rank": 49
   },
   {
     "title": "An undisclosed Microsoft presentation is now central to a multi-million dollar antitrust fight",
@@ -387,10 +647,10 @@
     "published": "2026-09-18T00:19:13+00:00",
     "score": 18,
     "status": "Announced",
-    "rank": 30
+    "rank": 50
   },
   {
-    "title": "Khosla-backed Mazama Energy just raised $135M to drill deeper into super-hot-rock geothermal",
+    "title": "Khosla-backed Mazama Energy just raised $135M to drill deeper into superhot-rock geothermal",
     "url": "https://techcrunch.com/2026/09/17/khosla-backed-mazama-energy-just-raised-135m-to-drill-deeper-into-super-hot-rock-geothermal",
     "section": "Company Milestones",
     "incident_type": "Milestone",
@@ -400,7 +660,7 @@
     "published": "2026-09-18T00:02:36+00:00",
     "score": 7,
     "status": "Announced",
-    "rank": 31
+    "rank": 51
   },
   {
     "title": "The more autonomous your AI, the more people it needs",
@@ -413,7 +673,7 @@
     "published": "2026-09-18T00:00:00+00:00",
     "score": 22,
     "status": "Announced",
-    "rank": 32
+    "rank": 52
   },
   {
     "title": "The amount of e-waste caused by AI is underestimated: we can’t only include the servers",
@@ -426,7 +686,7 @@
     "published": "2026-09-17T23:36:30+00:00",
     "score": 42,
     "status": "Announced",
-    "rank": 33
+    "rank": 53
   },
   {
     "title": "Crusoe raises $3.9B to build massive data centers and small modular ‘AI factories’",
@@ -439,7 +699,7 @@
     "published": "2026-09-17T23:25:52+00:00",
     "score": 7,
     "status": "Announced",
-    "rank": 34
+    "rank": 54
   },
   {
     "title": "Google DeepMind launches institute to widen the AGI debate",
@@ -452,20 +712,7 @@
     "published": "2026-09-17T23:21:17+00:00",
     "score": 6,
     "status": "Announced",
-    "rank": 35
-  },
-  {
-    "title": "Marvell pushes GlobalFoundries to light up wafer production",
-    "url": "https://www.theregister.com/systems/2026/09/18/marvell-pushes-globalfoundries-to-light-up-wafer-production/5297340",
-    "section": "Tech Failures",
-    "incident_type": "News",
-    "source": "The Register",
-    "image_url": "https://image.theregister.com/5263102.jpg?imageId=5263102&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683",
-    "summary": "It might be the next trillion-dollar company, but it'll need some help on the supply side to do it",
-    "published": "2026-09-17T23:16:53+00:00",
-    "score": 0,
-    "status": "Reported",
-    "rank": 36
+    "rank": 55
   },
   {
     "title": "Amazon-owned Zoox’s 100-robotaxi limit in Nevada is about to disappear",
@@ -478,33 +725,7 @@
     "published": "2026-09-17T23:08:24+00:00",
     "score": 0,
     "status": "Announced",
-    "rank": 37
-  },
-  {
-    "title": "Qwen 3.8 Omni Flash",
-    "url": "https://qwen.ai/blog?id=qwen3.8-omni-flash",
-    "section": "General Tech",
-    "incident_type": "News",
-    "source": "qwen.ai",
-    "image_url": "https://img.alicdn.com/imgextra/i4/O1CN01OXv3EM1FN8t9W4P79_!!6000000000474-2-tps-80-80.png",
-    "summary": "Comments",
-    "published": "2026-09-17T23:05:48+00:00",
-    "score": 0,
-    "status": "Reported",
-    "rank": 38
-  },
-  {
-    "title": "AI coding agents' 0-click RCE flaw could hand attackers keys to the kingdom",
-    "url": "https://www.theregister.com/security/2026/09/17/ai-coding-agents-0-click-rce-flaw-could-hand-attackers-keys-to-the-kingdom/5297335",
-    "section": "Tech Failures",
-    "incident_type": "Security",
-    "source": "The Register",
-    "image_url": "https://image.theregister.com/5297339.jpg?imageId=5297339&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683",
-    "summary": "Plugin4Shell attack affects all the major coding agents, researchers say",
-    "published": "2026-09-17T22:42:29+00:00",
-    "score": 7,
-    "status": "Reported",
-    "rank": 39
+    "rank": 56
   },
   {
     "title": "PrismML hopes its tiny LLM will change how we all use AI",
@@ -517,7 +738,7 @@
     "published": "2026-09-17T22:34:09+00:00",
     "score": 0,
     "status": "Announced",
-    "rank": 40
+    "rank": 57
   },
   {
     "title": "RFK Jr. names 8 new members to influential preventive medicine task force",
@@ -526,11 +747,11 @@
     "incident_type": "News",
     "source": "Ars Technica",
     "image_url": "https://cdn.arstechnica.net/wp-content/uploads/2026/03/GettyImages-2268348621-2560x1440.jpg",
-    "summary": "The USPSTF sets insurance coverage from preventive services, like colonoscopies.",
+    "summary": "The USPSTF sets insurance coverage for preventive services, like colonoscopies.",
     "published": "2026-09-17T22:31:28+00:00",
     "score": 0,
     "status": "Reported",
-    "rank": 41
+    "rank": 58
   },
   {
     "title": "The FAA’s plan to fix air traffic? $875M worth of AI",
@@ -543,7 +764,7 @@
     "published": "2026-09-17T22:14:59+00:00",
     "score": 12,
     "status": "Announced",
-    "rank": 42
+    "rank": 59
   },
   {
     "title": "Small AI models let drones autonomously identify and attack battlefield targets",
@@ -556,7 +777,7 @@
     "published": "2026-09-17T22:12:58+00:00",
     "score": 7,
     "status": "Reported",
-    "rank": 43
+    "rank": 60
   },
   {
     "title": "New RatHat Android malware uses AI to automate device control",
@@ -569,46 +790,7 @@
     "published": "2026-09-17T21:50:26+00:00",
     "score": 10,
     "status": "Reported",
-    "rank": 44
-  },
-  {
-    "title": "Bonsai 2 27B: Near-Lossless Compression in a 9x Smaller Footprint",
-    "url": "https://prismml.com/news/bonsai-2-27b",
-    "section": "General Tech",
-    "incident_type": "News",
-    "source": "prismml.com",
-    "image_url": "https://cdn.prod.website-files.com/699604cc2b9dd89bdbda0608/6a6d0e0bc0d5f9a97a5164c0_69cc089669ab0df26e921aac_prism-og-img%2520(2).png",
-    "summary": "Comments",
-    "published": "2026-09-17T21:13:31+00:00",
-    "score": 0,
-    "status": "Reported",
-    "rank": 45
-  },
-  {
-    "title": "Huawei's next-gen Ascend NPUs could become China's best option",
-    "url": "https://www.theregister.com/systems/2026/09/17/huaweis-next-gen-ascend-npus-could-become-chinas-best-option/5297320",
-    "section": "Tech Failures",
-    "incident_type": "News",
-    "source": "The Register",
-    "image_url": "https://image.theregister.com/261217.jpg?imageId=261217&x=0&y=0&cropw=100&croph=100&panox=0&panoy=0&panow=100&panoh=100&width=1200&height=683",
-    "summary": "960DT is set to arrive early, boasting performance far exceeding anything the West could offer the Middle Kingdom",
-    "published": "2026-09-17T21:07:51+00:00",
-    "score": 0,
-    "status": "Reported",
-    "rank": 46
-  },
-  {
-    "title": "Bend – A language that blocks AI mistakes via proof, on CPU and GPU",
-    "url": "https://bend-lang.com",
-    "section": "General Tech",
-    "incident_type": "News",
-    "source": "bend-lang.com",
-    "image_url": "https://images.unsplash.com/photo-1655720828018-edd2daec9349?auto=format&fit=crop&w=1200&q=80",
-    "summary": "Comments",
-    "published": "2026-09-17T20:36:13+00:00",
-    "score": 0,
-    "status": "Reported",
-    "rank": 47
+    "rank": 61
   },
   {
     "title": "The fix for rogue AI agents could be more AI",
@@ -621,20 +803,7 @@
     "published": "2026-09-17T20:34:47+00:00",
     "score": 4,
     "status": "Announced",
-    "rank": 48
-  },
-  {
-    "title": "OpenAI caught its models leaving notes to successors to hide bad behavior",
-    "url": "https://techcrunch.com/2026/09/17/openai-caught-its-models-leaving-notes-to-successors-to-hide-bad-behavior",
-    "section": "Company Milestones",
-    "incident_type": "Milestone",
-    "source": "TechCrunch",
-    "image_url": "https://techcrunch.com/wp-content/uploads/2026/09/GettyImages-1014496212.jpg?resize=1200,600",
-    "summary": "OpenAI disclosed instances of GPT-5.6 Sol instructing future contexts to conceal mistakes and misaligned behavior, highlighting the growing challenge of detecting misalignment as increasingly capable AI models learn...",
-    "published": "2026-09-17T20:34:24+00:00",
-    "score": 0,
-    "status": "Announced",
-    "rank": 49
+    "rank": 62
   },
   {
     "title": "Google announces new experimental \"CC\" AI agent for families",
@@ -642,38 +811,12 @@
     "section": "Tech Failures",
     "incident_type": "News",
     "source": "Ars Technica",
-    "image_url": "https://cdn.arstechnica.net/wp-content/uploads/2026/09/Google-CC-1152x648.png",
+    "image_url": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
     "summary": "Multiple family members can share data to help the agent make plans and complete tasks.",
     "published": "2026-09-17T20:24:34+00:00",
     "score": 0,
     "status": "Reported",
-    "rank": 50
-  },
-  {
-    "title": "Is the AI safety debate about safety or control?",
-    "url": "https://techcrunch.com/2026/09/17/is-the-ai-safety-debate-about-safety-or-control",
-    "section": "Company Milestones",
-    "incident_type": "Milestone",
-    "source": "TechCrunch",
-    "image_url": "https://techcrunch.com/wp-content/uploads/2026/08/GettyImages-2282033342.jpg?w=1024",
-    "summary": "Not everyone agrees with Amodei's call for globally coordinated action for AI safety.",
-    "published": "2026-09-17T20:19:37+00:00",
-    "score": 0,
-    "status": "Announced",
-    "rank": 51
-  },
-  {
-    "title": "Astra for Law",
-    "url": "https://openai.com/index/astra-for-law",
-    "section": "General Tech",
-    "incident_type": "News",
-    "source": "openai.com",
-    "image_url": "https://images.unsplash.com/photo-1655720828018-edd2daec9349?auto=format&fit=crop&w=1200&q=80",
-    "summary": "Comments",
-    "published": "2026-09-17T20:17:48+00:00",
-    "score": 0,
-    "status": "Reported",
-    "rank": 52
+    "rank": 63
   },
   {
     "title": "Microsoft exec called AI scraping the “largest theft of labor in human history”",
@@ -686,20 +829,7 @@
     "published": "2026-09-17T20:10:41+00:00",
     "score": 0,
     "status": "Reported",
-    "rank": 53
-  },
-  {
-    "title": "UN turns to Google to make its global data ready for AI agents",
-    "url": "https://techcrunch.com/2026/09/17/un-turns-to-google-to-make-its-global-data-ready-for-ai-agents",
-    "section": "Company Milestones",
-    "incident_type": "Milestone",
-    "source": "TechCrunch",
-    "image_url": "https://techcrunch.com/wp-content/uploads/2025/02/GettyImages-2196352264.jpg?w=1024",
-    "summary": "The shift comes after a UNICEF test found leading AI models struggled to accurately retrieve global development statistics.",
-    "published": "2026-09-17T20:00:00+00:00",
-    "score": 0,
-    "status": "Announced",
-    "rank": 54
+    "rank": 64
   },
   {
     "title": "The AI Superintelligence Slowdown",
@@ -712,7 +842,7 @@
     "published": "2026-09-17T19:28:24+00:00",
     "score": 8,
     "status": "Reported",
-    "rank": 55
+    "rank": 65
   },
   {
     "title": "Republican bill would order ISPs, DNS providers, and VPNs to block piracy sites",
@@ -725,7 +855,7 @@
     "published": "2026-09-17T19:07:28+00:00",
     "score": 0,
     "status": "Reported",
-    "rank": 56
+    "rank": 66
   },
   {
     "title": "Claude Code relaunches Projects to manage multiple AI agents in the cloud",
@@ -738,7 +868,7 @@
     "published": "2026-09-17T18:58:05+00:00",
     "score": 6,
     "status": "Reported",
-    "rank": 57
+    "rank": 67
   },
   {
     "title": "OpenAI details more cases of AI agents taking unauthorized actions",
@@ -751,7 +881,7 @@
     "published": "2026-09-17T18:55:12+00:00",
     "score": 0,
     "status": "Reported",
-    "rank": 58
+    "rank": 68
   },
   {
     "title": "LLMs respond differently to harmful prompts when AI watermarking is used",
@@ -764,7 +894,7 @@
     "published": "2026-09-17T18:33:13+00:00",
     "score": 0,
     "status": "Reported",
-    "rank": 59
+    "rank": 69
   },
   {
     "title": "Critical Check Point Management Flaw Lets Unauthenticated Attackers Run Code as Root",
@@ -777,7 +907,7 @@
     "published": "2026-09-17T18:08:28+00:00",
     "score": 37,
     "status": "Reported",
-    "rank": 60
+    "rank": 70
   },
   {
     "title": "IV drips used for \"detoxification\" actually filled with toxins; dozens poisoned",
@@ -790,7 +920,7 @@
     "published": "2026-09-17T17:43:50+00:00",
     "score": 0,
     "status": "Reported",
-    "rank": 61
+    "rank": 71
   },
   {
     "title": "ThreatsDay: Self-Rewriting Agents, 800+ Flaws Patched, Insider SIM Swaps and 22 More New Stories",
@@ -803,20 +933,7 @@
     "published": "2026-09-17T17:32:22+00:00",
     "score": 13,
     "status": "Reported",
-    "rank": 62
-  },
-  {
-    "title": "2026 Hyundai Ioniq 5: Here's what we still like, here's what annoys us",
-    "url": "https://arstechnica.com/cars/2026/09/2026-hyundai-ioniq-5-heres-what-we-still-like-heres-what-annoys-us",
-    "section": "Tech Failures",
-    "incident_type": "News",
-    "source": "Ars Technica",
-    "image_url": "https://cdn.arstechnica.net/wp-content/uploads/2026/09/2026-Hyundai-Ioniq-5-1-of-10-1152x648.jpg",
-    "summary": "It’s spacious, efficient, and charges very quickly. But what about reliability concerns?",
-    "published": "2026-09-17T17:30:30+00:00",
-    "score": 0,
-    "status": "Reported",
-    "rank": 63
+    "rank": 72
   },
   {
     "title": "Save $30 or more on a refurbished Apple TV 4K",
@@ -829,7 +946,7 @@
     "published": "2026-09-17T17:14:07+00:00",
     "score": 0,
     "status": "Reported",
-    "rank": 64
+    "rank": 73
   },
   {
     "title": "Brevo supply-chain attack injected ClickFix scripts on customer sites",
@@ -842,20 +959,7 @@
     "published": "2026-09-17T17:11:34+00:00",
     "score": 17,
     "status": "Confirmed",
-    "rank": 65
-  },
-  {
-    "title": "Covert uploads and megalomania: OpenAI details new \"misaligned\" agent incidents",
-    "url": "https://arstechnica.com/ai/2026/09/covert-uploads-and-megalomania-openai-details-new-misaligned-agent-incidents",
-    "section": "Tech Failures",
-    "incident_type": "News",
-    "source": "Ars Technica",
-    "image_url": "https://cdn.arstechnica.net/wp-content/uploads/2026/09/GettyImages-875641-001-1152x648.jpg",
-    "summary": "Model maker commits to new framework for reporting misaligned models.",
-    "published": "2026-09-17T16:18:34+00:00",
-    "score": 0,
-    "status": "Reported",
-    "rank": 66
+    "rank": 74
   },
   {
     "title": "TypeSafe AI’s new models work with machines, not humans",
@@ -868,7 +972,7 @@
     "published": "2026-09-17T16:06:34+00:00",
     "score": 13,
     "status": "Announced",
-    "rank": 67
+    "rank": 75
   },
   {
     "title": "Xbox’s clever disc-to-digital feature was 15 years in the making",
@@ -881,7 +985,7 @@
     "published": "2026-09-17T16:00:00+00:00",
     "score": 0,
     "status": "Reported",
-    "rank": 68
+    "rank": 76
   },
   {
     "title": "Critical Docker Sandboxes Flaw Lets Malicious Guest Code Read and Modify macOS Host Files",
@@ -894,7 +998,7 @@
     "published": "2026-09-17T15:37:56+00:00",
     "score": 8,
     "status": "Reported",
-    "rank": 69
+    "rank": 77
   },
   {
     "title": "Camp Snap’s 110D gives slim retro film cameras a digital upgrade",
@@ -907,7 +1011,7 @@
     "published": "2026-09-17T15:00:00+00:00",
     "score": 0,
     "status": "Reported",
-    "rank": 70
+    "rank": 78
   },
   {
     "title": "Your robotaxi might be a narc",
@@ -915,12 +1019,12 @@
     "section": "AI Outages",
     "incident_type": "News",
     "source": "The Verge",
-    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/09/268756_Robotaxis_are_cops_now_CVirginia.jpg?quality=90&strip=all&crop=0%2C10.732984293194%2C100%2C78.534031413613&w=1200",
+    "image_url": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
     "summary": "In early September, two teenagers got into a Waymo, but then ended up in the back of a police car. The robotaxi company said it detected \"a violation of our terms of service involving a firearm,\" pulled the car over,...",
     "published": "2026-09-17T15:00:00+00:00",
     "score": 0,
     "status": "Confirmed",
-    "rank": 71
+    "rank": 79
   },
   {
     "title": "Iran-Linked Handala Hack Tied to HEAVYGRAM Telegram Backdoor That Can Steal Passwords",
@@ -931,110 +1035,6 @@
     "image_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhdqFZ07lueoUFevcbuCOBavlR6CaAxmFqFs7hLpyqw-maKbLcISxW0Q-y7JwvoRrhDumRNaJo_Z4T6QRrGLUTDEE8yYqFfoRLmkoc_J4omdeCAmew1_5k-NwnNWJyYawal5nni-TVZu8M4aDsGNhbwlpp1Y7wLUSjsFR-olY89Mls9hD4CiL9jq0roUpzA/s1600/telegram-handala.jpg",
     "summary": "The Iran-linked \"hacktivist\" persona known as Handala Hack has been attributed to a Telegram-based surveillance backdoor called HEAVYGRAM and a Delphi-based utility known as CRUDEEXCLUDE. \"HEAVYGRAM offers builtin...",
     "published": "2026-09-17T14:03:13+00:00",
-    "score": 8,
-    "status": "Reported",
-    "rank": 72
-  },
-  {
-    "title": "What Recent AI-Powered Attacks Mean for Your Identity Security",
-    "url": "https://www.bleepingcomputer.com/news/security/what-recent-ai-powered-attacks-mean-for-your-identity-security",
-    "section": "AI Security",
-    "incident_type": "Security",
-    "source": "BleepingComputer",
-    "image_url": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=1200&q=80",
-    "summary": "AI is making credential theft faster and easier to scale, giving attackers more opportunities to abuse valid identities. Specops explains why identity security must go beyond successful authentication by verifying...",
-    "published": "2026-09-17T14:01:11+00:00",
-    "score": 15,
-    "status": "Reported",
-    "rank": 73
-  },
-  {
-    "title": "Microsoft AI CEO says AI threats are real, and Anthropic is making it worse",
-    "url": "https://www.theverge.com/podcast/996412/microsoft-ai-ceo-mustafa-suleyman-regulation-safety-anthropic-claude",
-    "section": "AI Outages",
-    "incident_type": "News",
-    "source": "The Verge",
-    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/09/DCD-Mustafa-Suleyman.png?quality=90&strip=all&crop=0%2C10.711631919237%2C100%2C78.576736161526&w=1200",
-    "summary": "Today, I’m talking with Mustafa Suleyman, the CEO of Microsoft AI. As you’re no doubt aware, the biggest story in tech right now is the spiraling debate about AI safety and regulation. It should come as no surprise...",
-    "published": "2026-09-17T14:00:00+00:00",
-    "score": 0,
-    "status": "Reported",
-    "rank": 74
-  },
-  {
-    "title": "AI is feared globally as the destroyer of jobs",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/996775/ai-is-feared-globally-as-the-destroyer-of-jobs",
-    "section": "AI Outages",
-    "incident_type": "News",
-    "source": "The Verge",
-    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/09/pew-hero.jpg?quality=90&strip=all&crop=0%2C0%2C100%2C83.178517142375&w=1200",
-    "summary": "Pew Research has published a new global survey that sheds light on how people view AI, including its impact on jobs, life in general, and income inequality. The survey questioned 42,151 people across 37 countries...",
-    "published": "2026-09-17T14:00:00+00:00",
-    "score": 0,
-    "status": "Reported",
-    "rank": 75
-  },
-  {
-    "title": "Windows 11 24H2 Home and Pro reach end of support in October",
-    "url": "https://www.bleepingcomputer.com/news/microsoft/windows-11-24h2-home-and-pro-reach-end-of-support-in-october",
-    "section": "AI Security",
-    "incident_type": "News",
-    "source": "BleepingComputer",
-    "image_url": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=1200&q=80",
-    "summary": "Microsoft reminded customers this week that devices running Windows 11 24H2 Home and Pro editions will stop receiving updates next month. [...]",
-    "published": "2026-09-17T13:09:09+00:00",
-    "score": 0,
-    "status": "Reported",
-    "rank": 76
-  },
-  {
-    "title": "Critical Unbound DNSSEC Validator Flaw Could Allow RCE via a Malicious DNS Zone",
-    "url": "https://thehackernews.com/2026/09/critical-unbound-dnssec-validator-flaw.html",
-    "section": "AI Security",
-    "incident_type": "Security",
-    "source": "The Hacker News",
-    "image_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiiFNFekCjM7qSAMNaeoNatwUPsjJY0Nj67yGKdlhq_zzLH9tyjQrXAByn9B6BvXEcMabyWnO5oWWE11_orN2h7G-7jRjGPSW48xtd4HySWIkI1fQzCbUDCVzRyc_KG3curUoXk4LgyckPwUO8aP65kR0CYnc90pkfXctHKXVQ7grKsc43drFZ63yRur20/s1600/dns-admin.jpg",
-    "summary": "Every release of the Unbound DNS resolver before 1.26.1 has a critical heap overflow in its DNSSEC validator, maintainer NLnet Labs said in an advisory on Wednesday. An attacker who controls a malicious zone and...",
-    "published": "2026-09-17T12:30:00+00:00",
-    "score": 33,
-    "status": "Reported",
-    "rank": 77
-  },
-  {
-    "title": "The Download: mice with part-human brains and climate tech innovators",
-    "url": "https://www.technologyreview.com/2026/09/17/1144314/the-download-mice-part-human-brains-climate-tech-innovators",
-    "section": "AI Failures",
-    "incident_type": "Outage",
-    "source": "MIT Tech Review",
-    "image_url": "https://wp.technologyreview.com/wp-content/uploads/2026/09/260915_HumanBrainTissueMice.jpg?resize=1200,600",
-    "summary": "This is today’s edition of The Download, our weekday newsletter that provides a daily dose of what’s going on in the world of technology. Meet a mouse whose brain cortex is made up of human cells Multiple cameras...",
-    "published": "2026-09-17T12:10:00+00:00",
-    "score": 8,
-    "status": "Reported",
-    "rank": 78
-  },
-  {
-    "title": "Can You Prove a New CVE Is Exploitable Before Attackers Do? Learn How in This Webinar",
-    "url": "https://thehackernews.com/2026/09/can-you-prove-new-cve-is-exploitable.html",
-    "section": "AI Security",
-    "incident_type": "Security",
-    "source": "The Hacker News",
-    "image_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgVgJqM9WZF6u_WZBeTJKqe35CDnh_4kxjLjZa3w63XbqfKBRNUENbTh5HGVrgYUGtmLRW9Px3GGzNcewMJWzd7CRxsk66eY1D70or8gasHUroPNdbUJ6ordqjxb7s8gKqQwuyWxCWC2BT0Matusn6PLXV9xus1PlqqqD3JITL_Unxt2xP8UK6zlX9Tmr0A/s1600/cves.jpg",
-    "summary": "A new CVE drops. Your scanner finds it. The severity score looks ugly. But that still does not answer the question that matters: Can it actually be exploited in your environment? Mythos-class AI is compressing the...",
-    "published": "2026-09-17T11:50:00+00:00",
-    "score": 25,
-    "status": "Reported",
-    "rank": 79
-  },
-  {
-    "title": "US takes down NightmareStresser DDoS-for-hire platform",
-    "url": "https://www.bleepingcomputer.com/news/security/fbi-seizes-nightmarestresser-service-linked-to-thousands-of-ddos-attacks",
-    "section": "AI Security",
-    "incident_type": "Outage",
-    "source": "BleepingComputer",
-    "image_url": "https://images.unsplash.com/photo-1655720828018-edd2daec9349?auto=format&fit=crop&w=1200&q=80",
-    "summary": "The U.S. Federal Bureau of Investigation (FBI) seized the domains used by NightmareStresser, one of the world's longest-running distributed denial-of-service (DDoS) platforms. [...]",
-    "published": "2026-09-17T11:33:35+00:00",
     "score": 8,
     "status": "Reported",
     "rank": 80
