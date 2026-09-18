@@ -19,6 +19,7 @@ logging.basicConfig(
 
 socket.setdefaulttimeout(12)
 OUTPUT_FILE = "news.json"
+WEBHOOK_URL = "https://hook.eu1.make.com/eu46gj3m60wz2ghkipo4pblnoxdfe1dh"
 
 # Categorized Feed Sources
 FEED_SOURCES = {
@@ -51,6 +52,13 @@ AI_STRICT_FAILURES = [
     "rogue", "malfunction", "breach", "leak", "outage", "destruct",
     "catastroph", "broken", "danger", "vulnerability", "wrong answer",
     "unhinged", "bias", "incident", "crash", "down"
+]
+
+# Scoring weights for viral detection
+VIRAL_TERMS = [
+    "hallucinat", "jailbreak", "exploit", "breach", "leak", "banned",
+    "lawsuit", "disaster", "catastroph", "rogue", "chaos", "scam",
+    "broken", "down", "outage", "fired", "danger", "shocking"
 ]
 
 FALLBACK_IMAGES = [
@@ -130,6 +138,48 @@ def detect_sub_niche(title, summary, default_sub="General"):
     if any(w in text for w in ["exploit", "leak", "breach", "hack", "vulnerability"]):
         return "Security"
     return default_sub
+
+def calculate_viral_score(art):
+    text = f"{art.get('title', '')} {art.get('summary', '')}".lower()
+    score = sum(text.count(term) * 3 for term in VIRAL_TERMS)
+    if art.get("section") == "AI Failures":
+        score += 5
+    if any(k in art.get("title", "").lower() for k in ["hallucinat", "fail", "broken", "exploit", "jailbreak"]):
+        score += 8
+    return score
+
+def post_viral_to_make(articles):
+    """Selects top viral posts (min 1, max 3) and sends them to Make.com."""
+    if not articles:
+        return
+
+    # Filter candidates with viral signals
+    candidates = sorted(articles, key=calculate_viral_score, reverse=True)
+    high_score = [a for a in candidates if calculate_viral_score(a) > 0]
+    
+    if not high_score:
+        to_send = candidates[:1]
+    else:
+        # Minimum 1, Maximum 3
+        count = min(3, max(1, len(high_score)))
+        to_send = high_score[:count]
+
+    logging.info("Pushing %d high-potential viral article(s) to Facebook webhook...", len(to_send))
+
+    for item in to_send:
+        payload = {
+            "headline": f"🚨 AI FAIL ALERT: {item['title']}",
+            "link": item["url"],
+            "summary": item["summary"]
+        }
+        try:
+            res = requests.post(WEBHOOK_URL, json=payload, timeout=10)
+            if res.status_code in (200, 202):
+                logging.info("Successfully pushed to webhook: %s", item["title"])
+            else:
+                logging.warning("Make.com response %d for %s", res.status_code, item["title"])
+        except Exception as e:
+            logging.error("Failed sending webhook for %s: %s", item["title"], e)
 
 def to_iso(entry):
     try:
@@ -236,6 +286,9 @@ def fetch_news():
         json.dump(articles, f, indent=2, ensure_ascii=False)
 
     logging.info("Complete! Saved %d items to %s", len(articles), OUTPUT_FILE)
+
+    # Automatically syndicate top viral posts to Make.com webhook
+    post_viral_to_make(articles)
 
 if __name__ == "__main__":
     fetch_news()
