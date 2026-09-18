@@ -17,23 +17,19 @@ logging.basicConfig(
     format="%(asctime)s [%(levelname)s] %(message)s"
 )
 
-# Safety net for feeds that hang
 socket.setdefaulttimeout(12)
-
 OUTPUT_FILE = "news.json"
 
-# ============================================================
-# RSS SOURCES WITH SUB-NICHE LABELS
-# ============================================================
+# Categorized Feed Sources
 FEED_SOURCES = {
     "AI Failures": [
         {"url": "https://hnrss.org/newest?q=AI+failure", "sub": "Incident"},
         {"url": "https://hnrss.org/newest?q=AI+hallucination", "sub": "Hallucination"},
-        {"url": "https://hnrss.org/newest?q=chatbot+wrong", "sub": "Failure"},
-        {"url": "https://hnrss.org/newest?q=AI+incident", "sub": "Incident"},
-        {"url": "https://hnrss.org/newest?q=AI+jailbreak", "sub": "Exploit"},
-        {"url": "https://hnrss.org/newest?q=prompt+injection", "sub": "Vulnerability"},
-        {"url": "https://hnrss.org/newest?q=OpenAI+outage", "sub": "Outage"},
+        {"url": "https://hnrss.org/newest?q=AI+gone+wrong", "sub": "Critical"},
+        {"url": "https://hnrss.org/newest?q=prompt+injection", "sub": "Jailbreak"},
+        {"url": "https://hnrss.org/newest?q=LLM+exploit", "sub": "Security"},
+        {"url": "https://hnrss.org/newest?q=ChatGPT+down", "sub": "Outage"},
+        {"url": "https://hnrss.org/newest?q=OpenAI+incident", "sub": "Critical"},
         {"url": "https://feeds.feedburner.com/TheHackersNews", "sub": "Security"},
         {"url": "https://www.bleepingcomputer.com/feed/", "sub": "Security"},
     ],
@@ -46,15 +42,15 @@ FEED_SOURCES = {
         {"url": "https://arstechnica.com/feed/", "sub": "Tech"},
         {"url": "https://news.ycombinator.com/rss", "sub": "Discussion"},
         {"url": "https://techcrunch.com/feed/", "sub": "Milestones"},
-        {"url": "https://www.theregister.com/headlines.atom", "sub": "Tech"},
     ]
 }
 
-# Strict filters to prioritize critical issues for AI Failures
-AI_FAILURE_CRITICAL = [
-    "failure", "fail", "destruct", "jailbreak", "prompt injection",
-    "hallucinat", "malfunction", "exploit", "leak", "breach", "outage",
-    "catastroph", "rogue", "attack", "vulnerability", "risk", "down"
+# Strict keyword trigger list for true AI problems
+AI_STRICT_FAILURES = [
+    "fail", "hallucinat", "exploit", "jailbreak", "prompt injection",
+    "rogue", "malfunction", "breach", "leak", "outage", "destruct",
+    "catastroph", "broken", "danger", "vulnerability", "wrong answer",
+    "unhinged", "bias", "incident", "crash", "down"
 ]
 
 FALLBACK_IMAGES = [
@@ -66,46 +62,23 @@ FALLBACK_IMAGES = [
 ]
 
 def pick_fallback(url):
-    # Deterministic integer selection independent of Python session seed
     return FALLBACK_IMAGES[zlib.adler32(url.encode("utf-8")) % len(FALLBACK_IMAGES)]
 
 HEADERS = {
     "User-Agent": (
         "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-        "AppleWebKit/537.36 Chrome/131.0 Safari/537.36"
+        "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0 Safari/537.36"
     ),
     "Accept-Language": "en-US,en;q=0.9,ne;q=0.8",
-}
-
-FAILURE_WORDS = {
-    "failure": 8, "failed": 8, "fails": 8, "crash": 7, "crashed": 7,
-    "error": 6, "wrong": 4, "incorrect": 5, "hallucination": 10,
-    "hallucinated": 10, "misinformation": 7, "misleading": 5,
-    "bug": 6, "broken": 7, "malfunction": 8, "glitch": 6, "problem": 4,
-}
-
-SECURITY_WORDS = {
-    "security": 8, "hack": 8, "hacked": 9, "attack": 7,
-    "vulnerability": 10, "vulnerable": 8, "exploit": 10,
-    "jailbreak": 10, "prompt injection": 12, "data leak": 12,
-    "breach": 12, "malware": 10, "phishing": 8,
-}
-
-OUTAGE_WORDS = {
-    "outage": 12, "down": 8, "downtime": 10, "offline": 8,
-    "unavailable": 9, "service disruption": 10, "disruption": 8,
-    "server issue": 8,
 }
 
 def clean_html(raw):
     if not raw:
         return ""
     soup = BeautifulSoup(raw, "html.parser")
-    text = soup.get_text(" ")
-    text = html_lib.unescape(text)
-    return re.sub(r"\s+", " ", text).strip()
+    return re.sub(r"\s+", " ", html_lib.unescape(soup.get_text(" "))).strip()
 
-def truncate(text, length=220):
+def truncate(text, length=210):
     text = text.strip()
     if len(text) <= length:
         return text
@@ -132,46 +105,31 @@ def source_name(url):
     mapping = {
         "ronbpost.com": "RONB Post",
         "techpana.com": "TechPana",
-        "techcrunch.com": "TechCrunch",
-        "arstechnica.com": "Ars Technica",
         "theverge.com": "The Verge",
+        "arstechnica.com": "Ars Technica",
+        "thehackernews.com": "The Hacker News",
+        "bleepingcomputer.com": "BleepingComputer",
+        "techcrunch.com": "TechCrunch",
         "news.ycombinator.com": "Hacker News",
         "hnrss.org": "Hacker News",
-        "venturebeat.com": "VentureBeat",
-        "technologyreview.com": "MIT Tech Review",
-        "bleepingcomputer.com": "BleepingComputer",
-        "feeds.feedburner.com": "The Hacker News",
-        "thehackernews.com": "The Hacker News",
-        "theregister.com": "The Register",
     }
-    return mapping.get(domain, domain or "Web")
+    return mapping.get(domain, domain or "Intelligence")
 
 def detect_sub_niche(title, summary, default_sub="General"):
     text = f"{title} {summary}".lower()
     if any(w in text for w in ["politics", "election", "government", "minister", "neta", "parliament"]):
         return "Politics"
-    if any(w in text for w in ["tech", "ai", "gadget", "software", "app", "digital", "cyber"]):
+    if any(w in text for w in ["gadget", "software", "app", "tech", "hardware", "device"]):
         return "Tech"
-    if any(w in text for w in ["outage", "down", "offline", "disruption"]):
-        return "Outages"
-    if any(w in text for w in ["hack", "exploit", "leak", "vulnerability", "breach"]):
+    if any(w in text for w in ["hallucinat", "wrong answer", "delusion"]):
+        return "Hallucination"
+    if any(w in text for w in ["jailbreak", "injection", "override", "bypass"]):
+        return "Jailbreak"
+    if any(w in text for w in ["outage", "down", "offline", "crash", "blackout"]):
+        return "Outage"
+    if any(w in text for w in ["exploit", "leak", "breach", "hack", "vulnerability"]):
         return "Security"
     return default_sub
-
-def calculate_score(title, summary):
-    text = f"{title} {summary}".lower()
-    score = 0
-    for words in (FAILURE_WORDS, SECURITY_WORDS, OUTAGE_WORDS):
-        for word, value in words.items():
-            if word in text:
-                score += value
-    return score
-
-def detect_status(title, summary):
-    text = f"{title} {summary}".lower()
-    if any(w in text for w in ["confirmed", "official", "company confirmed", "company said"]):
-        return "Confirmed"
-    return "Reported"
 
 def to_iso(entry):
     try:
@@ -194,22 +152,14 @@ def extract_og_image(article_url):
         for chunk in res.iter_content(8192):
             chunks.append(chunk)
             total += len(chunk)
-            if total > 150_000:
-                break
-            if b"</head>" in b"".join(chunks).lower():
+            if total > 150_000 or b"</head>" in b"".join(chunks).lower():
                 break
 
         soup = BeautifulSoup(b"".join(chunks), "html.parser")
-        for attr, val in [("property", "og:image"), ("property", "og:image:secure_url"), ("name", "twitter:image"), ("name", "twitter:image:src")]:
+        for attr, val in [("property", "og:image"), ("property", "og:image:secure_url"), ("name", "twitter:image")]:
             tag = soup.find("meta", attrs={attr: val})
-            if tag and tag.get("content"):
-                content = tag["content"].strip()
-                if content.startswith("http"):
-                    return content
-
-        img = soup.find("img")
-        if img and img.get("src") and img["src"].startswith("http"):
-            return img["src"]
+            if tag and tag.get("content") and tag["content"].strip().startswith("http"):
+                return tag["content"].strip()
     except Exception:
         pass
     return None
@@ -219,25 +169,20 @@ def fetch_feed(feed_info, section):
     default_sub = feed_info["sub"]
     articles = []
     try:
-        logging.info("Reading %s", feed_url)
         feed = feedparser.parse(feed_url)
-
-        for entry in feed.entries[:15]:
+        for entry in feed.entries[:20]:
             link = normalize_url(entry.get("link", ""))
-            if not link:
-                continue
-            if get_domain(link) == "news.ycombinator.com" and "/item" in link:
+            if not link or ("/item?id=" in link and "news.ycombinator.com" in link):
                 continue
 
-            title = clean_html(entry.get("title", "Untitled"))
+            title = clean_html(entry.get("title", ""))
             summary = clean_html(entry.get("summary") or entry.get("description") or "")
-
             if not title:
                 continue
 
             if section == "AI Failures":
                 combined = f"{title} {summary}".lower()
-                if not any(k in combined for k in AI_FAILURE_CRITICAL):
+                if not any(trigger in combined for trigger in AI_STRICT_FAILURES):
                     continue
 
             articles.append({
@@ -245,24 +190,16 @@ def fetch_feed(feed_info, section):
                 "url": link,
                 "section": section,
                 "sub_niche": detect_sub_niche(title, summary, default_sub),
-                "incident_type": detect_sub_niche(title, summary, default_sub),
                 "source": source_name(link),
                 "image_url": None,
                 "summary": truncate(summary),
                 "published": to_iso(entry),
-                "score": calculate_score(title, summary),
-                "status": detect_status(title, summary),
             })
     except Exception as e:
         logging.error("Feed error %s: %s", feed_url, e)
-
     return articles
 
 def fetch_news():
-    logging.info("=" * 60)
-    logging.info("AIFAIL INTELLIGENCE ENGINE RUNNING")
-    logging.info("=" * 60)
-
     articles = []
     seen = set()
     tasks = []
@@ -273,25 +210,19 @@ def fetch_news():
                 tasks.append(executor.submit(fetch_feed, feed_info, section))
 
         for task in as_completed(tasks):
-            try:
-                for article in task.result():
-                    if article["url"] in seen:
-                        continue
-                    seen.add(article["url"])
-                    articles.append(article)
-            except Exception as e:
-                logging.error("Worker error: %s", e)
+            for art in task.result():
+                if art["url"] in seen:
+                    continue
+                seen.add(art["url"])
+                articles.append(art)
 
     if not articles:
-        logging.error("No articles collected.")
+        logging.warning("No articles fetched.")
         return
 
-    logging.info("Collected %d unique articles.", len(articles))
+    articles.sort(key=lambda a: a.get("published", ""), reverse=True)
+    articles = articles[:100]
 
-    articles.sort(key=lambda a: (a.get("published", ""), a.get("score", 0)), reverse=True)
-    articles = articles[:90]
-
-    logging.info("Extracting images for %d articles...", len(articles))
     with ThreadPoolExecutor(max_workers=10) as executor:
         future_map = {executor.submit(extract_og_image, a["url"]): a for a in articles}
         for future in as_completed(future_map):
@@ -301,14 +232,10 @@ def fetch_news():
             except Exception:
                 art["image_url"] = pick_fallback(art["url"])
 
-    for idx, art in enumerate(articles, 1):
-        art["rank"] = idx
-
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         json.dump(articles, f, indent=2, ensure_ascii=False)
 
-    logging.info("Successfully saved %d stories to %s", len(articles), OUTPUT_FILE)
-    logging.info("=" * 60)
+    logging.info("Complete! Saved %d items to %s", len(articles), OUTPUT_FILE)
 
 if __name__ == "__main__":
     fetch_news()

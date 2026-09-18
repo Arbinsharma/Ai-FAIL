@@ -2,589 +2,588 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="AIFail tracks AI failures, security incidents, outages and technology news from Nepal.">
-<meta name="theme-color" content="#08090d">
-<meta name="google-adsense-account" content="ca-pub-3086366212061442">
-<title>AIFail — AI Failures & Tech Intelligence</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
 
-<!-- Dynamic Random Favicon from image1.jpg - image5.jpg -->
-<script>
-    (function () {
-        const rand = Math.floor(Math.random() * 5) + 1;
-        const link = document.createElement("link");
-        link.rel = "icon";
-        link.type = "image/jpeg";
-        link.href = "image" + rand + ".jpg";
-        document.head.appendChild(link);
-    })();
+<!-- SEO Meta Tags for Top Google Ranking -->
+<title>AIFail — AI Failures, Outages & Nepal Tech Intelligence</title>
+<meta name="description" content="Real-time tracker for critical AI failures, LLM hallucinations, outages, prompt injections, and technology news from Nepal and worldwide.">
+<meta name="keywords" content="AI fails, AI failures, ChatGPT wrong, AI hallucination, prompt injection, Nepal tech news, RONB, TechPana, AIFail, Arbin Sharma">
+<meta name="author" content="Arbin Sharma & Prashant Bhusal">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<link rel="canonical" href="https://aifail.pages.dev/">
+
+<!-- Open Graph & Social Cards -->
+<meta property="og:title" content="AIFail — AI Failures & Technology Intelligence">
+<meta property="og:description" content="Tracking rogue AI incidents, outages, model exploits, and Nepal technology news in real time.">
+<meta property="og:url" content="https://aifail.pages.dev/">
+<meta property="og:site_name" content="AIFail">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://aifail.pages.dev/image1.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- Schema.org News Organization Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NewsMediaOrganization",
+  "name": "AIFail",
+  "url": "https://aifail.pages.dev/",
+  "logo": "https://aifail.pages.dev/image1.jpg",
+  "description": "Independent intelligence platform documenting artificial intelligence failures and Nepal tech updates.",
+  "founder": [
+    {
+      "@type": "Person",
+      "name": "Arbin Sharma"
+    },
+    {
+      "@type": "Person",
+      "name": "Prashant Bhusal"
+    }
+  ]
+}
 </script>
 
+<meta name="theme-color" content="#07080c">
+
+<!-- Favicon Randomizer -->
 <script>
-    (function () {
-        try {
-            var saved = localStorage.getItem("aifail-theme");
-            var prefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
-            if (saved === "light" || (!saved && prefersLight)) {
-                document.documentElement.classList.add("light");
-            }
-        } catch (e) {}
-    })();
+(function() {
+    var rand = Math.floor(Math.random() * 5) + 1;
+    var link = document.createElement("link");
+    link.rel = "icon";
+    link.type = "image/jpeg";
+    link.href = "image" + rand + ".jpg";
+    document.head.appendChild(link);
+    try {
+        var s = localStorage.getItem("aifail-theme");
+        if (s === "light" || (!s && window.matchMedia("(prefers-color-scheme: light)").matches)) {
+            document.documentElement.classList.add("light");
+        }
+    } catch (e) {}
+})();
 </script>
 
+<!-- Google AdSense Script -->
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3086366212061442" crossorigin="anonymous"></script>
 
 <style>
 :root {
     --bg: #07080c;
-    --bg2: #0c0e14;
-    --card: rgba(255,255,255,0.055);
-    --card-hover: rgba(255,255,255,0.09);
+    --bg-card: rgba(255, 255, 255, 0.04);
+    --bg-card-hover: rgba(255, 255, 255, 0.08);
     --text: #f5f7fb;
-    --muted: #9ca3b0;
-    --border: rgba(255,255,255,0.10);
+    --muted: #94a3b8;
+    --border: rgba(255, 255, 255, 0.09);
     --accent: #7c5cff;
     --accent2: #00e5ff;
     --danger: #ff3b5c;
-    --radius: 22px;
-    --shadow: 0 20px 70px rgba(0,0,0,0.35);
+    --radius: 20px;
+    --nav-height: 64px;
 }
 
 html.light {
-    --bg: #f4f6fb;
-    --bg2: #ffffff;
-    --card: rgba(255,255,255,0.9);
-    --card-hover: #ffffff;
-    --text: #11131a;
-    --muted: #687080;
-    --border: rgba(0,0,0,0.09);
-    --accent: #5a3dd6;
-    --accent2: #007d94;
-    --shadow: 0 20px 60px rgba(30,40,70,0.10);
+    --bg: #f8fafc;
+    --bg-card: rgba(255, 255, 255, 0.94);
+    --bg-card-hover: #ffffff;
+    --text: #0f172a;
+    --muted: #64748b;
+    --border: rgba(0, 0, 0, 0.08);
+    --accent: #5b3ce6;
+    --accent2: #008ba3;
 }
 
-* { box-sizing: border-box; margin: 0; padding: 0; }
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
 html { scroll-behavior: smooth; }
 
 body {
-    font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    background:
-        radial-gradient(circle at 10% 0%, rgba(124,92,255,0.13), transparent 30%),
-        radial-gradient(circle at 90% 15%, rgba(0,229,255,0.08), transparent 28%),
-        var(--bg);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, sans-serif;
+    background-color: var(--bg);
     color: var(--text);
     min-height: 100vh;
-    transition: background .35s ease, color .35s ease;
+    transition: background-color .3s ease, color .3s ease;
     overflow-x: hidden;
 }
 
 a { color: inherit; text-decoration: none; }
 button, input { font: inherit; }
 
-/* Subtle top fixed watermark */
+/* Subtle Persistent Watermark */
 .top-watermark {
     position: fixed;
-    top: 5px;
+    top: 6px;
     right: 14px;
     font-size: 10px;
     font-weight: 900;
-    letter-spacing: 1.5px;
+    letter-spacing: 2px;
     opacity: 0.22;
     pointer-events: none;
-    z-index: 2500;
-    text-transform: uppercase;
+    z-index: 3000;
 }
 
-/* ============ HEADER ============ */
-header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    backdrop-filter: blur(22px);
-    -webkit-backdrop-filter: blur(22px);
-    background: rgba(7,8,12,0.78);
-    border-bottom: 1px solid var(--border);
+/* Zero CLS Ad Container (hidden until filled by Google) */
+.ad-shell {
+    width: min(1360px, 94%);
+    margin: 10px auto;
+    display: none;
+    overflow: hidden;
+    text-align: center;
 }
-html.light header { background: rgba(244,246,251,0.82); }
+.ad-shell:has(ins[data-ad-status="filled"]) {
+    display: block;
+}
 
-.header-inner {
-    width: min(1400px, 94%);
-    margin: auto;
-    min-height: 76px;
+/* Taskbar Floating Header */
+.taskbar-wrapper {
+    position: fixed;
+    top: 14px;
+    left: 0;
+    right: 0;
+    z-index: 2000;
+    display: flex;
+    justify-content: center;
+    pointer-events: none;
+    transition: transform 0.38s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s;
+    will-change: transform;
+}
+.taskbar-wrapper.hidden {
+    transform: translateY(-90px);
+    opacity: 0;
+}
+
+.taskbar {
+    pointer-events: auto;
+    width: min(1080px, 94%);
+    height: var(--nav-height);
+    background: rgba(14, 17, 26, 0.78);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid var(--border);
+    border-radius: 999px;
     display: flex;
     align-items: center;
-    gap: 20px;
+    justify-content: space-between;
+    padding: 0 16px;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
+}
+html.light .taskbar {
+    background: rgba(255, 255, 255, 0.86);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
 }
 
-.logo {
+.logo-brand {
     display: flex;
     align-items: center;
-    gap: 9px;
+    gap: 8px;
     font-weight: 950;
-    font-size: 22px;
-    letter-spacing: -1px;
-    white-space: nowrap;
+    font-size: 18px;
+    letter-spacing: -0.5px;
     cursor: pointer;
 }
 .logo-icon {
-    display: inline-grid;
-    place-items: center;
-    width: 34px;
-    height: 34px;
-    border-radius: 11px;
-    background: linear-gradient(135deg, var(--accent), var(--accent2));
-    box-shadow: 0 0 25px rgba(124,92,255,0.35);
-}
-
-.nav {
-    display: flex;
-    align-items: center;
-    gap: 7px;
-    flex: 1;
-    overflow-x: auto;
-    scrollbar-width: none;
-}
-.nav::-webkit-scrollbar { display: none; }
-
-.nav-btn {
-    border: 1px solid transparent;
-    background: transparent;
-    color: var(--muted);
-    padding: 10px 14px;
-    border-radius: 13px;
-    cursor: pointer;
-    white-space: nowrap;
-    font-size: 13px;
-    font-weight: 750;
-    transition: all .2s;
-}
-.nav-btn:hover {
-    color: var(--text);
-    background: rgba(124,92,255,0.10);
-    border-color: rgba(124,92,255,0.25);
-    transform: translateY(-2px);
-}
-.nav-btn.active {
-    color: white;
-    background: linear-gradient(135deg, rgba(124,92,255,0.9), rgba(0,229,255,0.55));
-    box-shadow: 0 8px 25px rgba(124,92,255,0.20);
-}
-
-.header-actions { display: flex; align-items: center; gap: 8px; }
-
-.icon-btn {
-    border: 1px solid var(--border);
-    background: var(--card);
-    color: var(--text);
-    width: 42px;
-    height: 42px;
-    border-radius: 13px;
-    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
     display: grid;
     place-items: center;
-    transition: transform .2s, background .2s, border-color .2s;
-}
-.icon-btn:hover {
-    transform: translateY(-3px);
-    border-color: rgba(124,92,255,0.5);
-    background: rgba(124,92,255,0.14);
+    background: linear-gradient(135deg, var(--accent), var(--accent2));
+    font-size: 14px;
 }
 
-/* ============ SUB-NICHE BAR ============ */
-.sub-bar-wrap {
-    width: min(1400px, 94%);
-    margin: 14px auto 0;
-    display: none;
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.nav-pill {
+    background: transparent;
+    border: 1px solid transparent;
+    color: var(--muted);
+    font-weight: 700;
+    font-size: 13px;
+    padding: 8px 14px;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: all 0.22s ease;
+    white-space: nowrap;
+}
+.nav-pill:hover {
+    color: var(--text);
+    background: rgba(124, 92, 255, 0.12);
+}
+.nav-pill.active {
+    color: #fff;
+    background: linear-gradient(135deg, var(--accent), var(--accent2));
+    box-shadow: 0 4px 18px rgba(124, 92, 255, 0.35);
+}
+
+.action-buttons { display: flex; align-items: center; gap: 8px; }
+.btn-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: 1px solid var(--border);
+    background: var(--bg-card);
+    color: var(--text);
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    transition: transform .2s, border-color .2s;
+}
+.btn-icon:hover { transform: scale(1.08); border-color: var(--accent); }
+
+/* Dynamic Sub-Niche Horizontal Pill Strip */
+.sub-bar-container {
+    width: min(1080px, 94%);
+    margin: 86px auto 14px;
+    display: flex;
     gap: 8px;
     overflow-x: auto;
     scrollbar-width: none;
-    padding-bottom: 4px;
+    padding-bottom: 2px;
 }
-.sub-bar-wrap::-webkit-scrollbar { display: none; }
+.sub-bar-container::-webkit-scrollbar { display: none; }
 
 .sub-pill {
-    border: 1px solid var(--border);
-    background: var(--card);
-    color: var(--muted);
     padding: 6px 14px;
     border-radius: 999px;
     font-size: 12px;
-    font-weight: 700;
+    font-weight: 750;
     cursor: pointer;
+    border: 1px solid var(--border);
+    background: var(--bg-card);
+    color: var(--muted);
     white-space: nowrap;
-    transition: all 0.2s;
+    transition: all .2s ease;
 }
 .sub-pill:hover { color: var(--text); border-color: var(--accent); }
 .sub-pill.active {
     background: var(--accent);
-    color: white;
     border-color: var(--accent);
+    color: #fff;
 }
 
-/* ============ MAIN ============ */
-main { width: min(1400px, 94%); margin: auto; }
-
-/* Ads Slot */
-.ad-slot-wrap {
-    width: min(1400px, 94%);
-    margin: 15px auto;
-    text-align: center;
+/* Main Container */
+main {
+    width: min(1360px, 94%);
+    margin: 0 auto 50px;
 }
 
-/* Search bar */
-.search-container {
-    margin-top: 25px;
-    max-width: 680px;
+/* In-Site Universal Search Toolbar */
+.toolbar-wrap {
+    margin: 20px 0 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+.search-box {
     position: relative;
+    flex: 1;
+    max-width: 580px;
+    min-width: 260px;
 }
-.search-container input {
+.search-box input {
     width: 100%;
-    padding: 16px 20px 16px 50px;
-    border-radius: 17px;
+    padding: 14px 18px 14px 44px;
+    border-radius: 16px;
     border: 1px solid var(--border);
-    background: var(--card);
+    background: var(--bg-card);
     color: var(--text);
     outline: none;
-    transition: border .25s, box-shadow .25s, transform .25s;
+    transition: border-color .25s, box-shadow .25s;
 }
-.search-container input:focus {
-    border-color: rgba(124,92,255,0.65);
-    box-shadow: 0 0 0 4px rgba(124,92,255,0.10);
-    transform: translateY(-2px);
+.search-box input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(124, 92, 255, 0.15);
 }
-.search-icon {
+.search-box span {
     position: absolute;
-    left: 18px;
+    left: 15px;
     top: 50%;
     transform: translateY(-50%);
     color: var(--muted);
-    font-size: 18px;
     pointer-events: none;
 }
-
-/* ============ SECTION HEADING ============ */
-.section-heading {
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    gap: 20px;
-    margin: 35px 0 20px;
+.counter-text {
+    color: var(--muted);
+    font-size: 13px;
+    font-weight: 700;
 }
-.section-heading h2 { font-size: 26px; letter-spacing: -1px; }
-.section-heading span { color: var(--muted); font-size: 13px; }
 
-/* ============ FEATURED ============ */
-.featured {
-    margin-top: 15px;
+/* Dynamic Featured Banner */
+.featured-card {
     border: 1px solid var(--border);
     border-radius: var(--radius);
     overflow: hidden;
-    background: linear-gradient(135deg, rgba(124,92,255,0.11), rgba(0,229,255,0.04));
-    box-shadow: var(--shadow);
-    transition: transform .35s ease, border .35s ease;
+    background: linear-gradient(135deg, rgba(124,92,255,0.08), rgba(0,229,255,0.03));
+    margin-bottom: 35px;
+    transition: transform .3s ease, border-color .3s;
+    will-change: transform;
 }
-.featured:hover { transform: translateY(-6px); border-color: rgba(124,92,255,0.35); }
-
-.featured-grid { display: grid; grid-template-columns: 1.15fr .85fr; }
-
-.featured-image {
-    min-height: 400px;
+.featured-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(124, 92, 255, 0.4);
+}
+.featured-layout {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+}
+.featured-thumb {
+    min-height: 380px;
     background-size: cover;
     background-position: center;
     position: relative;
-    background-color: var(--bg2);
+    background-color: #121520;
 }
-.featured-image::after {
+.featured-thumb::after {
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(90deg, transparent, rgba(0,0,0,0.45));
+    background: linear-gradient(90deg, transparent, rgba(0,0,0,0.5));
 }
-
-.featured-content {
-    padding: 45px;
+.featured-details {
+    padding: 40px;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-.badge-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 17px; }
-
+.meta-badges {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 14px;
+}
 .badge {
-    display: inline-flex;
-    align-items: center;
-    padding: 6px 10px;
+    padding: 5px 10px;
     border-radius: 999px;
     font-size: 10px;
-    font-weight: 900;
-    letter-spacing: .4px;
+    font-weight: 800;
+    letter-spacing: .5px;
     text-transform: uppercase;
-    background: rgba(124,92,255,0.13);
-    border: 1px solid rgba(124,92,255,0.24);
-    color: #bbaeff;
+    background: rgba(124,92,255,0.15);
+    border: 1px solid rgba(124,92,255,0.3);
+    color: var(--accent2);
 }
-html.light .badge { color: #4a30c9; background: rgba(90,61,214,0.10); }
-
-.badge.status {
-    background: rgba(46,229,157,0.08);
-    border-color: rgba(46,229,157,0.2);
-    color: #5bf0b5;
+.featured-details h2 {
+    font-size: clamp(22px, 3.5vw, 34px);
+    line-height: 1.15;
+    letter-spacing: -1px;
 }
-html.light .badge.status { color: #10835b; background: rgba(16,131,91,0.10); }
-
-.featured-content h3 {
-    font-size: clamp(24px, 3.5vw, 38px);
-    line-height: 1.12;
-    letter-spacing: -1.2px;
-}
-.featured-content p {
+.featured-details p {
     color: var(--muted);
-    line-height: 1.7;
-    margin-top: 17px;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-top: 14px;
 }
-
-.read-btn {
+.btn-primary {
     display: inline-flex;
     align-items: center;
-    justify-content: center;
     width: fit-content;
-    margin-top: 24px;
-    padding: 12px 18px;
-    border-radius: 13px;
+    margin-top: 20px;
+    padding: 11px 20px;
+    border-radius: 12px;
     background: linear-gradient(135deg, var(--accent), var(--accent2));
     color: white;
+    font-weight: 800;
     font-size: 13px;
-    font-weight: 850;
-    box-shadow: 0 10px 30px rgba(124,92,255,0.2);
-    transition: transform .2s, box-shadow .2s;
+    transition: transform .2s ease;
 }
-.read-btn:hover { transform: translateY(-3px); box-shadow: 0 15px 40px rgba(124,92,255,0.32); }
+.btn-primary:hover { transform: translateY(-2px); }
 
-/* ============ NEWS GRID ============ */
+/* News Grid */
 .news-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 18px;
+    gap: 20px;
 }
 
 .news-card {
-    overflow: hidden;
     border: 1px solid var(--border);
-    border-radius: 19px;
-    background: var(--card);
+    border-radius: var(--radius);
+    background: var(--bg-card);
+    overflow: hidden;
     display: flex;
     flex-direction: column;
-    transition: transform .3s, border .3s, background .3s, box-shadow .3s;
+    transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), background 0.28s, border-color 0.28s;
+    will-change: transform;
 }
 .news-card:hover {
     transform: translateY(-6px);
-    border-color: rgba(124,92,255,0.35);
-    background: var(--card-hover);
-    box-shadow: 0 18px 45px rgba(0,0,0,0.20);
+    border-color: rgba(124, 92, 255, 0.35);
+    background: var(--bg-card-hover);
 }
-
-.card-image {
-    height: 205px;
+.card-banner {
+    height: 195px;
     background-size: cover;
     background-position: center;
-    background-color: var(--bg2);
+    background-color: #121520;
     position: relative;
 }
-.card-image::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to top, rgba(0,0,0,0.55), transparent 60%);
+.card-content {
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
-
-.card-content { padding: 19px; display: flex; flex-direction: column; flex-grow: 1; }
-
-.card-meta {
+.card-top {
     display: flex;
     justify-content: space-between;
-    gap: 10px;
-    color: var(--muted);
     font-size: 11px;
-    margin-bottom: 10px;
+    color: var(--muted);
+    margin-bottom: 8px;
 }
-
-.card-content h3 { font-size: 17px; line-height: 1.3; letter-spacing: -.3px; }
-.card-content h3 a { transition: color .2s; }
+.card-content h3 {
+    font-size: 16px;
+    line-height: 1.35;
+    letter-spacing: -0.3px;
+    margin-bottom: 8px;
+}
 .card-content h3 a:hover { color: var(--accent2); }
-
 .card-content p {
     color: var(--muted);
     font-size: 13px;
-    line-height: 1.65;
-    margin-top: 10px;
-    flex-grow: 1;
+    line-height: 1.55;
+    flex: 1;
 }
-
 .card-bottom {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    gap: 10px;
-    margin-top: 17px;
-    font-size: 11px;
+    align-items: center;
+    margin-top: 15px;
+    font-size: 12px;
 }
-
-.small-read {
+.read-link {
     color: var(--accent2);
     font-weight: 800;
-    font-size: 12px;
-    transition: transform .2s;
-    display: inline-block;
 }
-.small-read:hover { transform: translateX(3px); }
 
-.empty-state {
+.empty-alert {
     grid-column: 1 / -1;
     text-align: center;
-    padding: 60px 20px;
+    padding: 50px 20px;
     color: var(--muted);
 }
 
-/* ============ ABOUT SECTION ============ */
-.about {
-    margin-top: 90px;
-    padding: 70px 0;
-    border-top: 1px solid var(--border);
-    text-align: center;
-}
-.about-card { max-width: 750px; margin: auto; }
-
-.about-avatar {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 4px solid rgba(124,92,255,0.45);
-    box-shadow: 0 0 0 10px rgba(124,92,255,0.07), 0 20px 50px rgba(0,0,0,0.3);
-    background: var(--bg2);
-}
-
-.about h2 { margin-top: 24px; font-size: 30px; letter-spacing: -1px; }
-.creator-meta {
-    color: var(--accent2);
-    font-size: 13px;
-    font-weight: 750;
-    letter-spacing: .2px;
-    margin-top: 8px;
-}
-.creator-bio {
-    color: var(--muted);
-    line-height: 1.7;
-    margin-top: 12px;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.creator-links {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 20px;
-}
-
-.email-link {
-    display: inline-flex;
-    align-items: center;
-    padding: 11px 17px;
-    border: 1px solid var(--border);
-    border-radius: 13px;
-    background: var(--card);
-    font-weight: 750;
-    transition: transform .2s, border-color .2s;
-}
-.email-link:hover { transform: translateY(-3px); border-color: var(--accent); }
-
-/* ============ GALLERY ============ */
-.gallery { margin-top: 45px; }
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 12px;
-}
-
-.gallery-item {
-    aspect-ratio: 1;
-    overflow: hidden;
-    border-radius: 17px;
-    border: 1px solid var(--border);
-    background: var(--card);
-    transition: transform .3s, box-shadow .3s;
-}
-.gallery-item:hover {
-    transform: translateY(-7px) rotate(1deg);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
-}
-.gallery-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform .5s;
-}
-.gallery-item:hover img { transform: scale(1.09); }
-
-/* ============ CONTACT ============ */
-.contact {
-    margin-top: 50px;
+/* About / Developer Profile */
+.profile-section {
+    margin-top: 80px;
     padding: 55px 20px;
     border-top: 1px solid var(--border);
     text-align: center;
 }
-.contact h2 { font-size: 28px; letter-spacing: -1px; }
-.contact p { margin-top: 10px; color: var(--muted); }
-
-/* ============ FOOTER ============ */
-footer {
-    width: min(1400px, 94%);
+.profile-wrap {
+    max-width: 720px;
     margin: auto;
-    padding: 25px 0 35px;
-    text-align: center;
-    border-top: 1px solid var(--border);
-    color: var(--muted);
-    font-size: 12px;
-    line-height: 1.7;
 }
+.avatar-img {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--accent);
+    box-shadow: 0 0 0 8px rgba(124, 92, 255, 0.12);
+}
+.profile-wrap h2 { margin-top: 20px; font-size: 26px; }
+.profile-meta {
+    color: var(--accent2);
+    font-weight: 750;
+    font-size: 13px;
+    margin-top: 6px;
+}
+.profile-bio {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.7;
+    margin: 14px auto 0;
+}
+.profile-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+.btn-pill {
+    padding: 10px 18px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    background: var(--bg-card);
+    font-weight: 750;
+    font-size: 13px;
+    transition: transform .2s, border-color .2s;
+}
+.btn-pill:hover { transform: translateY(-2px); border-color: var(--accent); }
 
-/* ============ TOAST ============ */
-.toast {
+/* Gallery */
+.gallery-wrap {
+    margin-top: 35px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+}
+.gallery-thumb {
+    aspect-ratio: 1;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+}
+.gallery-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .4s ease;
+}
+.gallery-thumb:hover img { transform: scale(1.08); }
+
+/* Toast */
+.toast-notice {
     position: fixed;
     bottom: 22px;
     left: 50%;
-    transform: translate(-50%, 120px);
+    transform: translate(-50%, 100px);
     z-index: 5000;
     padding: 12px 18px;
-    border-radius: 13px;
-    background: rgba(20,22,30,0.94);
+    border-radius: 12px;
+    background: rgba(14, 18, 28, 0.95);
     color: white;
-    border: 1px solid rgba(255,255,255,0.12);
-    box-shadow: 0 15px 45px rgba(0,0,0,0.35);
+    border: 1px solid rgba(255,255,255,0.1);
     font-size: 13px;
     opacity: 0;
     pointer-events: none;
     transition: transform .3s, opacity .3s;
 }
-.toast.show { transform: translate(-50%, 0); opacity: 1; }
+.toast-notice.active { transform: translate(-50%, 0); opacity: 1; }
 
-@media (max-width: 900px) {
-    .header-inner { flex-wrap: wrap; padding: 10px 0; }
-    .logo { margin-right: auto; }
-    .nav { order: 3; flex-basis: 100%; }
-    .featured-grid { grid-template-columns: 1fr; }
-    .featured-image { min-height: 260px; }
-    .featured-content { padding: 28px; }
+/* Responsive Rules */
+@media (max-width: 950px) {
+    .featured-layout { grid-template-columns: 1fr; }
+    .featured-thumb { min-height: 240px; }
     .news-grid { grid-template-columns: repeat(2, 1fr); }
-    .gallery-grid { grid-template-columns: repeat(3, 1fr); }
+    .gallery-wrap { grid-template-columns: repeat(3, 1fr); }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
+    .taskbar {
+        position: fixed;
+        bottom: 12px;
+        top: auto;
+        width: 95%;
+        height: 60px;
+        padding: 0 10px;
+    }
+    .taskbar-wrapper {
+        top: auto;
+        bottom: 0;
+    }
+    .taskbar-wrapper.hidden {
+        transform: translateY(90px);
+    }
+    .logo-brand span { display: none; }
+    .nav-pill { padding: 6px 10px; font-size: 12px; }
+    .sub-bar-container { margin: 25px auto 14px; }
     .news-grid { grid-template-columns: 1fr; }
-    .gallery-grid { grid-template-columns: repeat(2, 1fr); }
-    .creator-links { flex-direction: column; align-items: center; }
+    .gallery-wrap { grid-template-columns: repeat(2, 1fr); }
 }
 </style>
 </head>
@@ -593,103 +592,75 @@ footer {
 
 <div class="top-watermark">AIFAIL // NEPAL</div>
 
-<!-- Top Ad Slot -->
-<div class="ad-slot-wrap">
+<!-- Floating Taskbar -->
+<div class="taskbar-wrapper" id="taskbarWrap">
+    <nav class="taskbar" aria-label="Main taskbar">
+        <div class="logo-brand" id="logoClick">
+            <div class="logo-icon">⚡</div>
+            <span>AIFAIL</span>
+        </div>
+
+        <div class="nav-links">
+            <button class="nav-pill active" data-section="all">Home</button>
+            <button class="nav-pill" data-section="General Tech">General</button>
+            <button class="nav-pill" data-section="AI Failures">AI Failures</button>
+            <button class="nav-pill" data-section="Nepali News">Nepali</button>
+        </div>
+
+        <div class="action-buttons">
+            <button class="btn-icon" id="translateToggle" title="Translate">🌐</button>
+            <button class="btn-icon" id="themeToggle" title="Theme">🌓</button>
+        </div>
+    </nav>
+</div>
+
+<!-- Dynamic Sub-Niche Strip -->
+<div class="sub-bar-container" id="subBar"></div>
+
+<!-- Top Ad Slot (0 height until Google approval renders an ad) -->
+<div class="ad-shell">
     <ins class="adsbygoogle"
-         style="display:block; text-align:center;"
-         data-ad-layout="in-article"
-         data-ad-format="fluid"
+         style="display:block"
          data-ad-client="ca-pub-3086366212061442"
-         data-ad-slot="8867845421"></ins>
+         data-ad-slot="8867845421"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
 
-<header>
-<div class="header-inner">
-    <a href="#home" class="logo" aria-label="AIFail Home">
-        <span class="logo-icon">⚡</span>
-        <span>AIFAIL</span>
-    </a>
-
-    <nav class="nav" id="mainNav" aria-label="Categories">
-        <button class="nav-btn active" data-section="all">
-            🏠 <span data-en="Home" data-np="होम">Home</span>
-        </button>
-        <button class="nav-btn" data-section="General Tech">
-            💻 <span data-en="General News" data-np="सामान्य टेक">General News</span>
-        </button>
-        <button class="nav-btn" data-section="AI Failures">
-            🤖 <span data-en="AI Failures" data-np="AI असफलता">AI Failures</span>
-        </button>
-        <button class="nav-btn" data-section="Nepali News">
-            🇳🇵 <span data-en="Nepali News" data-np="नेपाली समाचार">Nepali News</span>
-        </button>
-    </nav>
-
-    <div class="header-actions">
-        <button class="icon-btn" id="languageBtn" aria-label="Translate Language" title="Translate">🌐</button>
-        <button class="icon-btn" id="themeBtn" aria-label="Toggle Theme" title="Theme">🌓</button>
-    </div>
-</div>
-</header>
-
-<!-- Dynamic Sub-Niche Pill Bar -->
-<div class="sub-bar-wrap" id="subBarWrap"></div>
-
 <main id="home">
 
-    <!-- Search Section -->
-    <div class="search-container">
-        <span class="search-icon">🔎</span>
-        <input
-            id="searchInput"
-            type="search"
-            autocomplete="off"
-            data-en-placeholder="Search news or press Enter to search web..."
-            data-np-placeholder="समाचार खोज्नुहोस् वा वेबमा खोज्न Enter थिच्नुहोस्..."
-            placeholder="Search news or press Enter to search web..."
-        >
+    <div class="toolbar-wrap">
+        <div class="search-box">
+            <span>🔍</span>
+            <input type="search" id="localSearch" placeholder="Search incidents, companies, models...">
+        </div>
+        <div class="counter-text" id="counter">Loading live updates...</div>
     </div>
 
-    <!-- Featured Story -->
-    <section id="featuredSection">
-        <div class="section-heading">
-            <h2>🔥 <span data-en="Featured Story" data-np="मुख्य समाचार">Featured Story</span></h2>
-            <span id="featuredSource">—</span>
-        </div>
-
-        <article class="featured" id="featuredCard">
-            <div class="featured-grid">
-                <div class="featured-image" id="featuredImage"></div>
-                <div class="featured-content">
-                    <div class="badge-row">
-                        <span class="badge" id="featuredCategory">NEWS</span>
-                        <span class="badge status" id="featuredStatus">REPORTED</span>
-                    </div>
-                    <h3 id="featuredTitle">Loading intelligence...</h3>
-                    <p id="featuredSummary">Gathering stories from verified feeds.</p>
-                    <a id="featuredLink" class="read-btn" href="#" target="_blank" rel="noopener noreferrer">
-                        Read Original ↗
-                    </a>
+    <!-- Featured Spotlight -->
+    <article class="featured-card" id="featuredArticle">
+        <div class="featured-layout">
+            <div class="featured-thumb" id="featuredImg"></div>
+            <div class="featured-details">
+                <div class="meta-badges">
+                    <span class="badge" id="featuredTag">SPOTLIGHT</span>
+                    <span class="badge" id="featuredSource">—</span>
                 </div>
+                <h2 id="featuredTitle">Connecting to intelligence feed...</h2>
+                <p id="featuredSummary">Gathering recent events and reports.</p>
+                <a class="btn-primary" id="featuredBtn" href="#" target="_blank" rel="noopener noreferrer">Read Incident ↗</a>
             </div>
-        </article>
-    </section>
-
-    <!-- Latest News Grid -->
-    <section id="latestNews">
-        <div class="section-heading">
-            <h2>📰 <span data-en="News Feed" data-np="ताजा समाचार">News Feed</span></h2>
-            <span id="articleCount">Loading...</span>
         </div>
+    </article>
 
-        <div id="newsGrid" class="news-grid">
-            <div class="empty-state">Loading stories...</div>
-        </div>
-    </section>
+    <!-- News Grid Container -->
+    <div class="news-grid" id="newsGrid">
+        <div class="empty-alert">Loading stories...</div>
+    </div>
 
-    <!-- In-Feed Ad Banner -->
-    <div class="ad-slot-wrap">
+    <!-- Mid Feed Ad Container -->
+    <div class="ad-shell" style="margin-top: 30px;">
         <ins class="adsbygoogle"
              style="display:block"
              data-ad-client="ca-pub-3086366212061442"
@@ -699,372 +670,257 @@ footer {
         <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
     </div>
 
-    <!-- Creators / About Section -->
-    <section class="about" id="about">
-        <div class="about-card">
-            <img id="avatar" class="about-avatar" src="image1.jpg" alt="AIFail creators">
-
-            <h2>Prashant Bhusal &amp; Arbin Sharma</h2>
-
-            <p class="creator-meta"
-               data-en="Class 9 students · Rosy Buds Bal Batika Secondary Boarding School · Nepal"
-               data-np="कक्षा ९ का विद्यार्थी · रोजी बड्स बाल बाटिका माध्यमिक विद्यालय · नेपाल">
-                Class 9 students · Rosy Buds Bal Batika Secondary Boarding School · Nepal
+    <!-- Developer & Creator Section -->
+    <section class="profile-section" id="about">
+        <div class="profile-wrap">
+            <img class="avatar-img" id="creatorAvatar" src="image1.jpg" alt="Arbin Sharma & Prashant Bhusal">
+            <h2>Arbin Sharma &amp; Prashant Bhusal</h2>
+            <div class="profile-meta">
+                Lead Developers &amp; Incident Researchers · Age 15 · Nepal
+            </div>
+            <p class="profile-bio">
+                Created by 15-year-old student developers from Rosy Buds Bal Batika Secondary Boarding School.
+                AIFail is an automated, real-time intelligence hub tracking artificial intelligence malfunctions,
+                model jailbreaks, hallucinations, outages, and regional Nepali tech coverage from RONB and TechPana.
             </p>
 
-            <p class="creator-bio"
-               data-en="Creators of AIFail — an independent technology and AI incident tracker built from Nepal."
-               data-np="AIFail का निर्माता — नेपालबाट बनाइएको स्वतन्त्र technology र AI incident tracker।">
-                Creators of AIFail — an independent technology and AI incident tracker built from Nepal.
-            </p>
-
-            <div class="creator-links">
-                <a class="email-link" href="mailto:prashantvushal@gmail.com" title="Email">
-                    📧 prashantvushal@gmail.com
+            <div class="profile-buttons">
+                <a class="btn-pill" href="mailto:prashantvushal@gmail.com">
+                    📧 Email to Developer
                 </a>
-                <a class="email-link" href="https://www.facebook.com/share/1Hsb1abHdc/" target="_blank" rel="noopener noreferrer" title="Facebook">
+                <a class="btn-pill" href="https://www.facebook.com/share/1Hsb1abHdc/" target="_blank" rel="noopener noreferrer">
                     📘 Facebook
                 </a>
-                <a class="email-link" href="https://rosybuds.edu.np" target="_blank" rel="noopener noreferrer" title="School">
-                    🏫 Rosy Buds School
+                <a class="btn-pill" href="https://rosybuds.edu.np" target="_blank" rel="noopener noreferrer">
+                    🏫 School Portal
                 </a>
             </div>
 
             <!-- Gallery -->
-            <div class="gallery">
-                <div class="section-heading" style="justify-content:center;">
-                    <h2>🖼️ <span data-en="Gallery" data-np="ग्यालरी">Gallery</span></h2>
-                </div>
-
-                <div class="gallery-grid">
-                    <div class="gallery-item"><img src="image1.jpg" alt="Gallery image 1" loading="lazy"></div>
-                    <div class="gallery-item"><img src="image2.jpg" alt="Gallery image 2" loading="lazy"></div>
-                    <div class="gallery-item"><img src="image3.jpg" alt="Gallery image 3" loading="lazy"></div>
-                    <div class="gallery-item"><img src="image4.jpg" alt="Gallery image 4" loading="lazy"></div>
-                    <div class="gallery-item"><img src="image5.jpg" alt="Gallery image 5" loading="lazy"></div>
-                </div>
+            <div class="gallery-wrap">
+                <div class="gallery-thumb"><img src="image1.jpg" alt="AIFail 1" loading="lazy"></div>
+                <div class="gallery-thumb"><img src="image2.jpg" alt="AIFail 2" loading="lazy"></div>
+                <div class="gallery-thumb"><img src="image3.jpg" alt="AIFail 3" loading="lazy"></div>
+                <div class="gallery-thumb"><img src="image4.jpg" alt="AIFail 4" loading="lazy"></div>
+                <div class="gallery-thumb"><img src="image5.jpg" alt="AIFail 5" loading="lazy"></div>
             </div>
         </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
-        <h2>📬 <span data-en="Contact" data-np="सम्पर्क">Contact</span></h2>
-        <p data-en="Have a news tip, correction, or technology incident to report?"
-           data-np="कुनै news tip, correction वा technology incident छ?">
-            Have a news tip, correction, or technology incident to report?
-        </p>
-        <a class="read-btn" href="mailto:prashantvushal@gmail.com" style="margin-top:20px;">
-            📧 Email AIFail
-        </a>
     </section>
 
 </main>
 
-<footer>
-    <div>⚡ <strong>AIFAIL</strong> — AI &amp; Technology Intelligence</div>
-    <div style="margin-top:6px;">
-        Built in 🇳🇵 Nepal by
-        <strong>Prashant Bhusal</strong> &amp; <strong>Arbin Sharma</strong>
-    </div>
-    <div style="margin-top:6px;">
-        © <span id="year"></span>
-        <strong>PRASHANT BHUSAL / ARBIN SHARMA</strong> — All rights reserved.
-    </div>
-</footer>
-
-<div id="toast" class="toast" role="status" aria-live="polite">Updated</div>
+<div class="toast-notice" id="toast">Updated</div>
 
 <script>
-let allNews = [];
-let currentSection = "all";
-let currentSub = "all";
-let currentLanguage = "en";
-let toastTimer;
+let allArticles = [];
+let activeSection = "all";
+let activeSub = "all";
+let activeLang = "en";
+let lastScrollY = window.scrollY;
 
-const newsGrid       = document.getElementById("newsGrid");
-const searchInput    = document.getElementById("searchInput");
-const articleCount   = document.getElementById("articleCount");
-const featuredTitle  = document.getElementById("featuredTitle");
-const featuredSum    = document.getElementById("featuredSummary");
-const featuredLink   = document.getElementById("featuredLink");
-const featuredImage  = document.getElementById("featuredImage");
-const featuredCat    = document.getElementById("featuredCategory");
-const featuredStatus = document.getElementById("featuredStatus");
-const featuredSrc    = document.getElementById("featuredSource");
-const subBarWrap     = document.getElementById("subBarWrap");
-const avatar         = document.getElementById("avatar");
-const toast          = document.getElementById("toast");
+const newsGrid = document.getElementById("newsGrid");
+const localSearch = document.getElementById("localSearch");
+const counter = document.getElementById("counter");
+const subBar = document.getElementById("subBar");
+const taskbarWrap = document.getElementById("taskbarWrap");
+const toast = document.getElementById("toast");
 
-document.getElementById("year").textContent = new Date().getFullYear();
-
-function esc(value) {
-    return String(value == null ? "" : value)
-        .replace(/&/g, "&amp;")
-        .replace(/</g, "&lt;")
-        .replace(/>/g, "&gt;")
-        .replace(/"/g, "&quot;")
-        .replace(/'/g, "&#039;");
-}
-
-function safeURL(url) {
-    return typeof url === "string" && /^https?:\/\//i.test(url) ? url : "";
+function esc(s) {
+    return String(s || "").replace(/[&<>"']/g, m => ({
+        "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#039;"
+    })[m]);
 }
 
 function showToast(msg) {
     toast.textContent = msg;
-    toast.classList.add("show");
-    clearTimeout(toastTimer);
-    toastTimer = setTimeout(() => toast.classList.remove("show"), 2200);
+    toast.classList.add("active");
+    setTimeout(() => toast.classList.remove("active"), 2200);
 }
 
-// Sub-niche mappings
-const subNiches = {
+// Sub-niche configurations
+const subNicheMap = {
     "Nepali News": ["all", "Politics", "Tech", "General"],
-    "AI Failures": ["all", "Incident", "Hallucination", "Exploit", "Security", "Outages"],
-    "General Tech": ["all", "Tech", "Discussion", "Milestones"]
+    "AI Failures": ["all", "Incident", "Hallucination", "Jailbreak", "Security", "Outage"],
+    "General Tech": ["all", "Tech", "Milestones", "Discussion"]
 };
 
-function renderSubBar() {
-    subBarWrap.innerHTML = "";
-    const list = subNiches[currentSection];
+// Taskbar Scroll Animation (Hide down, Reveal up)
+window.addEventListener("scroll", () => {
+    const currentY = window.scrollY;
+    if (currentY > 120 && currentY > lastScrollY) {
+        taskbarWrap.classList.add("hidden");
+    } else {
+        taskbarWrap.classList.remove("hidden");
+    }
+    lastScrollY = currentY;
+}, { passive: true });
 
-    if (!list || currentSection === "all") {
-        subBarWrap.style.display = "none";
+function renderSubBar() {
+    subBar.innerHTML = "";
+    const list = subNicheMap[activeSection];
+    if (!list || activeSection === "all") {
+        subBar.style.display = "none";
         return;
     }
+    subBar.style.display = "flex";
 
-    subBarWrap.style.display = "flex";
     list.forEach(sub => {
         const btn = document.createElement("button");
-        btn.className = `sub-pill ${currentSub === sub ? "active" : ""}`;
-        btn.textContent = sub === "all" ? "All " + currentSection : sub;
+        btn.className = `sub-pill ${activeSub === sub ? "active" : ""}`;
+        btn.textContent = sub === "all" ? "All " + activeSection : sub;
         btn.addEventListener("click", () => {
-            currentSub = sub;
+            activeSub = sub;
             renderSubBar();
-            renderNews();
+            renderArticles();
         });
-        subBarWrap.appendChild(btn);
+        subBar.appendChild(btn);
     });
 }
 
-function renderFeatured() {
-    if (!allNews.length) {
-        featuredTitle.textContent = "No news available.";
-        featuredSum.textContent = "News will appear when the feed updates.";
-        return;
+// Fisher-Yates shuffle to guarantee refreshed positioning
+function shuffleArray(arr) {
+    const a = [...arr];
+    for (let i = a.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [a[i], a[j]] = [a[j], a[i]];
     }
+    return a;
+}
 
-    const art = allNews[0];
-    featuredTitle.textContent = art.title || "Untitled";
-    featuredSum.textContent = art.summary || "No summary available.";
-    featuredLink.href = safeURL(art.url) || "#";
-    featuredCat.textContent = (art.sub_niche || art.section || "NEWS").toUpperCase();
-    featuredStatus.textContent = (art.status || "REPORTED").toUpperCase();
-    featuredSrc.textContent = art.source || "Public Source";
+function updateFeatured(featuredArt) {
+    if (!featuredArt) return;
+    document.getElementById("featuredTitle").textContent = featuredArt.title;
+    document.getElementById("featuredSummary").textContent = featuredArt.summary;
+    document.getElementById("featuredTag").textContent = (featuredArt.sub_niche || featuredArt.section).toUpperCase();
+    document.getElementById("featuredSource").textContent = featuredArt.source;
+    document.getElementById("featuredBtn").href = featuredArt.url;
 
-    if (art.image_url) {
-        featuredImage.style.backgroundImage = `url('${esc(art.image_url)}')`;
-    } else {
-        featuredImage.style.backgroundImage = "none";
+    const img = document.getElementById("featuredImg");
+    if (featuredArt.image_url) {
+        img.style.backgroundImage = `url('${esc(featuredArt.image_url)}')`;
     }
 }
 
-function getFilteredNews() {
-    const query = searchInput.value.trim().toLowerCase();
-    return allNews.filter(art => {
-        if (currentSection !== "all" && art.section !== currentSection) return false;
-        if (currentSub !== "all" && art.sub_niche !== currentSub) return false;
-        if (!query) return true;
-        const haystack = [art.title, art.summary, art.section, art.source, art.sub_niche]
-            .filter(Boolean).join(" ").toLowerCase();
-        return haystack.includes(query);
+function getFilteredList() {
+    const q = localSearch.value.trim().toLowerCase();
+    return allArticles.filter(art => {
+        if (activeSection !== "all" && art.section !== activeSection) return false;
+        if (activeSub !== "all" && art.sub_niche !== activeSub) return false;
+        if (!q) return true;
+        const corpus = (art.title + " " + art.summary + " " + art.source + " " + art.section + " " + art.sub_niche).toLowerCase();
+        return corpus.includes(q);
     });
 }
 
-function createCard(art) {
-    const card = document.createElement("article");
-    card.className = "news-card";
-    const url = safeURL(art.url) || "#";
-    const imgStyle = art.image_url ? `style="background-image:url('${esc(art.image_url)}')"` : "";
-
-    card.innerHTML = `
-        <div class="card-image" ${imgStyle}></div>
-        <div class="card-content">
-            <div class="card-meta">
-                <span>${esc(art.source || "Web")}</span>
-                <span>${esc(art.sub_niche || art.section)}</span>
-            </div>
-            <h3>
-                <a href="${esc(url)}" target="_blank" rel="noopener noreferrer">
-                    ${esc(art.title || "Untitled")}
-                </a>
-            </h3>
-            <p>${esc(art.summary || "No summary available.")}</p>
-            <div class="card-bottom">
-                <span class="badge">${esc(art.section)}</span>
-                <a href="${esc(url)}" target="_blank" rel="noopener noreferrer" class="small-read">
-                    Read ↗
-                </a>
-            </div>
-        </div>
-    `;
-    return card;
-}
-
-function renderNews() {
-    const filtered = getFilteredNews();
+function renderArticles() {
+    const items = getFilteredList();
     newsGrid.innerHTML = "";
 
-    if (!filtered.length) {
-        const empty = document.createElement("div");
-        empty.className = "empty-state";
-        empty.innerHTML = `
-            <div style="font-size:36px;">🔎</div>
-            <h3 style="margin-top:10px;">${currentLanguage === "np" ? "कुनै समाचार भेटिएन" : "No stories found"}</h3>
-            <p style="margin-top:5px;">${currentLanguage === "np" ? "कृपया अर्को खोज वा श्रेणी छान्नुहोस्।" : "Try another search term or sub-niche."}</p>
+    if (!items.length) {
+        newsGrid.innerHTML = `
+            <div class="empty-alert">
+                <div style="font-size:32px;">🔍</div>
+                <h3 style="margin-top:10px;">No articles matched your query.</h3>
+                <p style="margin-top:4px;">Try searching another keyword or changing the sub-niche.</p>
+            </div>
         `;
-        newsGrid.appendChild(empty);
-        articleCount.textContent = currentLanguage === "np" ? "० समाचार" : "0 stories";
+        counter.textContent = "0 items found";
         return;
     }
 
-    filtered.forEach(art => newsGrid.appendChild(createCard(art)));
-    articleCount.textContent = currentLanguage === "np"
-        ? filtered.length + " समाचार"
-        : filtered.length + " stories";
+    counter.textContent = `${items.length} items live`;
+
+    items.forEach(art => {
+        const card = document.createElement("article");
+        card.className = "news-card";
+        card.innerHTML = `
+            <div class="card-banner" style="background-image: url('${esc(art.image_url)}')"></div>
+            <div class="card-content">
+                <div class="card-top">
+                    <span>${esc(art.source)}</span>
+                    <span>${esc(art.sub_niche || art.section)}</span>
+                </div>
+                <h3><a href="${esc(art.url)}" target="_blank" rel="noopener noreferrer">${esc(art.title)}</a></h3>
+                <p>${esc(art.summary)}</p>
+                <div class="card-bottom">
+                    <span class="badge">${esc(art.section)}</span>
+                    <a href="${esc(art.url)}" target="_blank" rel="noopener noreferrer" class="read-link">Read Story ↗</a>
+                </div>
+            </div>
+        `;
+        newsGrid.appendChild(card);
+    });
 }
 
-// Navigation Tabs
-document.querySelectorAll(".nav-btn").forEach(btn => {
+// Navigation Tabs - Switch sections without scrolling down
+document.querySelectorAll(".nav-pill").forEach(btn => {
     btn.addEventListener("click", () => {
-        document.querySelectorAll(".nav-btn").forEach(b => b.classList.remove("active"));
+        document.querySelectorAll(".nav-pill").forEach(b => b.classList.remove("active"));
         btn.classList.add("active");
-        currentSection = btn.dataset.section;
-        currentSub = "all";
+        activeSection = btn.dataset.section;
+        activeSub = "all";
         renderSubBar();
-        renderNews();
-        document.getElementById("latestNews").scrollIntoView({ behavior: "smooth", block: "start" });
+        renderArticles();
     });
 });
 
-// Search input handling + External Web Search Fallback on Enter
-searchInput.addEventListener("input", renderNews);
-searchInput.addEventListener("keydown", (e) => {
-    if (e.key === "Enter") {
-        const query = searchInput.value.trim();
-        const matches = getFilteredNews();
-        if (matches.length === 0 && query) {
-            const target = currentSection === "Nepali News"
-                ? `https://www.google.com/search?q=site:ronbpost.com+OR+site:techpana.com+${encodeURIComponent(query)}`
-                : `https://www.google.com/search?q=${encodeURIComponent(query)}`;
-            window.open(target, "_blank");
-        }
-    }
+document.getElementById("logoClick").addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
-// Live in-place translation for website & article contents
-async function translateText(text, targetLang) {
-    if (!text || targetLang === "en") return text;
+localSearch.addEventListener("input", renderArticles);
+
+// In-Place Dynamic Translation
+async function translateStr(text, target) {
+    if (!text || target === "en") return text;
     try {
-        const res = await fetch(`https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=${targetLang}&dt=t&q=${encodeURIComponent(text)}`);
-        const data = await res.json();
-        return data[0].map(s => s[0]).join("");
+        const r = await fetch(`https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=${target}&dt=t&q=${encodeURIComponent(text)}`);
+        const d = await r.json();
+        return d[0].map(s => s[0]).join("");
     } catch {
         return text;
     }
 }
 
-document.getElementById("languageBtn").addEventListener("click", async () => {
-    currentLanguage = currentLanguage === "en" ? "np" : "en";
-    const targetCode = currentLanguage === "np" ? "ne" : "en";
-    document.documentElement.lang = targetCode;
+document.getElementById("translateToggle").addEventListener("click", async () => {
+    activeLang = activeLang === "en" ? "ne" : "en";
+    showToast(activeLang === "ne" ? "अनुवाद गरिँदैछ..." : "Translating to English...");
 
-    // Update static UI elements
-    document.querySelectorAll("[data-en][data-np]").forEach(el => {
-        const val = el.dataset[currentLanguage];
-        if (val) el.textContent = val;
-    });
-    document.querySelectorAll("[data-en-placeholder][data-np-placeholder]").forEach(el => {
-        el.placeholder = currentLanguage === "en" ? el.dataset.enPlaceholder : el.dataset.npPlaceholder;
-    });
-
-    showToast(currentLanguage === "np" ? "अनुवाद हुँदैछ..." : "Translating to English...");
-
-    // Translate featured article
-    if (featuredTitle.textContent) featuredTitle.textContent = await translateText(featuredTitle.textContent, targetCode);
-    if (featuredSum.textContent) featuredSum.textContent = await translateText(featuredSum.textContent, targetCode);
-
-    // Translate cards currently displayed
     const cards = document.querySelectorAll(".news-card");
     for (const card of cards) {
         const h3 = card.querySelector("h3 a");
         const p = card.querySelector("p");
-        if (h3) h3.textContent = await translateText(h3.textContent, targetCode);
-        if (p) p.textContent = await translateText(p.textContent, targetCode);
+        if (h3) h3.textContent = await translateStr(h3.textContent, activeLang);
+        if (p) p.textContent = await translateStr(p.textContent, activeLang);
     }
-
-    showToast(currentLanguage === "np" ? "नेपाली मोड सम्पन्न" : "English mode enabled");
+    showToast(activeLang === "ne" ? "नेपाली भाषा सक्रिय भयो" : "English active");
 });
 
-// Theme switcher
-document.getElementById("themeBtn").addEventListener("click", () => {
+document.getElementById("themeToggle").addEventListener("click", () => {
     const isLight = document.documentElement.classList.toggle("light");
     try { localStorage.setItem("aifail-theme", isLight ? "light" : "dark"); } catch (e) {}
-    showToast(isLight ? "Light mode enabled" : "Dark mode enabled");
+    showToast(isLight ? "Light Mode" : "Dark Mode");
 });
 
-// Fallback images handling for gallery & avatar
-avatar.addEventListener("error", () => {
-    avatar.src = "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=400&q=80";
-});
-
-const galleryFallbacks = [
-    "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=400&q=80",
-    "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=400&q=80",
-    "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=400&q=80",
-    "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=400&q=80",
-    "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?auto=format&fit=crop&w=400&q=80"
-];
-
-document.querySelectorAll(".gallery-item img").forEach((img, i) => {
-    img.addEventListener("error", () => {
-        img.src = galleryFallbacks[i % galleryFallbacks.length];
-    });
-});
-
-// News loader
-async function loadNews() {
+// Load Feed Data with Shuffling
+async function load() {
     try {
-        const controller = new AbortController();
-        const timeout = setTimeout(() => controller.abort(), 10000);
+        const res = await fetch("news.json?t=" + Date.now());
+        const raw = await res.json();
 
-        const res = await fetch("news.json?t=" + Date.now(), {
-            cache: "no-store",
-            signal: controller.signal
-        });
-        clearTimeout(timeout);
+        // Separate and shuffle on every load
+        const shuffled = shuffleArray(raw);
+        updateFeatured(shuffled[0]);
+        allArticles = shuffled.slice(1);
 
-        if (!res.ok) throw new Error("HTTP " + res.status);
-        const data = await res.json();
-        allNews = data.filter(item => item && typeof item.title === "string");
-
-        renderFeatured();
-        renderNews();
-    } catch (err) {
-        console.error("AIFail load error:", err);
-        newsGrid.innerHTML = `
-            <div class="empty-state">
-                <div style="font-size:36px;">⚠️</div>
-                <h3 style="margin-top:10px;">News could not be loaded</h3>
-                <p style="margin-top:5px;">Run fetch_news.py to generate news.json.</p>
-            </div>
-        `;
-        articleCount.textContent = "Error";
+        renderSubBar();
+        renderArticles();
+    } catch (e) {
+        newsGrid.innerHTML = `<div class="empty-alert">Run python fetch_news.py to build local news feed.</div>`;
     }
 }
 
-loadNews();
+load();
 </script>
 </body>
 </html>
