@@ -1,13 +1,93 @@
 [
   {
-    "title": "बाढीपीडितलाई उबरको राहत अभियान: रेडक्रसलाई ५० लाख, हरेक राइडबाट थप १० देखि २० रुपैयाँ सहयोग",
-    "url": "https://techpana.com/2026/159166/uber-relief-campaign-flood-victims-red-cross-50-lakh-rides-donation",
+    "title": "तीन दिने भारत भ्रमण सकेर अर्थमन्त्री स्वदेश फिर्ता",
+    "url": "https://www.ronbpost.com/2026/09/20151",
     "section": "Nepali News",
     "sub_niche": "Tech",
-    "source": "TechPana",
-    "image_url": "https://techpana.prixacdn.net/media/albums/uber_epWuOkDXwd.jpeg",
-    "summary": "काठमाडौं । बाढी प्रभावित समुदायको राहत तथा पुनर्स्थापनामा सहयोग पुर्‍याउन उबरले ‘राइड फर नेपाल’ अभियान सुरु गरेको छ । अभियानमार्फत कम्पनीले आफ्नो मोबिलिटी नेटवर्कलाई विपद् राहत प्रयाससँग जोड्दै यात्रु र...",
-    "published": "2026-09-19T13:02:34+00:00"
+    "source": "RONB Post",
+    "image_url": "https://www.ronbpost.com/wp-content/uploads/2026/09/Finance-minister-616-scaled.jpg",
+    "summary": "काठमाडौं । अर्थमन्त्री डा. स्वर्णिम वाग्ले तीन दिने भारत भ्रमण सम्पन्न गरी शनिबार साँझ स्वदेश फर्किएका छन्। भ्रमणका क्रममा उनले भारतकी वित्तमन्त्री निर्मला सीतारमण तथा विदेशमन्त्री एस. जयशंकरसँग भेटवार्ता...",
+    "published": "2026-09-19T14:32:45+00:00"
+  },
+  {
+    "title": "संविधान दिवसको अवसरमा राष्ट्रपति कार्यालयमा विशेष समारोह",
+    "url": "https://www.ronbpost.com/2026/09/20148",
+    "section": "Nepali News",
+    "sub_niche": "Tech",
+    "source": "RONB Post",
+    "image_url": "https://www.ronbpost.com/wp-content/uploads/2026/09/795664591_1064804269668852_3617874649271111113_n.jpg",
+    "summary": "काठमाडौं । संविधान दिवस (राष्ट्रिय दिवस) २०८३ को अवसरमा शनिबार राष्ट्रपति कार्यालय शीतल निवासमा विशेष समारोह आयोजना गरिएको छ। समारोहमा राष्ट्रपति रामचन्द्र पौडेल, उपराष्ट्रपति रामसहायप्रसाद यादव,...",
+    "published": "2026-09-19T14:29:24+00:00"
+  },
+  {
+    "title": "A graphical desktop for the ZX Spectrum",
+    "url": "https://github.com/mindbox77/zxdesk",
+    "section": "General Tech",
+    "sub_niche": "Discussion",
+    "source": "github.com",
+    "image_url": "https://opengraph.githubassets.com/cd463259b88ffd33dfe2d1f3aceb23345426a7c6c2f32c3a77b165cdcd68ff65/mindbox77/zxdesk",
+    "summary": "Comments",
+    "published": "2026-09-19T14:01:58+00:00"
+  },
+  {
+    "title": "Does AI need an antitrust exemption so it doesn’t kill everyone????",
+    "url": "https://www.theverge.com/podcast/997382/openai-microsoft-anthropic-elon-musk-cartel-ai-competition",
+    "section": "General Tech",
+    "sub_niche": "Tech",
+    "source": "The Verge",
+    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/09/DCD_2026-09-19_Kanter.jpg?quality=90&strip=all&crop=0%2C10.711631919237%2C100%2C78.576736161526&w=1200",
+    "summary": "Today on Decoder, we’ve got the first of a two-part series on the future of business, and I’m talking with Jonathan Kanter, the former antitrust chief for the US Department of Justice in the Biden...",
+    "published": "2026-09-19T14:00:00+00:00"
+  },
+  {
+    "title": "What Zig felt like, coming from Rust",
+    "url": "https://besok.github.io/posts/what-zig-felt-like-coming-from-rust",
+    "section": "General Tech",
+    "sub_niche": "Discussion",
+    "source": "besok.github.io",
+    "image_url": "https://images.unsplash.com/photo-1655720828018-edd2daec9349?auto=format&fit=crop&w=1200&q=80",
+    "summary": "Comments",
+    "published": "2026-09-19T13:55:18+00:00"
+  },
+  {
+    "title": "Tin: full-text search for Postgres",
+    "url": "https://planetscale.com/blog/introducing-tin",
+    "section": "General Tech",
+    "sub_niche": "Discussion",
+    "source": "planetscale.com",
+    "image_url": "https://planetscale.com/assets/introducing-tin-social-BxZcr7Qp.png",
+    "summary": "Comments",
+    "published": "2026-09-19T13:52:06+00:00"
+  },
+  {
+    "title": "ShinyHunters hacks Clop leak site, threatens to extort ransomware gang",
+    "url": "https://www.bleepingcomputer.com/news/security/shinyhunters-hacks-clop-leak-site-threatens-to-extort-ransomware-gang",
+    "section": "AI Failures",
+    "sub_niche": "Security",
+    "source": "BleepingComputer",
+    "image_url": "https://www.bleepstatic.com/content/hl-images/2024/06/15/emoji-hacker.jpg",
+    "summary": "The ShinyHunters extortion gang breached the Clop (aka Cl0p) ransomware operation's data leak site, defacing the Tor site and allegedly stealing server data and the private keys for its onion service. [...]",
+    "published": "2026-09-19T13:48:32+00:00"
+  },
+  {
+    "title": "Can You Prove a New CVE Is Exploitable Before Attackers Do? Learn How in This Webinar",
+    "url": "https://thehackernews.com/2026/09/can-you-prove-new-cve-is-exploitable.html",
+    "section": "AI Failures",
+    "sub_niche": "Tech",
+    "source": "The Hacker News",
+    "image_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgVgJqM9WZF6u_WZBeTJKqe35CDnh_4kxjLjZa3w63XbqfKBRNUENbTh5HGVrgYUGtmLRW9Px3GGzNcewMJWzd7CRxsk66eY1D70or8gasHUroPNdbUJ6ordqjxb7s8gKqQwuyWxCWC2BT0Matusn6PLXV9xus1PlqqqD3JITL_Unxt2xP8UK6zlX9Tmr0A/s1600/cves.jpg",
+    "summary": "A new CVE drops. Your scanner finds it. The severity score looks ugly. But that still does not answer the question that matters: Can it actually be exploited in your environment? Mythos-class AI is...",
+    "published": "2026-09-19T13:28:48+00:00"
+  },
+  {
+    "title": "Identity Visibility in 2026: The Foundation of Identity Security",
+    "url": "https://thehackernews.com/2026/09/identity-visibility-in-2026-foundation.html",
+    "section": "AI Failures",
+    "sub_niche": "Security",
+    "source": "The Hacker News",
+    "image_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgTFTNQKV-yV8FRZZRLBPRxZDhk6E7s3v8SpP5xW_aeDyMz-xMvi-xAVUmvDvMC-CnU1kddKpVGN9BBzeoH4xeq8zE3OAqUq5441sYhC4tfYcyU1-3_yPkVphC-20dCQX_e5kN_G-Ji42wbYuxavkjczHwYn9QP0WRXnN16KUA33kizHwh38yQl7clZAA0/s1600/ORCHID-1.jpg",
+    "summary": "Identity visibility is a starting point for modern identity security, because stolen and misused credentials are among the most frequently reported initial access vectors in breach research, including...",
+    "published": "2026-09-19T13:28:41+00:00"
   },
   {
     "title": "It’s not just LG. Every TV company is spying on you",
@@ -50,12 +130,22 @@
     "published": "2026-09-19T12:45:38+00:00"
   },
   {
+    "title": "When \"Review\" Becomes Permission: A Prompt Injection Lab",
+    "url": "https://rsec.uk/insights/when-review-becomes-permission-a-prompt-injection-lab-mu5tsobx",
+    "section": "AI Failures",
+    "sub_niche": "Jailbreak",
+    "source": "rsec.uk",
+    "image_url": "https://rsec.uk/uploads/photos/upload_ytfug01kmu5uhz0v.webp",
+    "summary": "Article URL: https://rsec.uk/insights/when-review-becomes-permission-a-prompt-injection-lab-mu5tsobx Comments URL: https://news.ycombinator.com/item?id=49766085 Points: 1 # Comments: 0",
+    "published": "2026-09-19T12:39:02+00:00"
+  },
+  {
     "title": "Calling viral AI actress Tilly Norwood? Agree to a face scan first",
     "url": "https://www.bleepingcomputer.com/news/security/calling-viral-ai-actress-tilly-norwood-agree-to-a-face-scan-first",
     "section": "AI Failures",
     "sub_niche": "Outage",
     "source": "BleepingComputer",
-    "image_url": "https://www.bleepstatic.com/content/hl-images/2024/04/10/artificial-intelligence-eyes.jpg",
+    "image_url": "https://www.bleepstatic.com/content/hl-images/2026/09/19/tilly-norwood-face-scan-header-1600x900.jpg",
     "summary": "AI actress Tilly Norwood went viral after glitching into Chinese on Piers Morgan Uncensored last night. Her \"Talking Tilly\" video call service face-scans every caller for an 18+ age check, senses callers'...",
     "published": "2026-09-19T11:38:20+00:00"
   },
@@ -320,16 +410,6 @@
     "published": "2026-09-19T02:24:54+00:00"
   },
   {
-    "title": "Science Is Open Software",
-    "url": "https://jepedersen.dk/blog/202505_research",
-    "section": "General Tech",
-    "sub_niche": "Tech",
-    "source": "jepedersen.dk",
-    "image_url": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=1200&q=80",
-    "summary": "Comments",
-    "published": "2026-09-19T02:21:35+00:00"
-  },
-  {
     "title": "India forces caller-ID apps to feed spam reports to telcos",
     "url": "https://techcrunch.com/2026/09/18/india-forces-caller-id-apps-to-feed-spam-reports-to-telcos",
     "section": "General Tech",
@@ -378,16 +458,6 @@
     "image_url": "https://techcrunch.com/wp-content/uploads/2020/07/GettyImages-567072595.jpg?w=1000",
     "summary": "“It’s important for service members to understand the uncertainty inherent to LLMs,\" a GovAI research scholar warns.",
     "published": "2026-09-18T23:12:32+00:00"
-  },
-  {
-    "title": "How OpenAI Used Its Own LLMs to Design Its Jalapeño Chip",
-    "url": "https://spectrum.ieee.org/llms-for-chip-design",
-    "section": "General Tech",
-    "sub_niche": "Discussion",
-    "source": "spectrum.ieee.org",
-    "image_url": "https://spectrum.ieee.org/media-library/close-up-of-a-computer-processor-consisting-of-several-pieces-of-silicon.jpg?id=67770467&width=1200&height=600&coordinates=0%2C356%2C0%2C144",
-    "summary": "Comments",
-    "published": "2026-09-18T23:04:17+00:00"
   },
   {
     "title": "Anthropic’s first embedded evaluator is … Accenture?",
@@ -680,6 +750,16 @@
     "published": "2026-09-18T16:00:00+00:00"
   },
   {
+    "title": "Black Holes or Black Hole Stars? Astronomers Spar over 'Little Red Dots'",
+    "url": "https://www.quantamagazine.org/black-holes-or-black-hole-stars-astronomers-spar-over-webb-telescopes-little-red-dots-20260914",
+    "section": "General Tech",
+    "sub_niche": "Discussion",
+    "source": "quantamagazine.org",
+    "image_url": "https://www.quantamagazine.org/wp-content/uploads/2026/09/Black-Hole-Star-cr-Mark-Belan-Social-1.jpg",
+    "summary": "Comments",
+    "published": "2026-09-18T15:47:14+00:00"
+  },
+  {
     "title": "FBI, Coast Guard boarded hacked oil tankers heading toward US coast",
     "url": "https://techcrunch.com/2026/09/18/fbi-coast-guard-boarded-hacked-oil-tankers-heading-towards-us-coast",
     "section": "General Tech",
@@ -708,16 +788,6 @@
     "image_url": "https://techcrunch.com/wp-content/uploads/2026/09/TCD26_Sykes-Khalil-16x9-Dark.png?resize=1200,675",
     "summary": "Nvidia's Nader Khalil and Sydney Sykes discuss one of the decisions shaping next-gen startups on the Builders Stage at TechCrunch Disrupt 2026.",
     "published": "2026-09-18T15:30:00+00:00"
-  },
-  {
-    "title": "Brendan Carr’s FCC is more worried about who The View interviews than foreign governments owning Paramount",
-    "url": "https://www.theverge.com/policy/997416/brendan-carr-fcc-foreign-governments-paramount",
-    "section": "General Tech",
-    "sub_niche": "Politics",
-    "source": "The Verge",
-    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/04/gettyimages-2262365040.jpg?quality=90&strip=all&crop=0%2C10.732984293194%2C100%2C78.534031413613&w=1200",
-    "summary": "The FCC has announced it's waiving its rules limiting foreign equity ownership to 25 percent in the Paramount-Warner Bros. case and will allow three sovereign wealth funds run by the governments of Saudi...",
-    "published": "2026-09-18T15:12:41+00:00"
   },
   {
     "title": "Cloudflare Quick Tunnels",
@@ -865,7 +935,7 @@
     "section": "Nepali News",
     "sub_niche": "Tech",
     "source": "TechPana",
-    "image_url": "https://images.unsplash.com/photo-1655720828018-edd2daec9349?auto=format&fit=crop&w=1200&q=80",
+    "image_url": "https://techpana.prixacdn.net/media/albums/sajha_yatayat_electric_bus_EV_techpana_ZkBrAYZ8bm.jpg",
     "summary": "काठमाडौं । साझा यातायातले डिजिटल टिकेटिङ र कमान्ड तथा कन्ट्रोल सेन्टर सुरु गरेको छ । बिहीबार औपचारिक रूपमा साझाले आफ्ना सबै बसहरूमा यसको सुरुवात गरेको हो । यससँगै अब साझा यातायातका सबै बसमा यात्रा गर्दा...",
     "published": "2026-09-18T09:05:42+00:00"
   },
@@ -875,19 +945,9 @@
     "section": "Nepali News",
     "sub_niche": "Tech",
     "source": "TechPana",
-    "image_url": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "image_url": "https://techpana.prixacdn.net/media/albums/new-iphone-techpana_lExiwFE2T4.png",
     "summary": "Kathmandu. Apple has reportedly agreed to pay $2 per gigabit (Gb) of DRAM from 2027, up from the current $1.50 per Gb, as rising demand for memory continues to outpace supply. The situation is expected to...",
     "published": "2026-09-18T09:04:13+00:00"
-  },
-  {
-    "title": "माथिल्लो त्रिशूली-१ को टनेलबाट ६ वटा शव निकालियो, थप खोजी जारी",
-    "url": "https://www.ronbpost.com/2026/09/20115",
-    "section": "Nepali News",
-    "sub_niche": "Tech",
-    "source": "RONB Post",
-    "image_url": "https://www.ronbpost.com/wp-content/uploads/2026/09/Trishuli-1.jpg",
-    "summary": "काठमाडौं । माथिल्लो त्रिशूली–१ जलविद्युत् आयोजनाको सुरुङबाट ६ शव निकालिएको छ। नेपाली सेनासहितको संयुक्त उद्धार टोलीले खोजी गर्दा अडिट ३ टनेलभित्र ढलान गर्नका लागि बुनिएको डन्डीको जालीको भित्री भागमा...",
-    "published": "2026-09-18T08:39:11+00:00"
   },
   {
     "title": "निःशुल्क ल्यापटप सर्भिसिङदेखि एक्सचेन्जसम्म सुविधा दिने ‘नियो सर्भिस क्याम्प’ सुरु",
@@ -895,19 +955,9 @@
     "section": "Nepali News",
     "sub_niche": "Tech",
     "source": "TechPana",
-    "image_url": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "image_url": "https://techpana.prixacdn.net/media/albums/laptop-servicing_h1jtm4WtlG.png",
     "summary": "काठमाडौं । ल्यापटप प्रयोगकर्तालाई सर्भिस तथा प्राविधिक सहयोग उपलब्ध गराउने उद्देश्यले ‘नियो सर्भिस क्याम्प’ सुरु भएको छ । सूचना प्रविधि, ग्याजेट तथा मनोरञ्जन सम्बन्धी विभिन्न प्रडक्ट बिक्री गर्दै आएको नियो...",
     "published": "2026-09-18T08:37:45+00:00"
-  },
-  {
-    "title": "नापजाँच सकिएको ९ वर्षपछि धनुषाका ३८८ परिवारले पाए लालपुर्जा",
-    "url": "https://www.ronbpost.com/2026/09/20111",
-    "section": "Nepali News",
-    "sub_niche": "Tech",
-    "source": "RONB Post",
-    "image_url": "https://www.ronbpost.com/wp-content/uploads/2026/09/795897943_1117968861187206_663697028658677863_n.jpg",
-    "summary": "काठमाडौं ।धनुषाको क्षिरेश्वरनाथ नगरपालिका–१ (साविक रमदैया भवाडी गा.वि.स. वडा नं २,३,४,६,७ र ८) का ३८८ परिवारले नापजाँच सम्पन्न भएको करिब ९ वर्षपछि जग्गाधनी प्रमाण पुर्जा (लालपुर्जा) प्राप्त गरेका छन्। लामो...",
-    "published": "2026-09-18T08:20:20+00:00"
   },
   {
     "title": "डीर्‍यामको मूल्यवृद्धिका कारण अर्को वर्ष आईफोन झनै महँगो हुने ! सन् २०२८ सम्म छैन राहत मिल्ने सङ्केत",
@@ -915,7 +965,7 @@
     "section": "Nepali News",
     "sub_niche": "Tech",
     "source": "TechPana",
-    "image_url": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "image_url": "https://techpana.prixacdn.net/media/albums/new-iphone-techpana_lExiwFE2T4.png",
     "summary": "काठमाडौं । एप्पल नयाँ वर्षमा डीर्&zwj;यामको मूल्य हालको १.५० डलर प्रति जीबीबाट बढाएर २ डलर प्रति जीबी तिर्न सहमत भएको छ । माग तीव्र रूपमा बढिरहेको र आपूर्तिले त्यसलाई धान्न सकस परिरहेको अवस्थामा स्थितिमा...",
     "published": "2026-09-18T07:54:14+00:00"
   },
@@ -935,68 +985,18 @@
     "section": "Nepali News",
     "sub_niche": "Politics",
     "source": "TechPana",
-    "image_url": "https://images.unsplash.com/photo-1655720828018-edd2daec9349?auto=format&fit=crop&w=1200&q=80",
+    "image_url": "https://techpana.prixacdn.net/media/albums/techpana-seventh-anniversary_saZDH7LIke.jpg",
     "summary": "From the Gen-Z movement and the formation of an interim government to general elections that produced a new party-led government with a near two-thirds majority, and most recently, the devastating floods in...",
     "published": "2026-09-18T07:28:52+00:00"
   },
   {
-    "title": "RatHat Android Malware Abuses ADB to Retain Shell Access After Uninstall",
-    "url": "https://thehackernews.com/2026/09/rathat-android-malware-abuses-adb-to.html",
-    "section": "AI Failures",
+    "title": "सफ्टवेयर डेभलप गर्ने सरकारी 'कम्पनी'को हाकिम बन्न ६ जनाबिच प्रतिस्पर्धा, कसले मार्ला बाजी ?",
+    "url": "https://techpana.com/2026/159146/government-software-company-chief-position-contest-between-six-candidates",
+    "section": "Nepali News",
     "sub_niche": "Tech",
-    "source": "The Hacker News",
-    "image_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj5Psm8tS3JWb6ev7nZoz7YQDPIgoHj9gwbNjgjxbokxICdzRIUb5YJI-XfDx0NQgm8afhayc-Zd51hjuxqi7Sk_XxCNXoTNt7nIZWpxCBcDMLjSm3uW38HRciOu3WNtaUT0a-2NSsOX91GbXpCScryNirImMMC4lkuVysHku58maTbm9XvAwJ0-X6O_wDE/s1600/1000109602.jpg",
-    "summary": "Cybersecurity researchers have flagged a new Android malware called RatHat that's assessed to be operated by China-based threat actors and features an artificial intelligence (AI)-powered system to navigate...",
-    "published": "2026-09-18T06:17:25+00:00"
-  },
-  {
-    "title": "RFK Jr. names 8 new members to influential preventive medicine task force",
-    "url": "https://arstechnica.com/health/2026/09/rfk-jr-stacks-another-influential-federal-panel-with-questionable-picks",
-    "section": "General Tech",
-    "sub_niche": "Tech",
-    "source": "Ars Technica",
-    "image_url": "https://cdn.arstechnica.net/wp-content/uploads/2026/03/GettyImages-2268348621-2560x1440.jpg",
-    "summary": "The USPSTF sets insurance coverage for preventive services, like colonoscopies.",
-    "published": "2026-09-17T22:31:28+00:00"
-  },
-  {
-    "title": "Small AI models let drones autonomously identify and attack battlefield targets",
-    "url": "https://arstechnica.com/ai/2026/09/nato-backed-startup-adapts-ai-for-autonomous-drone-recon-and-attack-missions",
-    "section": "General Tech",
-    "sub_niche": "Tech",
-    "source": "Ars Technica",
-    "image_url": "https://cdn.arstechnica.net/wp-content/uploads/2026/09/Scaleout-Systems-ALMA-demo-1152x648.png",
-    "summary": "Scaleout deploys decentralized AI-driven learning to military bases and drones.",
-    "published": "2026-09-17T22:12:58+00:00"
-  },
-  {
-    "title": "How to Write with an LLM",
-    "url": "https://sockpuppet.org/blog/2026/09/17/how-to-write-with-an-llm",
-    "section": "General Tech",
-    "sub_niche": "Discussion",
-    "source": "sockpuppet.org",
-    "image_url": "https://sockpuppet.org/blog/2026/09/17/how-to-write-with-an-llm/workshop_hu_1de7cdec7d0e03c9.jpg",
-    "summary": "Comments",
-    "published": "2026-09-17T21:48:38+00:00"
-  },
-  {
-    "title": "Google announces new experimental \"CC\" AI agent for families",
-    "url": "https://arstechnica.com/google/2026/09/google-announces-new-experimental-cc-ai-agent-for-families",
-    "section": "General Tech",
-    "sub_niche": "Tech",
-    "source": "Ars Technica",
-    "image_url": "https://cdn.arstechnica.net/wp-content/uploads/2026/09/Google-CC-1152x648.png",
-    "summary": "Multiple family members can share data to help the agent make plans and complete tasks.",
-    "published": "2026-09-17T20:24:34+00:00"
-  },
-  {
-    "title": "Microsoft exec called AI scraping the “largest theft of labor in human history”",
-    "url": "https://arstechnica.com/tech-policy/2026/09/microsoft-exec-called-ai-scraping-the-largest-theft-of-labor-in-human-history",
-    "section": "General Tech",
-    "sub_niche": "Tech",
-    "source": "Ars Technica",
-    "image_url": "https://cdn.arstechnica.net/wp-content/uploads/2026/09/GettyImages-907415308-2560x1440.jpg",
-    "summary": "Microsoft, OpenAI emails reveal fear of AI “doom loop” killing news orgs.",
-    "published": "2026-09-17T20:10:41+00:00"
+    "source": "TechPana",
+    "image_url": "https://techpana.prixacdn.net/media/albums/government-to-develop-own-software-development-center_nvqrvvd4Hb.jpg",
+    "summary": "काठमाडौं । सरकारले आफ्नै संयन्त्रमार्फत सफ्टवेयर निर्माण, विकास तथा सञ्चालन गर्न स्थापना गरेको सफ्टवेयर विकास तथा सञ्चालन केन्द्रको कार्यकारी निर्देशक पदका लागि छनोट प्रक्रिया अन्तिम चरणमा पुगेको छ ।...",
+    "published": "2026-09-18T07:21:28+00:00"
   }
 ]

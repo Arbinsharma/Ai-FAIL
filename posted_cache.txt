@@ -3,3 +3,6 @@ https://thehackernews.com/2026/09/critical-check-point-management-server.html
 https://www.bleepingcomputer.com/news/microsoft/microsoft-fixes-broken-copy-and-paste-for-excel-2016-users
 https://arstechnica.com/ai/2026/09/report-us-almost-boarded-chinese-ship-over-hallucinated-ai-arms-report
 https://thehackernews.com/2026/09/cisa-flags-three-linux-kernel.html
+https://www.theverge.com/policy/997573/virginia-governor-spanberger-data-center-ai-task-force
+https://www.theverge.com/ai-artificial-intelligence/997358/what-hollywood-thinks-about-existential-ai-warnings
+https://www.bleepingcomputer.com/news/security/check-point-warns-critical-flaw-lets-hackers-execute-code-as-root
