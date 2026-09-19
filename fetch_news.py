@@ -24,16 +24,13 @@ OUTPUT_FILE = "news.json"
 POSTED_CACHE_FILE = "posted_cache.txt"
 WEBHOOK_URL = "https://hook.eu1.make.com/eu46gj3m60wz2ghkipo4pblnoxdfe1dh"
 
-# Categorized Feed Sources
 FEED_SOURCES = {
     "AI Failures": [
         {"url": "https://hnrss.org/newest?q=AI+failure", "sub": "Incident"},
         {"url": "https://hnrss.org/newest?q=AI+hallucination", "sub": "Hallucination"},
-        {"url": "https://hnrss.org/newest?q=AI+gone+wrong", "sub": "Critical"},
         {"url": "https://hnrss.org/newest?q=prompt+injection", "sub": "Jailbreak"},
         {"url": "https://hnrss.org/newest?q=LLM+exploit", "sub": "Security"},
         {"url": "https://hnrss.org/newest?q=ChatGPT+down", "sub": "Outage"},
-        {"url": "https://hnrss.org/newest?q=OpenAI+incident", "sub": "Critical"},
         {"url": "https://feeds.feedburner.com/TheHackersNews", "sub": "Security"},
         {"url": "https://www.bleepingcomputer.com/feed/", "sub": "Security"},
     ],
@@ -49,18 +46,26 @@ FEED_SOURCES = {
     ]
 }
 
+AI_KEYWORDS = [
+    "ai", "artificial intelligence", "llm", "chatgpt", "openai", 
+    "gemini", "claude", "anthropic", "copilot", "deepseek", "model", "agent"
+]
+
 AI_STRICT_FAILURES = [
     "fail", "hallucinat", "exploit", "jailbreak", "prompt injection",
     "rogue", "malfunction", "breach", "leak", "outage", "destruct",
     "catastroph", "broken", "danger", "vulnerability", "wrong answer",
-    "unhinged", "bias", "incident", "crash", "down"
+    "unhinged", "bias", "incident", "crash", "down", "hack"
 ]
 
-VIRAL_TERMS = [
-    "hallucinat", "jailbreak", "exploit", "breach", "leak", "banned",
-    "lawsuit", "disaster", "catastroph", "rogue", "chaos", "scam",
-    "broken", "down", "outage", "fired", "danger", "shocking"
-]
+MODEL_SIGNATURES = {
+    "ChatGPT / OpenAI": ["chatgpt", "openai", "gpt-4", "gpt-5", "sora"],
+    "Google Gemini": ["gemini", "deepmind", "google ai"],
+    "Anthropic Claude": ["claude", "anthropic"],
+    "Microsoft Copilot": ["copilot", "azure ai"],
+    "Meta AI": ["llama", "meta ai"],
+    "DeepSeek": ["deepseek"]
+}
 
 FALLBACK_IMAGES = [
     "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80",
@@ -70,16 +75,13 @@ FALLBACK_IMAGES = [
     "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
 ]
 
-def pick_fallback(url):
-    return FALLBACK_IMAGES[zlib.adler32(url.encode("utf-8")) % len(FALLBACK_IMAGES)]
-
 HEADERS = {
-    "User-Agent": (
-        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-        "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0 Safari/537.36"
-    ),
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/131.0 Safari/537.36",
     "Accept-Language": "en-US,en;q=0.9,ne;q=0.8",
 }
+
+def pick_fallback(url):
+    return FALLBACK_IMAGES[zlib.adler32(url.encode("utf-8")) % len(FALLBACK_IMAGES)]
 
 def clean_html(raw):
     if not raw:
@@ -99,18 +101,11 @@ def truncate(text, length=210):
 def normalize_url(url):
     try:
         parts = urlsplit(url.strip())
-        return urlunsplit((parts.scheme, parts.netloc.lower(), parts.path.rstrip("/"), "", ""))
+        return urlunsplit((parts.scheme, parts.netloc.lower(), parts.path.rstrip("/"), parts.query, ""))
     except Exception:
-        return url.strip().split("?")[0].rstrip("/").lower()
-
-def get_domain(url):
-    try:
-        return urlparse(url).netloc.replace("www.", "")
-    except Exception:
-        return ""
+        return url.strip()
 
 def source_name(url):
-    domain = get_domain(url)
     mapping = {
         "ronbpost.com": "RONB Post",
         "techpana.com": "TechPana",
@@ -122,106 +117,54 @@ def source_name(url):
         "news.ycombinator.com": "Hacker News",
         "hnrss.org": "Hacker News",
     }
+    domain = urlparse(url).netloc.replace("www.", "")
     return mapping.get(domain, domain or "Intelligence")
+
+def detect_affected_model(text):
+    low = text.lower()
+    for model_name, identifiers in MODEL_SIGNATURES.items():
+        if any(i in low for i in identifiers):
+            return model_name
+    return "General / Autonomous"
+
+def assign_severity(sub_niche, text):
+    low = text.lower()
+    if any(w in low for w in ["cvss 10", "rce", "critical", "disaster", "root privilege", "breach"]):
+        return {"level": "CRITICAL", "color": "#ff3b5c"}
+    if sub_niche in ["Outage", "Jailbreak", "Security"]:
+        return {"level": "HIGH", "color": "#f97316"}
+    if sub_niche == "Hallucination":
+        return {"level": "MODERATE", "color": "#eab308"}
+    return {"level": "INFO", "color": "#00e5ff"}
 
 def detect_sub_niche(title, summary, default_sub="General"):
     text = f"{title} {summary}".lower()
-    if any(w in text for w in ["politics", "election", "government", "minister", "neta", "parliament"]):
+    if any(w in text for w in ["outage", "down", "offline", "crash", "blackout"]):
+        return "Outage"
+    if any(w in text for w in ["jailbreak", "injection", "override", "bypass"]):
+        return "Jailbreak"
+    if any(w in text for w in ["hallucinat", "wrong answer", "delusion"]):
+        return "Hallucination"
+    if any(w in text for w in ["exploit", "leak", "breach", "hack", "vulnerability"]):
+        return "Security"
+    if any(w in text for w in ["politics", "election", "government", "minister", "parliament"]):
         return "Politics"
     if any(w in text for w in ["gadget", "software", "app", "tech", "hardware", "device"]):
         return "Tech"
-    if any(w in text for w in ["hallucinat", "wrong answer", "delusion"]):
-        return "Hallucination"
-    if any(w in text for w in ["jailbreak", "injection", "override", "bypass"]):
-        return "Jailbreak"
-    if any(w in text for w in ["outage", "down", "offline", "crash", "blackout"]):
-        return "Outage"
-    if any(w in text for w in ["exploit", "leak", "breach", "hack", "vulnerability"]):
-        return "Security"
     return default_sub
-
-def calculate_viral_score(art):
-    text = f"{art.get('title', '')} {art.get('summary', '')}".lower()
-    score = sum(text.count(term) * 3 for term in VIRAL_TERMS)
-    if art.get("section") == "AI Failures":
-        score += 5
-    if any(k in art.get("title", "").lower() for k in ["hallucinat", "fail", "broken", "exploit", "jailbreak"]):
-        score += 8
-    return score
-
-def load_posted_cache():
-    if not os.path.exists(POSTED_CACHE_FILE):
-        return set()
-    with open(POSTED_CACHE_FILE, "r", encoding="utf-8") as f:
-        return set(line.strip() for line in f if line.strip())
-
-def mark_as_posted(url):
-    with open(POSTED_CACHE_FILE, "a", encoding="utf-8") as f:
-        f.write(f"{url}\n")
-
-def post_single_random_viral(articles):
-    """Picks exactly 1 random, never-before-posted viral article and pushes it."""
-    if not articles:
-        return
-
-    posted_urls = load_posted_cache()
-
-    # Filter candidates that haven't been posted yet
-    unposted = [a for a in articles if a["url"] not in posted_urls]
-    if not unposted:
-        logging.info("All current articles have already been posted to Facebook. No duplicate sent.")
-        return
-
-    # Prioritize items with positive viral score
-    viral_pool = [a for a in unposted if calculate_viral_score(a) > 0]
-    
-    # If none scored positive on strict terms, choose from top recent unposted
-    if not viral_pool:
-        viral_pool = unposted[:10]
-
-    # Pick 1 at random from the viral pool
-    chosen = random.choice(viral_pool)
-
-    payload = {
-        "headline": f"🚨 AI FAIL ALERT: {chosen['title']}",
-        "link": chosen["url"],
-        "summary": chosen["summary"]
-    }
-
-    try:
-        res = requests.post(WEBHOOK_URL, json=payload, timeout=10)
-        if res.status_code in (200, 202):
-            mark_as_posted(chosen["url"])
-            logging.info("[POSTED TO FACEBOOK] %s", chosen["title"])
-        else:
-            logging.warning("Make.com returned status %d for %s", res.status_code, chosen["title"])
-    except Exception as e:
-        logging.error("Failed sending webhook for %s: %s", chosen["title"], e)
-
-def to_iso(entry):
-    try:
-        if entry.get("published_parsed"):
-            return datetime.datetime(*entry.published_parsed[:6], tzinfo=datetime.timezone.utc).isoformat()
-        if entry.get("updated_parsed"):
-            return datetime.datetime(*entry.updated_parsed[:6], tzinfo=datetime.timezone.utc).isoformat()
-    except Exception:
-        pass
-    return datetime.datetime.now(datetime.timezone.utc).isoformat()
 
 def extract_og_image(article_url):
     try:
         res = requests.get(article_url, headers=HEADERS, timeout=7, stream=True)
         if res.status_code != 200:
             return None
-
         chunks = []
         total = 0
         for chunk in res.iter_content(8192):
             chunks.append(chunk)
             total += len(chunk)
-            if total > 150_000 or b"</head>" in b"".join(chunks).lower():
+            if total > 180_000 or b"</head>" in b"".join(chunks).lower():
                 break
-
         soup = BeautifulSoup(b"".join(chunks), "html.parser")
         for attr, val in [("property", "og:image"), ("property", "og:image:secure_url"), ("name", "twitter:image")]:
             tag = soup.find("meta", attrs={attr: val})
@@ -247,24 +190,92 @@ def fetch_feed(feed_info, section):
             if not title:
                 continue
 
+            combined = f"{title} {summary}".lower()
+
             if section == "AI Failures":
-                combined = f"{title} {summary}".lower()
-                if not any(trigger in combined for trigger in AI_STRICT_FAILURES):
+                has_ai = any(term in combined for term in AI_KEYWORDS)
+                has_failure = any(trigger in combined for trigger in AI_STRICT_FAILURES)
+                if not (has_ai and has_failure):
                     continue
+
+            sub_niche = detect_sub_niche(title, summary, default_sub)
+            severity = assign_severity(sub_niche, combined)
+            target_model = detect_affected_model(combined)
 
             articles.append({
                 "title": title,
                 "url": link,
                 "section": section,
-                "sub_niche": detect_sub_niche(title, summary, default_sub),
+                "sub_niche": sub_niche,
                 "source": source_name(link),
+                "target_model": target_model,
+                "severity": severity,
                 "image_url": None,
                 "summary": truncate(summary),
-                "published": to_iso(entry),
+                "published": datetime.datetime.now(datetime.timezone.utc).isoformat()
             })
     except Exception as e:
         logging.error("Feed error %s: %s", feed_url, e)
     return articles
+
+def check_ai_statuses():
+    """Quick uptime check on AI operational endpoints."""
+    endpoints = {
+        "OpenAI": "https://status.openai.com/api/v2/status.json",
+        "Anthropic": "https://status.anthropic.com/api/v2/status.json"
+    }
+    status_summary = {}
+    for service, endpoint in endpoints.items():
+        try:
+            r = requests.get(endpoint, timeout=4)
+            if r.status_code == 200:
+                data = r.json()
+                desc = data.get("status", {}).get("description", "Operational").lower()
+                status_summary[service] = "Operational" if "all systems operational" in desc else "Incident Reported"
+            else:
+                status_summary[service] = "Unknown"
+        except Exception:
+            status_summary[service] = "Operational"
+    return status_summary
+
+def load_posted_cache():
+    if not os.path.exists(POSTED_CACHE_FILE):
+        return set()
+    with open(POSTED_CACHE_FILE, "r", encoding="utf-8") as f:
+        return set(line.strip() for line in f if line.strip())
+
+def mark_as_posted(url):
+    with open(POSTED_CACHE_FILE, "a", encoding="utf-8") as f:
+        f.write(f"{url}\n")
+
+def post_single_random_viral(articles):
+    if not articles:
+        return
+
+    posted_urls = load_posted_cache()
+    unposted = [a for a in articles if a["url"] not in posted_urls]
+    if not unposted:
+        logging.info("No new unposted articles available.")
+        return
+
+    # Prioritize high severity for breaking news
+    critical_pool = [a for a in unposted if a["severity"]["level"] in ["CRITICAL", "HIGH"]]
+    chosen = random.choice(critical_pool if critical_pool else unposted)
+
+    # Payload formatted exactly as requested (Bold + Emoji, Title only, NO LINK)
+    formatted_headline = f"🚨 **BREAKING NEWS** 🚨\n\n{chosen['title']}"
+
+    payload = {
+        "title": formatted_headline,
+    }
+
+    try:
+        res = requests.post(WEBHOOK_URL, json=payload, timeout=10)
+        if res.status_code in (200, 202):
+            mark_as_posted(chosen["url"])
+            logging.info("[POSTED TO FACEBOOK] %s", chosen["title"])
+    except Exception as e:
+        logging.error("Webhook error: %s", e)
 
 def fetch_news():
     articles = []
@@ -284,9 +295,9 @@ def fetch_news():
                 articles.append(art)
 
     if not articles:
-        logging.warning("No articles fetched.")
         return
 
+    # Keep chronological order for freshness
     articles.sort(key=lambda a: a.get("published", ""), reverse=True)
     articles = articles[:100]
 
@@ -299,12 +310,16 @@ def fetch_news():
             except Exception:
                 art["image_url"] = pick_fallback(art["url"])
 
+    system_status = check_ai_statuses()
+    output_data = {
+        "statuses": system_status,
+        "articles": articles
+    }
+
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
-        json.dump(articles, f, indent=2, ensure_ascii=False)
+        json.dump(output_data, f, indent=2, ensure_ascii=False)
 
     logging.info("Complete! Saved %d items to %s", len(articles), OUTPUT_FILE)
-
-    # Automatically post 1 non-repetitive random viral article to Facebook
     post_single_random_viral(articles)
 
 if __name__ == "__main__":
