@@ -2,6 +2,8 @@ import json
 import logging
 import datetime
 import html as html_lib
+import os
+import random
 import re
 import socket
 import zlib
@@ -19,6 +21,7 @@ logging.basicConfig(
 
 socket.setdefaulttimeout(12)
 OUTPUT_FILE = "news.json"
+POSTED_CACHE_FILE = "posted_cache.txt"
 WEBHOOK_URL = "https://hook.eu1.make.com/eu46gj3m60wz2ghkipo4pblnoxdfe1dh"
 
 # Categorized Feed Sources
@@ -46,7 +49,6 @@ FEED_SOURCES = {
     ]
 }
 
-# Strict keyword trigger list for true AI problems
 AI_STRICT_FAILURES = [
     "fail", "hallucinat", "exploit", "jailbreak", "prompt injection",
     "rogue", "malfunction", "breach", "leak", "outage", "destruct",
@@ -54,7 +56,6 @@ AI_STRICT_FAILURES = [
     "unhinged", "bias", "incident", "crash", "down"
 ]
 
-# Scoring weights for viral detection
 VIRAL_TERMS = [
     "hallucinat", "jailbreak", "exploit", "breach", "leak", "banned",
     "lawsuit", "disaster", "catastroph", "rogue", "chaos", "scam",
@@ -148,38 +149,54 @@ def calculate_viral_score(art):
         score += 8
     return score
 
-def post_viral_to_make(articles):
-    """Selects top viral posts (min 1, max 3) and sends them to Make.com."""
+def load_posted_cache():
+    if not os.path.exists(POSTED_CACHE_FILE):
+        return set()
+    with open(POSTED_CACHE_FILE, "r", encoding="utf-8") as f:
+        return set(line.strip() for line in f if line.strip())
+
+def mark_as_posted(url):
+    with open(POSTED_CACHE_FILE, "a", encoding="utf-8") as f:
+        f.write(f"{url}\n")
+
+def post_single_random_viral(articles):
+    """Picks exactly 1 random, never-before-posted viral article and pushes it."""
     if not articles:
         return
 
-    # Filter candidates with viral signals
-    candidates = sorted(articles, key=calculate_viral_score, reverse=True)
-    high_score = [a for a in candidates if calculate_viral_score(a) > 0]
+    posted_urls = load_posted_cache()
+
+    # Filter candidates that haven't been posted yet
+    unposted = [a for a in articles if a["url"] not in posted_urls]
+    if not unposted:
+        logging.info("All current articles have already been posted to Facebook. No duplicate sent.")
+        return
+
+    # Prioritize items with positive viral score
+    viral_pool = [a for a in unposted if calculate_viral_score(a) > 0]
     
-    if not high_score:
-        to_send = candidates[:1]
-    else:
-        # Minimum 1, Maximum 3
-        count = min(3, max(1, len(high_score)))
-        to_send = high_score[:count]
+    # If none scored positive on strict terms, choose from top recent unposted
+    if not viral_pool:
+        viral_pool = unposted[:10]
 
-    logging.info("Pushing %d high-potential viral article(s) to Facebook webhook...", len(to_send))
+    # Pick 1 at random from the viral pool
+    chosen = random.choice(viral_pool)
 
-    for item in to_send:
-        payload = {
-            "headline": f"🚨 AI FAIL ALERT: {item['title']}",
-            "link": item["url"],
-            "summary": item["summary"]
-        }
-        try:
-            res = requests.post(WEBHOOK_URL, json=payload, timeout=10)
-            if res.status_code in (200, 202):
-                logging.info("Successfully pushed to webhook: %s", item["title"])
-            else:
-                logging.warning("Make.com response %d for %s", res.status_code, item["title"])
-        except Exception as e:
-            logging.error("Failed sending webhook for %s: %s", item["title"], e)
+    payload = {
+        "headline": f"🚨 AI FAIL ALERT: {chosen['title']}",
+        "link": chosen["url"],
+        "summary": chosen["summary"]
+    }
+
+    try:
+        res = requests.post(WEBHOOK_URL, json=payload, timeout=10)
+        if res.status_code in (200, 202):
+            mark_as_posted(chosen["url"])
+            logging.info("[POSTED TO FACEBOOK] %s", chosen["title"])
+        else:
+            logging.warning("Make.com returned status %d for %s", res.status_code, chosen["title"])
+    except Exception as e:
+        logging.error("Failed sending webhook for %s: %s", chosen["title"], e)
 
 def to_iso(entry):
     try:
@@ -287,8 +304,8 @@ def fetch_news():
 
     logging.info("Complete! Saved %d items to %s", len(articles), OUTPUT_FILE)
 
-    # Automatically syndicate top viral posts to Make.com webhook
-    post_viral_to_make(articles)
+    # Automatically post 1 non-repetitive random viral article to Facebook
+    post_single_random_viral(articles)
 
 if __name__ == "__main__":
     fetch_news()
