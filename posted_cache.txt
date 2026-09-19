@@ -1,2 +1,3 @@
 https://www.bleepingcomputer.com/news/security/webinar-which-google-workspace-security-controls-actually-matter
 https://thehackernews.com/2026/09/critical-check-point-management-server.html
+https://www.bleepingcomputer.com/news/microsoft/microsoft-fixes-broken-copy-and-paste-for-excel-2016-users
