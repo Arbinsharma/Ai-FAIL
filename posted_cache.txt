@@ -6,3 +6,6 @@ https://thehackernews.com/2026/09/cisa-flags-three-linux-kernel.html
 https://www.theverge.com/policy/997573/virginia-governor-spanberger-data-center-ai-task-force
 https://www.theverge.com/ai-artificial-intelligence/997358/what-hollywood-thinks-about-existential-ai-warnings
 https://www.bleepingcomputer.com/news/security/check-point-warns-critical-flaw-lets-hackers-execute-code-as-root
+https://thehackernews.com/2026/09/solarwinds-patches-arm-hard-coded-key.html
+https://thehackernews.com/2026/09/microsoft-patches-cvss-100-azure-ai.html
+https://crawl.develz.org

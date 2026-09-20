@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AIFail — Global Intelligence</title>
+<style>
+    body { font-family: sans-serif; background: #07080c; color: #fff; margin: 0; padding: 20px; }
+    .nav { display: flex; gap: 15px; margin-bottom: 20px; background: #111; padding: 15px; border-radius: 10px; }
+    .nav a { color: #00e5ff; text-decoration: none; font-weight: bold; padding: 10px; }
+    .nav a.active { background: #00e5ff; color: #000; border-radius: 5px; }
+    .sub-nav { display: flex; gap: 10px; margin-bottom: 30px; }
+    .sub-nav button { background: #222; color: #fff; border: 1px solid #444; padding: 8px 15px; border-radius: 20px; cursor: pointer; }
+    .sub-nav button.active { background: #00e5ff; color: #000; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+    .card { background: #1a1a24; border: 1px solid #333; padding: 20px; border-radius: 10px; }
+</style>
+</head>
+<body>
+    <div class="nav">
+        <a href="index.html">🚨 AI Insider Threats</a>
+        <a href="nepali.html">🇳🇵 Nepali News</a>
+        <a href="global.html" class="active">🌍 Global News</a>
+    </div>
+
+    <h1>Global Intelligence Hub</h1>
+    <div class="sub-nav" id="subFilters">
+        <button class="active" onclick="filter('All')">All</button>
+        <button onclick="filter('Tech')">Tech</button>
+        <button onclick="filter('Politics')">Politics</button>
+        <button onclick="filter('Normal')">Normal</button>
+    </div>
+    
+    <div class="grid" id="feed"></div>
+
+<script>
+let globalData = [];
+function render(items) {
+    document.getElementById('feed').innerHTML = items.map(a => `
+        <div class="card">
+            <span style="color:#00e5ff; font-size:12px; font-weight:bold;">${a.sub_niche} | ${a.source}</span>
+            <h3 style="margin-top:8px;">${a.title}</h3>
+            <p style="font-size:14px; color:#aaa;">${a.summary}</p>
+            <a href="${a.url}" target="_blank" style="color:#fff; text-decoration:underline;">Read Full Report</a>
+        </div>
+    `).join('');
+}
+
+function filter(sub) {
+    document.querySelectorAll('.sub-nav button').forEach(b => b.classList.toggle('active', b.innerText === sub));
+    render(sub === 'All' ? globalData : globalData.filter(a => a.sub_niche === sub));
+}
+
+fetch('news.json').then(r => r.json()).then(data => {
+    globalData = data.articles.filter(a => a.macro === 'Global News');
+    render(globalData);
+});
+</script>
+</body>
+</html>
