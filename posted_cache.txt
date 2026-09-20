@@ -11,3 +11,4 @@ https://thehackernews.com/2026/09/microsoft-patches-cvss-100-azure-ai.html
 https://crawl.develz.org
 https://www.bleepingcomputer.com/news/security/shinyhunters-hacks-clop-leak-site-threatens-to-extort-ransomware-gang
 https://thehackernews.com/2026/09/google-gemini-broke-into-real-company.html
+https://www.theverge.com/ai-artificial-intelligence/997706/the-ai-regulation-smackdown-isnt-over
