@@ -12,3 +12,7 @@ https://crawl.develz.org
 https://www.bleepingcomputer.com/news/security/shinyhunters-hacks-clop-leak-site-threatens-to-extort-ransomware-gang
 https://thehackernews.com/2026/09/google-gemini-broke-into-real-company.html
 https://www.theverge.com/ai-artificial-intelligence/997706/the-ai-regulation-smackdown-isnt-over
+https://www.theverge.com/science/997834/ai-cyberattack-energy-critical-infrastructure
+https://www.theverge.com/column/997843/streamers-cable-fast-channels
+https://thehackernews.com/2026/09/critical-pre-auth-rce-in-orkes.html
+https://techcrunch.com/2026/09/20/is-the-ai-industry-really-ready-to-slow-down

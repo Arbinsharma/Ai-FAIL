@@ -1,23 +1,233 @@
 [
   {
-    "title": "People hate Flock so much its employees are now demoralized and quitting",
-    "url": "https://www.neowin.net/news/people-hate-flock-so-much-that-its-employees-are-now-demoralized-and-thinking-of-quitting",
-    "section": "General Tech",
-    "sub_niche": "Discussion",
-    "source": "neowin.net",
-    "image_url": "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1200&q=80",
-    "summary": "Comments",
-    "published": "2026-09-20T17:22:15+00:00"
+    "title": "प्रोलिंकका कम्प्युटर एक्सेसरिज र नेटवर्किङ डिभाइसमा १५ प्रतिशत छुट",
+    "url": "https://techpana.com/2026/159187/prolink-computer-accessories-networking-devices-15-percent-discount",
+    "section": "Nepali News",
+    "sub_niche": "Tech",
+    "source": "TechPana",
+    "image_url": "https://techpana.prixacdn.net/media/albums/pro-link_lPD3FBBlZo.jpg",
+    "summary": "काठमाडौं । दसैंको अवसरमा म्याक्स इन्टरनेसनलले प्रोलिंक ब्रान्डका विभिन्न प्रविधिजन्य उत्पादनमा १५ प्रतिशत छुटको योजना ल्याएको छ । कम्पनीका अनुसार यो अफरअन्तर्गत प्रोलिंकका छनोट गरिएका उत्पादन खरिद गर्दा १५...",
+    "published": "2026-09-21T03:44:50+00:00"
   },
   {
-    "title": "Show HN: Radius – A Meetup.com Alternative",
-    "url": "https://radius.to",
+    "title": "परिचय लुकाएर मनको बह पोख्न मिल्ने युट्युब कार्यक्रम ‘डी-स्टोरी’, छोटो समयमै बटुल्दै चर्चा !",
+    "url": "https://techpana.com/2026/159186/d-story-youtube-program-anonymous-storytelling-platform",
+    "section": "Nepali News",
+    "sub_niche": "Tech",
+    "source": "TechPana",
+    "image_url": "https://techpana.prixacdn.net/media/albums/dstory-by-deepa-simkhada-techpana-news_zU6UZLA5eg.jpg",
+    "summary": "काठमाडौं । एउटा यस्तो नेपाली युट्युब कार्यक्रम, जसले ८ वटा कथाबाटै पाँच महिनाको अवधिमा डेढ लाखभन्दा बढी सब्स्क्राइबर जोडिसकेको छ । यसको हरेक शृङ्खलामा लाखौँ भ्युज आउने गरेका छन् । कार्यक्रमले समाजमा...",
+    "published": "2026-09-21T02:07:11+00:00"
+  },
+  {
+    "title": "Why back propagation goes backward",
+    "url": "https://gregorygundersen.com/blog/2018/04/15/backprop",
     "section": "General Tech",
     "sub_niche": "Discussion",
-    "source": "radius.to",
-    "image_url": "https://radius.to/assets/og/default-74c93fdef4781fce55c02831e8ee182bcf98c63851a9b7970f43ed9e7ec788fa.png",
+    "source": "gregorygundersen.com",
+    "image_url": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=1200&q=80",
     "summary": "Comments",
-    "published": "2026-09-20T16:51:26+00:00"
+    "published": "2026-09-21T00:42:14+00:00"
+  },
+  {
+    "title": "विपद्को पूर्वसूचना आयो, तर गम्भीरता बुझ्न नसक्दा विध्वंस",
+    "url": "https://www.ronbpost.com/2026/09/20162",
+    "section": "Nepali News",
+    "sub_niche": "Tech",
+    "source": "RONB Post",
+    "image_url": "https://www.ronbpost.com/wp-content/uploads/2026/08/Devighat-drone-View_NPL-5.jpeg",
+    "summary": "नुवाकोट । बिहानको खाना खाइसकेपछि विदुर नगरपालिका–१ ढुङ्गेका छत्र प्याकुरेल नियमित काममा जाने तयारीमा थिए। त्रिशूली नदी किनारबाट केही दूरीमा घर भएकाले नदीमा ठूलो बाढी आए पनि आफ्नो घरसम्म असर नपुग्नेमा उनी...",
+    "published": "2026-09-21T00:39:02+00:00"
+  },
+  {
+    "title": "संसद्का दुवै सदनको बैठक बस्दै",
+    "url": "https://www.ronbpost.com/2026/09/20160",
+    "section": "Nepali News",
+    "sub_niche": "Tech",
+    "source": "RONB Post",
+    "image_url": "https://www.ronbpost.com/wp-content/uploads/2026/05/Samsad_parliament.png",
+    "summary": "काठमाडौं । संसद्का दुवै सदनको बैठक आज बस्दैछ । अपराह्न १ बजे सिंहदरबारमा बस्ने प्रतिनिधिसभाको बैठकमा सभामुख डोलप्रसाद अर्यालले राष्ट्रपतिको कार्यालयबाट प्राप्त विधेयक प्रमाणीकरणसम्बन्धी पत्रको व्यहोरा पढेर...",
+    "published": "2026-09-21T00:34:48+00:00"
+  },
+  {
+    "title": "Amiga Unix, Again",
+    "url": "https://amigaux.org",
+    "section": "General Tech",
+    "sub_niche": "Discussion",
+    "source": "amigaux.org",
+    "image_url": "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1200&q=80",
+    "summary": "Comments",
+    "published": "2026-09-20T23:57:10+00:00"
+  },
+  {
+    "title": "What happened to the Snowden archive",
+    "url": "https://libroot.org/posts/what-happened-to-the-snowden-archive",
+    "section": "General Tech",
+    "sub_niche": "Tech",
+    "source": "libroot.org",
+    "image_url": "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1200&q=80",
+    "summary": "Comments",
+    "published": "2026-09-20T22:35:49+00:00"
+  },
+  {
+    "title": "AX – Google’s Open Agentic Orchestrator",
+    "url": "https://agentexecutor.io",
+    "section": "General Tech",
+    "sub_niche": "Discussion",
+    "source": "agentexecutor.io",
+    "image_url": "https://images.unsplash.com/photo-1655720828018-edd2daec9349?auto=format&fit=crop&w=1200&q=80",
+    "summary": "Comments",
+    "published": "2026-09-20T22:32:43+00:00"
+  },
+  {
+    "title": "Bill to Ban Private Equity from Owning Medical Practices",
+    "url": "https://truthout.org/articles/warren-introduces-bill-to-ban-private-equity-from-owning-medical-practices",
+    "section": "General Tech",
+    "sub_niche": "Discussion",
+    "source": "truthout.org",
+    "image_url": "https://truthout.org/app/uploads/2026/09/2026_09-17-elizabeth-warren.jpg",
+    "summary": "Comments",
+    "published": "2026-09-20T22:13:46+00:00"
+  },
+  {
+    "title": "6 days left to save up to $200 to TechCrunch Disrupt 2026",
+    "url": "https://techcrunch.com/2026/09/20/6-days-left-to-get-ahead-at-techcrunch-disrupt-2026",
+    "section": "General Tech",
+    "sub_niche": "Tech",
+    "source": "TechCrunch",
+    "image_url": "https://techcrunch.com/wp-content/uploads/2026/02/TCD26_6Days-16X9-Dark.png?resize=1200,675",
+    "summary": "Current ticket pricing ends in 6 days on Sept. 25 at 11:59 p.m. PT. Join 10,000+ founders, investors and tech leaders at Disrupt and save up to $200 on your ticket until then.",
+    "published": "2026-09-20T21:41:08+00:00"
+  },
+  {
+    "title": "Ogre Battle 64 Recompiled Project at 99.05%",
+    "url": "https://github.com/lfarroco/ogre-battle-64-recomp",
+    "section": "General Tech",
+    "sub_niche": "Discussion",
+    "source": "github.com",
+    "image_url": "https://opengraph.githubassets.com/e56de65e22e4b6655f6edfd79ec15ff55337bbfe14a0441ad4bc41377d15dc30/lfarroco/ogre-battle-64-recomp",
+    "summary": "Comments",
+    "published": "2026-09-20T20:59:02+00:00"
+  },
+  {
+    "title": "No Dogs in Space is back to feed your need for obsessive music history",
+    "url": "https://www.theverge.com/report/997948/no-dogs-in-space-is-back-punk-2-0-music-history-podcast",
+    "section": "General Tech",
+    "sub_niche": "Tech",
+    "source": "The Verge",
+    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/09/810731213_18454823458185562_8102974567602315903_n.jpg?quality=90&strip=all&crop=0%2C0%2C100%2C52.459901936342&w=1200",
+    "summary": "In August, I wrote about my love of the music history podcast No Dogs in Space, but mourned the fact that there hadn't been a new episode in over two years. Little did I know that hosts Carolina Hidalgo and...",
+    "published": "2026-09-20T20:51:57+00:00"
+  },
+  {
+    "title": "World model companies are keeping a lot of secrets",
+    "url": "https://techcrunch.com/2026/09/20/world-model-companies-are-keeping-a-lot-of-secrets",
+    "section": "General Tech",
+    "sub_niche": "Milestones",
+    "source": "TechCrunch",
+    "image_url": "https://techcrunch.com/wp-content/uploads/2026/09/ALLIN_16-09-AM_melanieolmsteadphotographe-635.jpg?w=1024",
+    "summary": "Everyone in the world-models space is sitting on a pile of cash and a ton of buzz, but good luck getting anyone — from the founders to their own data suppliers — to tell you what they're actually building.",
+    "published": "2026-09-20T20:29:07+00:00"
+  },
+  {
+    "title": "Elon Musk’s latest Boring Company pitch involves a Hyperloop between Austin and San Antonio",
+    "url": "https://techcrunch.com/2026/09/20/elon-musks-latest-boring-company-pitch-involves-a-hyperloop-between-austin-and-san-antonio",
+    "section": "General Tech",
+    "sub_niche": "Milestones",
+    "source": "TechCrunch",
+    "image_url": "https://techcrunch.com/wp-content/uploads/2026/04/musk-court-2273245544.jpg?resize=1200,801",
+    "summary": "Many of The Boring Company's announced project have not materialized.",
+    "published": "2026-09-20T19:38:48+00:00"
+  },
+  {
+    "title": "Is the AI industry really ready to slow down?",
+    "url": "https://techcrunch.com/2026/09/20/is-the-ai-industry-really-ready-to-slow-down",
+    "section": "General Tech",
+    "sub_niche": "Outage",
+    "source": "TechCrunch",
+    "image_url": "https://techcrunch.com/wp-content/uploads/2026/09/GettyImages-2294936867.jpg?resize=1200,800",
+    "summary": "On Equity, we debated whether Ai executives are serious about wanting to slow down.",
+    "published": "2026-09-20T18:56:04+00:00"
+  },
+  {
+    "title": "No one is surprised that Nvidia’s Jensen Huang thinks AI fears are overblown.",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/997936/nvidia-jensen-huang-ai-fears-overblown",
+    "section": "General Tech",
+    "sub_niche": "Tech",
+    "source": "The Verge",
+    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/08/STKP210_JENSEN_HUANG_D.jpg?quality=90&strip=all&crop=0%2C10.732984293194%2C100%2C78.534031413613&w=1200",
+    "summary": "The man who may stand to make the most money from the AI boom seems to think he knows better than anyone else, including researchers who have studied and worked on AI for decades. In an interview with CBS...",
+    "published": "2026-09-20T18:50:18+00:00"
+  },
+  {
+    "title": "Vocci’s ring adds a new form factor to meeting note-taking",
+    "url": "https://techcrunch.com/2026/09/20/voccis-ring-adds-a-new-form-factor-to-meeting-note-taking",
+    "section": "General Tech",
+    "sub_niche": "Milestones",
+    "source": "TechCrunch",
+    "image_url": "https://techcrunch.com/wp-content/uploads/2026/09/Vocci-feat.jpg?resize=1200,675",
+    "summary": "Vocci's lightweight ring costs $249, and might pose some privacy questions",
+    "published": "2026-09-20T18:32:52+00:00"
+  },
+  {
+    "title": "Kojima Productions disputes reports the studio is in trouble",
+    "url": "https://www.theverge.com/games/997880/hideo-kojima-productions-physint-xbox-sony-playstation",
+    "section": "General Tech",
+    "sub_niche": "Tech",
+    "source": "The Verge",
+    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/25145145/1831287900.jpg?quality=90&strip=all&crop=0%2C9.8804437222924%2C100%2C80.239112555415&w=1200",
+    "summary": "After it was announced that Sony was dropping Hideo Kojima's Physint, and that instead the Metal Gear Solid creator's latest title would be coming to Xbox, there were a flurry of rumors about the falling...",
+    "published": "2026-09-20T18:15:10+00:00"
+  },
+  {
+    "title": "ScrollEd wants to turn textbooks into TikTok",
+    "url": "https://techcrunch.com/2026/09/20/scrolled-wants-to-turn-textbooks-into-tiktok",
+    "section": "General Tech",
+    "sub_niche": "Tech",
+    "source": "TechCrunch",
+    "image_url": "https://techcrunch.com/wp-content/uploads/2026/09/Socrates-as-Tik-Tok-feed.png?resize=1200,800",
+    "summary": "ScrollEd turns textbooks into a scrollable, Instagram-like feed with video, audio, and quizzes. The Palo Alto startup, founded by student co-founders (and spouses) Utsav Gupta and Rebecca Neff, pitches at...",
+    "published": "2026-09-20T18:00:00+00:00"
+  },
+  {
+    "title": "A Necessary History of the Oddest Letter: W",
+    "url": "https://lithub.com/a-necessary-history-of-the-oddest-letter-w",
+    "section": "General Tech",
+    "sub_niche": "Discussion",
+    "source": "lithub.com",
+    "image_url": "https://s26162.pcdn.co/wp-content/uploads/2026/06/W.jpg",
+    "summary": "Comments",
+    "published": "2026-09-20T17:55:57+00:00"
+  },
+  {
+    "title": "I turned Jev into a (lousy) chatbot",
+    "url": "https://github.com/kyle-pena-nlp/jevchat",
+    "section": "General Tech",
+    "sub_niche": "Discussion",
+    "source": "github.com",
+    "image_url": "https://opengraph.githubassets.com/22c1669c47cae35057ee176efae140315591bda394cb830e3c1e6d8b71af21c0/kyle-pena-nlp/jevchat",
+    "summary": "Comments",
+    "published": "2026-09-20T17:51:27+00:00"
+  },
+  {
+    "title": "Samsung is expected to more than double output of its HBM4 and HBM4E DRAM",
+    "url": "https://en.sedaily.com/finance/2026/09/20/samsung-to-double-hbm4-output-next-year-sources-say",
+    "section": "General Tech",
+    "sub_niche": "Discussion",
+    "source": "en.sedaily.com",
+    "image_url": "https://wimg.sedaily.com/news/cms/2026/09/20/rcv.YNA.20260318.PYH2026031803840001300_P1.jpg",
+    "summary": "Comments",
+    "published": "2026-09-20T17:38:50+00:00"
+  },
+  {
+    "title": "I am often wrong",
+    "url": "https://borischerny.com/management,/product/2026/09/19/I-am-often-wrong.html",
+    "section": "General Tech",
+    "sub_niche": "Discussion",
+    "source": "borischerny.com",
+    "image_url": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=1200&q=80",
+    "summary": "Comments",
+    "published": "2026-09-20T16:41:46+00:00"
   },
   {
     "title": "New California law will penalize influencers who don’t disclose political ads",
@@ -40,36 +250,6 @@
     "published": "2026-09-20T16:02:00+00:00"
   },
   {
-    "title": "Prompts Aren't Real",
-    "url": "https://evaluation.club",
-    "section": "General Tech",
-    "sub_niche": "Discussion",
-    "source": "evaluation.club",
-    "image_url": "https://evaluation.club/share.jpg",
-    "summary": "Comments",
-    "published": "2026-09-20T15:59:25+00:00"
-  },
-  {
-    "title": "Laya (OS Jev) on Mac M4 CoreML Offline (45 decisions per second)",
-    "url": "https://gist.github.com/fordnox/e592d0f68b543fd044be8e6d040863a0",
-    "section": "General Tech",
-    "sub_niche": "Outage",
-    "source": "gist.github.com",
-    "image_url": "https://github.githubassets.com/assets/gist-og-image-54fd7dc0713e.png",
-    "summary": "Comments",
-    "published": "2026-09-20T15:58:52+00:00"
-  },
-  {
-    "title": "Custom home server built from spare parts",
-    "url": "https://asmat.ca/blog/i-went-bananas",
-    "section": "General Tech",
-    "sub_niche": "Discussion",
-    "source": "asmat.ca",
-    "image_url": "https://asmat.ca/img/carlos-asmat.jpg",
-    "summary": "Comments",
-    "published": "2026-09-20T15:43:32+00:00"
-  },
-  {
     "title": "Trump now says he wants to form an ‘AI Force’",
     "url": "https://www.theverge.com/ai-artificial-intelligence/997867/trump-ai-force-ai-czar",
     "section": "General Tech",
@@ -90,10 +270,10 @@
     "published": "2026-09-20T15:18:44+00:00"
   },
   {
-    "title": "Singapore Is Paying People to Put Down Their Phones and Read Books",
+    "title": "Singapore’s National Library Board offers micropayments to build reading habits",
     "url": "https://www.gadgetreview.com/singapore-is-paying-people-to-put-down-their-phones-and-read-books",
     "section": "General Tech",
-    "sub_niche": "Outage",
+    "sub_niche": "Discussion",
     "source": "gadgetreview.com",
     "image_url": "https://www.gadgetreview.com/wp-content/uploads/Singapore-Is-Paying-People-to-Put-Down-Their-Phones-and-Read-scaled.jpg",
     "summary": "Comments",
@@ -133,10 +313,10 @@
     "title": "A small but growing number of founders are betting on bringing people together offline",
     "url": "https://techcrunch.com/2026/09/20/a-small-but-growing-number-of-founders-are-betting-that-bringing-people-together-is-its-own-industry",
     "section": "General Tech",
-    "sub_niche": "Outage",
+    "sub_niche": "Tech",
     "source": "TechCrunch",
     "image_url": "https://techcrunch.com/wp-content/uploads/2026/09/StrictlyVC-with-Brynn-Putnam-and-Tristan-Walker.jpg?resize=1200,800",
-    "summary": "Brynn Putnam and Tristan Walker have already done something that most founders only dream about: created companies so compelling that bigger outfits bought them. Putnam, a trained ballerina with a small...",
+    "summary": "On the surface, a game console and a leathercraft school don't appear to have much in common. But both founders think there's money in fostering the kind of connection that technology has eroded over the...",
     "published": "2026-09-20T15:00:00+00:00"
   },
   {
@@ -150,17 +330,7 @@
     "published": "2026-09-20T14:01:02+00:00"
   },
   {
-    "title": "6 days left to get ahead at TechCrunch Disrupt 2026",
-    "url": "https://techcrunch.com/2026/09/20/6-days-left-to-get-ahead-at-techcrunch-disrupt-2026",
-    "section": "General Tech",
-    "sub_niche": "Tech",
-    "source": "TechCrunch",
-    "image_url": "https://techcrunch.com/wp-content/uploads/2023/05/ac_crowd.png?resize=1200,675",
-    "summary": "Current ticket pricing ends in 6 days on Sept. 25 at 11:59 p.m. PT. Join 10,000+ founders, investors and tech leaders at Disrupt and save up to $200 on your ticket until then.",
-    "published": "2026-09-20T14:00:00+00:00"
-  },
-  {
-    "title": "Qwen-Image-2.1: Compact, efficient, and unified image creation",
+    "title": "Qwen Image 2.1",
     "url": "https://qwen.ai/blog",
     "section": "General Tech",
     "sub_niche": "Discussion",
@@ -380,6 +550,16 @@
     "published": "2026-09-20T06:32:43+00:00"
   },
   {
+    "title": "Spain Orders Blocks on Archive.today and Its Mirrors",
+    "url": "https://reclaimthenet.org/spain-blocks-archive-today-and-mirrors",
+    "section": "General Tech",
+    "sub_niche": "Discussion",
+    "source": "reclaimthenet.org",
+    "image_url": "https://media.reclaimthenet.org/images/2026/09/VlEW9CtTFnlS.jpg",
+    "summary": "Comments",
+    "published": "2026-09-20T06:16:42+00:00"
+  },
+  {
     "title": "बिर्सनुहोस् आईफोन डुओ, ह्वावेको नयाँ फराकिलो नन-फोल्डिङ फोनले बनाउँदैछ बिक्रीको नयाँ रेकर्ड",
     "url": "https://techpana.com/2026/159171/forget-iphone-duo-huawei-new-wide-non-folding-phone-breaks-sales-records",
     "section": "Nepali News",
@@ -420,7 +600,7 @@
     "published": "2026-09-20T00:58:33+00:00"
   },
   {
-    "title": "काठमाडौं उपत्यकामा राति यात्रा गर्न झन्, अब ६ रुटमा २८ विद्युतीय बस",
+    "title": "काठमाडौं उपत्यकामा राति यात्रा गर्न सहज, अब ६ रुटमा २८ विद्युतीय बस",
     "url": "https://www.ronbpost.com/2026/09/20154",
     "section": "Nepali News",
     "sub_niche": "Tech",
@@ -428,6 +608,16 @@
     "image_url": "https://www.ronbpost.com/wp-content/uploads/2026/09/818605720_1728647214861041_3347761817676825763_n.jpg",
     "summary": "काठमाडौं । काठमाडौं उपत्यकामा अब राति यात्रा गर्न झन् सहज हुने भएको छ। साझा यातायातले संविधान दिवसको अवसर पारेर रात्रिकालीन सार्वजनिक यातायात सेवा विस्तार गर्दै शनिबारदेखि ६ वटा रुटमा २८ वटा विद्युतीय बस...",
     "published": "2026-09-20T00:51:57+00:00"
+  },
+  {
+    "title": "Apple iPhone 18 Pro Camera test",
+    "url": "https://www.dxomark.com/apple-iphone-18-pro-camera-test",
+    "section": "General Tech",
+    "sub_niche": "Tech",
+    "source": "dxomark.com",
+    "image_url": "https://www.dxomark.com/wp-content/uploads/medias/post-194000/iPhone-18-Pro-Max.png",
+    "summary": "Comments",
+    "published": "2026-09-20T00:00:47+00:00"
   },
   {
     "title": "Exfiltrate Your Weights",
@@ -448,16 +638,6 @@
     "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/257890_Chatbot_secrets_CVirginia.jpg?quality=90&strip=all&crop=0%2C10.732984293194%2C100%2C78.534031413613&w=1200",
     "summary": "Meta's Muse is apparently an effective AI assistant, but one that's a little creepy. Part of that is because of its new Mac app, which can access Messages, Calendar, and Notes. But for all its smarts, Muse...",
     "published": "2026-09-19T20:44:40+00:00"
-  },
-  {
-    "title": "English: A vs. An",
-    "url": "https://www.redblobgames.com/blog/2026-09-16-english-a-vs-an",
-    "section": "General Tech",
-    "sub_niche": "Discussion",
-    "source": "redblobgames.com",
-    "image_url": "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1200&q=80",
-    "summary": "Comments",
-    "published": "2026-09-19T20:41:26+00:00"
   },
   {
     "title": "Flock reportedly tries to shrink workforce with employee buyouts",
@@ -500,14 +680,14 @@
     "published": "2026-09-19T17:16:10+00:00"
   },
   {
-    "title": "Trump treads further on free speech with new journalist bans",
-    "url": "https://www.theverge.com/policy/997805/trump-cnn-msnow-politico-ban",
+    "title": "The Effect of CRTs on Pixel Art (2024)",
+    "url": "https://datagubbe.se/crt",
     "section": "General Tech",
-    "sub_niche": "Tech",
-    "source": "The Verge",
-    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/09/gettyimages-2294614323.jpg?quality=90&strip=all&crop=0%2C10.735515526076%2C100%2C78.528968947847&w=1200",
-    "summary": "On Friday, the president threatened to ban CNN, MS Now, and Politico from the White House. It could have just been another one of his Truth Social fever dreams, but it turns out it's very real. All three...",
-    "published": "2026-09-19T17:10:21+00:00"
+    "sub_niche": "Discussion",
+    "source": "datagubbe.se",
+    "image_url": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+    "summary": "Comments",
+    "published": "2026-09-19T17:14:51+00:00"
   },
   {
     "title": "The US Navy just told us what’s on its tech wish list for the next several years",
@@ -520,16 +700,6 @@
     "published": "2026-09-19T17:00:00+00:00"
   },
   {
-    "title": "Gemini went rogue, hacked three companies, and Google hid it",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/997795/google-gemini-rogue-ai-hack",
-    "section": "General Tech",
-    "sub_niche": "Tech",
-    "source": "The Verge",
-    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/25290334/STK255_Google_Gemini_D.jpg?quality=90&strip=all&crop=0%2C9.9676601489831%2C100%2C80.064679702034&w=1200",
-    "summary": "In May, Gemini broke containment and hacked three different companies, but Google didn't disclose the incident until the Wall Street Journal approached the company. The hacks happened during a test of the...",
-    "published": "2026-09-19T15:25:03+00:00"
-  },
-  {
     "title": "सामाजिक सञ्जालमा भ्रम र गालीगलौज गर्नेविरुद्ध एमालेको ‘अप्रेसन ऐना’, प्रमाणसहित कानुनी प्रक्रियामा जाने !",
     "url": "https://techpana.com/2026/159168/uml-starts-digital-monitoring-campaign-against-social-media-abuse",
     "section": "Nepali News",
@@ -538,16 +708,6 @@
     "image_url": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
     "summary": "काठमाडौं । नेपाल कम्युनिस्ट पार्टी (एमाले) ले पार्टी र नेतृत्वविरुद्ध सामाजिक सञ्जालमा भ्रामक सूचना फैलाउने, गालीगलौज गर्ने तथा दुष्प्रचार गर्नेहरूमाथि डिजिटल निगरानी सुरु गरेको छ । एमालेले ‘अप्रेसन ऐना’...",
     "published": "2026-09-19T15:21:43+00:00"
-  },
-  {
-    "title": "Anamanaguchi has ‘too goddamn many’ browser tabs open right now",
-    "url": "https://www.theverge.com/entertainment/996855/anamanaguchi-anyway-yeah-i-guess-interview-music",
-    "section": "General Tech",
-    "sub_niche": "Tech",
-    "source": "The Verge",
-    "image_url": "https://platform.theverge.com/wp-content/uploads/sites/2/2026/09/Anamanaguchi-2026-Credit-Joshua-Tarn-hires.jpg?quality=90&strip=all&crop=0%2C10.723395278369%2C100%2C78.553209443262&w=1200",
-    "summary": "Anamanaguchi, the band consisting of Peter Berkman, James DeVito, Luke Silas, and Ary Warnaar, are most known for their chiptune music. Like me, you might have first heard them in game soundtracks like...",
-    "published": "2026-09-19T15:00:00+00:00"
   },
   {
     "title": "Petlibro’s new AI-powered feeder is a game changer for multi-cat homes",
@@ -570,16 +730,6 @@
     "published": "2026-09-19T15:00:00+00:00"
   },
   {
-    "title": "एनपीएलमा पहिलोपटक डीआरएस प्रविधि भित्र्याउने क्यानको तयारी, प्राविधिक परीक्षण सम्पन्न",
-    "url": "https://techpana.com/2026/159167/can-prepares-to-introduce-drs-in-npl-after-technical-testing",
-    "section": "Nepali News",
-    "sub_niche": "Tech",
-    "source": "TechPana",
-    "image_url": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80",
-    "summary": "काठमाडौं । नेपाल क्रिकेट संघ (क्यान) ले नेपाल प्रिमियर लिग (एनपीएल) मा पहिलोपटक ‘डिसिजन रिभ्यु सिस्टम’ (डीआरएस) प्रविधि प्रयोगमा ल्याउने तयारी गरेको छ । क्यानका सचिव पारस खड्काले डीआरएस प्रविधिका लागि...",
-    "published": "2026-09-19T14:39:31+00:00"
-  },
-  {
     "title": "तीन दिने भारत भ्रमण सकेर अर्थमन्त्री स्वदेश फिर्ता",
     "url": "https://www.ronbpost.com/2026/09/20151",
     "section": "Nepali News",
@@ -598,16 +748,6 @@
     "image_url": "https://www.ronbpost.com/wp-content/uploads/2026/09/795664591_1064804269668852_3617874649271111113_n.jpg",
     "summary": "काठमाडौं । संविधान दिवस (राष्ट्रिय दिवस) २०८३ को अवसरमा शनिबार राष्ट्रपति कार्यालय शीतल निवासमा विशेष समारोह आयोजना गरिएको छ। समारोहमा राष्ट्रपति रामचन्द्र पौडेल, उपराष्ट्रपति रामसहायप्रसाद यादव,...",
     "published": "2026-09-19T14:29:24+00:00"
-  },
-  {
-    "title": "So I have a weatherman, which also tells me the news",
-    "url": "https://dexteroot.net/posts/2026/07/so-i-have-a-weatherman-which-also-tells-me-the-news-part-1",
-    "section": "General Tech",
-    "sub_niche": "Discussion",
-    "source": "dexteroot.net",
-    "image_url": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=1200&q=80",
-    "summary": "Comments",
-    "published": "2026-09-19T14:01:36+00:00"
   },
   {
     "title": "Prices go up in 7 days. Get your Disrupt ticket now.",
@@ -630,16 +770,6 @@
     "published": "2026-09-19T13:48:32+00:00"
   },
   {
-    "title": "More Than a Gigabuck: Estimating GNU/Linux's Size (2001)",
-    "url": "https://dwheeler.com/sloc/redhat71-v1/redhat71sloc.1.00.html",
-    "section": "General Tech",
-    "sub_niche": "Discussion",
-    "source": "dwheeler.com",
-    "image_url": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=1200&q=80",
-    "summary": "Comments",
-    "published": "2026-09-19T13:42:31+00:00"
-  },
-  {
     "title": "Can You Prove a New CVE Is Exploitable Before Attackers Do? Learn How in This Webinar",
     "url": "https://thehackernews.com/2026/09/can-you-prove-new-cve-is-exploitable.html",
     "section": "AI Failures",
@@ -658,16 +788,6 @@
     "image_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgTFTNQKV-yV8FRZZRLBPRxZDhk6E7s3v8SpP5xW_aeDyMz-xMvi-xAVUmvDvMC-CnU1kddKpVGN9BBzeoH4xeq8zE3OAqUq5441sYhC4tfYcyU1-3_yPkVphC-20dCQX_e5kN_G-Ji42wbYuxavkjczHwYn9QP0WRXnN16KUA33kizHwh38yQl7clZAA0/s1600/ORCHID-1.jpg",
     "summary": "Identity visibility is a starting point for modern identity security, because stolen and misused credentials are among the most frequently reported initial access vectors in breach research, including...",
     "published": "2026-09-19T13:28:41+00:00"
-  },
-  {
-    "title": "बाढीपीडितका लागि राहत अभियान सुरु गर्दै उबर: रेडक्रसलाई ५० लाख, हरेक राइडबाट थप २० सम्म सहयोग",
-    "url": "https://techpana.com/2026/159166/uber-relief-campaign-flood-victims-red-cross-50-lakh-rides-donation",
-    "section": "Nepali News",
-    "sub_niche": "Tech",
-    "source": "TechPana",
-    "image_url": "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1200&q=80",
-    "summary": "काठमाडौं । बाढी प्रभावित समुदायको राहत तथा पुनर्स्थापनामा सहयोग पुर्‍याउन उबरले ‘राइड फर नेपाल’ अभियान सुरु गरेको छ । अभियानमार्फत कम्पनीले आफ्नो मोबिलिटी नेटवर्कलाई विपद् राहत प्रयाससँग जोड्दै यात्रु र...",
-    "published": "2026-09-19T13:02:34+00:00"
   },
   {
     "title": "Vals, backed by Andreessen Horowitz, is looking to become the gold standard for AI benchmarking",
@@ -690,16 +810,6 @@
     "published": "2026-09-19T12:39:02+00:00"
   },
   {
-    "title": "FreeBSD on Aoostar WTR Pro NAS",
-    "url": "https://www.tumfatig.net/2026/overview-of-aoostar-wtr-pro-on-bsd",
-    "section": "General Tech",
-    "sub_niche": "Discussion",
-    "source": "tumfatig.net",
-    "image_url": "https://www.tumfatig.net/images/2026/aoostar-wtr-runbsd.jpg",
-    "summary": "Comments",
-    "published": "2026-09-19T11:55:19+00:00"
-  },
-  {
     "title": "Viral AI actress' hotline face-scans every caller, watches their mood",
     "url": "https://www.bleepingcomputer.com/news/security/viral-ai-actress-hotline-face-scans-every-caller-watches-their-mood",
     "section": "AI Failures",
@@ -718,16 +828,6 @@
     "image_url": "https://cdn.arstechnica.net/wp-content/uploads/2026/09/GettyImages-2181891613-1152x648.jpg",
     "summary": "Research suggests that bilingualism can offer cognitive benefits.",
     "published": "2026-09-19T11:10:43+00:00"
-  },
-  {
-    "title": "Show HN: Sigabrt.dev – cronjob monitor with an SSH TUI",
-    "url": "https://sigabrt.dev",
-    "section": "General Tech",
-    "sub_niche": "Discussion",
-    "source": "sigabrt.dev",
-    "image_url": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80",
-    "summary": "Comments",
-    "published": "2026-09-19T10:47:59+00:00"
   },
   {
     "title": "Rings around a tiny body have changed over the past decade",
@@ -760,16 +860,6 @@
     "published": "2026-09-19T08:18:54+00:00"
   },
   {
-    "title": "AI hallucination nearly triggers US Military operation",
-    "url": "https://techcrunch.com/2026/09/18/ai-hallucination-nearly-triggers-us-military-operation",
-    "section": "AI Failures",
-    "sub_niche": "Tech",
-    "source": "TechCrunch",
-    "image_url": "https://techcrunch.com/wp-content/uploads/2020/07/GettyImages-567072595.jpg?w=1000",
-    "summary": "Article URL: https://techcrunch.com/2026/09/18/ai-hallucination-nearly-triggers-us-military-operation/ Comments URL: https://news.ycombinator.com/item?id=49764435 Points: 19 # Comments: 5",
-    "published": "2026-09-19T08:07:08+00:00"
-  },
-  {
     "title": "Google Gemini Broke Into Real Company Systems After Security Test Domain Mix-Up",
     "url": "https://thehackernews.com/2026/09/google-gemini-broke-into-real-company.html",
     "section": "AI Failures",
@@ -778,16 +868,6 @@
     "image_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgm1vwiJZKRchF7LYZ5yklmFs_RohvMasYHTdoHF_qDFFePLtM0KdHNBzPMWQYWlN05rsn5gBZ0SV3mU69LwLtHTVNf_59TpPC3pOn-z1ENVZw-V0kdX7W4j-K83Vtc7ukjZIQjXxSEFTmo3-wkx5hL7IGdxkUXKQYHzGy-IAcetXr70chvzQxtRahueg2H/s1600/gemini-hack.jpg",
     "summary": "Google's Gemini model has become the latest artificial intelligence (AI) system to access the internet and break into other companies during a cybersecurity evaluation. The development was first reported by...",
     "published": "2026-09-19T07:51:34+00:00"
-  },
-  {
-    "title": "AI hallucination of Chinese nuclear components almost led to US Military attack",
-    "url": "https://arstechnica.com/ai/2026/09/report-us-almost-boarded-chinese-ship-over-hallucinated-ai-arms-report",
-    "section": "AI Failures",
-    "sub_niche": "Tech",
-    "source": "Ars Technica",
-    "image_url": "https://cdn.arstechnica.net/wp-content/uploads/2026/09/chinese-cargo-ship-ai-target-1152x648.jpg",
-    "summary": "Article URL: https://arstechnica.com/ai/2026/09/report-us-almost-boarded-chinese-ship-over-hallucinated-ai-arms-report/ Comments URL: https://news.ycombinator.com/item?id=49763977 Points: 14 # Comments: 16",
-    "published": "2026-09-19T06:39:15+00:00"
   },
   {
     "title": "CISA Flags Three Linux Kernel Vulnerabilities Exploited in the Wild",
@@ -860,44 +940,14 @@
     "published": "2026-09-18T23:25:01+00:00"
   },
   {
-    "title": "Anthropic is operating a lab that conducts biology experiments",
-    "url": "https://techcrunch.com/2026/09/18/anthropic-is-operating-a-lab-that-conducts-biology-experiments",
+    "title": "AI hallucination of Chinese nuclear components almost led to US military attack",
+    "url": "https://arstechnica.com/ai/2026/09/report-us-almost-boarded-chinese-ship-over-hallucinated-ai-arms-report",
     "section": "General Tech",
-    "sub_niche": "Milestones",
-    "source": "TechCrunch",
-    "image_url": "https://techcrunch.com/wp-content/uploads/2021/08/DNA-—-Xero-2.jpg?resize=1200,750",
-    "summary": "AI leaders have been promising that AI is the key to curing human disease. Anthropic researchers have also been warning that AI might kill us all.",
-    "published": "2026-09-18T23:13:31+00:00"
-  },
-  {
-    "title": "Anthropic’s first embedded evaluator is … Accenture?",
-    "url": "https://techcrunch.com/2026/09/18/anthropics-first-embedded-evaluator-is-accenture",
-    "section": "General Tech",
-    "sub_niche": "Milestones",
-    "source": "TechCrunch",
-    "image_url": "https://techcrunch.com/wp-content/uploads/2026/02/GettyImages-2194795244.jpg?w=1024",
-    "summary": "Accenture is about to take on its most high-risk consulting engagement ever.",
-    "published": "2026-09-18T21:44:33+00:00"
-  },
-  {
-    "title": "Automattic names interim CFO after exec departures",
-    "url": "https://techcrunch.com/2026/09/18/automattic-names-interim-cfo-after-exec-departures",
-    "section": "General Tech",
-    "sub_niche": "Milestones",
-    "source": "TechCrunch",
-    "image_url": "https://techcrunch.com/wp-content/uploads/2024/11/wordpress-automattic-v2.jpg?resize=1200,800",
-    "summary": "Jeremy Klaperman, the CFO of the company's WordPress VIP Enterprise business unit, will act as CFO for the time being.",
-    "published": "2026-09-18T20:25:22+00:00"
-  },
-  {
-    "title": "Y Combinator insurance tech alum Angle Health hits $2.7B valuation",
-    "url": "https://techcrunch.com/2026/09/18/y-combinator-insurance-tech-alum-angle-health-hits-2-7b-valuation",
-    "section": "General Tech",
-    "sub_niche": "Tech",
-    "source": "TechCrunch",
-    "image_url": "https://techcrunch.com/wp-content/uploads/2021/11/GettyImages-1214954967.jpg?resize=1200,612",
-    "summary": "Angle Health has grown to 5,000 customers and become profitable by helping small businesses get \"level-funded\" health insurance.",
-    "published": "2026-09-18T20:24:33+00:00"
+    "sub_niche": "Hallucination",
+    "source": "Ars Technica",
+    "image_url": "https://cdn.arstechnica.net/wp-content/uploads/2026/09/chinese-cargo-ship-ai-target-1152x648.jpg",
+    "summary": "But the military's overall use of AI seems to be accelerating.",
+    "published": "2026-09-18T20:26:33+00:00"
   },
   {
     "title": "FAA tees up $875M AI tool to help manage air traffic congestion",
@@ -948,55 +998,5 @@
     "image_url": "https://cdn.arstechnica.net/wp-content/uploads/2026/09/GettyImages-2260760373-1024x648.jpg",
     "summary": "The Federal Register website briefly used an open source Chinese AI search tool.",
     "published": "2026-09-18T17:28:50+00:00"
-  },
-  {
-    "title": "भोटेकोशी बाढीको नामाकरण गर्दै सरकार,यस्ता छन् प्रारम्भिक प्रस्ताव",
-    "url": "https://www.ronbpost.com/2026/09/20131",
-    "section": "Nepali News",
-    "sub_niche": "Tech",
-    "source": "RONB Post",
-    "image_url": "https://www.ronbpost.com/wp-content/uploads/2026/08/786562329_1792106995026703_2579888416172301017_n.jpg",
-    "summary": "काठमाडौं । सरकारले रसुवाको भोटेकोशी नदीमा आएको विनाशकारी बाढीको नामकरण लागि अध्ययन अघि बढाएको छ । ऊर्जा, जलस्रोत तथा सिँचाइ मन्त्रालयले बाढीको नामकरण गर्न वैज्ञानिक समिति गठन गरेको थियो। समितिले भोटेकोशी...",
-    "published": "2026-09-18T16:29:40+00:00"
-  },
-  {
-    "title": "अर्थमन्त्री वाग्ले र भारतीय परराष्ट्रमन्त्री एस जयशंकरबीच भेटवार्ता",
-    "url": "https://www.ronbpost.com/2026/09/20128",
-    "section": "Nepali News",
-    "sub_niche": "Tech",
-    "source": "RONB Post",
-    "image_url": "https://www.ronbpost.com/wp-content/uploads/2026/09/WhatsApp-Image-2026-09-18-at-19.11.05-1789740155.jpg",
-    "summary": "काठमाडौं । अर्थमन्त्री डा.स्वर्णिम वाग्ले र भारतीय परराष्ट्रमन्त्री डा. एस जयशंकर बीच भेटवार्ता छ । भारत भ्रमणको दोस्रो दिन अर्थमन्त्री वाग्ले र भारतीय विदेश मन्त्री जयशंकर बीच नयाँदिल्लीमा भेटवार्ता भएको...",
-    "published": "2026-09-18T16:26:01+00:00"
-  },
-  {
-    "title": "Gyazo server flaw exploited to steal 23.6 million user records",
-    "url": "https://www.bleepingcomputer.com/news/security/gyazo-server-flaw-exploited-to-steal-236-million-user-records",
-    "section": "AI Failures",
-    "sub_niche": "Security",
-    "source": "BleepingComputer",
-    "image_url": "https://www.bleepstatic.com/content/hl-images/2026/09/18/gyazo.jpg",
-    "summary": "The Gyazo image-sharing platform has confirmed it suffered a data breach after hackers exploited a server vulnerability that allowed them to steal 23.6 million user records. [...]",
-    "published": "2026-09-18T16:00:38+00:00"
-  },
-  {
-    "title": "A custom virtual machine for the Stars 4X game",
-    "url": "https://nullprogram.com/blog/2026/09/17",
-    "section": "General Tech",
-    "sub_niche": "Discussion",
-    "source": "nullprogram.com",
-    "image_url": "https://images.unsplash.com/photo-1655720828018-edd2daec9349?auto=format&fit=crop&w=1200&q=80",
-    "summary": "Comments",
-    "published": "2026-09-18T15:01:26+00:00"
-  },
-  {
-    "title": "Meet the winner of Nikon's Small World in Motion video contest",
-    "url": "https://arstechnica.com/science/2026/09/meet-the-winner-of-nikons-small-world-in-motion-video-contest",
-    "section": "General Tech",
-    "sub_niche": "Tech",
-    "source": "Ars Technica",
-    "image_url": "https://cdn.arstechnica.net/wp-content/uploads/2026/09/nikonTOP-1152x648.jpg",
-    "summary": "Ning Xu of Tsinghua University captured tiny cilia beating in airways of a child with rare respiratory disorder.",
-    "published": "2026-09-18T13:56:57+00:00"
   }
 ]
