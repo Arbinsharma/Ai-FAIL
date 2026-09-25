@@ -18,3 +18,4 @@ https://thehackernews.com/2026/09/critical-pre-auth-rce-in-orkes.html
 https://techcrunch.com/2026/09/20/is-the-ai-industry-really-ready-to-slow-down
 https://arstechnica.com/ai/2026/09/trump-rejects-ai-slowdown-calls-launches-ai-force-instead
 https://www.bleepingcomputer.com/news/security/openai-hacked-australian-medicare-govt-site-probed-data-providers
+https://thehackernews.com/2026/09/attackers-exploit-wordpress-cve-2026.html
