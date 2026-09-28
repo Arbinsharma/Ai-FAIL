@@ -20,3 +20,4 @@ https://arstechnica.com/ai/2026/09/trump-rejects-ai-slowdown-calls-launches-ai-f
 https://www.bleepingcomputer.com/news/security/openai-hacked-australian-medicare-govt-site-probed-data-providers
 https://thehackernews.com/2026/09/attackers-exploit-wordpress-cve-2026.html
 https://arstechnica.com/space/2026/09/nasa-chief-concerned-china-may-deny-access-to-parts-of-south-pole
+https://www.bleepingcomputer.com/news/security/citrix-admins-warned-to-shut-down-netscalers-over-2-exploited-zero-days
